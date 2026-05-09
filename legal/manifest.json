@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "_comment": "Folio legal docs manifest. App fetches this on launch to know latest version. Bump version + summary when ToS/Privacy changes.",
+  "terms": {
+    "version": "0.1",
+    "effective_date": "2026-12-31T00:00:00+08:00",
+    "change_type": "minor",
+    "summary_zh": "初始版本草稿（pre-launch、未生效）",
+    "summary_en": "Initial draft (pre-launch, not yet in force)",
+    "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
+    "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
+  },
+  "privacy": {
+    "version": "0.1",
+    "effective_date": "2026-12-31T00:00:00+08:00",
+    "change_type": "minor",
+    "summary_zh": "初始版本草稿（pre-launch、未生效）",
+    "summary_en": "Initial draft (pre-launch, not yet in force)",
+    "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
+    "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
+  }
+}
