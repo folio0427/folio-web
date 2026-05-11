@@ -114,7 +114,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - IP / login logs: 6 months – 1 year
 - Payment records (future): 5–7 years (Commercial Accounting Act, Tax Collection Act)
 - Pending criminal investigation data: until resolution
-- Terms consent records (`user_tos_consents`): permanent (legal evidence)
+- Terms consent records (`user_tos_consents`): **5 years** (legal evidence; auto-purged on expiry). Records include the `doc_type`, version, timestamp, method of your acceptance, plus a **salted SHA-256 hash of your email** (salt kept server-side, never held by the client). The hash is **one-way** and cannot be reversed to recover your email. Purpose: (a) after you delete your account, allow us to verify in litigation whether an email you claim is yours ever consented on Folio; (b) without retaining the plaintext email. This constitutes pseudonymisation under GDPR Art. 4(5) and is lawful.
 
 ### Bookshelf snapshots collected by others (Important)
 
@@ -129,9 +129,50 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Retained until both parties delete the chatroom or both accounts
 - One-sided account deletion: messages retained, nickname replaced with "User has left"
 
-### Long-inactive accounts
+### Co-reading sticky notes (v2.2)
 
-- 12 consecutive months without login: notification email sent; deletion after 30 days of no response
+- Sticky notes you write inside a co-reading room (25% milestone, 100% milestone, free notes) appear on your reading partner's "notes wall" as a memento of your shared reading.
+- You may also write purely-personal notes in your shelf (not associated with any co-reading partner).
+- The other party cannot save your notes into their own shelf; they can only view them on your shared wall.
+- They can select and copy text out, but plain text copied this way is no longer governed by Folio.
+
+### Account deletion (v2.2.2 — "Leave Folio")
+
+Choosing "Leave Folio" causes the platform to handle your data as follows:
+
+**Fully cleared**
+- Your Google / Apple sign-in link (auth.users record)
+- Nickname, avatar, gender, birthdate, preference categories
+- Your shelf, reviews, posts, pending applications
+- Push notification settings (push token)
+
+**Retained anonymously** (as a memento for your co-reading partners)
+- Sticky notes you wrote in co-reading rooms
+- Your messages in those rooms
+- Author name shown as "A book friend who left"
+
+**Legal basis**: Conversations and co-reading records are jointly produced by both parties (joint controllership); we have a legitimate interest in retaining them for the other party's continued use. Anonymisation removes the data from being personally identifiable, complying with PDPA / GDPR. This pattern matches LINE / WhatsApp / Discord and other messaging services.
+
+**Future re-login**: Signing back in with the same Google / Apple account will be treated as a **brand-new user** requiring fresh registration. Sticky notes you wrote on partners' walls remain (anonymised) but are not linked to your new account.
+
+**Processing**: within 30 days of completion. We send a confirmation email to your registered address as written evidence.
+
+**Statutory retention (regardless of mode):**
+- Terms-consent records (`user_tos_consents`) — **5 years** (incl. salted SHA-256 of email, non-reversible, auto-purged on expiry)
+- Messages relevant to ongoing legal disputes or fraud investigations
+- Anonymised data that cannot be traced to an individual
+
+### Sign in with Apple revocation and account deletion (Important)
+
+Apple lets you revoke Folio's authorization via **Settings → Apple ID → Password & Security → Sign in with Apple → Folio → Stop Using**.
+
+**Please note: this action only revokes the Apple ID ↔ Folio link; it does NOT automatically delete your Folio account or data.** Apple and Folio are separate data controllers; revocation at the Apple layer cannot be construed as a deletion request directed at Folio.
+
+**To fully delete your Folio account**, please use the in-app path: **"Me" tab → Settings → Leave Folio**. This is the only guaranteed deletion path.
+
+**If you revoke Apple authorization without deleting in-app**: your Folio data persists until you actively delete in-app.
+
+This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal is to prevent accidental data loss caused by third-party platform actions and ensure your deletion intent is direct, explicit, and traceable.
 
 ## 07　Your Rights
 

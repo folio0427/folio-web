@@ -2,20 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "_comment": "Folio legal docs manifest. App fetches this on launch to know latest version. Bump version + summary when ToS/Privacy changes.",
   "terms": {
-    "version": "0.1",
+    "version": "0.3",
     "effective_date": "2026-12-31T00:00:00+08:00",
-    "change_type": "minor",
-    "summary_zh": "初始版本草稿（pre-launch、未生效）",
-    "summary_en": "Initial draft (pre-launch, not yet in force)",
+    "change_type": "data_consent_required",
+    "summary_zh": "v2.2.2：採 LINE 模式單一級「離開 Folio」+ 共讀便利貼牆機制",
+    "summary_en": "v2.2.2: Single-tier 'Leave Folio' (LINE pattern) + co-reading sticky notes wall",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "0.1",
+    "version": "0.4",
     "effective_date": "2026-12-31T00:00:00+08:00",
-    "change_type": "minor",
-    "summary_zh": "初始版本草稿（pre-launch、未生效）",
-    "summary_en": "Initial draft (pre-launch, not yet in force)",
+    "change_type": "data_consent_required",
+    "summary_zh": "v2.2.3：同意紀錄改 5 年保留（salted SHA-256 email hash）+ Sign in with Apple 撤銷說明",
+    "summary_en": "v2.2.3: 5-year consent retention (salted SHA-256 email hash) + Sign in with Apple revocation clause",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }
