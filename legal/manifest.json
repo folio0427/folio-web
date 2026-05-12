@@ -11,11 +11,11 @@
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "0.4",
+    "version": "0.5",
     "effective_date": "2026-12-31T00:00:00+08:00",
-    "change_type": "data_consent_required",
-    "summary_zh": "v2.2.3：同意紀錄改 5 年保留（salted SHA-256 email hash）+ Sign in with Apple 撤銷說明",
-    "summary_en": "v2.2.3: 5-year consent retention (salted SHA-256 email hash) + Sign in with Apple revocation clause",
+    "change_type": "minor",
+    "summary_zh": "v2.2.4：移除自設「寄送 email 確認」承諾（GDPR / 個資法非強制）；軟化單一刪除路徑限制、開放 email 申訴管道",
+    "summary_en": "v2.2.4: Drop self-imposed 'confirmation email' promise (not required by GDPR / PDPA); soften sole-path wording and accept email-based deletion requests",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }

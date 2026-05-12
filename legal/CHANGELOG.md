@@ -11,6 +11,20 @@
 
 ---
 
+## privacy v0.5 — 2026-05-11
+
+**狀態**：草稿（pre-launch、未生效）
+**文件**：privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：minor（放寬、非實質義務變更）
+**摘要**：
+
+- 移除「寄送確認 email 至註冊地址作為書面證據」承諾 — GDPR Art. 12 / 個資法 §3 均未強制 email 確認、刪除生效自身即為法律事實；自設承諾若無法兌現反而違反個資法 §27 一致性義務、故刪除
+- 軟化「此為唯一保證之刪除路徑」→ 補充 email (folio0427@gmail.com) 為替代管道；GDPR Art. 12(2) 要求 controller 便利化權利行使、單一路徑寫法過嚴
+- 處理時程改寫為「點擊離開 Folio 後即時生效」、反映 edge fn `delete_account` 之同步刪除行為（auth.admin.deleteUser + cascade）
+- manifest.json privacy 0.4 → 0.5、change_type 由 `data_consent_required` 改 `minor`（放寬、不需阻擋式 re-consent）
+
+---
+
 ## v0.1 — 2026-05-09
 
 **狀態**：草稿（pre-launch、未生效）

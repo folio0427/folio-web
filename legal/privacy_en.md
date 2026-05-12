@@ -155,7 +155,7 @@ Choosing "Leave Folio" causes the platform to handle your data as follows:
 
 **Future re-login**: Signing back in with the same Google / Apple account will be treated as a **brand-new user** requiring fresh registration. Sticky notes you wrote on partners' walls remain (anonymised) but are not linked to your new account.
 
-**Processing**: within 30 days of completion. We send a confirmation email to your registered address as written evidence.
+**Processing**: takes effect immediately after you confirm "Leave Folio"; your auth account and personal data are removed from our servers in the same operation.
 
 **Statutory retention (regardless of mode):**
 - Terms-consent records (`user_tos_consents`) — **5 years** (incl. salted SHA-256 of email, non-reversible, auto-purged on expiry)
@@ -168,7 +168,7 @@ Apple lets you revoke Folio's authorization via **Settings → Apple ID → Pass
 
 **Please note: this action only revokes the Apple ID ↔ Folio link; it does NOT automatically delete your Folio account or data.** Apple and Folio are separate data controllers; revocation at the Apple layer cannot be construed as a deletion request directed at Folio.
 
-**To fully delete your Folio account**, please use the in-app path: **"Me" tab → Settings → Leave Folio**. This is the only guaranteed deletion path.
+**To fully delete your Folio account**, please use the in-app path: **"Me" tab → Settings → Leave Folio**. If that path is unavailable to you, you may also email a deletion request to folio0427@gmail.com.
 
 **If you revoke Apple authorization without deleting in-app**: your Folio data persists until you actively delete in-app.
 
