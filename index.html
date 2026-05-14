@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Folio — 從一本書，遇見可能的緣分</title>
-<meta name="description" content="Folio 是以書交友的 app — 透過共讀促成深度連結。書是對話入口，不是內容本身。">
+<title data-i18n="page.title.home">Folio — 從一本書，遇見可能的緣分</title>
+<meta name="description" data-i18n="page.desc.home" content="Folio 是以書交友的 app — 透過共讀促成深度連結。書是對話入口，不是內容本身。">
 <meta name="theme-color" content="#F8F1E4">
 <link rel="icon" type="image/png" href="assets/folio_icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,72 +14,112 @@
 </head>
 <body>
 
+<img src="assets/bookmark-ribbon.png" class="book-ribbon" alt="" aria-hidden="true">
+
 <nav class="nav">
   <a href="index.html" class="nav-logo">
     <img src="assets/folio_icon.png" alt="Folio">
     <span>Folio</span>
   </a>
   <div class="nav-links">
-    <a href="#modes">模式</a>
-    <a href="#flow">流程</a>
-    <a href="#philosophy">理念</a>
-    <a href="terms.html">條款</a>
-    <a href="privacy.html">隱私</a>
+    <a href="#modes" data-i18n="nav.modes">模式</a>
+    <a href="#flow" data-i18n="nav.flow">流程</a>
+    <a href="#philosophy" data-i18n="nav.philosophy">理念</a>
+    <a href="terms.html" data-i18n="nav.terms">條款</a>
+    <a href="privacy.html" data-i18n="nav.privacy">隱私</a>
+    <button type="button" class="lang-toggle" data-i18n="lang.toggle" aria-label="Switch language">EN</button>
   </div>
 </nav>
 
 <!-- Hero -->
 <section class="hero">
+  <div class="compilation-scene" aria-hidden="true">
+    <img class="compilation-bg" src="assets/compilation/compilation-clean-bg-v8-no-moon.png" alt="">
+    <img class="hanging-moon" src="assets/compilation/compilation-hanging-moon-v1.png" alt="">
+    <img class="book-glow-art" src="assets/compilation/book-magic-aura-smoke-v6.png" alt="">
+    <img class="plant-layer plant-left" src="assets/compilation/plant-left-sprig.png" alt="">
+    <img class="plant-layer plant-left-leaf" src="assets/compilation/plant-left-leaf.png" alt="">
+    <img class="float-layer note note-gold" src="assets/compilation/generated-floaters/note-yellow-large.png" alt="">
+    <img class="float-layer note note-lavender" src="assets/compilation/generated-floaters/note-lavender.png" alt="">
+    <img class="float-layer note note-rose" src="assets/compilation/generated-floaters/note-rose.png" alt="">
+    <img class="float-layer note note-sage" src="assets/compilation/generated-floaters/note-sage.png" alt="">
+    <img class="float-layer note note-amber" src="assets/compilation/generated-floaters/note-amber-small.png" alt="">
+    <img class="float-layer note note-tiny-gold-a" src="assets/compilation/generated-floaters-more/note-yellow-small-01.png" alt="">
+    <img class="float-layer note note-tiny-gold-b" src="assets/compilation/generated-floaters-more/note-yellow-small-02.png" alt="">
+    <img class="float-layer note note-tiny-rose-a" src="assets/compilation/generated-floaters-more/note-rose-small-01.png" alt="">
+    <img class="float-layer note note-tiny-rose-b" src="assets/compilation/generated-floaters-more/note-rose-small-02.png" alt="">
+    <img class="float-layer note note-tiny-sage-a" src="assets/compilation/generated-floaters-more/note-sage-small-01.png" alt="">
+    <img class="float-layer note note-tiny-lavender" src="assets/compilation/generated-floaters-more/note-lavender-small-01.png" alt="">
+    <img class="float-layer note book-note book-note-a" src="assets/compilation/generated-floaters-more/note-yellow-small-02.png" alt="">
+    <img class="float-layer note book-note book-note-b" src="assets/compilation/generated-floaters-more/note-rose-small-01.png" alt="">
+    <img class="float-layer note book-note book-note-c" src="assets/compilation/generated-floaters-more/note-sage-small-01.png" alt="">
+    <img class="float-layer leaf leaf-right" src="assets/compilation/generated-floaters/leaf-large-gold.png" alt="">
+    <img class="float-layer leaf leaf-small-a" src="assets/compilation/generated-floaters/leaf-sage-small.png" alt="">
+    <img class="float-layer leaf leaf-small-b" src="assets/compilation/generated-floaters/leaf-amber-small.png" alt="">
+    <img class="float-layer leaf leaf-small-c" src="assets/compilation/generated-floaters-more/leaf-amber-mid-01.png" alt="">
+    <img class="float-layer leaf leaf-small-d" src="assets/compilation/generated-floaters-more/leaf-amber-tiny-01.png" alt="">
+    <img class="float-layer leaf leaf-small-e" src="assets/compilation/generated-floaters-more/leaf-sage-tiny-01.png" alt="">
+    <img class="float-layer leaf leaf-small-f" src="assets/compilation/generated-floaters-more/leaf-sage-tiny-02.png" alt="">
+  </div>
   <div class="blob b1"></div>
   <div class="blob b2"></div>
-  <div class="container hero-grid">
-    <div class="hero-text reveal">
-      <span class="eyebrow">— 以書交友 —</span>
-      <h1>從一本書，<br>遇見<span class="accent">可能的緣分</span>。</h1>
-      <p class="lede">
-        Folio 不是配對 app，也不是讀書器。<br>
-        透過一起讀完一本書，慢慢認識一個人。
-      </p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="#modes">了解 Folio</a>
-        <a class="btn btn-ghost" href="#flow">如何運作</a>
-      </div>
+  <div class="container hero-content">
+    <h1>
+      <span class="word word-1" data-i18n="hero.line1">從一本書</span>
+      <br>
+      <span class="line-2-wrap">
+        <span class="word word-2" data-i18n="hero.line2.prefix">遇見</span>
+        <span class="word accent" data-i18n="hero.line2.accent">可能的緣分</span>
+      </span>
+    </h1>
+    <p class="lede" data-i18n="hero.lede">
+      Folio 不是配對 app，也不是讀書器。<br>
+      透過一起讀完一本書，慢慢認識一個人。
+    </p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#modes" data-i18n="hero.cta.primary">了解 Folio</a>
+      <a class="btn btn-ghost" href="#launch" data-i18n="hero.cta.secondary">如何下載</a>
     </div>
-    <div class="hero-mascots">
-      <img src="assets/aurora.png" alt="Aurora — 純粹書友" class="mascot aurora">
-      <img src="assets/vesper.png" alt="Vesper — 純粹找緣分" class="mascot vesper">
-    </div>
+    <p class="hero-caption" data-i18n="hero.caption">每一張便利貼，是一段共讀的紀念。</p>
   </div>
 </section>
 
 <!-- Modes -->
-<section id="modes">
+<section id="modes" class="modes-section">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">— Three modes —</span>
-      <h2>選一個你來這裡的理由</h2>
-      <p>三種心態、互相尊重。發帖時、別人就知道你想要的是什麼。</p>
+      <span class="kicker" data-i18n="modes.kicker">— Three modes —</span>
+      <h2 data-i18n="modes.title">選一個你來這裡的理由</h2>
+      <p><span data-i18n="modes.sub">三種心態、互相尊重。發帖時、別人就知道你想要的是什麼。</span><br><span class="kicker-sub" data-i18n="modes.sub.cooldown">更換心態有 7 天冷卻期，避免反覆切換造成困擾。</span></p>
     </div>
     <div class="modes-grid">
       <div class="mode-card pure reveal reveal-delay-1">
-        <span class="mode-badge">Sage 鼠尾草</span>
-        <h3>純粹書友</h3>
-        <p class="tagline">「來這裡交朋友，就只是交朋友。」</p>
-        <p class="desc">只想找人共讀、交換心得，不發展任何浪漫可能。乾淨、安靜、有書就好。</p>
+        <div class="mode-art" style="background-image: url('assets/mode-art-lamp.png');"></div>
+        <span class="mode-badge" data-i18n="modes.pure.badge">純粹書友</span>
+        <h3 data-i18n="modes.pure.h">來這裡，是為了找人一起讀書</h3>
+        <p class="tagline" data-i18n="modes.pure.tagline">「來這裡交朋友，就只是交朋友。」</p>
+        <p class="desc" data-i18n="modes.pure.desc">只想找人共讀、交換心得，不發展任何浪漫可能。乾淨、安靜、有書就好。</p>
       </div>
       <div class="mode-card romance reveal reveal-delay-2">
-        <span class="mode-badge">Lavender 薰衣草</span>
-        <h3>純粹找緣分</h3>
-        <p class="tagline">「從一本書，遇見可能的緣分。」</p>
-        <p class="desc">從共讀開始尋找關係的可能。不滑卡、不靠話術、看你選的書認識你。</p>
+        <div class="mode-art" style="background-image: url('assets/mode-art-duo.png');"></div>
+        <span class="mode-badge" data-i18n="modes.romance.badge">純粹找緣分</span>
+        <h3 data-i18n="modes.romance.h">來這裡，是想從書裡認識一個人</h3>
+        <p class="tagline" data-i18n="modes.romance.tagline">「從一本書，遇見可能的緣分。」</p>
+        <p class="desc" data-i18n="modes.romance.desc">從共讀開始尋找關係的可能。不滑卡、不靠話術、看你選的書認識你。</p>
+        <p class="desc-aux" data-i18n="modes.romance.aux">註冊時可選想找的性別（女 / 男）；性別只是顯示、不會把人從你的視野中過濾掉。</p>
       </div>
       <div class="mode-card both reveal reveal-delay-3">
-        <span class="mode-badge">Amber 暖駝</span>
-        <h3>不拘</h3>
-        <p class="tagline">「看書、看人、看緣分。」</p>
-        <p class="desc">兩種都接受。是純粹書友與純粹找緣分之間的橋樑。</p>
+        <div class="mode-art" style="background-image: url('assets/mode-art-door.png');"></div>
+        <span class="mode-badge" data-i18n="modes.both.badge">不拘</span>
+        <h3 data-i18n="modes.both.h">來這裡，看看會遇見什麼</h3>
+        <p class="tagline" data-i18n="modes.both.tagline">「看書、看人、看緣分。」</p>
+        <p class="desc" data-i18n="modes.both.desc">兩種都接受。是純粹書友與純粹找緣分之間的橋樑。</p>
       </div>
     </div>
+    <p class="modes-matrix-note reveal reveal-delay-3">
+      <span data-i18n="modes.matrix.main">想單純交朋友的人，與想找緣分的人，看見的是不同的書架。</span><br>
+      <span class="matrix-line-soft" data-i18n="modes.matrix.soft">選「不拘」的人，兩個書架都看得見。</span>
+    </p>
   </div>
 </section>
 
@@ -87,32 +127,95 @@
 <section id="flow" class="flow">
   <div class="container">
     <div class="section-head reveal">
-      <span class="kicker">— How it works —</span>
-      <h2>共讀是過程，關係是結果</h2>
-      <p>四個階段，每一步都有篩選。留下來的，是值得的。</p>
+      <span class="kicker" data-i18n="flow.kicker">— How it works —</span>
+      <h2 data-i18n="flow.title">共讀是過程，關係是結果</h2>
+      <p data-i18n="flow.sub">四個階段，每一步都有篩選。留下來的，是值得的。</p>
     </div>
     <div class="flow-grid">
       <div class="flow-step reveal reveal-delay-1">
+        <img src="assets/step-1-post.png" alt="" class="flow-icon">
         <div class="num">1</div>
-        <h3>發帖</h3>
-        <p>選一本想讀的書，寫下為什麼想讀、期待怎樣的讀友。</p>
+        <h3 data-i18n="flow.step1.h">發帖</h3>
+        <p data-i18n="flow.step1.p">選一本想讀的書，寫下為什麼想讀、期待怎樣的讀友。一天最多兩篇、慢慢來。</p>
       </div>
       <div class="flow-step reveal reveal-delay-2">
+        <img src="assets/step-2-apply.png" alt="" class="flow-icon">
         <div class="num">2</div>
-        <h3>報名</h3>
-        <p>看見有興趣的帖子，按鏡像表單寫下你能成為的夥伴。</p>
+        <h3 data-i18n="flow.step2.h">報名</h3>
+        <p data-i18n="flow.step2.p">看見有興趣的帖子，按鏡像表單寫下你能成為的夥伴。</p>
       </div>
       <div class="flow-step reveal reveal-delay-3">
+        <img src="assets/step-3-coread.png" alt="" class="flow-icon">
         <div class="num">3</div>
-        <h3>共讀</h3>
-        <p>配對成立、共讀室開啟。雙方各自進度推到 25% 並寫下心得，聊天才解鎖。</p>
+        <h3 data-i18n="flow.step3.h">共讀</h3>
+        <p data-i18n="flow.step3.p">配對成立、共讀室開啟。雙方各自推到 25% 並寫下心得、聊天才解鎖。解鎖後可自由對話、收藏對方寫過的句子。</p>
       </div>
       <div class="flow-step reveal reveal-delay-3">
+        <img src="assets/step-4-organize.png" alt="" class="flow-icon">
         <div class="num">4</div>
-        <h3>整理</h3>
-        <p>各自讀到 100%，便利貼整理成可分享的閱讀紀念，留下一段共讀的證明。</p>
+        <h3 data-i18n="flow.step4.h">整理</h3>
+        <p data-i18n="flow.step4.p">各自讀到 100%、便利貼整理成一張閱讀紀念。可分享到 IG、Threads、X — 是你與這本書的關係證明。</p>
       </div>
     </div>
+
+    <!-- 細節：v2.2 機制 -->
+    <div class="flow-details reveal">
+      <h3 class="details-head" data-i18n="flow.details.h">設計上的小事</h3>
+      <div class="details-grid">
+        <div class="detail">
+          <span class="dot"></span>
+          <div>
+            <h4 data-i18n="flow.detail1.h">一天最多兩篇</h4>
+            <p data-i18n="flow.detail1.p">避免洗版、避免被看成「廣告」。每 24 小時兩篇是上限，刪了也不會還你次數 — 想清楚再發。</p>
+          </div>
+        </div>
+        <div class="detail">
+          <span class="dot"></span>
+          <div>
+            <h4 data-i18n="flow.detail2.h">共讀便利貼牆</h4>
+            <p data-i18n="flow.detail2.p">每對共讀都有一面便利貼牆 — 雙方寫下的 25% / 100% 心得會貼在一起，按時間排序，是只屬於你們的紀念。</p>
+          </div>
+        </div>
+        <div class="detail">
+          <span class="dot"></span>
+          <div>
+            <h4 data-i18n="flow.detail3.h">我的貼文 — 完整管理</h4>
+            <p data-i18n="flow.detail3.p">底部專屬 Tab 看自己發過的所有帖子、報名人數、過期狀態。隨時可關閉、隨時可移除（已配對的共讀不受影響）。</p>
+          </div>
+        </div>
+        <div class="detail">
+          <span class="dot"></span>
+          <div>
+            <h4 data-i18n="flow.detail4.h">進度同步書房</h4>
+            <p data-i18n="flow.detail4.p">發帖時帶入的進度、共讀中的更新、書房的本子 — 同一本書一個進度，三處同步。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solo：也是個人書房 -->
+<section id="solo" class="solo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="kicker" data-i18n="solo.kicker">— Solo or together —</span>
+      <h2 data-i18n="solo.title">也是你一個人的書房</h2>
+      <p data-i18n="solo.sub">不想找夥伴的時候，這裡就是你私人的閱讀紀錄。<br>配對是選項，不是條件。</p>
+    </div>
+    <div class="solo-grid">
+      <div class="solo-col reveal reveal-delay-1">
+        <span class="solo-tag" data-i18n="solo.col1.tag">一個人</span>
+        <h4 data-i18n="solo.col1.h">把書讀完，把字留下</h4>
+        <p data-i18n="solo.col1.p">記下你讀過的書、寫下隨手心得、整理 100% 的閱讀紀念。可以不發帖、不報名、不開共讀室 — 就是獨屬你的個人書櫃。</p>
+      </div>
+      <div class="solo-col reveal reveal-delay-2">
+        <span class="solo-tag" data-i18n="solo.col2.tag">想找人時</span>
+        <h4 data-i18n="solo.col2.h">慢慢來，書會帶人來</h4>
+        <p data-i18n="solo.col2.p">為一本想讀的書留下邀請，看誰也想翻開。願意的人出現之後，從同一頁開始一起往前走。要不要、什麼時候，都由你決定。</p>
+      </div>
+    </div>
+    <p class="solo-note reveal" data-i18n="solo.note">你寫過的字、收藏的句子，永遠是你的 — 不會因為沒人配對就消失。</p>
   </div>
 </section>
 
@@ -120,24 +223,53 @@
 <section id="philosophy" class="philosophy">
   <div class="blob b3"></div>
   <div class="container">
-    <blockquote class="reveal">
+    <blockquote class="reveal" data-i18n="philosophy.quote">
       質 &gt; 量。<br>
       每一層機制（發帖、報名、進度閘）都在篩選，<br>
       留下來的關係，會比那些一見面就能加好友的更深。
     </blockquote>
-    <cite class="reveal reveal-delay-1">— Folio 設計信念</cite>
+    <cite class="reveal reveal-delay-1" data-i18n="philosophy.cite">— Folio 設計信念</cite>
   </div>
 </section>
 
-<!-- 18+ notice -->
-<section>
+<!-- Launch：Coming soon -->
+<section id="launch" class="launch">
   <div class="container">
-    <div class="age-notice reveal">
-      <div class="badge">18+</div>
-      <div>
-        <h3>本服務僅限年滿 18 歲</h3>
-        <p>註冊時須提供出生年月日。未滿 18 歲於技術上無法完成註冊。本服務不主動針對未成年行銷，亦不收集 18 歲以下個資。</p>
+    <div class="launch-inner">
+      <img src="assets/folio_icon.png" alt="" class="launch-icon reveal">
+      <span class="launch-tag reveal reveal-delay-1" data-i18n="launch.tag">Coming soon</span>
+      <h2 class="reveal reveal-delay-1" data-i18n="launch.title">準備好讀第一本書了嗎</h2>
+      <p class="launch-sub reveal reveal-delay-2" data-i18n="launch.sub">Folio 正在內測、預計近期上線 iOS 與 Android。</p>
+      <div class="store-row reveal reveal-delay-2">
+        <button type="button" class="store-btn" disabled aria-label="App Store">
+          <span class="sb-glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M17.05 13.18c-.03-2.96 2.42-4.38 2.53-4.45-1.38-2.01-3.52-2.29-4.28-2.32-1.82-.18-3.55 1.07-4.47 1.07-.93 0-2.35-1.05-3.86-1.02-1.98.03-3.81 1.15-4.83 2.92-2.06 3.57-.53 8.85 1.48 11.75.98 1.42 2.15 3.01 3.68 2.95 1.48-.06 2.04-.96 3.83-.96 1.78 0 2.29.96 3.85.93 1.59-.03 2.6-1.45 3.57-2.87 1.13-1.65 1.6-3.25 1.62-3.33-.04-.02-3.1-1.19-3.13-4.72zM14.13 4.48c.82-.99 1.37-2.37 1.22-3.74-1.18.05-2.6.78-3.45 1.77-.76.87-1.42 2.27-1.24 3.61 1.31.1 2.65-.66 3.47-1.64z"/>
+            </svg>
+          </span>
+          <span class="sb-text">
+            <span class="sb-prefix" data-i18n="launch.store.prefix">下載自</span>
+            <span class="sb-name">App Store</span>
+          </span>
+          <span class="sb-state" data-i18n="launch.store.state">敬請期待</span>
+        </button>
+        <button type="button" class="store-btn" disabled aria-label="Google Play">
+          <span class="sb-glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M3.6 1.4c-.4.4-.6 1-.6 1.7v17.8c0 .7.2 1.3.6 1.7l.1.1L13.6 12 3.7 1.4l-.1 0z"/>
+              <path d="M16.8 15.2L13.6 12l3.2-3.2 5 2.8c1.4.8 1.4 2 0 2.8l-5 2.8z" opacity=".85"/>
+              <path d="M16.8 15.2L13.6 12 3.6 22.6c.5.5 1.3.6 2.2.1l11-6.3-.0-.0z"/>
+              <path d="M16.8 8.8L5.8 2.5c-.9-.5-1.7-.4-2.2.1L13.6 12l3.2-3.2z" opacity=".7"/>
+            </svg>
+          </span>
+          <span class="sb-text">
+            <span class="sb-prefix" data-i18n="launch.store.prefix">下載自</span>
+            <span class="sb-name">Google Play</span>
+          </span>
+          <span class="sb-state" data-i18n="launch.store.state">敬請期待</span>
+        </button>
       </div>
+      <p class="launch-note reveal reveal-delay-3" data-i18n="launch.note">敬請期待上架公告。</p>
     </div>
   </div>
 </section>
@@ -151,37 +283,38 @@
           <img src="assets/folio_icon.png" alt="Folio">
           <span>Folio</span>
         </div>
-        <p class="footer-tagline">A place for readers who want to be more than readers.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">A place for readers who want to be more than readers.</p>
       </div>
       <div>
-        <h4>探索</h4>
+        <h4 data-i18n="footer.h.explore">探索</h4>
         <ul>
-          <li><a href="#modes">三種模式</a></li>
-          <li><a href="#flow">共讀流程</a></li>
-          <li><a href="#philosophy">設計理念</a></li>
+          <li><a href="#modes" data-i18n="footer.li.modes">三種模式</a></li>
+          <li><a href="#flow" data-i18n="footer.li.flow">共讀流程</a></li>
+          <li><a href="#philosophy" data-i18n="footer.li.philosophy">設計理念</a></li>
         </ul>
       </div>
       <div>
-        <h4>法務</h4>
+        <h4 data-i18n="footer.h.legal">法務</h4>
         <ul>
-          <li><a href="terms.html">服務條款</a></li>
-          <li><a href="privacy.html">隱私權政策</a></li>
+          <li><a href="terms.html" data-i18n="footer.li.terms">服務條款</a></li>
+          <li><a href="privacy.html" data-i18n="footer.li.privacy">隱私權政策</a></li>
         </ul>
       </div>
       <div>
-        <h4>聯絡</h4>
+        <h4 data-i18n="footer.h.contact">聯絡</h4>
         <ul>
           <li><a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Folio · 由獨立開發者提供</span>
-      <span>v0.1 · 草稿版本，未上線</span>
+      <span data-i18n="footer.copyright">© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務</span>
+      <span data-i18n="footer.status">Pre-launch · 內測階段</span>
     </div>
   </div>
 </footer>
 
+<script src="js/i18n.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
