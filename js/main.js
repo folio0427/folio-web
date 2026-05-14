@@ -18,18 +18,19 @@
     revealEls.forEach((el) => el.classList.add('visible'));
   }
 
-  // Nav: subtle deepen on scroll
+  // Nav: stays transparent over entire hero bg, opaque after leaving hero
   const nav = document.querySelector('.nav');
   if (nav) {
-    let last = 0;
     const update = () => {
       const y = window.scrollY;
-      if (y > 30) nav.style.background = 'rgba(248, 241, 228, 0.92)';
-      else nav.style.background = 'rgba(248, 241, 228, 0.7)';
-      last = y;
+      const heroH = window.innerHeight;
+      const overHero = y < heroH * 0.92;
+      nav.classList.toggle('nav-over-hero', overHero);
+      nav.classList.toggle('nav-scrolled', !overHero);
     };
     update();
     window.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+    window.addEventListener('resize', update, { passive: true });
   }
 
 // Book ribbon: organic sway — multi-freq idle + smoothed scroll velocity
