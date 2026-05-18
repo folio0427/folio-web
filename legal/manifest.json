@@ -3,7 +3,7 @@
   "_comment": "Folio legal docs manifest. App fetches this on launch to know latest version. Bump version + summary when ToS/Privacy changes.",
   "terms": {
     "version": "0.3",
-    "effective_date": "2026-12-31T00:00:00+08:00",
+    "effective_date": "2026-05-20T00:00:00+08:00",
     "change_type": "data_consent_required",
     "summary_zh": "v2.2.2：採 LINE 模式單一級「離開 Folio」+ 共讀便利貼牆機制",
     "summary_en": "v2.2.2: Single-tier 'Leave Folio' (LINE pattern) + co-reading sticky notes wall",
@@ -12,7 +12,7 @@
   },
   "privacy": {
     "version": "0.5",
-    "effective_date": "2026-12-31T00:00:00+08:00",
+    "effective_date": "2026-05-20T00:00:00+08:00",
     "change_type": "minor",
     "summary_zh": "v2.2.4：移除自設「寄送 email 確認」承諾（GDPR / 個資法非強制）；軟化單一刪除路徑限制、開放 email 申訴管道",
     "summary_en": "v2.2.4: Drop self-imposed 'confirmation email' promise (not required by GDPR / PDPA); soften sole-path wording and accept email-based deletion requests",

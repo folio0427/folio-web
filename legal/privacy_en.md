@@ -1,10 +1,8 @@
 # Folio Privacy Policy
 
-> **Version** v0.1 ｜ **Effective Date** TBD ｜ **Last Updated** 2026-05-09 ｜ **Status** Draft
+> **Version** v0.5 ｜ **Effective Date** 2026-05-20 ｜ **Last Updated** 2026-05-18 ｜ **Status** Final
 
-This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights.
-
-> **This is a draft outline.** Final policy will be reviewed by a Taiwan-licensed attorney (with GDPR consultant). For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
+This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
 ---
 
@@ -180,7 +178,7 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 
 - Inspect: know what we hold
 - Request copy: obtain a copy
-- Correct: amend (gender / DOB are locked, require review)
+- Correct: amend (gender / DOB are user-editable, with a 7-day cooldown after each change)
 - Restrict processing: opt out of specific uses (e.g., push)
 - Delete: delete account
 

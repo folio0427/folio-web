@@ -1,10 +1,8 @@
 # Folio Terms of Service
 
-> **Version** v0.1 ｜ **Effective Date** TBD ｜ **Last Updated** 2026-05-09 ｜ **Status** Draft
+> **Version** v0.3 ｜ **Effective Date** 2026-05-20 ｜ **Last Updated** 2026-05-18 ｜ **Status** Final
 
-Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service.
-
-> **This is a draft outline.** Final terms will be reviewed by a Taiwan-licensed attorney. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
+Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
 ---
 
@@ -34,8 +32,8 @@ Welcome to Folio. The service is currently provided by an independent developer 
 - Provide truthful, accurate, complete information
 - Safeguard your OAuth (Google / Apple) credentials
 - Account sharing, transfer, sale prohibited
-- Locked fields: gender, date of birth (require review to modify)
-- Cooldown fields: nickname (30 days), mode (7 days)
+- Cooldown fields: nickname (30 days), mode (7 days), gender (7 days), date of birth (7 days) — locked during the cooldown after each change
+- Any change to date of birth must still keep you 18 or older (system-enforced)
 
 ## 05　User Conduct
 
