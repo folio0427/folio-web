@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v0.5 ｜ **Effective Date** 2026-05-20 ｜ **Last Updated** 2026-05-18 ｜ **Status** Final
+> **Version** v0.6 ｜ **Effective Date** 2026-05-20 ｜ **Last Updated** 2026-05-20 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -25,6 +25,8 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Favorite book categories (max 5)
 - Personality answers (up to 3, optional)
 - Mode (Pure Book Friend / Open to Connection / Open)
+- Desired gender (only when your mode is "Open to Connection" or "Open")
+- Character styling (mascot appearance; not a real-life image)
 
 ### Generated through usage
 
@@ -32,7 +34,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Applications (title, progress, motivation, self-offer, note)
 - Chat messages (incl. canned, quotes, progress updates)
 - Reflections (25%, 100%, anytime)
-- Bookshelf (own books, collected quotes)
+- Bookshelf (own books, sticky notes)
 - Match records (partner, unlock time, end time)
 - Device info: OS version, app version, language, push token, device ID (de-identified)
 - IP address (security and fraud prevention)
@@ -40,7 +42,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 ### Not collected
 
-- Photos, avatars (not enabled in v1)
+- Real-life photos (no real-photo upload; character styling is a mascot appearance, not a real-life image)
 - Bank, credit card information
 - Precise GPS
 - Contacts
@@ -83,7 +85,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 - Nickname, mode badge, category preferences
 - Posts, applications, reflections
-- After matching: chat messages and bookshelf quotes (when actively cited)
+- After matching: chat messages and sticky-note content you cite
 
 ## 05　Cross-Border Transfer
 
@@ -101,31 +103,21 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 ### After account deletion
 
-- Personal data cleared within 30 days
+- Personal data is cleared immediately once you confirm "Leave Folio" (see "Account deletion" below)
 - Statutory retention (tax, criminal investigation) per applicable law
 
 ### Specific retention periods
 
-- 18+ verification hash: 1 year (prevent minor re-registration)
-- Violation / suspension records (de-identified): 5 years
-- Report records (incl. reported content): 1–3 years
+- Violation, report, and related enforcement records (incl. reported content): retained for community safety, abuse prevention, and legal defense; the link to your account is removed after you delete your account
 - IP / login logs: 6 months – 1 year
 - Payment records (future): 5–7 years (Commercial Accounting Act, Tax Collection Act)
 - Pending criminal investigation data: until resolution
 - Terms consent records (`user_tos_consents`): **5 years** (legal evidence; auto-purged on expiry). Records include the `doc_type`, version, timestamp, method of your acceptance, plus a **salted SHA-256 hash of your email** (salt kept server-side, never held by the client). The hash is **one-way** and cannot be reversed to recover your email. Purpose: (a) after you delete your account, allow us to verify in litigation whether an email you claim is yours ever consented on Folio; (b) without retaining the plaintext email. This constitutes pseudonymisation under GDPR Art. 4(5) and is lawful.
 
-### Bookshelf snapshots collected by others (Important)
-
-- Messages collected by others persist as snapshots in their bookshelf
-- **Snapshots are NOT auto-removed when you delete your account**
-- We replace the displayed nickname with "User has left"
-- Snapshots disappear only when the collector deletes them or their account
-- Publishing constitutes consent to this mechanism
-
 ### Chat messages
 
 - Retained until both parties delete the chatroom or both accounts
-- One-sided account deletion: messages retained, nickname replaced with "User has left"
+- One-sided account deletion: messages retained, author name replaced with "A book friend who left"
 
 ### Co-reading sticky notes (v2.2)
 
@@ -141,7 +133,7 @@ Choosing "Leave Folio" causes the platform to handle your data as follows:
 **Fully cleared**
 - Your Google / Apple sign-in link (auth.users record)
 - Nickname, avatar, gender, birthdate, preference categories
-- Your shelf, reviews, posts, pending applications
+- Your shelf (books and personal sticky notes), reflection share cards, posts, unprocessed applications
 - Push notification settings (push token)
 
 **Retained anonymously** (as a memento for your co-reading partners)
@@ -155,7 +147,7 @@ Choosing "Leave Folio" causes the platform to handle your data as follows:
 
 **Processing**: takes effect immediately after you confirm "Leave Folio"; your auth account and personal data are removed from our servers in the same operation.
 
-**Statutory retention (regardless of mode):**
+**Statutory retention:**
 - Terms-consent records (`user_tos_consents`) — **5 years** (incl. salted SHA-256 of email, non-reversible, auto-purged on expiry)
 - Messages relevant to ongoing legal disputes or fraud investigations
 - Anonymised data that cannot be traced to an individual

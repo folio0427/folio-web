@@ -11,6 +11,26 @@
 
 ---
 
+## terms v0.4 / privacy v0.6 — 2026-05-20
+
+**狀態**：草稿（pre-launch、生效日 2026-05-20）
+**文件**：terms_zh.md、terms_en.md、privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：minor（校正、章節移除、用語對齊；無新增蒐集個資、無新增第三方分享、無新增使用目的）
+**摘要**：
+
+- 移除「句子收藏 snapshot 機制」整節（privacy §06 / terms §06）— 該功能（將他人句子收藏進自己書房）於 app v2.3 已下線、`bookshelf_quotes` 資料表已隨 migration 移除、條款描述之資料流向已不存在。terms §06 改以「共讀內容於帳號刪除後之留存」如實描述便利貼 / 訊息之匿名保留。
+- 移除「18+ 驗證雜湊識別碼保留 1 年」（privacy §06 / terms §03）— app 未實作此雜湊；年齡驗證實際以註冊 DatePicker 下限 + DB trigger `trg_profiles_enforce_adult` 強制、不留存任何雜湊識別碼。
+- 帳戶刪除時程「30 日內」更正為「即時」（privacy §06、terms §11）— 對齊 edge function `delete_account` 之同步刪除（`auth.admin.deleteUser` + cascade）、並消除與 privacy「帳戶刪除」一節既有「即時生效」描述之內部矛盾。
+- 「違規 / 停權紀錄 5 年」「檢舉紀錄 1–3 年」兩條固定年限改為目的限制式描述（為社群安全 / 防濫用 / 法律抗辯保留、帳號刪除後移除與帳號之關聯）— app 目前無固定年限之自動清除排程、原數字無對應機制。
+- 書房用語「收藏的句子 / 書房句子」對齊現行資料模型改為「便利貼」（privacy §02 / §04）。
+- 匿名化顯示名稱統一為「已離開的書友」（privacy §06 聊天訊息段、terms §06）— 對齊 app 實際寫入字串。
+- 補列「想找的性別」「角色造型設定」為蒐集項目、釐清不蒐集者為「真人相片」（privacy §02）— 原文漏列 desired_gender 與 mascot avatar、且與「帳戶刪除」一節提及之頭像互相矛盾。
+- 帳號刪除入口路徑更正為「我」分頁 → 設定 → 離開 Folio（terms §11）。
+- 平台閒置終止由 12 個月對齊為 24 個月（terms §11）— 對齊後端 `purge_dormant_accounts` 函數預設值。
+- manifest：privacy 0.5 → 0.6；terms 0.3 → 0.4、change_type 由 `data_consent_required` 改 `minor`（本次為校正、放寬、用語對齊、不需阻擋式 re-consent）。
+
+---
+
 ## privacy v0.5 — 2026-05-11
 
 **狀態**：草稿（pre-launch、未生效）

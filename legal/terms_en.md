@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v0.3 ｜ **Effective Date** 2026-05-20 ｜ **Last Updated** 2026-05-18 ｜ **Status** Final
+> **Version** v0.4 ｜ **Effective Date** 2026-05-20 ｜ **Last Updated** 2026-05-20 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -25,7 +25,6 @@ Welcome to Folio. The service is currently provided by an independent developer 
 - Real date of birth must be provided at registration (DatePicker locked to 18+)
 - Underage discovery → immediate account termination + data deletion + no reinstatement
 - Guardians who discover minor usage may email us to request deletion (7 business days)
-- Hashed identifier retained 1 year post-rejection to prevent re-registration
 
 ## 04　Account & Profile
 
@@ -71,13 +70,12 @@ Welcome to Folio. The service is currently provided by an independent developer 
 - You grant us a non-exclusive, worldwide, royalty-free, sublicensable license
 - Limited to: service operation / platform infrastructure / de-identified analytics / 100% wrap-up pages you actively share
 
-### Snapshot Mechanism (Important)
+### Retention of co-reading content after account deletion (Important)
 
-- Messages you publish, if collected by others into their bookshelf, become snapshots in their bookshelf
-- **Even after you delete your account, collected snapshots are not automatically removed**
-- We replace the displayed nickname with "User has left"
+- Sticky notes and messages you write in a co-reading room are jointly produced by you and your reading partner
+- After you delete your account, this content remains, anonymised, on your reading partner's side, with the author shown as "A book friend who left"
 - By publishing, you consent to this mechanism
-- Snapshots disappear when the collector deletes them or deletes their own account
+- For detailed handling, see the "Account deletion" section of the Privacy Policy
 
 ### 100% Wrap-up Page Sharing
 
@@ -127,8 +125,8 @@ Welcome to Folio. The service is currently provided by an independent developer 
 
 ### User-initiated deletion
 
-- Anytime via "Me → Settings"
-- Personal data cleared within 30 days (statutory retention exempted)
+- Anytime via "Me" tab → Settings → Leave Folio
+- Personal data is cleared immediately upon confirmation (statutory retention exempted)
 
 ### Platform-initiated termination
 
@@ -136,7 +134,7 @@ Welcome to Folio. The service is currently provided by an independent developer 
 - Multiple legitimate complaints
 - Suspected illegality
 - 18+ verification failure
-- 12 consecutive months of inactivity
+- 24 consecutive months of inactivity
 - Service-wide shutdown
 
 ## 12　Service Changes
