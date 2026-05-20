@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v0.4 ｜ **Effective Date** 2026-05-20 ｜ **Last Updated** 2026-05-20 ｜ **Status** Final
+> **Version** v0.5 ｜ **Effective Date** 2026-05-21 ｜ **Last Updated** 2026-05-21 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -62,6 +62,26 @@ Welcome to Folio. The service is currently provided by an independent developer 
 
 - Warnings / feature limitations / temporary suspension / permanent termination
 - We reserve civil and criminal recourse
+
+### Suspension Notice & Appeal
+
+When your account is suspended (feature restrictions or full suspension):
+
+**Notice**
+- We will notify you both in-app and via your OAuth-linked email
+- The notice includes: suspension type (partial restriction / full), reason, and effective date
+
+**Appeal**
+- You may appeal within 14 days of receiving the notice
+- Channel: [folio0427@gmail.com](mailto:folio0427@gmail.com)
+- Required information: your Folio nickname, login email, and notice receipt time (if any)
+- We will respond within 7 business days
+
+**Prevention of repeat violations**
+- To prevent suspension evasion, when an account is suspended we record a one-way salted SHA-256 hash of the user's Google / Apple sign-in identifier
+- The record is retained for 5 years and is removed immediately upon unbanning
+- During this period, if you delete your Folio account and attempt to re-register with the same Google / Apple identity, the system will block registration and prompt you to contact support
+- The hash is non-reversible and we retain only the minimum required for matching
 
 ## 06　User-Generated Content (UGC)
 

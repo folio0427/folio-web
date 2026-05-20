@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v0.6 ｜ **Effective Date** 2026-05-20 ｜ **Last Updated** 2026-05-20 ｜ **Status** Final
+> **Version** v0.7 ｜ **Effective Date** 2026-05-21 ｜ **Last Updated** 2026-05-21 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -109,6 +109,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 ### Specific retention periods
 
 - Violation, report, and related enforcement records (incl. reported content): retained for community safety, abuse prevention, and legal defense; the link to your account is removed after you delete your account
+- Suspension-evasion hash (one-way salted SHA-256 of the OAuth sign-in identifier, used only to prevent re-registration evasion): auto-deleted 5 years after suspension; removed immediately upon unbanning. See "Suspension Notice & Appeal" in the Terms of Service for details
 - IP / login logs: 6 months – 1 year
 - Payment records (future): 5–7 years (Commercial Accounting Act, Tax Collection Act)
 - Pending criminal investigation data: until resolution

@@ -2,20 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "_comment": "Folio legal docs manifest. App fetches this on launch to know latest version. Bump version + summary when ToS/Privacy changes.",
   "terms": {
-    "version": "0.4",
-    "effective_date": "2026-05-20T00:00:00+08:00",
-    "change_type": "minor",
-    "summary_zh": "v2.5 校正：移除已下線的句子收藏 snapshot 機制與 18+ 雜湊保留條目；刪除即時生效；閒置終止對齊 24 個月",
-    "summary_en": "v2.5 corrections: removed retired snapshot mechanism and 18+ hash retention; deletion takes effect immediately; dormancy termination aligned to 24 months",
+    "version": "0.5",
+    "effective_date": "2026-05-21T00:00:00+08:00",
+    "change_type": "data_consent_required",
+    "summary_zh": "v2.5：新增「停權通知與申訴」段（DSA 對齊）、揭露 OAuth 識別碼雜湊保留機制（防止規避停權重複註冊、5 年）",
+    "summary_en": "v2.5: Added 'Suspension Notice & Appeal' section (DSA-aligned), disclosing OAuth identifier hash retention for ban-evasion prevention (5 years)",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "0.6",
-    "effective_date": "2026-05-20T00:00:00+08:00",
-    "change_type": "minor",
-    "summary_zh": "v2.5 校正：刪除即時生效；移除已下線的句子收藏 snapshot 章節與 18+ 雜湊保留；檢舉/停權保留改目的限制式描述",
-    "summary_en": "v2.5 corrections: deletion takes effect immediately; removed retired bookshelf-snapshot section and 18+ hash retention; report/suspension retention reworded to purpose-limited",
+    "version": "0.7",
+    "effective_date": "2026-05-21T00:00:00+08:00",
+    "change_type": "data_consent_required",
+    "summary_zh": "v2.5：保留期限清單新增「停權雜湊識別碼」條目（與條款新章對應、5 年、解 ban 即時移除）",
+    "summary_en": "v2.5: Added 'suspension-evasion hash' retention entry to the retention list (mirrors new Terms section, 5 years, removed on unban)",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }

@@ -11,6 +11,21 @@
 
 ---
 
+## terms v0.5 / privacy v0.7 — 2026-05-21
+
+**狀態**：草稿（pre-launch、生效日 2026-05-21）
+**文件**：terms_zh.md、terms_en.md、privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：data_consent_required（新增處理目的：停權規避防護之 OAuth 識別碼雜湊保留）
+**摘要**：
+
+- Terms §05 新增「停權通知與申訴」子節 — 對齊 GDPR / DSA Art. 17（statement of reasons）+ Art. 20（內部申訴機制）：明訂停權通知方式（app 內 + email）、申訴管道（folio0427@gmail.com）、14 日申訴期、7 工作天回覆時程，並完整揭露**重複違規之 OAuth 識別碼雜湊保留機制**（salted SHA-256、5 年、解 ban 即時移除、雜湊不可反推、最小化原則）。
+- Privacy §06「特定資料之保留期間」新增「停權雜湊識別碼」條目，與 Terms 新章對應；說明用途、保留期限、刪除時機。
+- manifest：terms 0.4 → 0.5、privacy 0.6 → 0.7；兩者皆 `change_type=data_consent_required` — 因為新增了「停權規避防護」這個新的處理目的，依政策 §11「新增收集個資 / 新增第三方分享 / 改變使用目的」分類，現有用戶下次開 app 將被 LegalGateGuard 強制阻擋式 modal 重新勾選同意（pre-launch 階段無實際用戶受影響）。
+- 法律依據：GDPR Art. 6(1)(f) legitimate interest（防止社群濫用、Recital 47 防詐欺）+ Art. 5(1)(c) 資料最小化（只存雜湊、不存明文 sub）+ Art. 5(1)(e) 儲存限制（5 年期限 + 自動清除 cron）+ Art. 13 透明度（先揭露、後處理）；台灣個資法 §8 告知義務 + §11 期限屆滿應刪除。
+- 工程順序遵循「揭露在先、處理在後」原則：本次先 push 條款上線、待 GitHub Pages 重建後、再做後端 banned_oauth_identities 表 + edge functions + 註冊時 check 的程式實作（避免條款未告知期間偷偷處理用戶資料）。
+
+---
+
 ## terms v0.4 / privacy v0.6 — 2026-05-20
 
 **狀態**：草稿（pre-launch、生效日 2026-05-20）
