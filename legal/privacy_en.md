@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v0.8 ｜ **Effective Date** 2026-05-21 ｜ **Last Updated** 2026-05-21 ｜ **Status** Final
+> **Version** v1.0 ｜ **Effective Date** 2026-05-22 ｜ **Last Updated** 2026-05-22 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -65,7 +65,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 ### Service providers (data processors)
 
-- **Supabase Inc.** (database, storage, auth, Realtime) — US / EU hosts
+- **Supabase Inc.** (database, storage, auth, Realtime) — Singapore host
 - **Firebase Cloud Messaging (FCM) by Google LLC** (push) — global edge
 - **Apple Push Notification service (APNs)** (iOS push) — global edge
 - **Google LLC** (Google OAuth)
@@ -91,7 +91,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 ## 05　Cross-Border Transfer
 
-- Supabase hosts may be in US / EU; FCM, APNs, and Firebase Analytics are global
+- The Supabase host is in Singapore; FCM, APNs, and Firebase Analytics are global
 - Transfer protections: EU Standard Contractual Clauses + Supabase SOC 2 Type II
 - Transit encryption: TLS 1.2+
 - At-rest encryption: AES-256
@@ -122,14 +122,14 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Retained until both parties delete the chatroom or both accounts
 - One-sided account deletion: messages retained, author name replaced with "A book friend who left"
 
-### Co-reading sticky notes (v2.2)
+### Co-reading sticky notes
 
 - Sticky notes you write inside a co-reading room (25% milestone, 100% milestone, free notes) appear on your reading partner's "notes wall" as a memento of your shared reading.
 - You may also write purely-personal notes in your shelf (not associated with any co-reading partner).
 - The other party cannot save your notes into their own shelf; they can only view them on your shared wall.
 - They can select and copy text out, but plain text copied this way is no longer governed by Folio.
 
-### Account deletion (v2.2.2 — "Leave Folio")
+### Account deletion ("Leave Folio")
 
 Choosing "Leave Folio" causes the platform to handle your data as follows:
 
@@ -241,7 +241,7 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 
 ### Change classification
 
-- **Minor** (typos, restructuring): version bump, no notice
+- **Minor** (typos, restructuring): version bump + L4 blocking modal re-consent
 - **Material** (liability, jurisdiction, termination): all L1–L4 channels
 - **New data collection / third-party sharing / purpose change**: forced modal re-consent, feature-limited if no consent, no buffer
 

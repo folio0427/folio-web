@@ -11,6 +11,22 @@
 
 ---
 
+## terms v1.0 / privacy v1.0 — 2026-05-22
+
+**狀態**：草稿（pre-launch、生效日 2026-05-22）
+**文件**：terms_zh.md、terms_en.md、privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：minor（事實校正 + 文件用語清理 + 通知分級對齊；無新增蒐集個資、無新增第三方分享、無新增使用目的）
+**摘要**：
+
+- **Privacy §04 / §05**：更正 Supabase 主機所在地 —— 原誤寫「美國 / 歐盟」、實際為**新加坡**（Supabase 專案 region `ap-southeast-1`）。資料儲存地未變動、僅文件描述對齊事實；屬據實揭露之校正（個資法 §8、GDPR Art. 13）。§05「可能位於」改為確定之「位於新加坡」。
+- **Privacy §06**：移除兩處章節標題內的 app 內部產品版號標註 —「共讀便利貼（v2.2 新增）」→「共讀便利貼」、「帳戶刪除（v2.2.2 —「離開 Folio」）」→「帳戶刪除（「離開 Folio」）」。app 產品版號（v2.2 / v2.2.2）對讀者無意義、不應出現於法律文件；法律文件之版本以文件標頭自身版號為準。
+- **Terms §10**：「v1 提供之全部功能均為免費」之「v1」改為「目前」—— 同上、清除產品版號用語。
+- **Privacy §11 / Terms §15 變更分級**：「非重大變更：版本號 bump、不另行通知」改為「非重大變更：版本號 bump、仍以阻擋式 modal 重新取得同意」。對齊產品決策 —— 任何條款變更（含非重大）皆透過阻擋式 modal 取得用戶明示再同意、不再有「不另行通知」之 tier。
+- **版本**：terms 0.5 → 1.0、privacy 0.9 → 1.0。privacy 文件標頭先前誤植為 v0.8（commit `e8c8602`〔privacy v0.9〕漏更新標頭）、本次一併校正。1.0 作為 pre-launch 定稿版本里程碑。
+- 對應：manifest.json 同步；Supabase tos_versions seed terms 1.0 / privacy 1.0（後續由 sync_tos_versions workflow 自動維護）。
+
+---
+
 ## privacy v0.9 — 2026-05-21
 
 **狀態**：草稿（pre-launch、生效日 2026-05-21）

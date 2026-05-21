@@ -1,21 +1,21 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "_comment": "Folio legal docs manifest. App fetches this on launch to know latest version. Bump version + summary when ToS/Privacy changes.",
+  "_comment": "Folio legal docs manifest. Source of truth for the latest ToS / Privacy version: a GitHub Action syncs this into Supabase tos_versions (which the app reads), and it is also bundled into the app as an offline fallback. Bump version + summary when ToS / Privacy changes.",
   "terms": {
-    "version": "0.5",
-    "effective_date": "2026-05-21T00:00:00+08:00",
-    "change_type": "data_consent_required",
-    "summary_zh": "v2.5：新增「停權通知與申訴」段（DSA 對齊）、揭露 OAuth 識別碼雜湊保留機制（防止規避停權重複註冊、5 年）",
-    "summary_en": "v2.5: Added 'Suspension Notice & Appeal' section (DSA-aligned), disclosing OAuth identifier hash retention for ban-evasion prevention (5 years)",
+    "version": "1.0",
+    "effective_date": "2026-05-22T00:00:00+08:00",
+    "change_type": "minor",
+    "summary_zh": "v1.0：§10 清除產品版號用語；§15 變更分級調整為任何變更皆以阻擋式 modal 重新取得同意。",
+    "summary_en": "v1.0: §10 removed product-version wording; §15 change classification updated so any change requires re-consent via the blocking modal.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "0.9",
-    "effective_date": "2026-05-21T00:00:00+08:00",
+    "version": "1.0",
+    "effective_date": "2026-05-22T00:00:00+08:00",
     "change_type": "minor",
-    "summary_zh": "v2.5.2：§04 修正 — Firebase Analytics 不再接收性別、亦不再以帳號識別碼綁定；分析資料僅關聯裝置層級 App 實例 ID。對應 app 端移除 gender 上傳與 setUserId。",
-    "summary_en": "v2.5.2: §04 corrected — Firebase Analytics no longer receives gender and is no longer bound by an account identifier; analytics data is associated only with the device-level App Instance ID. Matches app-side removal of gender upload and setUserId.",
+    "summary_zh": "v1.0：§04／§05 更正 Supabase 主機所在地為新加坡；移除文件內 app 產品版號標註；§11 變更分級調整為任何變更皆以阻擋式 modal 重新取得同意。",
+    "summary_en": "v1.0: §04/§05 corrected the Supabase host location to Singapore; removed app product-version tags from the document; §11 change classification updated so any change requires re-consent via the blocking modal.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }

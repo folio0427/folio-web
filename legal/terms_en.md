@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v0.5 ｜ **Effective Date** 2026-05-21 ｜ **Last Updated** 2026-05-21 ｜ **Status** Final
+> **Version** v1.0 ｜ **Effective Date** 2026-05-22 ｜ **Last Updated** 2026-05-22 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -137,7 +137,7 @@ When your account is suspended (feature restrictions or full suspension):
 
 ## 10　Paid Features
 
-- All v1 features are free
+- All current features are free
 - Paid features may be introduced later, with separate notice
 - Free features will not be retroactively charged
 
@@ -178,7 +178,7 @@ When your account is suspended (feature restrictions or full suspension):
 
 ## 15　Term Modifications
 
-- **Minor edits** (typos, restructuring): version bump, no notice
+- **Minor edits** (typos, restructuring): version bump + blocking modal re-consent
 - **Material changes** (liability, jurisdiction, termination): in-app announcement + push + email + blocking modal; continued use = consent
 - **New data collection / new third-party sharing / changed purposes**: forced modal re-consent; no checkbox = feature limited
 
