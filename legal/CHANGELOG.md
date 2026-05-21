@@ -11,6 +11,26 @@
 
 ---
 
+## privacy v0.8 — 2026-05-21
+
+**狀態**：草稿（pre-launch、生效日 2026-05-21）
+**文件**：privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：data_consent_required（新增第三方資料處理者：Google Analytics for Firebase）
+**摘要**：
+
+- §04「服務提供者（資料處理者）」新增 **Google Analytics for Firebase（Firebase Analytics）by Google LLC**。app 自 `firebase_analytics` SDK（`app/lib/services/analytics.dart`）起即蒐集用量數據（DAU、v2.1 進度閘 funnel 七事件）；SDK 已在 production build 內、先前條款未揭露 → 本次為**揭露補正**（disclosure catch-up）。揭露 Google 透過此服務收集之資料類型（App 實例 ID、概略位置、App 生命週期與產品互動事件），並揭露 Folio 額外以 `setUserId` / `setUserProperty` 傳送之分析維度（帳號識別碼、性別、年齡、心態）。
+- §02「收集之個人資料」：設備資訊補列 Firebase Analytics 之 App 實例 ID；新增「概略位置（國家 / 城市層級、由遮罩 IP 推得）」為蒐集項目；操作日誌註明部分經 Firebase Analytics 互動事件收集。移除「裝置 ID（去識別）」措辭 — App 實例 ID 與帳號識別碼經 `setUserId` 關聯、屬 pseudonymous 而非 de-identified。
+- §03「收集目的」：「服務改進（去識別化分析）」更正為「服務改進與用量分析（DAU、使用流程）」 — Firebase Analytics 為 pseudonymous，原「去識別化」措辭不再精確。
+- §05「跨境傳輸」：節點清單補列 Firebase Analytics。
+- §08「Cookie 與類似技術」：「不使用第三方 cookie 追蹤」改為「不使用瀏覽器第三方 cookie 追蹤」並補述 Firebase Analytics 以 App 實例 ID（非 cookie）運作；「不向第三方廣告商提供識別碼」改為明確界定為 Folio 自身行為（未嵌廣告 SDK、App 內無廣告、不為廣告投放提供識別碼）。
+- manifest：privacy 0.7 → 0.8、change_type=`data_consent_required` — 依政策 §11「新增第三方分享」分類，現有用戶下次開 app 將被 LegalGateGuard 強制阻擋式 modal 重新勾選同意（pre-launch 階段無實際用戶受影響）。terms 不變（維持 0.5）。
+- 法律依據：台灣個資法 §8 告知義務（第三方處理者揭露）；GDPR Art. 13(1)(e) 揭露 recipients、Art. 44–46 跨境傳輸、Art. 5(1)(a) 透明性。注意：本次與 v0.7「揭露在先、處理在後」相反 — Firebase Analytics SDK 已在 app 內運行、屬既成處理之事後補揭，應儘速上線以縮短未揭露期間。
+- 對應 supabase migration：`20260521210000_v25_tos_versions_privacy_v08.sql`（tos_versions 補 privacy 0.8 active row、供 record_consent FK linkage；註：privacy 0.6 / 0.7 從未 seed 進 tos_versions，屬既有 drift、本次不回填）。
+- 待辦（商店合規、非條款本身）：因新增 Coarse Location + Device ID（App Instance ID）+ Product Interaction 揭露，需同步更新 App Store Connect「App 隱私」問卷與 Google Play「資料安全」表單；gender / age 作為 analytics 維度亦須於問卷反映。
+- 待確認（工程）：Android `AndroidManifest.xml` 未以 `tools:node="remove"` 移除 Firebase Analytics 合併進來的 `com.google.android.gms.permission.AD_ID`，且 Firebase 專案未確認關閉 Google signals / 廣告個人化；若要讓 §08「不為廣告投放提供識別碼」之主張完全成立，建議移除 AD_ID 權限並於 Firebase Console 關閉廣告個人化訊號。
+
+---
+
 ## terms v0.5 / privacy v0.7 — 2026-05-21
 
 **狀態**：草稿（pre-launch、生效日 2026-05-21）

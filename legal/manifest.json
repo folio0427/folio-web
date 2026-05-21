@@ -11,11 +11,11 @@
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "0.7",
+    "version": "0.8",
     "effective_date": "2026-05-21T00:00:00+08:00",
     "change_type": "data_consent_required",
-    "summary_zh": "v2.5：保留期限清單新增「停權雜湊識別碼」條目（與條款新章對應、5 年、解 ban 即時移除）",
-    "summary_en": "v2.5: Added 'suspension-evasion hash' retention entry to the retention list (mirrors new Terms section, 5 years, removed on unban)",
+    "summary_zh": "v2.5.1：第三方處理者清單新增 Google Analytics for Firebase（用量分析 DAU / funnel）；揭露其收集 App 實例 ID、概略位置、App 互動事件，及 Folio 傳送之性別 / 年齡 / 心態分析維度",
+    "summary_en": "v2.5.1: Added Google Analytics for Firebase to the third-party processor list (usage analytics, DAU / funnel); disclosed its collection of App Instance ID, coarse location, app-interaction events, plus the gender / age / mode dimensions Folio sends",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }

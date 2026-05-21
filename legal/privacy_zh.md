@@ -1,6 +1,6 @@
 # Folio 隱私權政策
 
-> **版本** v0.7 ｜ **生效日** 2026-05-21 ｜ **最後更新** 2026-05-21 ｜ **狀態** 正式
+> **版本** v0.8 ｜ **生效日** 2026-05-21 ｜ **最後更新** 2026-05-21 ｜ **狀態** 正式
 
 本政策說明 Folio 收集、使用、儲存、分享您個人資料之方式、以及您之權利。如有疑問請來信 [folio0427@gmail.com](mailto:folio0427@gmail.com)。
 
@@ -36,9 +36,10 @@
 - 心得（25%、100%、隨時）
 - 書房內容（自己的書、便利貼）
 - 配對紀錄（配對對象、解鎖時間、結束時間）
-- 設備資訊：作業系統版本、App 版本、語言設定、推播 token、裝置 ID（去識別）
-- IP 位址（用於安全與防詐）
-- 操作日誌（登入時間、功能點擊統計）
+- 設備資訊：作業系統版本、App 版本、語言設定、推播 token、裝置與 App 實例識別碼（含 Firebase Analytics 之 App Instance ID）
+- IP 位址（用於安全與防詐；Firebase Analytics 會將其遮罩後用以推算概略位置）
+- 概略位置：國家 / 城市層級（由遮罩後 IP 推得、非精準定位、來自 Firebase Analytics）
+- 操作日誌（登入時間、功能點擊；部分透過 Firebase Analytics 之 App 互動事件收集）
 
 ### 不收集
 
@@ -54,7 +55,7 @@
 - 帳戶建立、登入、維運
 - 用戶配對、媒合演算法
 - 18+ 年齡驗證
-- 服務改進（去識別化分析）
+- 服務改進與用量分析（DAU、使用流程）
 - 詐欺、濫用偵測
 - 客服處理
 - 法令義務遵循
@@ -69,6 +70,7 @@
 - **Apple Push Notification service (APNs) by Apple Inc.**（iOS 推播）— 全球節點
 - **Google LLC（OAuth）**（Google 登入）
 - **Apple Inc.（OAuth）**（Apple 登入）
+- **Google Analytics for Firebase（Firebase Analytics）by Google LLC**（用量分析：DAU、使用流程 funnel）— 全球節點。Google 透過此服務收集：App 實例 ID（App Instance ID、裝置層級識別碼）、概略位置（由遮罩後 IP 推得、非精準定位）、App 生命週期與產品互動事件。Folio 另以您的帳號識別碼與部分個人屬性（性別、年齡、心態）作為分析維度（用於 cohort 切分）。
 
 ### 法定揭露
 
@@ -89,7 +91,7 @@
 
 ## 05　跨境傳輸
 
-- Supabase 主機可能位於美國 / 歐盟、FCM 與 APNs 為全球節點
+- Supabase 主機可能位於美國 / 歐盟、FCM、APNs 與 Firebase Analytics 為全球節點
 - 傳輸保護：歐盟標準契約條款（SCCs）+ Supabase SOC 2 Type II
 - 傳輸加密：TLS 1.2+
 - 儲存加密：AES-256 at rest
@@ -199,8 +201,9 @@ Apple 提供您於「設定 → Apple ID → 密碼與安全性 → 使用 Apple
 - Folio 為原生應用程式、主要使用本地儲存（SharedPreferences / Keychain）
 - 儲存登入 token、用戶偏好（語言、模式設定）
 - Session Token：Supabase JWT
-- 不使用第三方 cookie 追蹤
-- 不向第三方廣告商提供識別碼
+- 不使用瀏覽器第三方 cookie 追蹤
+- 用量分析（Firebase Analytics、見 §04）會在您的裝置產生「App 實例 ID」作為分析識別碼、並收集概略位置與 App 互動事件
+- Folio 未嵌入第三方廣告 SDK、App 內不顯示廣告、不為廣告投放目的向廣告商提供您的識別碼
 
 ## 09　兒少保護
 

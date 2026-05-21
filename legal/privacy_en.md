@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v0.7 ｜ **Effective Date** 2026-05-21 ｜ **Last Updated** 2026-05-21 ｜ **Status** Final
+> **Version** v0.8 ｜ **Effective Date** 2026-05-21 ｜ **Last Updated** 2026-05-21 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -36,9 +36,10 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Reflections (25%, 100%, anytime)
 - Bookshelf (own books, sticky notes)
 - Match records (partner, unlock time, end time)
-- Device info: OS version, app version, language, push token, device ID (de-identified)
-- IP address (security and fraud prevention)
-- Activity logs (login time, click stats)
+- Device info: OS version, app version, language, push token, device and app-instance identifiers (incl. the Firebase Analytics App Instance ID)
+- IP address (security and fraud prevention; Firebase Analytics masks it to derive coarse location)
+- Coarse location: country / city level (derived from a masked IP, not precise positioning; via Firebase Analytics)
+- Activity logs (login time, clicks; partly collected via Firebase Analytics app-interaction events)
 
 ### Not collected
 
@@ -54,7 +55,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Account creation, login, maintenance
 - Matching algorithm
 - 18+ verification
-- Service improvement (de-identified analytics)
+- Service improvement and usage analytics (DAU, funnel)
 - Fraud and abuse detection
 - Customer service
 - Legal compliance
@@ -69,6 +70,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - **Apple Push Notification service (APNs)** (iOS push) — global edge
 - **Google LLC** (Google OAuth)
 - **Apple Inc.** (Apple OAuth)
+- **Google Analytics for Firebase (Firebase Analytics) by Google LLC** (usage analytics: DAU, funnel) — global edge. Through this service Google collects: App Instance ID (a device-level identifier), coarse location (derived from a masked IP, not precise positioning), and app-lifecycle / product-interaction events. Folio additionally sends your account identifier and certain profile attributes (gender, age, mode) as analytics dimensions (for cohort analysis).
 
 ### Legal disclosure
 
@@ -89,7 +91,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 ## 05　Cross-Border Transfer
 
-- Supabase hosts may be in US / EU; FCM / APNs are global
+- Supabase hosts may be in US / EU; FCM, APNs, and Firebase Analytics are global
 - Transfer protections: EU Standard Contractual Clauses + Supabase SOC 2 Type II
 - Transit encryption: TLS 1.2+
 - At-rest encryption: AES-256
@@ -199,8 +201,9 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 - Folio is a native app; primarily uses local storage (SharedPreferences / Keychain)
 - Stores login tokens, user preferences (language, mode)
 - Session token: Supabase JWT
-- No third-party cookie tracking
-- No identifier sharing with ad networks
+- No third-party browser cookie tracking
+- Usage analytics (Firebase Analytics, see §04) generate an "App Instance ID" on your device as an analytics identifier, and collect coarse location and app-interaction events
+- Folio embeds no third-party advertising SDK, shows no in-app ads, and does not provide your identifiers to advertisers for ad targeting
 
 ## 09　Children's Privacy
 
