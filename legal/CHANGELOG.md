@@ -11,6 +11,20 @@
 
 ---
 
+## terms v1.1 / privacy v1.1 — 2026-05-22
+
+**狀態**：草稿（pre-launch、生效日 2026-05-22）
+**文件**：terms_zh.md、terms_en.md、privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：minor（純版本號提升、無實質條文變更）
+**摘要**：
+
+- terms 1.0 → 1.1、privacy 1.0 → 1.1。本次為**純版本號提升**：四份條款文件（terms_zh / terms_en / privacy_zh / privacy_en）之實質條文內容**未作任何變更**。
+- 文件標頭版號與 manifest.json 版號同步更新至 v1.1、兩者維持一致（沿續 v1.0 對標頭 / manifest 版號 drift 之校正）。
+- manifest：terms / privacy change_type 皆 minor、生效日維持 2026-05-22。依現行政策 §11 / §15 分級，任何變更（含 minor）皆以阻擋式 modal 重新取得同意 — 已同意 v1.0 之用戶下次開 app 將被 LegalGateGuard 重新取得 v1.1 同意。
+- 對應 Supabase tos_versions：由 sync_tos_versions workflow 於 manifest.json push 後自動補 terms 1.1 / privacy 1.1 active row。
+
+---
+
 ## terms v1.0 / privacy v1.0 — 2026-05-22
 
 **狀態**：草稿（pre-launch、生效日 2026-05-22）

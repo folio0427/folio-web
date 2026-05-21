@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v1.0 ｜ **Effective Date** 2026-05-22 ｜ **Last Updated** 2026-05-22 ｜ **Status** Final
+> **Version** v1.1 ｜ **Effective Date** 2026-05-22 ｜ **Last Updated** 2026-05-22 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 

@@ -2,20 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "_comment": "Folio legal docs manifest. Source of truth for the latest ToS / Privacy version: a GitHub Action syncs this into Supabase tos_versions (which the app reads), and it is also bundled into the app as an offline fallback. Bump version + summary when ToS / Privacy changes.",
   "terms": {
-    "version": "1.0",
+    "version": "1.1",
     "effective_date": "2026-05-22T00:00:00+08:00",
     "change_type": "minor",
-    "summary_zh": "v1.0：§10 清除產品版號用語；§15 變更分級調整為任何變更皆以阻擋式 modal 重新取得同意。",
-    "summary_en": "v1.0: §10 removed product-version wording; §15 change classification updated so any change requires re-consent via the blocking modal.",
+    "summary_zh": "v1.1：版本號提升至 1.1；服務條款實質條文內容未變更。",
+    "summary_en": "v1.1: Version bumped to 1.1; no change to the substantive Terms of Service content.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "1.0",
+    "version": "1.1",
     "effective_date": "2026-05-22T00:00:00+08:00",
     "change_type": "minor",
-    "summary_zh": "v1.0：§04／§05 更正 Supabase 主機所在地為新加坡；移除文件內 app 產品版號標註；§11 變更分級調整為任何變更皆以阻擋式 modal 重新取得同意。",
-    "summary_en": "v1.0: §04/§05 corrected the Supabase host location to Singapore; removed app product-version tags from the document; §11 change classification updated so any change requires re-consent via the blocking modal.",
+    "summary_zh": "v1.1：版本號提升至 1.1；隱私權政策實質條文內容未變更。",
+    "summary_en": "v1.1: Version bumped to 1.1; no change to the substantive Privacy Policy content.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }
