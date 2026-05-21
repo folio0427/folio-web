@@ -1,0 +1,40 @@
+name: Sync tos_versions to Supabase
+
+# legal/manifest.json 一變動 → 把它同步進 Supabase tos_versions。
+# Folio app 的 LegalGate._resolveLatest 讀 tos_versions 當「最新條款版號」的
+# source of truth，所以這個 workflow 讓「改 manifest 就好、Supabase 自動跟上」。
+#
+# 需要的 repo secret（Settings → Secrets and variables → Actions → New repository secret）：
+#   TOS_SYNC_SECRET — 與 Supabase Vault 的 tos_sync_secret 同值。
+#     取值：Supabase SQL editor 執行
+#       SELECT decrypted_secret FROM vault.decrypted_secrets WHERE name='tos_sync_secret';
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'legal/manifest.json'
+  workflow_dispatch: {}   # 允許手動補跑
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate manifest.json
+        run: jq empty legal/manifest.json
+
+      - name: Push manifest to sync_tos_versions edge function
+        env:
+          TOS_SYNC_SECRET: ${{ secrets.TOS_SYNC_SECRET }}
+        run: |
+          code=$(curl -sS -o /tmp/resp.json -w '%{http_code}' \
+            -X POST 'https://icceblokyandhpyobjwc.supabase.co/functions/v1/sync_tos_versions' \
+            -H 'Content-Type: application/json' \
+            -H "X-Sync-Secret: $TOS_SYNC_SECRET" \
+            --data @legal/manifest.json)
+          echo "HTTP $code"
+          cat /tmp/resp.json; echo
+          [ "$code" = "200" ] || { echo "::error::sync_tos_versions failed (HTTP $code)"; exit 1; }
