@@ -11,11 +11,11 @@
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "0.8",
+    "version": "0.9",
     "effective_date": "2026-05-21T00:00:00+08:00",
-    "change_type": "data_consent_required",
-    "summary_zh": "v2.5.1：第三方處理者清單新增 Google Analytics for Firebase（用量分析 DAU / funnel）；揭露其收集 App 實例 ID、概略位置、App 互動事件，及 Folio 傳送之性別 / 年齡 / 心態分析維度",
-    "summary_en": "v2.5.1: Added Google Analytics for Firebase to the third-party processor list (usage analytics, DAU / funnel); disclosed its collection of App Instance ID, coarse location, app-interaction events, plus the gender / age / mode dimensions Folio sends",
+    "change_type": "minor",
+    "summary_zh": "v2.5.2：§04 修正 — Firebase Analytics 不再接收性別、亦不再以帳號識別碼綁定；分析資料僅關聯裝置層級 App 實例 ID。對應 app 端移除 gender 上傳與 setUserId。",
+    "summary_en": "v2.5.2: §04 corrected — Firebase Analytics no longer receives gender and is no longer bound by an account identifier; analytics data is associated only with the device-level App Instance ID. Matches app-side removal of gender upload and setUserId.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }

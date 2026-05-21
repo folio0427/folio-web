@@ -70,7 +70,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - **Apple Push Notification service (APNs)** (iOS push) — global edge
 - **Google LLC** (Google OAuth)
 - **Apple Inc.** (Apple OAuth)
-- **Google Analytics for Firebase (Firebase Analytics) by Google LLC** (usage analytics: DAU, funnel) — global edge. Through this service Google collects: App Instance ID (a device-level identifier), coarse location (derived from a masked IP, not precise positioning), and app-lifecycle / product-interaction events. Folio additionally sends your account identifier and certain profile attributes (gender, age, mode) as analytics dimensions (for cohort analysis).
+- **Google Analytics for Firebase (Firebase Analytics) by Google LLC** (usage analytics: DAU, funnel) — global edge. Through this service Google collects: App Instance ID (a device-level identifier), coarse location (derived from a masked IP, not precise positioning), and app-lifecycle / product-interaction events. Folio attaches a small set of non-sensitive attributes (age, mode) to certain feature events as analytics dimensions (for cohort analysis). Analytics data from this service is associated only with the device-level App Instance ID and is **not** linked to your Folio account identifier; Folio does **not** send sensitive personal data such as gender to this service.
 
 ### Legal disclosure
 

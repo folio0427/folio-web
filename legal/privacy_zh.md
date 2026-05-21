@@ -70,7 +70,7 @@
 - **Apple Push Notification service (APNs) by Apple Inc.**（iOS 推播）— 全球節點
 - **Google LLC（OAuth）**（Google 登入）
 - **Apple Inc.（OAuth）**（Apple 登入）
-- **Google Analytics for Firebase（Firebase Analytics）by Google LLC**（用量分析：DAU、使用流程 funnel）— 全球節點。Google 透過此服務收集：App 實例 ID（App Instance ID、裝置層級識別碼）、概略位置（由遮罩後 IP 推得、非精準定位）、App 生命週期與產品互動事件。Folio 另以您的帳號識別碼與部分個人屬性（性別、年齡、心態）作為分析維度（用於 cohort 切分）。
+- **Google Analytics for Firebase（Firebase Analytics）by Google LLC**（用量分析：DAU、使用流程 funnel）— 全球節點。Google 透過此服務收集：App 實例 ID（App Instance ID、裝置層級識別碼）、概略位置（由遮罩後 IP 推得、非精準定位）、App 生命週期與產品互動事件。Folio 於部分功能事件附帶少量非敏感屬性（年齡、抱持心態）作為分析維度（用於 cohort 切分）。此服務之分析資料僅關聯至裝置層級的 App 實例 ID、**不**綁定您的 Folio 帳號識別碼；Folio **不**將性別等敏感個人資料傳送至此服務。
 
 ### 法定揭露
 

@@ -11,6 +11,29 @@
 
 ---
 
+## privacy v0.9 — 2026-05-21
+
+**狀態**：草稿（pre-launch、生效日 2026-05-21）
+**文件**：privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：minor（資料處理「減少」：移除傳送項目，非新增蒐集 / 分享 / 目的）
+**摘要**：
+
+- 接續 v0.8（commit `0a0e804`，揭露 Firebase Analytics 為第三方處理者）。v0.8 §04 揭露 Folio 以 `setUserId` 傳送帳號識別碼、並以 user property / event param 傳送性別 / 年齡 / 心態作為分析維度。本次將 app 端對應行為**收斂**、並同步修正 §04 使措辭與新行為一致。
+- App 端對應變更（`app/lib/`、`app/android/`；app repo 另有進行中重構，本次變更未隨此 commit 進 app repo）：
+  - **移除 `gender` 傳送** — `setUserProperty('gender')` ×3（main.dart 冷啟動 / auth 事件、confirm_screen.dart 註冊）+ `register_complete` 事件之 `gender` 參數（analytics.dart `registerComplete` 簽章）。理由：性別屬敏感個資；Google Analytics 條款禁止上傳可識別 / 敏感資料，性別配合帳號識別碼上傳尤甚。性別分布分析改以 Supabase `profiles` 表第一方 SQL 進行、不出本平台系統。
+  - **移除 `setUserId`** — analytics 不再以 Folio 帳號識別碼綁定，改為僅關聯 Firebase 裝置層級 App 實例 ID（由帳號層級 identity-linked 降為裝置層級 pseudonymous）。`age` / `stance` 仍作為 `register_complete` 等 funnel 事件之參數保留 — 非敏感、非 GA 禁類、cohort 分析所需。
+  - **`AndroidManifest.xml`** — 以 `tools:node="remove"` 移除 `firebase_analytics` 自動合併進來的 `com.google.android.gms.permission.AD_ID`（廣告 ID）權限，使 §08「不為廣告投放提供識別碼」之主張於 Android 端完全成立。對應 v0.8 CHANGELOG「待確認（工程）」事項之一。
+- §04「服務提供者」：Google Analytics for Firebase 條目改寫 — 移除「您的帳號識別碼」與「性別」之描述；明示分析資料僅關聯裝置層級 App 實例 ID、不綁帳號、不傳送性別等敏感資料；保留「年齡、抱持心態」為事件分析維度。
+- §02 / §03 / §08 不變：§02 之 App 實例 ID 描述、§03「用量分析」目的、§08 分析識別碼描述於本次變更後仍精確。
+- manifest：privacy 0.8 → 0.9、change_type 由 `data_consent_required` 改 `minor` — 本次為資料傳送之「減少」（移除性別 + 解除帳號綁定），對用戶有利、不新增蒐集 / 分享 / 目的，依政策 §11 屬非重大變更、不觸發阻擋式 re-consent。terms 不變（維持 0.5）。
+- 法律依據：GDPR Art. 5(1)(c) 資料最小化、Art. 5(1)(a) 透明性（§04 措辭與實際行為對齊）；台灣個資法 §5 比例原則、§8 告知義務。
+- 對應 supabase migration：`20260521220000_v25_tos_versions_privacy_v09.sql`（tos_versions 補 privacy 0.9 active row、privacy 其餘版本設 inactive）。
+- 待辦（商店合規 + 工程，非條款本身）：
+  - **Firebase Console 人工確認**（無法自動驗證）：Google signals 已停用、專案未連結 Google Ads、廣告個人化已關閉。若任一開啟，App 實例 ID + 年齡 + 心態仍可能進入 Google 跨 app 廣告圖譜 → App Store「追蹤」問卷須答 Yes 並導入 ATT。
+  - App Store Connect「App 隱私」/ Google Play「資料安全」問卷更新：移除 gender 作為傳送給 Google 之資料類型；因 `setUserId` 已移除，analytics 相關資料類型由「與身分連結」改為「未與身分連結」。
+
+---
+
 ## privacy v0.8 — 2026-05-21
 
 **狀態**：草稿（pre-launch、生效日 2026-05-21）
