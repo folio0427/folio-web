@@ -13,15 +13,15 @@
 
 ## terms v1.2 / privacy v1.2 — 2026-05-22
 
-**狀態**：草稿（pre-launch、生效日 2026-05-22）
+**狀態**：正式（上線版本、生效日 2026-05-22）
 **文件**：terms_zh.md、terms_en.md、privacy_zh.md、privacy_en.md、manifest.json
-**變更類型**：minor（純版本號提升、無實質條文變更）
+**變更類型**：minor（正式版上線定版；條文沿用 v1.1）
 **摘要**：
 
-- terms 1.1 → 1.2、privacy 1.1 → 1.2。本次為**純版本號提升**：四份條款文件（terms_zh / terms_en / privacy_zh / privacy_en）之實質條文內容**未作任何變更**。
+- terms 1.1 → 1.2、privacy 1.1 → 1.2。v1.2 為 **Folio 正式版上線版本** — 將服務條款與隱私權政策定為正式生效版本（v1.0 / v1.1 為 pre-launch 草稿）。四份條款文件（terms_zh / terms_en / privacy_zh / privacy_en）之條文內容沿用 v1.1。
 - 文件標頭版號與 manifest.json 版號同步更新至 v1.2、兩者維持一致。
-- manifest：terms / privacy change_type 皆 minor、生效日維持 2026-05-22。依現行政策 §11 / §15 分級，任何變更（含 minor）皆以阻擋式 modal 重新取得同意 — 已同意 v1.1 之用戶下次開 app 將被 LegalGateGuard 重新取得 v1.2 同意。
-- 對應 Supabase tos_versions：由 sync_tos_versions workflow 於 manifest.json push 後自動補 terms 1.2 / privacy 1.2 active row。
+- manifest：terms / privacy change_type 皆 minor、生效日 2026-05-22。依現行政策 §11 / §15 分級，任何變更（含 minor）皆以阻擋式 modal 重新取得同意 — 已同意 v1.1 之用戶下次開 app 將被 LegalGateGuard 重新取得 v1.2 同意。
+- 對應 Supabase tos_versions：由 sync_tos_versions workflow 於 manifest.json push 後自動 upsert（含 summary）更新 terms 1.2 / privacy 1.2 row。
 
 ---
 

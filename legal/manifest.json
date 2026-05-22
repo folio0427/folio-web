@@ -5,8 +5,8 @@
     "version": "1.2",
     "effective_date": "2026-05-22T00:00:00+08:00",
     "change_type": "minor",
-    "summary_zh": "v1.2：版本號提升至 1.2；服務條款實質條文內容未變更。",
-    "summary_en": "v1.2: Version bumped to 1.2; no change to the substantive Terms of Service content.",
+    "summary_zh": "v1.2：Folio 正式版上線；服務條款正式生效。",
+    "summary_en": "v1.2: Folio official launch; the Terms of Service take effect.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
@@ -14,8 +14,8 @@
     "version": "1.2",
     "effective_date": "2026-05-22T00:00:00+08:00",
     "change_type": "minor",
-    "summary_zh": "v1.2：版本號提升至 1.2；隱私權政策實質條文內容未變更。",
-    "summary_en": "v1.2: Version bumped to 1.2; no change to the substantive Privacy Policy content.",
+    "summary_zh": "v1.2：Folio 正式版上線；隱私權政策正式生效。",
+    "summary_en": "v1.2: Folio official launch; the Privacy Policy takes effect.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }
