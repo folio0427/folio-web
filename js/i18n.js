@@ -97,6 +97,7 @@
       'footer.h.legal':        '法務',
       'footer.li.terms':       '服務條款',
       'footer.li.privacy':     '隱私權政策',
+      'footer.li.childsafety': '兒童安全',
       'footer.h.contact':      '聯絡',
       'footer.copyright':      '© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務',
 
@@ -197,6 +198,7 @@
       'footer.h.legal':        'Legal',
       'footer.li.terms':       'Terms',
       'footer.li.privacy':     'Privacy',
+      'footer.li.childsafety': 'Child Safety',
       'footer.h.contact':      'Contact',
       'footer.copyright':      '© 2026 Folio · by an independent developer · 18+ only',
 
