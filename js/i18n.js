@@ -84,7 +84,7 @@
 
       'launch.tag':            'Coming soon',
       'launch.title':          '準備好讀第一本書了嗎',
-      'launch.sub':            'Folio 正在內測、預計近期上線 iOS 與 Android。',
+      'launch.sub':            'Folio 預計近期上線 iOS 與 Android。',
       'launch.note':           '敬請期待上架公告。',
       'launch.store.prefix':   '下載自',
       'launch.store.state':    '敬請期待',
@@ -99,7 +99,6 @@
       'footer.li.privacy':     '隱私權政策',
       'footer.h.contact':      '聯絡',
       'footer.copyright':      '© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務',
-      'footer.status':         'Pre-launch · 內測階段',
 
       'lang.toggle':           'EN',
 
@@ -185,7 +184,7 @@
 
       'launch.tag':            'Coming soon',
       'launch.title':          'Ready to read your first book?',
-      'launch.sub':            'Folio is in private beta. Launching on iOS and Android soon.',
+      'launch.sub':            'Folio is launching on iOS and Android soon.',
       'launch.note':           'Stay tuned for the launch announcement.',
       'launch.store.prefix':   'Download on',
       'launch.store.state':    'Coming soon',
@@ -200,7 +199,6 @@
       'footer.li.privacy':     'Privacy',
       'footer.h.contact':      'Contact',
       'footer.copyright':      '© 2026 Folio · by an independent developer · 18+ only',
-      'footer.status':         'Pre-launch · Private beta',
 
       'lang.toggle':           '中',
 
