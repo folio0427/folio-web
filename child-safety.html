@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>兒童安全標準 — Folio / Child Safety Standards</title>
+<meta name="description" content="Folio 為防範兒童性虐待及剝削 (CSAE) 所採行的標準與措施。Folio's standards against child sexual abuse and exploitation (CSAE).">
+<meta name="theme-color" content="#F8F1E4">
+<link rel="icon" type="image/webp" href="assets/folio_icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #F8F1E4;
+    --cream: #FAF3E7;
+    --sage: #6B8064;
+    --walnut: #3D2F1F;
+    --walnut-soft: #6f6253;
+    --amber: #C9B89A;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--parchment);
+    color: var(--walnut);
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 24px 64px; }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--walnut); margin-bottom: 32px;
+  }
+  .brand img { width: 32px; height: 32px; border-radius: 8px; }
+  .brand span { font-family: 'Noto Serif TC', serif; font-weight: 600; font-size: 20px; }
+  h1 {
+    font-family: 'Noto Serif TC', serif; font-weight: 700;
+    font-size: 27px; line-height: 1.45; margin-bottom: 8px;
+  }
+  h2 {
+    font-family: 'Noto Serif TC', serif; font-weight: 600; font-size: 19px;
+    margin: 34px 0 12px; padding-bottom: 8px;
+    border-bottom: 1px solid rgba(201, 184, 154, 0.5);
+  }
+  h3 {
+    font-family: 'Noto Serif TC', serif; font-weight: 600;
+    font-size: 16px; margin: 18px 0 8px; color: var(--sage);
+  }
+  p { margin-bottom: 12px; }
+  ol, ul { margin: 8px 0 16px 22px; }
+  li { margin-bottom: 6px; }
+  .lede { color: var(--walnut-soft); }
+  .card {
+    background: var(--cream);
+    border: 1px solid rgba(201, 184, 154, 0.55);
+    border-radius: 16px; padding: 18px 24px; margin: 16px 0;
+  }
+  a { color: var(--sage); }
+  .divider { margin: 48px 0; border: none; border-top: 1px solid rgba(201, 184, 154, 0.6); }
+  .lang-tag {
+    display: inline-block; font-size: 12px; letter-spacing: 0.08em;
+    color: var(--walnut-soft); border: 1px solid rgba(201, 184, 154, 0.7);
+    border-radius: 999px; padding: 3px 12px; margin-bottom: 16px;
+  }
+  .updated { color: var(--walnut-soft); font-size: 13px; margin-top: 40px; }
+  strong { font-weight: 500; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="brand" href="index.html">
+    <img src="assets/folio_icon.webp" alt="Folio">
+    <span>Folio</span>
+  </a>
+
+  <!-- ============ 中文 ============ -->
+  <span class="lang-tag">中文</span>
+  <h1>Folio 兒童安全標準</h1>
+  <p class="lede">本頁說明 Folio 為防範兒童性虐待及剝削（Child Sexual Abuse and Exploitation，以下簡稱 CSAE）所採行的標準與措施。Folio 目前由獨立開發者提供與營運。</p>
+
+  <h2>我們的承諾</h2>
+  <p>Folio 對任何形式的兒童性虐待、兒童性剝削，以及兒童性虐待材料（Child Sexual Abuse Material，CSAM）採取<strong>零容忍</strong>。我們嚴格禁止此類內容、行為、引誘或意圖出現在本服務中。</p>
+
+  <h2>Folio 僅供成年人使用</h2>
+  <div class="card">
+    <ul>
+      <li>Folio 是 <strong>18 歲以上成年人專用</strong>的服務，不針對、也不向未成年人提供。</li>
+      <li>註冊時必須提供出生日期，系統據此計算年齡；<strong>未滿 18 歲一律無法完成註冊</strong>。</li>
+      <li>此年齡限制不僅實作於前端介面，亦由後端資料庫層強制檢查。日後若使用者修改出生日期，系統會重新驗證，未滿 18 歲即遭阻擋。</li>
+      <li>Folio 不收集兒童個人資料，亦無意成為未成年人使用的平台。</li>
+    </ul>
+  </div>
+
+  <h2>防範設計</h2>
+  <div class="card">
+    <ul>
+      <li><strong>無照片或影像上傳功能</strong>：個人檔案不設頭像、貼文不附圖。服務中不存在任何上傳影像的途徑，從根本上消除散布 CSAM 影像的管道。</li>
+      <li>服務以<strong>文字共讀</strong>為核心，無即時影音通話，亦無滑卡式隨機配對。</li>
+      <li>使用者互動建立在公開貼文與報名機制之上，過程可受檢視。</li>
+    </ul>
+  </div>
+
+  <h2>檢舉與處理機制</h2>
+  <div class="card">
+    <ul>
+      <li><strong>App 內檢舉</strong>：使用者可檢舉任何貼文、訊息或其他使用者。</li>
+      <li><strong>封鎖</strong>：使用者可封鎖其他使用者，封鎖後雙方不再互相顯示。</li>
+      <li>檢舉案件由我們審核處理；違反規定的帳號將被停權。</li>
+    </ul>
+  </div>
+
+  <h2>對 CSAE 的處理方式</h2>
+  <p>一旦發現涉及 CSAE 的內容、帳號或行為，我們將：</p>
+  <ul>
+    <li>立即移除相關內容；</li>
+    <li>永久停權相關帳號；</li>
+    <li>保存必要證據；</li>
+    <li>依適用之兒童安全法律，向相關主管機關或通報機構通報。</li>
+  </ul>
+
+  <h2>遵守法律</h2>
+  <p>Folio 遵守服務營運所適用之兒童安全相關法律及通報義務。</p>
+
+  <h2>檢舉 CSAE 或與我們聯絡</h2>
+  <div class="card">
+    <p>若您發現任何涉及兒童安全疑慮的內容或行為，請立即透過下列任一管道通知我們：</p>
+    <ul>
+      <li><strong>App 內檢舉</strong>：使用檢舉功能回報貼文、訊息或使用者。</li>
+      <li><strong>電子郵件</strong>：<a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a>（主旨請註明「Child Safety」）。</li>
+    </ul>
+  </div>
+
+  <h2>聯絡我們</h2>
+  <p>如對本兒童安全標準有任何疑問，請來信：<a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a></p>
+
+  <hr class="divider">
+
+  <!-- ============ English ============ -->
+  <span class="lang-tag">English</span>
+  <h1>Folio Child Safety Standards</h1>
+  <p class="lede">This page describes the standards and measures Folio applies to prevent child sexual abuse and exploitation (CSAE). Folio is currently provided and operated by an independent developer.</p>
+
+  <h2>Our commitment</h2>
+  <p>Folio has <strong>zero tolerance</strong> for child sexual abuse and exploitation in any form, and for child sexual abuse material (CSAM). We strictly prohibit such content, conduct, grooming, or intent within the service.</p>
+
+  <h2>Folio is for adults only</h2>
+  <div class="card">
+    <ul>
+      <li>Folio is a service <strong>for adults aged 18 and over</strong>. It is not directed to, nor offered to, minors.</li>
+      <li>A date of birth is required at registration; the system derives the user's age from it, and <strong>anyone under 18 cannot complete registration</strong>.</li>
+      <li>This age restriction is enforced not only in the front-end interface but also at the back-end database layer. If a user later changes their date of birth, the system re-verifies it and blocks anyone under 18.</li>
+      <li>Folio does not collect children's personal data and is not intended to be a platform used by minors.</li>
+    </ul>
+  </div>
+
+  <h2>Preventive design</h2>
+  <div class="card">
+    <ul>
+      <li><strong>No photo or image upload</strong>: profiles have no avatars and posts carry no images. There is no pathway to upload images anywhere in the service, which structurally eliminates a channel for distributing CSAM imagery.</li>
+      <li>The service centers on <strong>text-based co-reading</strong>. There are no live video calls and no swipe-style random matching.</li>
+      <li>User interaction is built on public posts and an application mechanism, making the process reviewable.</li>
+    </ul>
+  </div>
+
+  <h2>Reporting and response mechanisms</h2>
+  <div class="card">
+    <ul>
+      <li><strong>In-app reporting</strong>: users can report any post, message, or other user.</li>
+      <li><strong>Blocking</strong>: users can block other users; once blocked, the two no longer appear to each other.</li>
+      <li>Reports are reviewed and acted upon by us; accounts that violate our rules are banned.</li>
+    </ul>
+  </div>
+
+  <h2>How we handle CSAE</h2>
+  <p>When we become aware of content, an account, or conduct involving CSAE, we will:</p>
+  <ul>
+    <li>remove the relevant content immediately;</li>
+    <li>permanently ban the accounts involved;</li>
+    <li>preserve necessary evidence;</li>
+    <li>report to the relevant authorities or reporting bodies as required by applicable child safety law.</li>
+  </ul>
+
+  <h2>Legal compliance</h2>
+  <p>Folio complies with the child safety laws and reporting obligations applicable to the operation of the service.</p>
+
+  <h2>Reporting CSAE or contacting us</h2>
+  <div class="card">
+    <p>If you find any content or conduct that raises a child safety concern, please notify us immediately through either channel below:</p>
+    <ul>
+      <li><strong>In-app report</strong>: use the report function to flag a post, message, or user.</li>
+      <li><strong>Email</strong>: <a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a> (please use "Child Safety" as the subject).</li>
+    </ul>
+  </div>
+
+  <h2>Contact us</h2>
+  <p>For any questions about these Child Safety Standards, email: <a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a></p>
+
+  <p class="updated">Folio · 最後更新 Last updated: 2026-05-22</p>
+</div>
+</body>
+</html>
