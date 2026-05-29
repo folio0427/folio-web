@@ -1,0 +1,15 @@
+{
+  "name": "folio-web",
+  "version": "1.0.0",
+  "description": "Folio 的**官方網站**與**法律文件**公開來源。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "marked": "^18.0.4"
+  }
+}

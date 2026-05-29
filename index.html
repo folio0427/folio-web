@@ -3,10 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="page.title.home">Folio — 從一本書，遇見可能的緣分</title>
-<meta name="description" data-i18n="page.desc.home" content="Folio 是以書交友的 app — 透過共讀促成深度連結。書是對話入口，不是內容本身。">
+<title data-i18n="page.title.home">Folio｜以書交友 app、慢步調共讀 — 從一本書遇見可能的緣分</title>
+<meta name="description" data-i18n="page.desc.home" content="Folio 是以書交友的 iOS app — 透過共讀慢慢認識一個人，不滑卡配對。三種模式、進度閘解鎖聊天、共讀便利貼牆，留下值得的關係。">
+<meta name="keywords" content="以書交友, 共讀 app, 讀書夥伴, 慢社交, 書友配對, 共讀社群, Folio, book buddy, slow dating, 18+">
+<meta name="author" content="Folio">
 <meta name="theme-color" content="#F8F1E4">
 <link rel="icon" type="image/webp" href="assets/folio_icon.webp">
+
+<!-- Preload hero LCP -->
+<link rel="preload" as="image" href="assets/compilation/compilation-clean-bg-v8-no-moon.webp" fetchpriority="high">
+
+<!-- Canonical + hreflang -->
+<link rel="canonical" href="https://folio0427.github.io/folio-web/">
+<link rel="alternate" hreflang="zh-Hant" href="https://folio0427.github.io/folio-web/">
+<link rel="alternate" hreflang="x-default" href="https://folio0427.github.io/folio-web/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Folio">
+<meta property="og:title" content="Folio｜以書交友 app — 從一本書遇見可能的緣分">
+<meta property="og:description" content="慢步調共讀社交：三種模式、進度閘解鎖聊天、共讀便利貼牆。不滑卡、不靠話術，看你選的書認識你。">
+<meta property="og:url" content="https://folio0427.github.io/folio-web/">
+<meta property="og:image" content="https://folio0427.github.io/folio-web/assets/welcome.webp">
+<meta property="og:image:alt" content="Folio — 以書交友 app、慢步調共讀">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Folio｜以書交友 app — 從一本書遇見可能的緣分">
+<meta name="twitter:description" content="慢步調共讀社交：三種模式、進度閘解鎖聊天、共讀便利貼牆。">
+<meta name="twitter:image" content="https://folio0427.github.io/folio-web/assets/welcome.webp">
+<meta name="twitter:image:alt" content="Folio — 以書交友 app、慢步調共讀">
+
+<!-- JSON-LD: Organization + WebSite + MobileApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://folio0427.github.io/folio-web/#organization",
+      "name": "Folio",
+      "url": "https://folio0427.github.io/folio-web/",
+      "logo": "https://folio0427.github.io/folio-web/assets/folio_icon.webp",
+      "email": "folio0427@gmail.com",
+      "sameAs": [
+        "https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://folio0427.github.io/folio-web/#website",
+      "url": "https://folio0427.github.io/folio-web/",
+      "name": "Folio",
+      "description": "以書交友、慢步調共讀社交 app",
+      "publisher": { "@id": "https://folio0427.github.io/folio-web/#organization" },
+      "inLanguage": "zh-Hant"
+    },
+    {
+      "@type": "MobileApplication",
+      "name": "Folio - Find Your Book Buddy",
+      "operatingSystem": "iOS 15.0+",
+      "applicationCategory": "SocialNetworkingApplication",
+      "description": "以書交友的 iOS app。透過共讀慢慢認識一個人，不滑卡配對。三種模式（純粹書友 / 想找緣分 / 不拘）、進度閘解鎖聊天、共讀便利貼牆。",
+      "url": "https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110",
+      "image": "https://folio0427.github.io/folio-web/assets/folio_icon.webp",
+      "inLanguage": "zh-Hant",
+      "contentRating": "Mature 17+",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TWD"
+      },
+      "publisher": { "@id": "https://folio0427.github.io/folio-web/#organization" }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
@@ -18,7 +93,7 @@
 
 <nav class="nav">
   <a href="index.html" class="nav-logo">
-    <img src="assets/folio_icon.webp" alt="Folio">
+    <img src="assets/folio_icon.webp" alt="Folio - 以書交友 app 標誌">
     <span>Folio</span>
   </a>
   <div class="nav-links">
@@ -30,38 +105,39 @@
     <!-- 語言切換暫時隱藏 / lang toggle temporarily hidden -->
     <!-- <button type="button" class="lang-toggle" data-i18n="lang.toggle" aria-label="Switch language">EN</button> -->
   </div>
+  <div class="scroll-progress" role="presentation" aria-hidden="true"><span class="scroll-progress-bar"></span></div>
 </nav>
 
 <!-- Hero -->
 <section class="hero">
   <div class="compilation-scene" aria-hidden="true">
-    <img class="compilation-bg" src="assets/compilation/compilation-clean-bg-v8-no-moon.webp" alt="">
-    <img class="hanging-moon" src="assets/compilation/compilation-hanging-moon-v1.webp" alt="">
-    <img class="cloud-layer cloud-small" src="assets/compilation/cloud-small.webp" alt="">
-    <img class="book-glow-art" src="assets/compilation/book-magic-aura-smoke-v6.webp" alt="">
-    <img class="plant-layer plant-left" src="assets/compilation/plant-left-sprig.webp" alt="">
-    <img class="plant-layer plant-left-leaf" src="assets/compilation/plant-left-leaf.webp" alt="">
-    <img class="float-layer note note-gold" src="assets/compilation/generated-floaters/note-yellow-large.webp" alt="">
-    <img class="float-layer note note-lavender" src="assets/compilation/generated-floaters/note-lavender.webp" alt="">
-    <img class="float-layer note note-rose" src="assets/compilation/generated-floaters/note-rose.webp" alt="">
-    <img class="float-layer note note-sage" src="assets/compilation/generated-floaters/note-sage.webp" alt="">
-    <img class="float-layer note note-amber" src="assets/compilation/generated-floaters/note-amber-small.webp" alt="">
-    <img class="float-layer note note-tiny-gold-a" src="assets/compilation/generated-floaters-more/note-yellow-small-01.webp" alt="">
-    <img class="float-layer note note-tiny-gold-b" src="assets/compilation/generated-floaters-more/note-yellow-small-02.webp" alt="">
-    <img class="float-layer note note-tiny-rose-a" src="assets/compilation/generated-floaters-more/note-rose-small-01.webp" alt="">
-    <img class="float-layer note note-tiny-rose-b" src="assets/compilation/generated-floaters-more/note-rose-small-02.webp" alt="">
-    <img class="float-layer note note-tiny-sage-a" src="assets/compilation/generated-floaters-more/note-sage-small-01.webp" alt="">
-    <img class="float-layer note note-tiny-lavender" src="assets/compilation/generated-floaters-more/note-lavender-small-01.webp" alt="">
-    <img class="float-layer note book-note book-note-a" src="assets/compilation/generated-floaters-more/note-yellow-small-02.webp" alt="">
-    <img class="float-layer note book-note book-note-b" src="assets/compilation/generated-floaters-more/note-rose-small-01.webp" alt="">
-    <img class="float-layer note book-note book-note-c" src="assets/compilation/generated-floaters-more/note-sage-small-01.webp" alt="">
-    <img class="float-layer leaf leaf-right" src="assets/compilation/generated-floaters/leaf-large-gold.webp" alt="">
-    <img class="float-layer leaf leaf-small-a" src="assets/compilation/generated-floaters/leaf-sage-small.webp" alt="">
-    <img class="float-layer leaf leaf-small-b" src="assets/compilation/generated-floaters/leaf-amber-small.webp" alt="">
-    <img class="float-layer leaf leaf-small-c" src="assets/compilation/generated-floaters-more/leaf-amber-mid-01.webp" alt="">
-    <img class="float-layer leaf leaf-small-d" src="assets/compilation/generated-floaters-more/leaf-amber-tiny-01.webp" alt="">
-    <img class="float-layer leaf leaf-small-e" src="assets/compilation/generated-floaters-more/leaf-sage-tiny-01.webp" alt="">
-    <img class="float-layer leaf leaf-small-f" src="assets/compilation/generated-floaters-more/leaf-sage-tiny-02.webp" alt="">
+    <img class="compilation-bg" src="assets/compilation/compilation-clean-bg-v8-no-moon.webp" alt="" fetchpriority="high">
+    <img class="hanging-moon" src="assets/compilation/compilation-hanging-moon-v1.webp" alt="" loading="lazy">
+    <img class="cloud-layer cloud-small" src="assets/compilation/cloud-small.webp" alt="" loading="lazy">
+    <img class="book-glow-art" src="assets/compilation/book-magic-aura-smoke-v6.webp" alt="" loading="lazy">
+    <img class="plant-layer plant-left" src="assets/compilation/plant-left-sprig.webp" alt="" loading="lazy">
+    <img class="plant-layer plant-left-leaf" src="assets/compilation/plant-left-leaf.webp" alt="" loading="lazy">
+    <img class="float-layer note note-gold" src="assets/compilation/generated-floaters/note-yellow-large.webp" alt="" loading="lazy">
+    <img class="float-layer note note-lavender" src="assets/compilation/generated-floaters/note-lavender.webp" alt="" loading="lazy">
+    <img class="float-layer note note-rose" src="assets/compilation/generated-floaters/note-rose.webp" alt="" loading="lazy">
+    <img class="float-layer note note-sage" src="assets/compilation/generated-floaters/note-sage.webp" alt="" loading="lazy">
+    <img class="float-layer note note-amber" src="assets/compilation/generated-floaters/note-amber-small.webp" alt="" loading="lazy">
+    <img class="float-layer note note-tiny-gold-a mobile-hide" src="assets/compilation/generated-floaters-more/note-yellow-small-01.webp" alt="" loading="lazy">
+    <img class="float-layer note note-tiny-gold-b mobile-hide" src="assets/compilation/generated-floaters-more/note-yellow-small-02.webp" alt="" loading="lazy">
+    <img class="float-layer note note-tiny-rose-a mobile-hide" src="assets/compilation/generated-floaters-more/note-rose-small-01.webp" alt="" loading="lazy">
+    <img class="float-layer note note-tiny-rose-b mobile-hide" src="assets/compilation/generated-floaters-more/note-rose-small-02.webp" alt="" loading="lazy">
+    <img class="float-layer note note-tiny-sage-a mobile-hide" src="assets/compilation/generated-floaters-more/note-sage-small-01.webp" alt="" loading="lazy">
+    <img class="float-layer note note-tiny-lavender mobile-hide" src="assets/compilation/generated-floaters-more/note-lavender-small-01.webp" alt="" loading="lazy">
+    <img class="float-layer note book-note book-note-a mobile-hide" src="assets/compilation/generated-floaters-more/note-yellow-small-02.webp" alt="" loading="lazy">
+    <img class="float-layer note book-note book-note-b mobile-hide" src="assets/compilation/generated-floaters-more/note-rose-small-01.webp" alt="" loading="lazy">
+    <img class="float-layer note book-note book-note-c mobile-hide" src="assets/compilation/generated-floaters-more/note-sage-small-01.webp" alt="" loading="lazy">
+    <img class="float-layer leaf leaf-right" src="assets/compilation/generated-floaters/leaf-large-gold.webp" alt="" loading="lazy">
+    <img class="float-layer leaf leaf-small-a" src="assets/compilation/generated-floaters/leaf-sage-small.webp" alt="" loading="lazy">
+    <img class="float-layer leaf leaf-small-b" src="assets/compilation/generated-floaters/leaf-amber-small.webp" alt="" loading="lazy">
+    <img class="float-layer leaf leaf-small-c mobile-hide" src="assets/compilation/generated-floaters-more/leaf-amber-mid-01.webp" alt="" loading="lazy">
+    <img class="float-layer leaf leaf-small-d mobile-hide" src="assets/compilation/generated-floaters-more/leaf-amber-tiny-01.webp" alt="" loading="lazy">
+    <img class="float-layer leaf leaf-small-e mobile-hide" src="assets/compilation/generated-floaters-more/leaf-sage-tiny-01.webp" alt="" loading="lazy">
+    <img class="float-layer leaf leaf-small-f mobile-hide" src="assets/compilation/generated-floaters-more/leaf-sage-tiny-02.webp" alt="" loading="lazy">
   </div>
   <div class="blob b1"></div>
   <div class="blob b2"></div>
@@ -136,25 +212,25 @@
     </div>
     <div class="flow-grid">
       <div class="flow-step reveal reveal-delay-1">
-        <img src="assets/step-1-post.webp" alt="" class="flow-icon">
+        <img src="assets/step-1-post.webp" alt="Step 1：發帖 — 選一本想讀的書，寫下為什麼想讀" class="flow-icon" loading="lazy">
         <div class="num">1</div>
         <h3 data-i18n="flow.step1.h">發帖</h3>
         <p data-i18n="flow.step1.p">選一本想讀的書，寫下為什麼想讀、期待怎樣的讀友。一天最多兩篇、慢慢來。</p>
       </div>
       <div class="flow-step reveal reveal-delay-2">
-        <img src="assets/step-2-apply.webp" alt="" class="flow-icon">
+        <img src="assets/step-2-apply.webp" alt="Step 2：報名 — 按鏡像表單寫下你能成為怎樣的讀書夥伴" class="flow-icon" loading="lazy">
         <div class="num">2</div>
         <h3 data-i18n="flow.step2.h">報名</h3>
         <p data-i18n="flow.step2.p">看見有興趣的帖子，按鏡像表單寫下你能成為的夥伴。</p>
       </div>
       <div class="flow-step reveal reveal-delay-3">
-        <img src="assets/step-3-coread.webp" alt="" class="flow-icon">
+        <img src="assets/step-3-coread.webp" alt="Step 3：共讀 — 雙方推到 25% 各寫一則心得才解鎖聊天" class="flow-icon" loading="lazy">
         <div class="num">3</div>
         <h3 data-i18n="flow.step3.h">共讀</h3>
         <p data-i18n="flow.step3.p">配對成立、共讀室開啟。雙方各自推到 25% 並寫下筆記、聊天才解鎖。解鎖後可自由對話、收藏對方寫過的句子。</p>
       </div>
       <div class="flow-step reveal reveal-delay-3">
-        <img src="assets/step-4-organize.webp" alt="" class="flow-icon">
+        <img src="assets/step-4-organize.webp" alt="Step 4：整理 — 讀到 100% 把便利貼整理成可分享的閱讀紀念" class="flow-icon" loading="lazy">
         <div class="num">4</div>
         <h3 data-i18n="flow.step4.h">整理</h3>
         <p data-i18n="flow.step4.p">各自讀到 100%、便利貼整理成一張閱讀紀念 — 可分享自己的讀後心得、或與對方交織出的共讀筆記到 IG、Threads、X。</p>
@@ -239,12 +315,12 @@
 <section id="launch" class="launch">
   <div class="container">
     <div class="launch-inner">
-      <img src="assets/folio_icon.webp" alt="" class="launch-icon reveal">
-      <span class="launch-tag reveal reveal-delay-1" data-i18n="launch.tag">Coming soon</span>
+      <img src="assets/folio_icon.webp" alt="Folio 標誌" class="launch-icon reveal">
+      <span class="launch-tag launch-tag-live reveal reveal-delay-1" data-i18n="launch.tag">iOS 已上架 · Available now</span>
       <h2 class="reveal reveal-delay-1" data-i18n="launch.title">準備好讀第一本書了嗎</h2>
-      <p class="launch-sub reveal reveal-delay-2" data-i18n="launch.sub">Folio 預計近期上線 iOS 與 Android。</p>
+      <p class="launch-sub reveal reveal-delay-2" data-i18n="launch.sub">Folio iOS 版已上架 App Store。Android 即將推出。</p>
       <div class="store-row reveal reveal-delay-2">
-        <button type="button" class="store-btn" disabled aria-label="App Store">
+        <a class="store-btn store-btn-live" href="https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110" target="_blank" rel="noopener" aria-label="Download Folio on the App Store">
           <span class="sb-glyph" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
               <path d="M17.05 13.18c-.03-2.96 2.42-4.38 2.53-4.45-1.38-2.01-3.52-2.29-4.28-2.32-1.82-.18-3.55 1.07-4.47 1.07-.93 0-2.35-1.05-3.86-1.02-1.98.03-3.81 1.15-4.83 2.92-2.06 3.57-.53 8.85 1.48 11.75.98 1.42 2.15 3.01 3.68 2.95 1.48-.06 2.04-.96 3.83-.96 1.78 0 2.29.96 3.85.93 1.59-.03 2.6-1.45 3.57-2.87 1.13-1.65 1.6-3.25 1.62-3.33-.04-.02-3.1-1.19-3.13-4.72zM14.13 4.48c.82-.99 1.37-2.37 1.22-3.74-1.18.05-2.6.78-3.45 1.77-.76.87-1.42 2.27-1.24 3.61 1.31.1 2.65-.66 3.47-1.64z"/>
@@ -254,9 +330,9 @@
             <span class="sb-prefix" data-i18n="launch.store.prefix">下載自</span>
             <span class="sb-name">App Store</span>
           </span>
-          <span class="sb-state" data-i18n="launch.store.state">敬請期待</span>
-        </button>
-        <button type="button" class="store-btn" disabled aria-label="Google Play">
+          <span class="sb-state sb-state-live" data-i18n="launch.store.state.live">立即下載</span>
+        </a>
+        <button type="button" class="store-btn" disabled aria-label="Google Play (coming soon)">
           <span class="sb-glyph" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
               <path d="M3.6 1.4c-.4.4-.6 1-.6 1.7v17.8c0 .7.2 1.3.6 1.7l.1.1L13.6 12 3.7 1.4l-.1 0z"/>
@@ -269,10 +345,10 @@
             <span class="sb-prefix" data-i18n="launch.store.prefix">下載自</span>
             <span class="sb-name">Google Play</span>
           </span>
-          <span class="sb-state" data-i18n="launch.store.state">敬請期待</span>
+          <span class="sb-state" data-i18n="launch.store.state">即將上架</span>
         </button>
       </div>
-      <p class="launch-note reveal reveal-delay-3" data-i18n="launch.note">敬請期待上架公告。</p>
+      <p class="launch-note reveal reveal-delay-3" data-i18n="launch.note">iOS 已上架、Android 即將推出。</p>
     </div>
   </div>
 </section>
@@ -283,7 +359,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="assets/folio_icon.webp" alt="Folio">
+          <img src="assets/folio_icon.webp" alt="Folio - 以書交友 app 標誌">
           <span>Folio</span>
         </div>
         <p class="footer-tagline" data-i18n="footer.tagline">A place for readers who want to be more than readers.</p>

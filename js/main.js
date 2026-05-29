@@ -19,14 +19,23 @@
   }
 
   // Nav: stays transparent over entire hero bg, opaque after leaving hero
+  // Also drives scroll progress bar via --scroll-progress CSS var
   const nav = document.querySelector('.nav');
+  const progressBar = nav?.querySelector('.scroll-progress-bar');
   if (nav) {
     const update = () => {
       const y = window.scrollY;
-      const heroH = window.innerHeight;
+      const viewH = window.innerHeight;
+      const heroH = viewH;
       const overHero = y < heroH * 0.92;
       nav.classList.toggle('nav-over-hero', overHero);
       nav.classList.toggle('nav-scrolled', !overHero);
+
+      if (progressBar) {
+        const docH = document.documentElement.scrollHeight - viewH;
+        const pct = docH > 0 ? Math.min(100, (y / docH) * 100) : 0;
+        progressBar.style.setProperty('--scroll-progress', pct.toFixed(2) + '%');
+      }
     };
     update();
     window.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });

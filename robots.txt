@@ -1,0 +1,10 @@
+# Folio — robots.txt
+# https://folio0427.github.io/folio-web/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://folio0427.github.io/folio-web/sitemap.xml
+
+# Crawl-delay not needed for static GitHub Pages

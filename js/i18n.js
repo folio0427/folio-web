@@ -6,10 +6,10 @@
 
   const dict = {
     zh: {
-      'page.title.home':       'Folio — 從一本書，遇見可能的緣分',
-      'page.title.terms':      'Folio — 服務條款',
-      'page.title.privacy':    'Folio — 隱私權政策',
-      'page.desc.home':        'Folio 是以書交友的 app — 透過共讀促成深度連結。書是對話入口，不是內容本身。',
+      'page.title.home':       'Folio｜以書交友 app、慢步調共讀 — 從一本書遇見可能的緣分',
+      'page.title.terms':      'Folio｜服務條款 — 以書交友 app 使用條款',
+      'page.title.privacy':    'Folio｜隱私權政策 — 個資保護與資料使用說明',
+      'page.desc.home':        'Folio 是以書交友的 iOS app — 透過共讀慢慢認識一個人，不滑卡配對。三種模式、進度閘解鎖聊天、共讀便利貼牆，留下值得的關係。',
 
       'nav.modes':             '模式',
       'nav.flow':              '流程',
@@ -82,12 +82,13 @@
       'philosophy.quote':      '質 &gt; 量。<br>每一層機制（發帖、報名、進度閘）都在篩選，<br>留下來的關係，會比那些一見面就能加好友的更深。',
       'philosophy.cite':       '— Folio 設計信念',
 
-      'launch.tag':            'Coming soon',
+      'launch.tag':            'iOS 已上架 · Available now',
       'launch.title':          '準備好讀第一本書了嗎',
-      'launch.sub':            'Folio 預計近期上線 iOS 與 Android。',
-      'launch.note':           '敬請期待上架公告。',
+      'launch.sub':            'Folio iOS 版已上架 App Store。Android 即將推出。',
+      'launch.note':           'iOS 已上架、Android 即將推出。',
       'launch.store.prefix':   '下載自',
-      'launch.store.state':    '敬請期待',
+      'launch.store.state':    '即將上架',
+      'launch.store.state.live': '立即下載',
 
       'footer.tagline':        'A place for readers who want to be more than readers.',
       'footer.h.explore':      '探索',
@@ -107,10 +108,10 @@
     },
 
     en: {
-      'page.title.home':       'Folio — From one book, meet a possible kindred',
-      'page.title.terms':      'Folio — Terms of Service',
-      'page.title.privacy':    'Folio — Privacy Policy',
-      'page.desc.home':        'Folio is a book-first social app — meaningful connections through co-reading. Books open the conversation, not the content.',
+      'page.title.home':       'Folio｜Book-First Social App for Slow Co-Reading — From one book, meet a kindred',
+      'page.title.terms':      'Folio｜Terms of Service — Co-Reading Social App',
+      'page.title.privacy':    'Folio｜Privacy Policy — Data Use & Protection',
+      'page.desc.home':        'Folio is a book-first iOS social app — slow-paced co-reading instead of swiping. Three modes, progress-gated chat, shared sticky-note walls. Build deeper connections through books.',
 
       'nav.modes':             'Modes',
       'nav.flow':              'How',
@@ -183,12 +184,13 @@
       'philosophy.quote':      'Quality &gt; quantity.<br>Each layer (posting, applying, the progress gate) filters.<br>Relationships that remain run deeper than those formed at first sight.',
       'philosophy.cite':       '— Folio design belief',
 
-      'launch.tag':            'Coming soon',
+      'launch.tag':            'Available now on iOS',
       'launch.title':          'Ready to read your first book?',
-      'launch.sub':            'Folio is launching on iOS and Android soon.',
-      'launch.note':           'Stay tuned for the launch announcement.',
+      'launch.sub':            'Folio for iOS is live on the App Store. Android coming soon.',
+      'launch.note':           'iOS live · Android coming soon.',
       'launch.store.prefix':   'Download on',
       'launch.store.state':    'Coming soon',
+      'launch.store.state.live': 'Get it now',
 
       'footer.tagline':        'A place for readers who want to be more than readers.',
       'footer.h.explore':      'Explore',

@@ -154,6 +154,26 @@ section {
   -webkit-backdrop-filter: blur(14px);
   border-bottom-color: rgba(201, 184, 154, 0.3);
 }
+
+/* Scroll progress bar — sage thread along bottom of nav */
+.scroll-progress {
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 2px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-watercolor);
+}
+.nav.nav-scrolled .scroll-progress {
+  opacity: 1;
+}
+.scroll-progress-bar {
+  display: block;
+  height: 100%;
+  width: var(--scroll-progress, 0%);
+  background: linear-gradient(90deg, var(--sage) 0%, var(--amber) 100%);
+  transition: width 0.08s linear;
+}
 .nav-logo {
   display: flex;
   align-items: center;
@@ -460,6 +480,8 @@ section {
   .note-sage        { --w: 9vw;  --x: 72%; --y: 30%; }
   .note-amber       { --w: 7vw;  --x: 42%; --y: 22%; }
   .leaf-right       { --w: 14vw; --x: 82%; --y: 56%; }
+  /* Mobile decluttering: hide low-priority float layers to cut LCP + visual noise */
+  .mobile-hide { display: none !important; }
 }
 .hero-content {
   position: relative;
@@ -1191,6 +1213,33 @@ section {
   color: var(--walnut-soft);
   opacity: 0.7;
 }
+
+/* Live state — iOS already on App Store */
+.store-btn-live {
+  background: var(--sage);
+  border-color: var(--sage);
+  cursor: pointer;
+  opacity: 1;
+  text-decoration: none;
+}
+.store-btn-live:hover {
+  background: #5a6f55;
+  border-color: #5a6f55;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(107, 128, 100, 0.28);
+}
+.store-btn-live .sb-state-live {
+  background: rgba(250, 243, 231, 0.95);
+  color: var(--sage);
+  font-weight: 600;
+  opacity: 1;
+}
+.launch-tag-live {
+  background: rgba(107, 128, 100, 0.18);
+  color: var(--sage);
+  font-weight: 500;
+}
+
 @media (max-width: 480px) {
   .store-row { flex-direction: column; align-items: center; }
   .store-btn { width: 100%; max-width: 280px; }
