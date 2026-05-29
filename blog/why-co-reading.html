@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>為什麼共讀比配對 app 更容易遇到對的人｜Folio 慢社交筆記</title>
+<meta name="description" content="滑卡疲勞的時代，共讀為什麼能挑出更深的關係？從注意力經濟、決策疲乏，到不對稱資訊揭露——一篇給厭倦了滑卡的人的慢社交設計筆記。">
+<meta name="keywords" content="慢社交 app, 不滑卡的交友 app, 共讀 app, 以書交友, 讀書交友軟體, slow dating">
+<meta name="author" content="Folio">
+<meta name="theme-color" content="#F8F1E4">
+<link rel="icon" type="image/webp" href="../assets/folio_icon.webp">
+
+<!-- Smart App Banner -->
+<meta name="apple-itunes-app" content="app-id=6771667110">
+
+<!-- Canonical + hreflang -->
+<link rel="canonical" href="https://folio0427.github.io/folio-web/blog/why-co-reading.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://folio0427.github.io/folio-web/blog/why-co-reading.html">
+<link rel="alternate" hreflang="x-default" href="https://folio0427.github.io/folio-web/blog/why-co-reading.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Folio">
+<meta property="og:title" content="為什麼共讀比配對 app 更容易遇到對的人">
+<meta property="og:description" content="滑卡疲勞時代的慢社交設計筆記——為什麼一起讀完一本書，比一千張照片更接近一個人。">
+<meta property="og:url" content="https://folio0427.github.io/folio-web/blog/why-co-reading.html">
+<meta property="og:image" content="https://folio0427.github.io/folio-web/assets/welcome.webp">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2026-05-29T00:00:00+08:00">
+<meta property="article:author" content="Folio">
+<meta property="article:section" content="慢社交設計">
+<meta property="article:tag" content="慢社交">
+<meta property="article:tag" content="共讀">
+<meta property="article:tag" content="交友 app">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="為什麼共讀比配對 app 更容易遇到對的人">
+<meta name="twitter:description" content="滑卡疲勞時代的慢社交設計筆記。">
+<meta name="twitter:image" content="https://folio0427.github.io/folio-web/assets/welcome.webp">
+
+<!-- JSON-LD: BlogPosting -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "為什麼共讀比配對 app 更容易遇到對的人",
+  "description": "滑卡疲勞的時代，共讀為什麼能挑出更深的關係？",
+  "image": "https://folio0427.github.io/folio-web/assets/welcome.webp",
+  "datePublished": "2026-05-29T00:00:00+08:00",
+  "dateModified": "2026-05-29T00:00:00+08:00",
+  "inLanguage": "zh-Hant",
+  "author": {
+    "@type": "Organization",
+    "name": "Folio",
+    "url": "https://folio0427.github.io/folio-web/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Folio",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://folio0427.github.io/folio-web/assets/folio_icon.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://folio0427.github.io/folio-web/blog/why-co-reading.html"
+  },
+  "keywords": ["慢社交", "共讀", "以書交友", "交友 app"]
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Folio", "item": "https://folio0427.github.io/folio-web/" },
+    { "@type": "ListItem", "position": 2, "name": "慢社交筆記", "item": "https://folio0427.github.io/folio-web/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "為什麼共讀比配對 app 更容易遇到對的人" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+  /* Blog-specific tweaks layered on top of legal content styles */
+  .blog-article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 120px 24px 80px;
+  }
+  .blog-breadcrumb {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--walnut-soft);
+    margin-bottom: 24px;
+    opacity: 0.75;
+  }
+  .blog-breadcrumb a { color: var(--sage); text-decoration: none; }
+  .blog-breadcrumb a:hover { text-decoration: underline; }
+  .blog-meta {
+    display: flex;
+    gap: 16px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--walnut-soft);
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .blog-meta time { color: var(--sage); }
+  .blog-article h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    line-height: 1.35;
+    margin: 0 0 24px;
+    color: var(--walnut);
+  }
+  .blog-article p.lede {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--walnut-soft);
+    font-style: italic;
+    font-family: var(--font-italic);
+    margin: 0 0 40px;
+    padding-left: 16px;
+    border-left: 2px solid var(--sage);
+  }
+  .blog-article h2 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    margin: 48px 0 16px;
+    color: var(--walnut);
+  }
+  .blog-article h3 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin: 28px 0 12px;
+    color: var(--walnut);
+  }
+  .blog-article p,
+  .blog-article li {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--walnut);
+  }
+  .blog-article a { color: var(--sage); }
+  .blog-article ul, .blog-article ol { padding-left: 1.4em; }
+  .blog-article blockquote {
+    border-left: 3px solid var(--amber);
+    margin: 24px 0;
+    padding: 4px 0 4px 18px;
+    color: var(--walnut-soft);
+    font-style: italic;
+  }
+  .blog-cta {
+    margin-top: 56px;
+    padding: 32px;
+    background: rgba(107, 128, 100, 0.08);
+    border: 1px solid rgba(107, 128, 100, 0.2);
+    border-radius: 18px;
+    text-align: center;
+  }
+  .blog-cta h3 {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    margin: 0 0 8px;
+  }
+  .blog-cta p {
+    color: var(--walnut-soft);
+    margin: 0 0 20px;
+  }
+  .blog-cta .btn-row { justify-content: center; }
+  .blog-faq {
+    margin-top: 48px;
+    padding: 24px 0;
+    border-top: 1px solid rgba(201, 184, 154, 0.4);
+  }
+  .blog-faq h3 { margin-top: 24px; }
+  .blog-related {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(201, 184, 154, 0.4);
+  }
+  .blog-related h2 { margin-top: 0; }
+  .blog-related ul { list-style: none; padding: 0; }
+  .blog-related li { margin-bottom: 10px; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">
+    <img src="../assets/folio_icon.webp" alt="Folio - 以書交友 app 標誌">
+    <span>Folio</span>
+  </a>
+  <div class="nav-links">
+    <a href="../index.html#modes">模式</a>
+    <a href="../index.html#flow">流程</a>
+    <a href="../index.html#philosophy">理念</a>
+    <a href="index.html">筆記</a>
+    <a href="../terms.html">條款</a>
+    <a href="../privacy.html">隱私</a>
+  </div>
+  <div class="scroll-progress" role="presentation" aria-hidden="true"><span class="scroll-progress-bar"></span></div>
+</nav>
+
+<main>
+  <article class="blog-article">
+    <p class="blog-breadcrumb">
+      <a href="../index.html">Folio</a> ›
+      <a href="index.html">慢社交筆記</a> ›
+      <span>為什麼共讀比配對 app 更容易遇到對的人</span>
+    </p>
+
+    <div class="blog-meta">
+      <time datetime="2026-05-29">2026-05-29</time>
+      <span>· 約 6 分鐘閱讀</span>
+      <span>· 慢社交設計</span>
+    </div>
+
+    <h1>為什麼共讀比配對 app 更容易遇到對的人</h1>
+
+    <p class="lede">
+      滑卡疲勞時代的慢社交設計筆記——為什麼一起讀完一本書，比一千張照片更接近一個人。
+    </p>
+
+    <h2>滑卡疲勞不是你的問題、是設計的</h2>
+
+    <p>
+      在主流配對 app 上滑了三個月還沒遇到對的人？這不是運氣差。
+      Hinge 自己的研究指出：61% 的用戶覺得配對 app 比兩年前更累、52% 形容「演算法把自己耗光」。
+      Statista 2025 報告也顯示：北美 25-34 歲的 dating app 滲透率第一次下滑、退場用戶超過新增。
+    </p>
+
+    <p>
+      表象來看是「太多選擇悖論」（paradox of choice）。但拆開看更精準：
+      滑卡這個動作本身、結構性地鼓勵你做<strong>最低資訊量的決策</strong>。
+      照片 3 張、職業 1 行、興趣 5 個 chip——你 0.8 秒內判斷一個人。
+      不是你淺薄、是介面要你淺薄。
+    </p>
+
+    <h2>共讀的不對稱資訊揭露</h2>
+
+    <p>
+      共讀有一個配對 app 給不出的條件：<strong>你必須花時間才能 show 出某個面向</strong>。
+      你選了哪本書、為什麼想讀、讀到哪裡時想到什麼、跳過了哪一段——這些都是「show, not tell」。
+      自介寫「喜歡看書」是 tell，把村上春樹從第 1 頁讀到第 200 頁並留下兩段筆記是 show。
+      兩者的資訊密度差 100 倍。
+    </p>
+
+    <p>
+      心理學上叫 <em>costly signaling</em>：付出時間成本的信號更可信。
+      照片 0 成本（可能不是你拍的、可能修過、可能是兩年前）。
+      讀完一本 300 頁的書 ≈ 7-10 小時成本、且過程留下文字痕跡。<strong>偽裝成本太高</strong>。
+    </p>
+
+    <p>
+      這就是為什麼共讀 app 像是「逆滑卡」設計：不是給你更多選項、是給你更<strong>深</strong>的選項。
+    </p>
+
+    <h2>三個共讀本來就有、配對 app 設計不出的特質</h2>
+
+    <h3>1. 共同 reference 不需要找話題</h3>
+
+    <p>
+      第一次見面的尷尬 80% 來自「沒有共同事件」——只能聊天氣、聊週末、聊星座。
+      共讀的人天生有 300 頁的共同 reference：「第 5 章那個比喻你怎麼看？」「結局是不是太突然？」
+      不用編話題、書本身就是話題容器。
+    </p>
+
+    <h3>2. 節奏一致代表生活步調匹配</h3>
+
+    <p>
+      願意每週讀 50 頁、為了討論書留出 30 分鐘的人，跟「我下個月見」型的人，是兩個物種。
+      共讀進度本身在做用戶過濾——你不用設「期望節奏」這個欄位、進度條替你過濾。
+    </p>
+
+    <h3>3. 留下的不是聊天紀錄、是紀念</h3>
+
+    <p>
+      LINE 對話 3 個月後翻不到、不會珍惜。
+      共讀過程的筆記、雙方的心得——按書本歸位、不時間排序、形成可以回去翻的紀念物。
+      <a href="../index.html#flow">Folio 把這個叫便利貼牆</a>。
+      不只是社交、是共同創作。
+    </p>
+
+    <h2>Folio 怎麼做：3 個篩選層</h2>
+
+    <p>
+      把共讀變成 app、最大的挑戰是<strong>避免它墮落成「另一種滑卡」</strong>。
+      Folio 的回答是 3 個篩選層：
+    </p>
+
+    <ul>
+      <li><strong>發帖</strong>：要寫一本書、為什麼想讀、期待怎樣的讀友。一天最多 2 篇。寫不出來的人，自然不會發。</li>
+      <li><strong>報名</strong>：對方不是滑卡看到你、是讀了你的帖子之後寫一封鏡像表單。匿名 / 急就章不會報名。</li>
+      <li><strong>進度閘</strong>：配對成立後不能立刻聊。雙方各自要讀到 25%、各寫一則心得——4 個 ✓——才解鎖自由對話。不是真心想讀的人，這關就走了。</li>
+    </ul>
+
+    <p>
+      三層過濾下來、剩下的人都<strong>主動付出過時間</strong>。基底就跟滑卡 app 不一樣。
+      進來的人少、但每一個都值得認真對話。
+    </p>
+
+    <blockquote>
+      質 &gt; 量。<br>
+      每一層機制都在篩選，<br>
+      留下來的關係，會比那些一見面就能加好友的更深。
+    </blockquote>
+
+    <h2>不是給所有人的</h2>
+
+    <p>
+      共讀 app 不適合「現在很急」「不想花時間」「不喜歡讀書」的人——這完全 OK、那是另一種需求。
+      Folio 的設計信念是<strong>慢、深、留得下</strong>。如果你也累了、想試試另一種社交方式、
+      <a href="https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110" target="_blank" rel="noopener">下載 iOS 版來看看</a>。
+      沒上癮機制、沒推播轟炸、不會佔據你的注意力。
+    </p>
+
+    <div class="blog-faq">
+      <h2>常見問題</h2>
+
+      <h3>共讀要花多久？</h3>
+      <p>
+        Folio 預設選項 1-8 週。發帖時你選預期週數、報名者按這個節奏申請。
+        不是強制、是匹配信號——願意花 4 週讀完的人不會被「2 週衝刺」型的人挑到。
+      </p>
+
+      <h3>沒讀過書、會不會被排擠？</h3>
+      <p>
+        Folio 不查書單、不評等級。你可以挑「沒讀過、想試」的書發帖——
+        正在學的人比已經讀完的人更需要夥伴。共讀的對象是「跟我一起翻第一頁的人」、
+        不是「來教我的人」。
+      </p>
+
+      <h3>跟讀書會差在哪？</h3>
+      <p>
+        讀書會通常 5-15 人、線下、固定時間。Folio 是 1 對 1、線上、各自節奏。
+        共讀完不是解散、是繼續以這個人為窗口認識另一個人。
+      </p>
+
+      <h3>不想找對象、只想找朋友、可以嗎？</h3>
+      <p>
+        可以。註冊時可選「<a href="../index.html#modes">純粹書友</a>」模式——
+        系統會把你跟「想找緣分」型的用戶互相隱藏、彼此看不到。
+        就是要找書友、不會被當成戀愛市場。
+      </p>
+    </div>
+
+    <div class="blog-cta">
+      <h3>慢一點、也好</h3>
+      <p>
+        Folio iOS 版已在 App Store。免費、無廣告、18+ 限定。
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110" target="_blank" rel="noopener">下載 Folio</a>
+        <a class="btn btn-ghost" href="../index.html#modes">了解三種模式</a>
+      </div>
+    </div>
+
+    <aside class="blog-related">
+      <h2>延伸閱讀</h2>
+      <ul>
+        <li><a href="../index.html#flow">共讀流程：發帖 → 報名 → 進度閘 → 整理</a></li>
+        <li><a href="../index.html#philosophy">Folio 設計信念</a></li>
+        <li><a href="../privacy.html">隱私權政策</a>（含跨境傳輸 / GDPR 條款）</li>
+      </ul>
+    </aside>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="../assets/folio_icon.webp" alt="Folio">
+          <span>Folio</span>
+        </div>
+        <p class="footer-tagline">A place for readers who want to be more than readers.</p>
+      </div>
+      <div>
+        <h4>探索</h4>
+        <ul>
+          <li><a href="../index.html#modes">三種模式</a></li>
+          <li><a href="../index.html#flow">共讀流程</a></li>
+          <li><a href="index.html">慢社交筆記</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>法務</h4>
+        <ul>
+          <li><a href="../terms.html">服務條款</a></li>
+          <li><a href="../privacy.html">隱私權政策</a></li>
+          <li><a href="../child-safety.html">兒童安全</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>聯絡</h4>
+        <ul>
+          <li><a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>
