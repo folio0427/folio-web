@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v1.2 ｜ **Effective Date** 2026-05-22 ｜ **Last Updated** 2026-05-22 ｜ **Status** Final
+> **Version** v1.3 ｜ **Effective Date** 2026-06-02 ｜ **Last Updated** 2026-06-02 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -12,6 +12,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Primary: Taiwan Personal Data Protection Act (PDPA)
 - EU users: GDPR
 - California users: CCPA
+- Hong Kong users: Personal Data (Privacy) Ordinance (PDPO, Cap. 486 of the Laws of Hong Kong), regulated by the Office of the Privacy Commissioner for Personal Data, Hong Kong (PCPD)
 - App Store / Google Play privacy requirements observed
 
 ## 02　Data We Collect
@@ -22,7 +23,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Nickname
 - Gender
 - Date of birth (for 18+ verification + age display)
-- Favorite book categories (max 5)
+- Favorite book categories (max 10)
 - Personality answers (up to 3, optional)
 - Mode (Pure Book Friend / Open to Connection / Open)
 - Desired gender (only when your mode is "Open to Connection" or "Open")
@@ -30,12 +31,14 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 ### Generated through usage
 
-- Posts (title, motivation, expected partner, weeks, progress, category)
+- Posts (title, author, motivation, expected partner, weeks, progress, category)
 - Applications (title, progress, motivation, self-offer, note)
-- Chat messages (incl. canned, quotes, progress updates)
+- Chat messages (incl. canned, quotes, progress updates, and the excerpt of an original message you reply to)
 - Reflections (25%, 100%, anytime)
-- Bookshelf (own books, sticky notes)
-- Match records (partner, unlock time, end time)
+- Reflection share cards (reflection text, book author, reading start/end dates, chosen template)
+- Bookshelf (own books, book author, category, reading progress and page numbers, sticky notes)
+- Match records (partner, per-stage unlock times, 100%-completion and celebration times, last-message time)
+- Report and block data: when you report a post or a user, we record the target of your report, the reasons you select, and any explanation you provide, and the server captures a content snapshot at the time of the report as evidence for moderation and legal defense. Where the report targets a user, that snapshot may include the reported user's personal data (nickname, gender, date of birth, mode, personality answers), their recent posts, and the messages and sticky notes exchanged between you and that user in any shared co-reading room. When you block a user, we record only the "blocker–blocked" relationship; the blocked user receives no notification. The foregoing report and block data is accessible only to Folio's moderation / administration personnel and only to the extent necessary.
 - Device info: OS version, app version, language, push token, device and app-instance identifiers (incl. the Firebase Analytics App Instance ID)
 - IP address (security and fraud prevention; Firebase Analytics masks it to derive coarse location)
 - Coarse location: country / city level (derived from a masked IP, not precise positioning; via Firebase Analytics)
@@ -59,7 +62,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Fraud and abuse detection
 - Customer service
 - Legal compliance
-- Marketing push (separately consented, withdrawable)
+- Marketing push (separately consented, withdrawable at any time free of charge). Service / transactional pushes (e.g., new messages, application notices, co-reading room status changes) are necessary to provide the service and are not direct marketing; marketing pushes require your separate, explicit opt-in, kept distinct from service pushes (aligned with Part 6A direct-marketing rules of Hong Kong's Personal Data (Privacy) Ordinance)
 
 ## 04　Third-Party Sharing
 
@@ -75,6 +78,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 ### Legal disclosure
 
 - Court orders, criminal investigation, lawful agency requests
+- Lawful requests from competent authorities in the regions where the service operates, including a cessation (anti-doxxing) notice issued by the Office of the Privacy Commissioner for Personal Data, Hong Kong (PCPD) under the Personal Data (Privacy) Ordinance, and lawful content-removal requests under Hong Kong law
 - Imminent life-safety situations
 
 ### Not shared with
@@ -93,6 +97,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 - The Supabase host is in Singapore; FCM, APNs, and Firebase Analytics are global
 - Transfer protections: EU Standard Contractual Clauses + Supabase SOC 2 Type II
+- Personal data of Hong Kong users is likewise stored and processed outside Hong Kong (in Singapore and at global edge nodes). Hong Kong's Personal Data (Privacy) Ordinance currently imposes no data-localization requirement, and its cross-border transfer restriction (Section 33) is not yet in force; we nonetheless handle such transfers in line with the safeguards recommended by the Privacy Commissioner
 - Transit encryption: TLS 1.2+
 - At-rest encryption: AES-256
 - By using the service, you consent to cross-border transfer
@@ -110,12 +115,13 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 ### Specific retention periods
 
-- Violation, report, and related enforcement records (incl. reported content): retained for community safety, abuse prevention, and legal defense; the link to your account is removed after you delete your account
+- Violation, report, and related enforcement records (incl. reported content): retained for community safety, abuse prevention, and legal defense. After a report is **closed (actioned or dismissed) it is retained for 5 years and then automatically purged**; reports not yet resolved are kept until handled. The link to your account is removed after you delete your account
 - Suspension-evasion hash (one-way salted SHA-256 of the OAuth sign-in identifier, used only to prevent re-registration evasion): auto-deleted 5 years after suspension; removed immediately upon unbanning. See "Suspension Notice & Appeal" in the Terms of Service for details
 - IP / login logs: 6 months – 1 year
 - Payment records (future): 5–7 years (Commercial Accounting Act, Tax Collection Act)
 - Pending criminal investigation data: until resolution
-- Terms consent records (`user_tos_consents`): **5 years** (legal evidence; auto-purged on expiry). Records include the `doc_type`, version, timestamp, method of your acceptance, plus a **salted SHA-256 hash of your email** (salt kept server-side, never held by the client). The hash is **one-way** and cannot be reversed to recover your email. Purpose: (a) after you delete your account, allow us to verify in litigation whether an email you claim is yours ever consented on Folio; (b) without retaining the plaintext email. This constitutes pseudonymisation under GDPR Art. 4(5) and is lawful.
+- Terms consent records (`user_tos_consents`): **5 years** (legal evidence; auto-purged on expiry). Records include the `doc_type`, version, timestamp, method of your acceptance, the **IP address and the device / browser identifier string (user-agent) at the moment of your consent**, plus a **salted SHA-256 hash of your email** (salt kept server-side, never held by the client). The hash is **one-way** and cannot be reversed to recover your email. Purpose: (a) after you delete your account, allow us to verify in litigation whether an email you claim is yours ever consented on Folio; (b) without retaining the plaintext email. This constitutes pseudonymisation under GDPR Art. 4(5) and is lawful.
+- Terms-change notification delivery log (`tos_notification_log`): records the delivery and open status of terms-change notices across each channel (push / email / in-app banner / blocking modal) as evidence that we provided lawful notice; retained for the same period as the consent records, and the link to your account is removed (user_id set to NULL) after you delete your account.
 
 ### Chat messages
 
@@ -144,7 +150,7 @@ Choosing "Leave Folio" causes the platform to handle your data as follows:
 - Your messages in those rooms
 - Author name shown as "A book friend who left"
 
-**Legal basis**: Conversations and co-reading records are jointly produced by both parties (joint controllership); we have a legitimate interest in retaining them for the other party's continued use. Anonymisation removes the data from being personally identifiable, complying with PDPA / GDPR. This pattern matches LINE / WhatsApp / Discord and other messaging services.
+**Legal basis**: Conversations and co-reading records are jointly produced by both parties (joint controllership); we have a legitimate interest in retaining them for the other party's continued use. Anonymisation only removes the linkage to your account and displays the content as "A book friend who left"; to that extent it is no longer personally identifiable. However, where a message's own content contains information that identifies an individual (e.g. a self-entered name, address, or social handle), it may still constitute personal data, and we will handle such content in accordance with applicable law, a report, or your deletion request. This pattern matches LINE / WhatsApp / Discord and other messaging services.
 
 **Future re-login**: Signing back in with the same Google / Apple account will be treated as a **brand-new user** requiring fresh registration. Sticky notes you wrote on partners' walls remain (anonymised) but are not linked to your new account.
 
@@ -183,6 +189,14 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 - Object to automated decision-making: about the matching algorithm
 - Restrict processing
 - Lodge complaint with DPA
+
+### Hong Kong PDPO rights (Hong Kong users)
+
+- Data Access Request (DAR): ask whether we hold, and what, your personal data, and obtain a copy
+- Data Correction Request (DCR): request correction of inaccurate personal data
+- Opt out of direct marketing: request, at any time and free of charge, that we cease using your personal data for direct marketing
+- Right to lodge a complaint with the Office of the Privacy Commissioner for Personal Data, Hong Kong (PCPD)
+- Response time: we respond within **40 days** of receiving a complete request, as required by the Personal Data (Privacy) Ordinance (in practice we generally process within 30 days)
 
 ### How to exercise
 
@@ -233,11 +247,12 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 - **L3 In-app banner**: visible on app open
 - **L4 Blocking modal**: must check "I have read and agree" to continue
 
-### Buffer period calculation
+### How consent takes effect
 
-- 7 days **from when the user first sees the modal** (not from publish date)
-- During buffer: agree / postpone / delete account
-- After buffer without explicit consent: forced modal again, no checkbox = no continuation
+- After an update, you will see a blocking consent modal the next time you open the app
+- You cannot continue using the service until you explicitly check "I have read and agree"
+- The modal's options are: agree and continue / delete your account
+- No buffer period — under GDPR / PDPA we must obtain valid consent before continuing to process your personal data, rather than granting a grace window afterwards
 
 ### Change classification
 
@@ -251,6 +266,7 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 - All data subject requests, complaints, exercises of rights via the same email
 - Authority (Taiwan): National Communications Commission / Ministry of Justice (PDPA)
 - Authority (EU): Your country's Data Protection Authority
+- Authority (Hong Kong): Office of the Privacy Commissioner for Personal Data (PCPD), https://www.pcpd.org.hk
 
 ---
 

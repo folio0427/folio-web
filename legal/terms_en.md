@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v1.2 ｜ **Effective Date** 2026-05-22 ｜ **Last Updated** 2026-05-22 ｜ **Status** Final
+> **Version** v1.3 ｜ **Effective Date** 2026-06-02 ｜ **Last Updated** 2026-06-02 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -85,8 +85,10 @@ When your account is suspended (feature restrictions or full suspension):
 
 ## 06　User-Generated Content (UGC)
 
+- User content reflects only the views of the user who posted it and does not represent the position, views, approval, or endorsement of the platform. Folio is a neutral venue for book-based exchange and co-reading matching, and does not warrant the truthfulness, accuracy, completeness, legality, or reliability of user content, including but not limited to book titles, reflections, discussions, posts, applications, sticky notes, and messages. However, Folio may restrict, remove, or take action against such content in accordance with these Terms, applicable law, lawful authority requests, or moderation decisions.
 - You bear full legal responsibility for what you publish
 - We have no pre-screening obligation but reserve removal rights
+- We remove content that is unlawful or whose removal is required by a competent authority under the applicable law of each region in which we operate, including cessation (anti-doxxing) notices under Hong Kong's Personal Data (Privacy) Ordinance and lawful content-removal requests under Hong Kong law
 - You grant us a non-exclusive, worldwide, royalty-free, sublicensable license
 - Limited to: service operation / platform infrastructure / de-identified analytics / 100% wrap-up pages you actively share
 
@@ -169,6 +171,7 @@ When your account is suspended (feature restrictions or full suspension):
 - No warranty of uninterrupted, error-free, virus-free service
 - No warranty of match quality or suitability
 - No warranty of user data truthfulness
+- Reflections, discussions, sticky notes, messages, or shared content about books, reading experiences, life experiences, or other topics are personal opinions and experience-sharing only. They do not constitute professional, medical, psychological, legal, financial, investment, or other specialist advice. You should not rely solely on such content when making important decisions. For medical, psychological, legal, financial, investment, or other professional matters, please consult a qualified professional.
 
 ## 14　Limitation of Liability
 
@@ -176,17 +179,33 @@ When your account is suspended (feature restrictions or full suspension):
 - Not liable for indirect, consequential, profit, goodwill, or punitive damages
 - Consumer Protection Act minimum rights unaffected
 
-## 15　Term Modifications
+## 15　Indemnification
+
+- To the fullest extent permitted by applicable law, if your content (including anything you publish, transmit, share, or provide), or your breach of these Terms, violation of applicable law, or infringement of a third party's rights, causes the platform, its operator, employees, partners, or service providers to face any third-party claim, lawsuit, investigation, damage, cost, reasonable legal fee, or legally transferable administrative penalty or fine, you will be responsible for indemnifying them.
+- This indemnification is limited to losses directly caused by conduct attributable to you, and does not cover liability arising from the platform's own intentional misconduct or gross negligence, or any liability that cannot be excluded, limited, or transferred under applicable law.
+- This clause does not affect any responsibility you may owe to other users or third parties under applicable law.
+
+## 16　Term Modifications
 
 - **Minor edits** (typos, restructuring): version bump + blocking modal re-consent
-- **Material changes** (liability, jurisdiction, termination): in-app announcement + push + email + blocking modal; continued use = consent
-- **New data collection / new third-party sharing / changed purposes**: forced modal re-consent; no checkbox = feature limited
+- **Material changes** (liability, jurisdiction, termination): in-app announcement + push + email + blocking modal; you must explicitly check to consent before you can continue
+- **New data collection / new third-party sharing / changed purposes**: blocking modal forces re-consent; you cannot continue until you agree
 
-## 16　Governing Law & Jurisdiction
+## 17　Governing Law & Jurisdiction
 
 - These Terms are governed by Taiwan (R.O.C.) law
 - First-instance jurisdiction: Taiwan Taipei District Court
 - Consumer disputes governed by Consumer Protection Act jurisdiction rules
+- If the mandatory law of your place of habitual residence (for example, consumer-protection or personal-data-protection law in Hong Kong or the EU) grants you rights that cannot be excluded by contract, nothing in these Terms affects the protections you enjoy under such law
+
+## 18　Miscellaneous
+
+- **Severability**: If any provision of these Terms is held invalid or unenforceable by a court or competent authority, that provision is severed to the minimum extent necessary and the remaining provisions remain in full force.
+- **Entire agreement**: These Terms, together with the Privacy Policy, constitute the entire agreement between you and the platform and supersede all prior oral or written understandings.
+- **No waiver**: A failure or delay by the platform in exercising any right under these Terms does not constitute a waiver of that right.
+- **Assignment**: The platform may assign its rights and obligations under these Terms to a successor entity in connection with a reorganization, incorporation, merger, or transfer of assets; you may not transfer your account or your rights and obligations under these Terms without the platform's consent.
+- **Language**: These Terms are provided in Chinese and English; in case of any discrepancy, the Chinese version prevails.
+- **Survival**: Provisions that by their nature should survive termination (including the user-content licence, indemnification, disclaimers, limitation of liability, and governing law and jurisdiction) continue in effect after termination of the service or your account.
 
 ---
 
