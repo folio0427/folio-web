@@ -2,20 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "_comment": "Folio legal docs manifest. Source of truth for the latest ToS / Privacy version: a GitHub Action syncs this into Supabase tos_versions (which the app reads), and it is also bundled into the app as an offline fallback. Bump version + summary when ToS / Privacy changes.",
   "terms": {
-    "version": "1.3",
-    "effective_date": "2026-06-02T00:00:00+08:00",
-    "change_type": "major",
-    "summary_zh": "v1.3：新增香港地區適用 — 合法內容移除（含 PCPD 停止披露通知）、管轄保留條款（不影響當地強行法權利）；新增「內容不代表平台立場」、「非專業建議」與「用戶賠償」條款；並補一般條款（可分性、權利讓與等）。",
-    "summary_en": "v1.3: Adds Hong Kong coverage — lawful content-removal (incl. PCPD cessation notices) and a governing-law savings clause for mandatory local rights; adds content-not-platform-views, no-professional-advice, and user-indemnification clauses; adds standard miscellaneous clauses (severability, assignment, etc.).",
+    "version": "1.4",
+    "effective_date": "2026-06-05T00:00:00+08:00",
+    "change_type": "minor",
+    "summary_zh": "v1.4：修改部分敘述用詞使表述更精確一致；無實質條款變更。",
+    "summary_en": "v1.4: Minor wording revisions for clarity and consistency; no substantive change.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "1.3",
-    "effective_date": "2026-06-02T00:00:00+08:00",
-    "change_type": "major",
-    "summary_zh": "v1.3：新增香港 PDPO 適用與香港用戶權利（查閱 / 改正 / 拒絕直接行銷 / 投訴、40 日回覆）；補充檢舉 / 封鎖資料、同意紀錄之 IP 與裝置識別、通知送達紀錄、跨境傳輸與直接行銷說明；揭露檢舉紀錄 5 年保留、並釐清刪帳號後共讀內容之匿名化處理。",
-    "summary_en": "v1.3: Adds Hong Kong PDPO coverage and HK user rights (access / correction / direct-marketing opt-out / complaint, 40-day response); discloses report/block data, consent-record IP & device identifiers, notification-delivery log, cross-border and direct-marketing details, report-record 5-year retention, and clarified anonymisation of co-reading content after account deletion.",
+    "version": "1.4",
+    "effective_date": "2026-06-05T00:00:00+08:00",
+    "change_type": "minor",
+    "summary_zh": "v1.4：配合後續版本新增之「地區（選填）」個人檔案欄位，於「收集之個人資料」與「用戶間之顯示」補齊相關蒐集揭露；另於「用戶間之顯示」補充揭露性別 / 年齡對其他用戶之顯示範圍及新增之隱藏開關；並修改部分敘述用詞使表述更精確一致（不涉權利義務變更）。",
+    "summary_en": "v1.4: Adds the necessary disclosures for the optional \"Region\" profile field (introduced in a later app version) under \"Data We Collect\" and \"Inter-user visibility\"; also clarifies under \"Inter-user visibility\" how gender / age are shown to other users and documents the new hide toggles; minor wording revisions for clarity and consistency (no change to rights or obligations).",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }

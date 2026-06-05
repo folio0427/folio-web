@@ -11,6 +11,41 @@
 
 ---
 
+## terms v1.4 / privacy v1.4 — 2026-06-05
+
+**狀態**：正式（生效日 2026-06-05）
+**文件**：terms_zh.md、privacy_zh.md、privacy_en.md、manifest.json（terms_en.md 僅標頭版號 bump、內容不變）
+**變更類型**：minor（補齊後續版本新功能所需之蒐集揭露 + 部分敘述用詞精確化；無新增蒐集、無新增第三方分享、無新增使用目的）
+**摘要**：
+
+配合 app 後續版本（1.0.7 起）新增之「地區（選填）」個人檔案欄位，依「揭露在先、處理在後」原則預先補齊相關蒐集揭露；並修改部分敘述用詞使表述更精確一致。terms 1.3 → 1.4、privacy 1.3 → 1.4。
+
+**Privacy 變更：**
+
+- §02「收集之個人資料」新增「地區（選填、由您自行填寫之文字、可留空、可隨時修改）」。此欄位將於 app 後續版本（1.0.7 起）之註冊流程（`basic_screen`）與「我」頁提供、存於 `profiles.location`；依「揭露在先、處理在後」原則於功能上線前先行揭露。英文版同步補「Region」。
+- §04「用戶間之顯示」補列「地區（若您填寫）」— 該欄位將顯示於對方個人檔案（`peer_profile_sheet`）與貼文詳情（`post_detail_screen`）。
+- §04「用戶間之顯示」補充揭露「性別、年齡」對其他用戶之顯示（依抱持心態過濾矩陣、純粹書友之檢視者不顯示性別；年齡由出生年月日推算、`v_public_profiles` 僅曝 `age` int 不曝完整 `birth_date`）。此為既有顯示行為（自 app v2.1 起即顯示於對方個人檔案 / 貼文詳情）之揭露補正、先前未於本節明列；同時揭露 app v2.8（1.0.7）新增之 `hide_gender` / `hide_age` 隱藏開關（用戶可選擇不對外顯示性別 / 年齡、伺服器端由 `v_public_profiles` 之 `CASE … THEN NULL` 強制）。屬揭露完整性補正 + 新增用戶隱私控制、非新增蒐集、非新增第三方分享、非改變使用目的。英文版同步補。
+- 修改部分敘述用詞，使表述更精確、並與全文及 app UI 用語一致（§02、§04、§06）；不涉蒐集範圍、權利義務或處理目的之變更。
+
+**Terms 變更：**
+
+- 修改部分敘述用詞，使表述更精確一致（§05、§06）；英文版內容不變、僅標頭版號 bump。無實質條款變更。
+
+**變更類型理由**：本批為 (1) 配合後續版本新功能「地區」欄位、依「揭露在先、處理在後」原則之預先揭露、(2) 部分敘述用詞之精確化；非新增蒐集行為、非新增第三方分享、非改變使用目的，故採 `minor`。註：app LegalGate 對 minor / major / data_consent_required 均以「accepted 版本 < 最新版本」觸發同一阻擋式 modal、change_type 僅決定 modal 標籤文字；現有用戶下次開 app 仍會因 1.3 → 1.4 版號 bump 被 LegalGateGuard 強制重新取得同意。
+
+**法律依據**：台灣個資法 §8 告知義務（地區欄位揭露）；GDPR Art. 13 透明性、Art. 5(1)(a)；香港 PDPO DPP1（蒐集告知）/ DPP5（開放）。在地化用語屬文意清理、不涉實質義務變更。
+
+**對應 Supabase tos_versions**：由 sync_tos_versions workflow 於 manifest.json push 後自動 upsert（含 summary）terms 1.4 / privacy 1.4 active row。
+
+**待辦（非條款本身）**：
+
+- 跑 `scripts\sync_legal.bat` 同步進 `app/assets/legal/`（離線 fallback）。
+- commit + push folio-web → GitHub Pages 重建 + sync_tos_versions workflow 觸發。
+- 重建 app（flutter build）使 bundled fallback 帶新版。
+- （商店問卷）App Store「App 隱私」/ Google Play「資料安全」：確認「地區」自填欄位已反映於蒐集之資料類型（粗略位置 / 使用者內容）。
+
+---
+
 ## terms v1.3 / privacy v1.3 — 2026-06-02
 
 **狀態**：正式（生效日 2026-06-02）

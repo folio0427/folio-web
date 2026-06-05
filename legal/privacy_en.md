@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v1.3 ｜ **Effective Date** 2026-06-02 ｜ **Last Updated** 2026-06-02 ｜ **Status** Final
+> **Version** v1.4 ｜ **Effective Date** 2026-06-05 ｜ **Last Updated** 2026-06-05 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -28,6 +28,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Mode (Pure Book Friend / Open to Connection / Open)
 - Desired gender (only when your mode is "Open to Connection" or "Open")
 - Character styling (mascot appearance; not a real-life image)
+- Region (optional free text you provide; may be left blank and edited anytime)
 
 ### Generated through usage
 
@@ -89,7 +90,8 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 
 ### Inter-user visibility
 
-- Nickname, mode badge, category preferences
+- Nickname, mode badge, category preferences, region (if provided)
+- Gender and age: shown on the other party's profile and in post details per the mode filtering matrix (gender is not shown to Pure-Book-Friend viewers; age is derived from your date of birth, and your full date of birth is not shown). You can enable hide toggles on the "Me" page so your gender / age are not shown to other users
 - Posts, applications, reflections
 - After matching: chat messages and sticky-note content you cite
 

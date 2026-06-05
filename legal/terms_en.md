@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v1.3 ｜ **Effective Date** 2026-06-02 ｜ **Last Updated** 2026-06-02 ｜ **Status** Final
+> **Version** v1.4 ｜ **Effective Date** 2026-06-05 ｜ **Last Updated** 2026-06-05 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
