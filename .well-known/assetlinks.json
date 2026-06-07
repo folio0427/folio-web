@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.yuliao.folio",
+      "sha256_cert_fingerprints": [
+        "BD:9A:4E:82:96:0D:D1:FF:87:35:54:00:2B:5B:A0:98:2A:D8:F5:8F:3D:65:EA:38:88:81:2C:B2:94:83:D9:B9"
+      ]
+    }
+  }
+]

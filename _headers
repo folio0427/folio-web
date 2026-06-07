@@ -1,0 +1,14 @@
+# Cloudflare Pages headers.
+#
+# Apple / Google fetch these association files over HTTPS to verify Universal /
+# App Links. iOS is lenient about content-type but the spec wants application/json;
+# the AASA file has no extension so Pages would otherwise serve octet-stream.
+# Android requires application/json for assetlinks.json.
+
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600
+
+/.well-known/assetlinks.json
+  Content-Type: application/json
+  Cache-Control: public, max-age=3600

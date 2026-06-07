@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["LB5582LJQM.com.yuliao.folio"],
+        "components": [
+          { "/": "/post/*", "comment": "Folio shared post links open the app" }
+        ]
+      }
+    ]
+  }
+}
