@@ -101,6 +101,7 @@ section {
   padding: clamp(60px, 10vh, 120px) 0;
   position: relative;
 }
+section[id] { scroll-margin-top: 72px; }
 
 /* ---------- Book ribbon bookmark（fixed 左上、永遠掛著、scroll-driven sway）---------- */
 .book-ribbon {
@@ -170,17 +171,19 @@ section {
 .scroll-progress-bar {
   display: block;
   height: 100%;
-  width: var(--scroll-progress, 0%);
+  width: 100%;
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left;
   background: linear-gradient(90deg, var(--sage) 0%, var(--amber) 100%);
-  transition: width 0.08s linear;
+  transition: transform 0.08s linear;
 }
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 1.2rem;
+  font-family: 'EB Garamond', var(--font-serif);
+  font-weight: 500;
+  font-size: 1.3rem;
   color: var(--walnut);
 }
 .nav-logo img { width: 28px; height: 28px; border-radius: 6px; }
@@ -205,6 +208,9 @@ section {
   transition: transform 0.5s var(--ease-watercolor);
 }
 .nav-links a:hover::after { transform: scaleX(1); transform-origin: left; }
+/* Scrollspy：目前所在 section 的書籤線 */
+.nav-links a.active { color: var(--walnut); }
+.nav-links a.active::after { transform: scaleX(1); transform-origin: left; }
 
 .lang-toggle {
   margin-left: 6px;
@@ -251,8 +257,8 @@ section {
   pointer-events: none;
   opacity: 0;
   animation:
-    hero-scene-in 1.6s var(--ease-watercolor) 0.2s forwards,
-    folio-scene-breathe 7.8s ease-in-out 1.8s infinite;
+    hero-scene-in 1.2s var(--ease-watercolor) 0.1s forwards,
+    folio-scene-breathe 7.8s ease-in-out 1.4s infinite;
 }
 .compilation-scene::before {
   content: '';
@@ -302,8 +308,8 @@ section {
   pointer-events: none;
   transform-origin: 50% -260%;
   animation:
-    moon-drop 1.8s cubic-bezier(0.32, 0, 0.2, 1) 0.4s forwards,
-    moon-hang 6.4s ease-in-out 2.4s infinite;
+    moon-drop 1.5s cubic-bezier(0.32, 0, 0.2, 1) 0.3s forwards,
+    moon-hang 6.4s ease-in-out 1.9s infinite;
   filter: drop-shadow(0 5px 16px rgba(255, 220, 150, 0.22));
 }
 @keyframes moon-drop {
@@ -394,10 +400,14 @@ section {
   transform-origin: 50% 56%;
   will-change: transform;
 }
+/* 支點分家：同樣的 rotate 走出不同弧線、打散「同步呼吸」感 */
+.float-layer.note { transform-origin: 42% 30%; }
+.float-layer.leaf { transform-origin: 60% 72%; }
+.float-layer.book-note { transform-origin: 50% 80%; }
 .note-gold        { --w: 5.2vw; --x: 68%; --y: 8%;  --o: 0.58; animation: folio-drift-a 12.8s ease-in-out infinite; }
 .note-lavender    { --w: 4.4vw; --x: 84%; --y: 17%; --o: 0.52; animation: folio-drift-b 14.2s ease-in-out infinite -2.6s; }
 .note-rose        { --w: 4.0vw; --x: 58%; --y: 22%; --o: 0.52; animation: folio-drift-c 13.6s ease-in-out infinite -4.2s; }
-.note-sage        { --w: 4.4vw; --x: 76%; --y: 32%; --o: 0.50; animation: folio-drift-b 13.2s ease-in-out infinite -5.1s; }
+.note-sage        { --w: 4.4vw; --x: 76%; --y: 32%; --o: 0.50; animation: folio-drift-b 16.6s ease-in-out infinite -5.1s; }
 .note-amber       { --w: 3.2vw; --x: 53%; --y: 16%; --o: 0.55; animation: folio-drift-a 12.4s ease-in-out infinite -3.2s; }
 .note-tiny-gold-a { --w: 3.0vw; --x: 62%; --y: 14%; --o: 0.48; animation: folio-drift-c 14s ease-in-out infinite -1.7s; }
 .note-tiny-gold-b { --w: 2.8vw; --x: 88%; --y: 9%;  --o: 0.46; animation: folio-drift-a 15s ease-in-out infinite -7.1s; }
@@ -406,7 +416,7 @@ section {
 .note-tiny-sage-a { --w: 3.0vw; --x: 84%; --y: 38%; --o: 0.44; animation: folio-drift-a 13.8s ease-in-out infinite -7.6s; }
 .note-tiny-lavender { --w: 2.9vw; --x: 75%; --y: 12%; --o: 0.46; animation: folio-drift-b 15.8s ease-in-out infinite -5.5s; }
 .book-note-a { --w: 3.4vw; --x: 50%; --y: 40%; --o: 0.6; animation: folio-book-note-rise 11.4s ease-in-out infinite -1.4s; }
-.book-note-b { --w: 3.2vw; --x: 56%; --y: 44%; --o: 0.54; animation: folio-book-note-rise 12.2s ease-in-out infinite -4.3s; }
+.book-note-b { --w: 3.2vw; --x: 56%; --y: 44%; --o: 0.54; animation: folio-book-note-rise-m 12.2s ease-in-out infinite -4.3s; }
 .book-note-c { --w: 3.6vw; --x: 46%; --y: 47%; --o: 0.52; animation: folio-book-note-rise 13s ease-in-out infinite -6.1s; }
 .leaf-right    { --w: 6.4vw; --x: 84%; --y: 52%; --o: 0.68; animation: folio-leaf-glide 7.8s ease-in-out infinite -2.7s; }
 .leaf-small-a  { --w: 3.2vw; --x: 18%; --y: 36%; --o: 0.58; animation: folio-left-leaf 8.4s ease-in-out infinite -1.1s; }
@@ -453,6 +463,13 @@ section {
   66% { transform: translate3d(18px, -27px, 0) rotate(5deg) scale(0.84); }
   84% { transform: translate3d(8px, -14px, 0) rotate(1.2deg) scale(0.81); }
 }
+/* 鏡像版給 book-note-b：三張貼齊的便利貼別走同一條對角線（輸送帶感） */
+@keyframes folio-book-note-rise-m {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(4.5deg) scale(0.78); }
+  36% { transform: translate3d(-10px, -16px, 0) rotate(-2.4deg) scale(0.81); }
+  66% { transform: translate3d(-18px, -27px, 0) rotate(-5deg) scale(0.84); }
+  84% { transform: translate3d(-8px, -14px, 0) rotate(-1.2deg) scale(0.81); }
+}
 @keyframes folio-plant-sway {
   0%, 100% { transform: rotate(-0.8deg) translate3d(0, 0, 0); }
   50% { transform: rotate(1.8deg) translate3d(2px, -2px, 0); }
@@ -461,9 +478,10 @@ section {
   0%, 100% { transform: rotate(-12deg) translate3d(0, 0, 0); }
   50% { transform: rotate(-9deg) translate3d(2px, -1px, 0); }
 }
+/* transform-only：filter 版會逼整個 25 層 hero 每幀重新柵格化 */
 @keyframes folio-scene-breathe {
-  0%, 100% { transform: scale(1); filter: saturate(1) brightness(1); }
-  50% { transform: scale(1.006); filter: saturate(1.03) brightness(1.025); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.006); }
 }
 @keyframes hero-scene-in {
   from { opacity: 0; }
@@ -482,6 +500,9 @@ section {
   .leaf-right       { --w: 14vw; --x: 82%; --y: 56%; }
   /* Mobile decluttering: hide low-priority float layers to cut LCP + visual noise */
   .mobile-hide { display: none !important; }
+  /* 手機降耗：小葉子靜止當裝飾、blob 縮 blur 半徑 + 停 18s drift（在 hero 圖後幾乎看不見） */
+  .leaf-small-a, .leaf-small-b { animation: none; }
+  .blob { filter: blur(36px); animation: none; }
 }
 .hero-content {
   position: relative;
@@ -498,19 +519,19 @@ section {
 /* 從一本書：從上往下浮現 */
 .hero-content .word-1 {
   opacity: 0;
-  animation: fall-down 1.0s var(--ease-watercolor) 0.5s forwards;
+  animation: fall-down 0.8s var(--ease-watercolor) 0.3s forwards;
 }
 /* 遇見 可能的緣分：淡入 */
 .hero-content .line-2-wrap {
   opacity: 0;
-  animation: hero-fade 1.3s var(--ease-watercolor) 1.4s forwards;
+  animation: hero-fade 1.0s var(--ease-watercolor) 0.9s forwards;
 }
-/* 底下資訊（lede / btn / caption）：從下往上浮現 1.3s */
+/* 底下資訊（lede / btn / caption）：從下往上浮現；CTA 2.5s 內全亮 */
 .hero-content .lede,
 .hero-content .btn-row,
 .hero-content .hero-caption {
   opacity: 0;
-  animation: rise-up 1.3s var(--ease-watercolor) 2.5s forwards;
+  animation: rise-up 1.0s var(--ease-watercolor) 1.5s forwards;
 }
 @keyframes fall-down {
   from { opacity: 0; transform: translateY(-12px); }
@@ -586,7 +607,6 @@ section {
 
 @media (max-width: 768px) {
   .hero { padding: 80px 0 60px; }
-  .hero-bg { height: 42vh; top: 70px; }
   .hero-content { padding-bottom: 2vh; }
 }
 
@@ -601,7 +621,13 @@ section {
   font-size: 0.98rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.5s var(--ease-watercolor);
+  /* 指標回饋 0.3s — 比場景動畫快一檔、慢節奏留給氛圍動畫 */
+  transition: transform 0.3s var(--ease-watercolor),
+              box-shadow 0.3s var(--ease-watercolor),
+              filter 0.3s var(--ease-watercolor),
+              background-color 0.3s var(--ease-watercolor),
+              border-color 0.3s var(--ease-watercolor),
+              color 0.3s var(--ease-watercolor);
   border: 1.5px solid transparent;
   text-decoration: none;
 }
@@ -612,11 +638,15 @@ section {
   background-position: center;
   color: var(--cream);
 }
-.btn-primary:hover {
-  /* brightness() not bg-color — keeps the texture on hover */
-  filter: brightness(0.9);
+/* 兩顆按鈕 hover 行為一致：都抬升、都柔影 */
+.btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(61, 47, 31, 0.15);
+  box-shadow: 0 8px 24px rgba(61, 47, 31, 0.13);
+}
+.btn-primary:hover {
+  /* 內襯一層奶油薄釉（inset）— 均勻提亮、紋理不發霧；filter 會把水彩壓成霧面 */
+  box-shadow: inset 0 0 0 999px rgba(250, 243, 231, 0.14),
+              0 8px 24px rgba(61, 47, 31, 0.15);
 }
 .btn-ghost {
   background: transparent;
@@ -625,8 +655,13 @@ section {
 }
 .btn-ghost:hover {
   background: var(--cream);
-  border-color: var(--walnut);
+  border-color: var(--sage-soft);
   color: var(--walnut);
+}
+.btn:active {
+  transform: translateY(0) scale(0.985);
+  box-shadow: 0 3px 10px rgba(61, 47, 31, 0.12);
+  transition-duration: 0.12s;
 }
 .btn-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
@@ -698,7 +733,8 @@ section {
   border-radius: var(--radius-card);
   padding: 240px 28px 32px;
   position: relative;
-  transition: all 0.6s var(--ease-watercolor);
+  transition: transform 0.35s var(--ease-watercolor),
+              box-shadow 0.35s var(--ease-watercolor);
   overflow: hidden;
 }
 .mode-art {
@@ -720,7 +756,9 @@ section {
     rgba(0, 0, 0, 0.55) 78%,
     transparent 100%);
   z-index: 0;
+  transition: transform 0.8s var(--ease-watercolor);
 }
+.mode-card:hover .mode-art { transform: scale(1.03); }
 .mode-card > *:not(.mode-art) {
   position: relative;
   z-index: 1;
@@ -824,7 +862,10 @@ section {
   opacity: 0.45;
   z-index: 0;
   animation: dashed-flow 6s linear infinite;
+  /* background-position 是 paint 屬性 — 只在 flow 區進視野時跑、省全程重繪 */
+  animation-play-state: paused;
 }
+.flow-grid.flow-visible::before { animation-play-state: running; }
 @keyframes dashed-flow {
   0% { background-position: 0 0; }
   100% { background-position: 14px 0; }
@@ -1059,6 +1100,117 @@ section {
   .solo-grid { grid-template-columns: 1fr; gap: 18px; }
 }
 
+/* ---------- Notes：慢社交筆記導流 ---------- */
+.notes {
+  background: var(--parchment);
+}
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+/* reveal 進場放外層 wrapper（0.9s + stagger）、互動 transform 放卡片本體（0.35s）— 各管各的 */
+.note-card {
+  display: block;
+  position: relative;
+  height: 100%;
+  background: var(--cream);
+  border: 1px solid var(--amber-soft);
+  border-radius: var(--radius-soft);
+  padding: 26px 24px 20px;
+  text-decoration: none;
+  transform: rotate(var(--tilt, 0deg));
+  transition: transform 0.35s var(--ease-watercolor),
+              box-shadow 0.35s var(--ease-watercolor),
+              border-color 0.35s var(--ease-watercolor);
+  box-shadow: 0 2px 8px rgba(61, 47, 31, 0.04);
+}
+/* 紙膠帶：貼在牆上的便利貼比喻 */
+.note-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 64px;
+  height: 20px;
+  transform: translateX(-50%) rotate(-2.5deg);
+  background: rgba(220, 202, 176, 0.55);
+  border: 1px solid rgba(201, 184, 154, 0.35);
+  border-radius: 2px;
+  mix-blend-mode: multiply;
+  transition: transform 0.35s var(--ease-watercolor);
+}
+/* hover：紙被拿起來看 — 抬起、轉正、膠帶跟著拉直 */
+.note-card:hover {
+  transform: translateY(-5px) rotate(0deg);
+  box-shadow: var(--shadow-paper);
+  border-color: var(--sage);
+}
+.note-card:hover::before {
+  transform: translateX(-50%) rotate(0.5deg);
+}
+.note-card .note-go {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--sage);
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s var(--ease-watercolor),
+              transform 0.3s var(--ease-watercolor);
+}
+.note-card .note-go::after { content: ' →'; }
+.note-card:hover .note-go {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (hover: none) {
+  /* 觸控裝置沒有 hover、箭頭直接顯示 */
+  .note-card .note-go { opacity: 1; transform: none; }
+}
+.note-card time {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--sage);
+  display: block;
+  margin-bottom: 10px;
+}
+.note-card h3 {
+  font-size: 1.02rem;
+  line-height: 1.55;
+  margin-bottom: 8px;
+  color: var(--walnut);
+}
+.note-card p {
+  font-size: 0.88rem;
+  color: var(--walnut-soft);
+  line-height: 1.7;
+  margin: 0;
+}
+.notes-more {
+  text-align: center;
+  margin: 36px 0 0;
+}
+.notes-more a {
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--sage);
+}
+.notes-more a::after {
+  content: ' →';
+  display: inline-block;
+  transition: transform 0.3s var(--ease-watercolor);
+}
+.notes-more a:hover::after { transform: translateX(4px); }
+@media (max-width: 768px) {
+  .notes-grid { grid-template-columns: 1fr; max-width: 480px; }
+}
+
 /* ---------- Launch：Coming soon（開放式 layout）---------- */
 .launch {
   position: relative;
@@ -1106,10 +1258,10 @@ section {
 }
 .launch-tag {
   display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-family: var(--font-italic);
+  font-style: italic;
+  font-size: 0.98rem;
+  letter-spacing: 0.05em;
   color: var(--sage);
   margin-bottom: 14px;
   padding: 4px 0;
@@ -1161,11 +1313,8 @@ section {
   opacity: 0.82;
   overflow: hidden;
 }
-.store-btn:hover {
-  background: #5a6f55;
-  border-color: #5a6f55;
-  opacity: 0.95;
-}
+/* 基底 hover 已不需要：兩平台皆上架、頁上沒有 disabled 商店按鈕
+   （舊規則的灰綠 #5a6f55 會蓋過 live 的核桃色、讓按鈕 hover 發髒） */
 .store-btn .sb-glyph {
   flex: 0 0 auto;
   display: flex;
@@ -1186,10 +1335,11 @@ section {
   font-family: var(--font-sans);
 }
 .store-btn .sb-name {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
+  /* 拉丁字優先吃 EB Garamond、與 footer tagline 同款書卷氣 */
+  font-family: 'EB Garamond', var(--font-serif);
+  font-size: 1.14rem;
   font-weight: 500;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.015em;
 }
 .store-btn .sb-state {
   position: absolute;
@@ -1223,10 +1373,16 @@ section {
   text-decoration: none;
 }
 .store-btn-live:hover {
-  background: var(--walnut-soft);
-  border-color: var(--walnut-soft);
+  /* 同色相、暖一階 — 不用 walnut-soft（去飽和、會偏灰冷） */
+  background: #4e3c28;
+  border-color: #4e3c28;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(61, 47, 31, 0.32);
+}
+.store-btn-live:active {
+  transform: translateY(0) scale(0.985);
+  box-shadow: 0 4px 12px rgba(61, 47, 31, 0.2);
+  transition-duration: 0.12s;
 }
 .store-btn-live .sb-state-live {
   background: rgba(250, 243, 231, 0.95);
@@ -1235,9 +1391,7 @@ section {
   opacity: 1;
 }
 .launch-tag-live {
-  background: rgba(61, 47, 31, 0.12);
   color: var(--walnut);
-  font-weight: 500;
 }
 
 @media (max-width: 480px) {
@@ -1336,10 +1490,10 @@ section {
   align-items: center;
   gap: 12px;
   margin-bottom: 16px;
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
+  font-family: 'EB Garamond', var(--font-serif);
+  font-size: 1.4rem;
 }
-.footer-brand img { width: 32px; border-radius: 6px; }
+.footer-brand img { width: 32px; height: 32px; border-radius: 6px; }
 .footer-tagline {
   font-family: var(--font-italic);
   font-style: italic;
@@ -1362,7 +1516,7 @@ section {
   color: var(--cream);
   font-size: 0.92rem;
   opacity: 0.85;
-  transition: opacity 0.4s var(--ease-watercolor);
+  transition: opacity 0.4s var(--ease-watercolor), color 0.4s var(--ease-watercolor);
 }
 .footer a:hover { opacity: 1; color: var(--amber-soft); }
 .footer-bottom {
@@ -1523,7 +1677,7 @@ section {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 1.2s var(--ease-watercolor), transform 1.2s var(--ease-watercolor);
+  transition: opacity 0.9s var(--ease-watercolor), transform 0.9s var(--ease-watercolor);
 }
 .reveal.visible {
   opacity: 1;
@@ -1532,6 +1686,7 @@ section {
 .reveal-delay-1 { transition-delay: 0.15s; }
 .reveal-delay-2 { transition-delay: 0.3s; }
 .reveal-delay-3 { transition-delay: 0.45s; }
+.reveal-delay-4 { transition-delay: 0.6s; }
 
 /* ---------- Decorative blob（背景水彩）---------- */
 .blob {

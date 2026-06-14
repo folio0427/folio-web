@@ -9,7 +9,7 @@
       'page.title.home':       'Folio｜以書交友 app、慢步調共讀 — 從一本書遇見可能的緣分',
       'page.title.terms':      'Folio｜服務條款 — 以書交友 app 使用條款',
       'page.title.privacy':    'Folio｜隱私權政策 — 個資保護與資料使用說明',
-      'page.desc.home':        'Folio 是以書交友的 iOS app — 透過共讀慢慢認識一個人，不滑卡配對。三種模式、進度閘解鎖聊天、共讀便利貼牆，留下值得的關係。',
+      'page.desc.home':        'Folio 是以書交友的 app — 透過共讀慢慢認識一個人，不滑卡配對。三種模式、進度閘解鎖聊天、共讀便利貼牆，留下值得的關係。iOS 與 Android 皆已上架。',
 
       'nav.modes':             '模式',
       'nav.flow':              '流程',
@@ -83,10 +83,15 @@
       'philosophy.quote':      '質 &gt; 量。<br>每一層機制（發帖、報名、進度閘）都在篩選，<br>留下來的關係，會比那些一見面就能加好友的更深。',
       'philosophy.cite':       '— Folio 設計信念',
 
-      'launch.tag':            'iOS 已上架 · Available now',
+      'notes.kicker':          '— Notes on slow social design —',
+      'notes.title':           '慢社交筆記',
+      'notes.sub':             '關於共讀、慢步調社交、書與人 — 我們一邊做、一邊寫下來的思考。',
+      'notes.more':            '看所有筆記',
+
+      'launch.tag':            'iOS · Android · Available now',
       'launch.title':          '準備好讀第一本書了嗎',
-      'launch.sub':            'Folio iOS 版已上架 App Store。Android 即將推出。',
-      'launch.note':           'iOS 已上架、Android 即將推出。',
+      'launch.sub':            'Folio 已在 App Store 與 Google Play 上架。',
+      'launch.note':           '免費下載、18 歲以上限定。',
       'launch.store.prefix':   '下載自',
       'launch.store.state':    '即將上架',
       'launch.store.state.live': '立即下載',
@@ -102,6 +107,7 @@
       'footer.li.privacy':     '隱私權政策',
       'footer.li.childsafety': '兒童安全',
       'footer.h.contact':      '聯絡',
+      'footer.li.support':     '支持 Folio',
       'footer.copyright':      '© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務',
 
       'lang.toggle':           'EN',
@@ -113,7 +119,7 @@
       'page.title.home':       'Folio｜Book-First Social App for Slow Co-Reading — From one book, meet a kindred',
       'page.title.terms':      'Folio｜Terms of Service — Co-Reading Social App',
       'page.title.privacy':    'Folio｜Privacy Policy — Data Use & Protection',
-      'page.desc.home':        'Folio is a book-first iOS social app — slow-paced co-reading instead of swiping. Three modes, progress-gated chat, shared sticky-note walls. Build deeper connections through books.',
+      'page.desc.home':        'Folio is a book-first social app — slow-paced co-reading instead of swiping. Three modes, progress-gated chat, shared sticky-note walls. Now on iOS and Android.',
 
       'nav.modes':             'Modes',
       'nav.flow':              'How',
@@ -187,10 +193,15 @@
       'philosophy.quote':      'Quality &gt; quantity.<br>Each layer (posting, applying, the progress gate) filters.<br>Relationships that remain run deeper than those formed at first sight.',
       'philosophy.cite':       '— Folio design belief',
 
-      'launch.tag':            'Available now on iOS',
+      'notes.kicker':          '— Notes on slow social design —',
+      'notes.title':           'Slow Social Notes',
+      'notes.sub':             'On co-reading, slow-paced social, books and people — thoughts we write down as we build.',
+      'notes.more':            'Read all notes',
+
+      'launch.tag':            'iOS · Android · Available now',
       'launch.title':          'Ready to read your first book?',
-      'launch.sub':            'Folio for iOS is live on the App Store. Android coming soon.',
-      'launch.note':           'iOS live · Android coming soon.',
+      'launch.sub':            'Folio is now on the App Store and Google Play.',
+      'launch.note':           'Free to download · 18+ only.',
       'launch.store.prefix':   'Download on',
       'launch.store.state':    'Coming soon',
       'launch.store.state.live': 'Get it now',
@@ -206,6 +217,7 @@
       'footer.li.privacy':     'Privacy',
       'footer.li.childsafety': 'Child Safety',
       'footer.h.contact':      'Contact',
+      'footer.li.support':     'Support Folio',
       'footer.copyright':      '© 2026 Folio · by an independent developer · 18+ only',
 
       'lang.toggle':           '中',

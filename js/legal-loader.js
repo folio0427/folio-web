@@ -1,5 +1,6 @@
 // Folio legal page markdown loader — 動態 fetch .md + marked.js 解析
 // 監聽 folio-lang 事件、語言切換時自動 reload 對應 .md
+// 頁內已 prerender 的語言（build 時由同一份 .md 生成）直接沿用、零 fetch 零 marked
 (() => {
   'use strict';
 
@@ -8,6 +9,23 @@
 
   const doc = article.getAttribute('data-legal-doc'); // 'terms' or 'privacy'
   if (!doc) return;
+
+  // marked 按需載入 — zh（prerendered）訪客完全不需要它
+  const MARKED_SRC = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
+  let markedPromise = null;
+  function ensureMarked() {
+    if (typeof marked !== 'undefined') return Promise.resolve();
+    if (!markedPromise) {
+      markedPromise = new Promise((resolve) => {
+        const s = document.createElement('script');
+        s.src = MARKED_SRC;
+        s.onload = resolve;
+        s.onerror = resolve; // load() 內的 typeof 檢查會顯示錯誤訊息
+        document.head.appendChild(s);
+      });
+    }
+    return markedPromise;
+  }
 
   const ERROR_MSG = {
     zh: '條款內容載入失敗。請來信 <a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a>。',
@@ -21,6 +39,7 @@
     if (lang === currentLang) return;
     currentLang = lang;
 
+    await ensureMarked();
     if (typeof marked === 'undefined') {
       article.innerHTML = '<p>marked.js library failed to load (CDN blocked or offline). Check network.</p>';
       console.error('[legal-loader] marked is undefined');
@@ -67,19 +86,14 @@
     return (navigator.language || 'zh').toLowerCase().startsWith('zh') ? 'zh' : 'en';
   }
 
-  // Wait for marked to be available (CDN async)
-  function whenReady(cb) {
-    if (typeof marked !== 'undefined') return cb();
-    let tries = 0;
-    const tick = () => {
-      if (typeof marked !== 'undefined') return cb();
-      if (++tries > 40) return cb(); // ~4s max wait
-      setTimeout(tick, 100);
-    };
-    tick();
+  // Initial：prerendered 語言相符 → 不抹不抓；不符（如 en）才走 fetch
+  const prerendered = article.querySelector('[data-prerendered-lang]');
+  const initialLang = getInitialLang();
+  if (prerendered && prerendered.getAttribute('data-prerendered-lang') === initialLang) {
+    currentLang = initialLang;
+  } else {
+    load(initialLang);
   }
-
-  whenReady(() => load(getInitialLang()));
 
   // React to language change
   document.addEventListener('folio-lang', (e) => {

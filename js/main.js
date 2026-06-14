@@ -33,13 +33,40 @@
 
       if (progressBar) {
         const docH = document.documentElement.scrollHeight - viewH;
-        const pct = docH > 0 ? Math.min(100, (y / docH) * 100) : 0;
-        progressBar.style.setProperty('--scroll-progress', pct.toFixed(2) + '%');
+        // unitless 0–1 → CSS scaleX；transform 走 compositor、不觸發 layout
+        const frac = docH > 0 ? Math.min(1, y / docH) : 0;
+        progressBar.style.setProperty('--scroll-progress', frac.toFixed(4));
       }
     };
+    // 一個 scroll 事件潮只排一個 frame（多個 scroll event 不重複 queue）
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        update();
+      });
+    };
     update();
-    window.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', update, { passive: true });
+  }
+
+  // Scrollspy: 目前所在 section → nav 書籤線
+  const spyLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  if (spyLinks.length > 0 && 'IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const id = '#' + entry.target.id;
+        spyLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === id));
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    spyLinks.forEach((a) => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) spy.observe(target);
+    });
   }
 
 // Book ribbon: organic sway — multi-freq idle + smoothed scroll velocity
@@ -61,6 +88,9 @@
     const IDLE_A_AMP = 0.42;  const IDLE_A_PERIOD = 3400;
     const IDLE_B_AMP = 0.18;  const IDLE_B_PERIOD = 2100;  const IDLE_B_PHASE = 1.3;
     const IDLE_C_AMP = 0.08;  const IDLE_C_PERIOD = 1250;  const IDLE_C_PHASE = 2.7;
+
+    let lastRotateStr = '';
+    let lastSagStr = '';
 
     const frame = (now) => {
       const currentY = window.scrollY;
@@ -91,8 +121,15 @@
       // coupled translateY: |rotation| × small factor → gentle "stretch" sag
       const sagY = Math.abs(displayRotation) * 0.35;
 
-      ribbon.style.setProperty('--ribbon-rotate', displayRotation.toFixed(2) + 'deg');
-      ribbon.style.setProperty('--ribbon-sag', sagY.toFixed(2) + 'px');
+      // 值沒變（量化到 0.01）就不碰 style — 免去無效 style invalidation
+      const rotateStr = displayRotation.toFixed(2) + 'deg';
+      const sagStr = sagY.toFixed(2) + 'px';
+      if (rotateStr !== lastRotateStr || sagStr !== lastSagStr) {
+        ribbon.style.setProperty('--ribbon-rotate', rotateStr);
+        ribbon.style.setProperty('--ribbon-sag', sagStr);
+        lastRotateStr = rotateStr;
+        lastSagStr = sagStr;
+      }
       requestAnimationFrame(frame);
     };
     requestAnimationFrame(frame);
@@ -115,7 +152,13 @@
       });
     }, { threshold: 0.35, rootMargin: '0px 0px -40px 0px' });
     flowIo.observe(flowGrid);
+    // 虛線 dashed-flow 只在 flow 區可見時播放（paint 動畫、離場即停）
+    const dashIo = new IntersectionObserver((entries) => {
+      entries.forEach((e) => flowGrid.classList.toggle('flow-visible', e.isIntersecting));
+    });
+    dashIo.observe(flowGrid);
   } else if (flowGrid) {
+    flowGrid.classList.add('flow-visible');
     flowGrid.querySelectorAll('.flow-step').forEach((s) => s.classList.add('flow-on'));
   }
 })();

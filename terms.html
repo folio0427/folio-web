@@ -9,24 +9,24 @@
 <link rel="icon" type="image/webp" href="assets/folio_icon.webp">
 
 <!-- Canonical + hreflang -->
-<link rel="canonical" href="https://folio0427.github.io/folio-web/terms.html">
-<link rel="alternate" hreflang="zh-Hant" href="https://folio0427.github.io/folio-web/terms.html">
-<link rel="alternate" hreflang="x-default" href="https://folio0427.github.io/folio-web/terms.html">
+<link rel="canonical" href="https://foliomatch.app/terms.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://foliomatch.app/terms.html">
+<link rel="alternate" hreflang="x-default" href="https://foliomatch.app/terms.html">
 
 <!-- Open Graph -->
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Folio">
 <meta property="og:title" content="Folio｜服務條款">
 <meta property="og:description" content="Folio 以書交友 app 完整服務條款。">
-<meta property="og:url" content="https://folio0427.github.io/folio-web/terms.html">
-<meta property="og:image" content="https://folio0427.github.io/folio-web/assets/folio_icon.webp">
+<meta property="og:url" content="https://foliomatch.app/terms.html">
+<meta property="og:image" content="https://foliomatch.app/assets/folio_icon.webp">
 <meta property="og:locale" content="zh_TW">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Folio｜服務條款">
 <meta name="twitter:description" content="Folio 以書交友 app 完整服務條款。">
-<meta name="twitter:image" content="https://folio0427.github.io/folio-web/assets/folio_icon.webp">
+<meta name="twitter:image" content="https://foliomatch.app/assets/folio_icon.webp">
 
 <!-- JSON-LD -->
 <script type="application/ld+json">
@@ -34,16 +34,16 @@
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "Folio｜服務條款",
-  "url": "https://folio0427.github.io/folio-web/terms.html",
+  "url": "https://foliomatch.app/terms.html",
   "inLanguage": "zh-Hant",
-  "isPartOf": { "@type": "WebSite", "name": "Folio", "url": "https://folio0427.github.io/folio-web/" },
+  "isPartOf": { "@type": "WebSite", "name": "Folio", "url": "https://foliomatch.app/" },
   "about": "Folio 以書交友 app 服務條款"
 }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -291,8 +291,8 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
-<script src="js/i18n.js" defer></script>
+<!-- marked 由 legal-loader 按需載入（zh prerendered 不需要）；i18n 只在需要英文時載入 -->
+<script>try{var fl=localStorage.getItem('folio-lang');if(fl==='en'||(!fl&&!(navigator.language||'zh').toLowerCase().startsWith('zh'))){var s=document.createElement('script');s.src='js/i18n.js';s.defer=true;document.head.appendChild(s);}}catch(e){}</script>
 <script src="js/main.js" defer></script>
 <script src="js/legal-loader.js" defer></script>
 </body>

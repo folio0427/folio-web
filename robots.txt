@@ -1,10 +1,10 @@
 # Folio — robots.txt
-# https://folio0427.github.io/folio-web/
+# https://foliomatch.app/
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://folio0427.github.io/folio-web/sitemap.xml
+Sitemap: https://foliomatch.app/sitemap.xml
 
 # Crawl-delay not needed for static GitHub Pages

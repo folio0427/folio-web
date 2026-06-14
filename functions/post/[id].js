@@ -30,7 +30,7 @@ export async function onRequestGet(context) {
 <title>Folio — 共讀貼文</title>
 <meta property="og:title" content="Folio — 以書交友">
 <meta property="og:description" content="在 Folio 打開這則共讀貼文，一起讀一本書。">
-<meta property="og:image" content="https://folio0427.github.io/folio-web/assets/welcome.webp">
+<meta property="og:image" content="https://foliomatch.app/assets/welcome.webp">
 <meta property="og:url" content="https://foliomatch.app/post/${id}">
 <meta name="twitter:card" content="summary_large_image">
 <style>
@@ -49,7 +49,7 @@ export async function onRequestGet(context) {
 </style>
 </head>
 <body>
-  <img src="https://folio0427.github.io/folio-web/assets/folio_icon.webp" alt="Folio">
+  <img src="https://foliomatch.app/assets/folio_icon.webp" alt="Folio">
   <h1>在 Folio 打開這則貼文</h1>
   <p>下載 Folio 即可查看這則共讀貼文，找人一起讀一本書。</p>
   <div class="btns">
