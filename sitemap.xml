@@ -35,9 +35,15 @@
   </url>
   <url>
     <loc>https://foliomatch.app/blog/</loc>
-    <lastmod>2026-06-13</lastmod>
+    <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://foliomatch.app/blog/what-to-talk-about-after-matching.html</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://foliomatch.app/blog/our-beginning.html</loc>
