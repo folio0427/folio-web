@@ -9,10 +9,12 @@
 // iOS 沒有 deferred deep link，裝完 App 後得手動輸碼，所以把碼大字印出來，
 // 配商店按鈕，讓使用者自己決定節奏。
 
-const APP_STORE =
-  "https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110";
+// region-less Apple URL → 裝置上 App Store app 自動導當地 storefront（TW / HK /
+// 其他地區皆可、app 多區上架）。region-less 在桌機瀏覽器會 404、故桌機不丟此連結。
+const APP_STORE = "https://apps.apple.com/app/id6771667110";
 const PLAY_STORE =
   "https://play.google.com/store/apps/details?id=com.yuliao.folio";
+const SITE = "https://foliomatch.app/";
 
 export async function onRequestGet(context) {
   const rawCode = context.params.code || "";
@@ -33,10 +35,10 @@ export async function onRequestGet(context) {
     ? `<div class="code"><span class="code-label">好友碼</span><span class="code-val">${code}</span></div>`
     : "";
 
+  // 桌機（無 primary）：region-less App Store 連結會 404 → 一律導官網（有商店 badge）。
   const storeBtns = primary
     ? `<a class="btn primary" href="${primary}">下載 Folio</a>`
-    : `<a class="btn primary" href="${APP_STORE}">App Store</a>
-       <a class="btn primary" href="${PLAY_STORE}">Google Play</a>`;
+    : `<a class="btn primary" href="${SITE}">前往 Folio 官網下載</a>`;
 
   const html = `<!doctype html>
 <html lang="zh-Hant">

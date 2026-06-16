@@ -5,7 +5,6 @@
         "appIDs": ["LB5582LJQM.com.yuliao.folio"],
         "components": [
           { "/": "/post/*", "comment": "Folio shared post links open the app" },
-          { "/": "/i/*", "comment": "One-time friend invite links open the app" },
           { "/": "/u/*", "comment": "Fixed friend-code links open the app" }
         ]
       }

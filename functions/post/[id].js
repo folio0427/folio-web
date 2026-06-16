@@ -6,8 +6,10 @@
 //
 // 貼文內容本身受 RLS 保護（非公開），故這裡不抓貼文資料、只做品牌頁 + 商店導流。
 
-const APP_STORE =
-  "https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110";
+// region-less Apple URL → 裝置上 App Store app 自動導當地 storefront（TW / HK /
+// 其他地區皆可、app 多區上架）。region-less 在「桌機瀏覽器」會 404、故桌機
+// （非 iOS/Android）走 SITE、不丟商店連結。
+const APP_STORE = "https://apps.apple.com/app/id6771667110";
 const PLAY_STORE =
   "https://play.google.com/store/apps/details?id=com.yuliao.folio";
 const SITE = "https://foliomatch.app/";
