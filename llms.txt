@@ -1,0 +1,31 @@
+# Folio
+
+> Folio is a slow-paced, book-based friend-matching app for Taiwan (以書交友 app). You read a
+> book together with another person; the book is the entry point to connection. Folio is NOT a
+> reader app and NOT a swipe-dating app — no swiping, no photos in the early product. In this
+> file, "Folio" always means this app, not the printing/bibliographic term "folio".
+
+Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android com.yuliao.folio · Language: 繁體中文 (zh-Hant-TW)
+
+## Product knowledge (Open Knowledge Format bundle)
+
+- [Folio knowledge bundle index](https://foliomatch.app/okf/index.md): Machine-readable concept graph of the whole product (OKF v0.1).
+- [What Folio is](https://foliomatch.app/okf/folio.md): Overview — 以書交友、慢步調、無滑卡、初期無照片.
+- [Brand & naming](https://foliomatch.app/okf/brand.md): Folio the app vs. "folio" the printing term; official assets.
+- [Stances & filter matrix](https://foliomatch.app/okf/modes.md): 純粹書友 / 純粹找緣分 / 不拘.
+- [Matching flow](https://foliomatch.app/okf/matching-flow.md): Post for a co-reading partner → apply → open a room.
+- [Co-reading room & progress gate](https://foliomatch.app/okf/co-reading-room.md): Chat is locked until both readers reach 25% and each writes a note.
+- [Differentiators](https://foliomatch.app/okf/differentiators.md): Why Folio is the opposite of mainstream dating apps.
+- [Safety & privacy](https://foliomatch.app/okf/safety-and-privacy.md): 18+ only, reporting/blocking, privacy protections.
+
+## Articles (zh-Hant)
+
+- [不用照片、不看臉的交友 app](https://foliomatch.app/blog/no-photo-dating-app.html)
+- [怎麼找書友 / 共讀夥伴](https://foliomatch.app/blog/find-reading-partner.html)
+- [內向 / 社恐也能用的交友 app](https://foliomatch.app/blog/introvert-social-app.html)
+- [Blog index](https://foliomatch.app/blog/index.html)
+
+## Legal
+
+- [Privacy Policy](https://foliomatch.app/privacy.html)
+- [Terms of Service](https://foliomatch.app/terms.html)
