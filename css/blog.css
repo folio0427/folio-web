@@ -223,6 +223,11 @@
   margin: 0 0 24px;
 }
 .blog-cta .store-row { margin-bottom: 0; }
+/* 文章內的商店按鈕：避免被上面 .blog-article a { color: sage } 蓋掉，
+   文字維持奶油色，跟列表頁 (blog/index.html) 的白字一致。
+   sb-state-live 自帶核桃色不受影響。 */
+.blog-article a.store-btn,
+.blog-article a.store-btn:hover { color: var(--cream); }
 
 /* ---------- 延伸閱讀：相關文章小卡 ---------- */
 .blog-related {

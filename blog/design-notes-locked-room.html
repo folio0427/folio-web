@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>設計筆記：為什麼共讀室一開始是鎖住的｜Folio 慢社交筆記</title>
-<meta name="description" content="配對成立卻不能馬上聊天 — Folio 最反直覺的設計。這篇寫下進度閘的完整取捨：為什麼是 25%、為什麼要雙方、為什麼要各寫一則心得，以及被我們否決的兩個替代方案。">
+<meta name="description" content="配對成立卻不能馬上聊天，Folio 最反直覺的設計。這篇寫下進度閘的完整取捨：為什麼是 25%、為什麼要雙方、為什麼要各寫一則心得，以及被我們否決的兩個替代方案。">
 <meta name="keywords" content="Folio 設計, 進度閘, 摩擦設計, 慢社交, 交友 app 設計, 共讀">
 <meta name="author" content="Folio">
 <meta name="theme-color" content="#F8F1E4">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Folio">
 <meta property="og:title" content="設計筆記：為什麼共讀室一開始是鎖住的">
-<meta property="og:description" content="配對成立卻不能馬上聊天 — Folio 最反直覺的設計，與它背後的完整取捨。">
+<meta property="og:description" content="配對成立卻不能馬上聊天，Folio 最反直覺的設計，與它背後的完整取捨。">
 <meta property="og:url" content="https://foliomatch.app/blog/design-notes-locked-room.html">
 <meta property="og:image" content="https://foliomatch.app/assets/og-image.jpg">
 <meta property="og:locale" content="zh_TW">
-<meta property="article:published_time" content="2026-06-10T00:00:00+08:00">
+<meta property="article:published_time" content="2026-05-16T00:00:00+08:00">
 <meta property="article:author" content="Folio">
 <meta property="article:section" content="設計筆記">
 <meta property="article:tag" content="設計">
@@ -41,8 +41,8 @@
   "headline": "設計筆記：為什麼共讀室一開始是鎖住的",
   "description": "進度閘的完整取捨：為什麼是 25%、為什麼要雙方、為什麼要各寫一則心得。",
   "image": "https://foliomatch.app/assets/og-image.jpg",
-  "datePublished": "2026-06-10T00:00:00+08:00",
-  "dateModified": "2026-06-10T00:00:00+08:00",
+  "datePublished": "2026-05-16T00:00:00+08:00",
+  "dateModified": "2026-05-16T00:00:00+08:00",
   "inLanguage": "zh-Hant",
   "author": { "@type": "Organization", "name": "Folio", "url": "https://foliomatch.app/" },
   "publisher": {
@@ -100,7 +100,7 @@
     </p>
 
     <div class="blog-meta">
-      <time datetime="2026-06-10">2026-06-10</time>
+      <time datetime="2026-05-16">2026-05-16</time>
       <span>· 約 6 分鐘閱讀</span>
       <span>· 設計筆記</span>
     </div>
@@ -108,21 +108,21 @@
     <h1>設計筆記：為什麼共讀室一開始是鎖住的</h1>
 
     <p class="lede">
-      「我們都配對成功了，為什麼還不能聊天？」—
-      這是 Folio 最常被問、也最反直覺的設計。這篇把它背後的取捨完整寫下來。
+      「我們都配對成功了，為什麼還不能聊天？」
+      這是 Folio 最常被問、也最反直覺的設計，這篇把它背後的取捨完整寫下來。
     </p>
 
     <h2>問題：配對成立的那一刻，最危險</h2>
 
     <p>
       主流配對 app 的流程是：配對成立 → 立刻開聊。看起來理所當然，
-      但這正是大多數配對死掉的地方 — 兩個人之間除了「互相按了喜歡」之外什麼都沒有。
+      但這正是大多數配對死掉的地方，兩個人之間除了「互相按了喜歡」之外什麼都沒有。
       於是開場白變成考試、已讀不回變成日常，配對列表越長、真的聊起來的越少。
     </p>
 
     <p>
       我們把這個現象叫做<strong>「滑卡心理的延續」</strong>：
-      即使配對了，雙方還是用滑卡的心態對待彼此 — 低成本、低承諾、隨時可以走。
+      即使配對了，雙方還是用滑卡的心態對待彼此：低成本、低承諾、隨時可以走。
       如果共讀 app 也讓配對直接進聊天，書就會淪為頭像旁邊的裝飾品，
       Folio 就只是換了皮的交友軟體。
     </p>
@@ -130,7 +130,7 @@
     <h2>解法：聊天的鑰匙是進度</h2>
 
     <p>
-      所以 Folio 的共讀室開場是鎖住的。解鎖需要四個條件 — 我們內部叫它「4 個 ✓」：
+      所以 Folio 的共讀室開場是鎖住的。解鎖需要四個條件：
     </p>
 
     <ul>
@@ -150,15 +150,16 @@
 
     <h3>為什麼是 25%，不是 10% 或 50%</h3>
     <p>
-      10% 太便宜 — 翻個序章就到，過濾不了任何人。50% 太苛 —
+      10% 太便宜，翻個序章就到，過濾不了任何人。50% 太苛，
       等於要求兩個陌生人在「完全不能交流」的狀態下各自苦讀半本書，
-      動機撐不到那裡。25% 剛好是「讀過第一個轉折、開始有自己的看法、
-      也開始想找人講」的位置。閘門的目的不是刁難，是讓對話發生在有話可說的時候。
+      動機撐不到那裡。25% 剛好是一個微妙的位置：你大致摸到了作者想說什麼、
+      讀過第一個轉折，心裡開始長出自己的看法與感觸，也開始想找人聊聊。
+      閘門的目的不是刁難，是讓對話發生在彼此都有話可說的時候。
     </p>
 
     <h3>為什麼要「雙方」都到</h3>
     <p>
-      單方達標就解鎖的話，快的那個人會一邊等一邊聊、慢的那個人會被進度壓力追著跑 —
+      單方達標就解鎖的話，快的那個人會一邊等一邊聊、慢的那個人會被進度壓力追著跑，
       共讀變成單方面的施捨或催促。雙方條件讓這件事保持對等：
       我們是一起走到這裡的，誰也不欠誰。
     </p>
@@ -166,7 +167,7 @@
     <h3>為什麼還要各寫一則心得</h3>
     <p>
       進度條可以隨手拉，字不會說謊。寫一則心得（在 Folio 裡是一張便利貼）
-      是最小可行的誠意證明 — 它同時解決了另一個問題：解鎖那一刻，
+      是最小可行的誠意證明，它同時解決了另一個問題：解鎖那一刻，
       聊天室裡已經躺著兩張彼此寫下的想法，<strong>第一句話有了著力點</strong>。
       不用想開場白，回應對方的便利貼就是開場。
     </p>
@@ -178,7 +179,7 @@
     </p>
 
     <ul>
-      <li><strong>時間閘</strong>（配對後 48 小時才能聊）：時間會自己流逝，不需要付出 —
+      <li><strong>時間閘</strong>（配對後 48 小時才能聊）：時間會自己流逝，不需要付出，
         掛機等開鎖跟讀書毫無關係，過濾不了人，只是拖延。</li>
       <li><strong>訊息次數閘</strong>（前 20 則限字數或限次數）：會催生出「為了解鎖而灌水」
         的對話，跟我們要的「有重量的字」背道而馳。</li>
@@ -186,14 +187,14 @@
 
     <p>
       兩個方案的共同問題：它們製造的是「等待」，不是「投入」。
-      只有進度閘讓解鎖的過程本身就是共讀 — 摩擦不是附加的關卡，摩擦就是內容。
+      只有進度閘讓解鎖的過程本身就是共讀：摩擦不是附加的關卡，摩擦就是內容。
     </p>
 
     <h2>摩擦設計：社交產品的反主流選擇</h2>
 
     <p>
       主流社交產品的鐵律是降低摩擦：少一個步驟、多一分留存。
-      Folio 反過來，在最關鍵的地方刻意加摩擦 — 因為我們要留下的不是「用戶」，
+      Folio 反過來，在最關鍵的地方刻意加摩擦，因為我們要留下的不是「用戶」，
       是<strong>願意花時間的人</strong>。會被進度閘擋住的人，本來就不會好好讀完一本書；
       願意走過閘門的人，得到的是一個同樣付出過的對話對象。
     </p>
@@ -206,7 +207,7 @@
 
     <p>
       這個信念寫在 <a href="../index.html#philosophy">Folio 的首頁</a>上，
-      而進度閘是它最具體的化身。如果你好奇被「鎖住」的對話解鎖之後長什麼樣子 —
+      而進度閘是它最具體的化身。如果你好奇被「鎖住」的對話解鎖之後長什麼樣子，
       只有一個辦法：找一本書，<a href="../index.html#flow">跟一個人一起讀到 25%</a>。
     </p>
 
@@ -252,7 +253,7 @@
           <span>我們的起點：為什麼要做一個「慢」的交友 app</span>
         </a>
         <a class="related-card" href="sticky-note-wall.html">
-          <time datetime="2026-06-13">2026-06-13</time>
+          <time datetime="2026-06-02">2026-06-02</time>
           <span>便利貼牆：把對話留下來的另一種方式</span>
         </a>
       </div>
