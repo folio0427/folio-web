@@ -3,6 +3,7 @@
   'use strict';
 
   // Scroll reveal: IntersectionObserver
+  const REVEAL_THRESHOLD = 0.12;
   const revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length > 0 && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
@@ -12,8 +13,17 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
-    revealEls.forEach((el) => io.observe(el));
+    }, { threshold: REVEAL_THRESHOLD, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach((el) => {
+      // 比視窗高太多的元素（如超長的法律條款頁）一次露不到 REVEAL_THRESHOLD、
+      // 門檻永遠跨不過 → 直接顯示、不丟給 observer 否則永久 opacity:0 空白
+      const h = el.getBoundingClientRect().height;
+      if (h > 0 && window.innerHeight / h < REVEAL_THRESHOLD) {
+        el.classList.add('visible');
+      } else {
+        io.observe(el);
+      }
+    });
   } else {
     revealEls.forEach((el) => el.classList.add('visible'));
   }
