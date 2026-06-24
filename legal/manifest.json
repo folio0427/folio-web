@@ -2,20 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "_comment": "Folio legal docs manifest. Source of truth for the latest ToS / Privacy version: a GitHub Action syncs this into Supabase tos_versions (which the app reads), and it is also bundled into the app as an offline fallback. Bump version + summary when ToS / Privacy changes.",
   "terms": {
-    "version": "1.4",
-    "effective_date": "2026-06-05T00:00:00+08:00",
-    "change_type": "minor",
-    "summary_zh": "v1.4：修改部分敘述用詞使表述更精確一致；無實質條款變更。",
-    "summary_en": "v1.4: Minor wording revisions for clarity and consistency; no substantive change.",
+    "version": "1.5",
+    "effective_date": "2026-06-24T00:00:00+08:00",
+    "change_type": "major",
+    "summary_zh": "v1.5：新增澳洲（《澳洲消費者法》不可排除之消費者保證 carve-out、澳洲消費者管轄）與美國上架合規（DMCA 通知 / 取下程序、禁性交易 / 販運、責任 carve-out、安全資源）相關條款。",
+    "summary_en": "v1.5: Adds Australia provisions (non-excludable Australian Consumer Law guarantee carve-out; Australian-consumer jurisdiction) and US launch-compliance provisions (DMCA notice-and-takedown, prohibition of commercial sex / trafficking, liability carve-outs, safety resources).",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },
   "privacy": {
-    "version": "1.4",
-    "effective_date": "2026-06-05T00:00:00+08:00",
-    "change_type": "minor",
-    "summary_zh": "v1.4：配合後續版本新增之「地區（選填）」個人檔案欄位，於「收集之個人資料」與「用戶間之顯示」補齊相關蒐集揭露；另於「用戶間之顯示」補充揭露性別 / 年齡對其他用戶之顯示範圍及新增之隱藏開關；並修改部分敘述用詞使表述更精確一致（不涉權利義務變更）。",
-    "summary_en": "v1.4: Adds the necessary disclosures for the optional \"Region\" profile field (introduced in a later app version) under \"Data We Collect\" and \"Inter-user visibility\"; also clarifies under \"Inter-user visibility\" how gender / age are shown to other users and documents the new hide toggles; minor wording revisions for clarity and consistency (no change to rights or obligations).",
+    "version": "1.5",
+    "effective_date": "2026-06-24T00:00:00+08:00",
+    "change_type": "major",
+    "summary_zh": "v1.5：新增澳洲（隱私法 / APPs、線上安全法、敏感資料同意、跨境 APP 8、資料外洩 NDB 通知）與澳門（第 8/2005 號法律、主管機關 DSPDP）章節；補齊美國各州隱私權、敏感資料說明、CalOPPA Do-Not-Track 揭露、不販售 / 不分享聲明；釐清「想找的性別」僅顯示、不參與配對過濾，且不傳送至 Firebase 分析。",
+    "summary_en": "v1.5: Adds Australia (Privacy Act/APPs, Online Safety Act, sensitive-data consent, APP 8 cross-border, NDB breach notice) and Macau (Law 8/2005, regulator DSPDP) sections; adds US state privacy rights, sensitive-data note, CalOPPA Do-Not-Track disclosure, no-sale/no-share statement; clarifies that desired gender is display-only (not used for match filtering) and is not sent to Firebase Analytics.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/privacy_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/privacy_en.md"
   }

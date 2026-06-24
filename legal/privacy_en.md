@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v1.4 ｜ **Effective Date** 2026-06-05 ｜ **Last Updated** 2026-06-05 ｜ **Status** Final
+> **Version** v1.5 ｜ **Effective Date** 2026-06-24 ｜ **Last Updated** 2026-06-24 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -11,8 +11,10 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Applies to Folio app and related services
 - Primary: Taiwan Personal Data Protection Act (PDPA)
 - EU users: GDPR
-- California users: CCPA
+- United States users: the California Consumer Privacy Act (CCPA/CPRA) and other US state comprehensive privacy laws. We may not meet the "covered business" thresholds of these laws given our current scale, but we voluntarily extend the rights described below to residents of US states (see §07, "US State Privacy Rights")
 - Hong Kong users: Personal Data (Privacy) Ordinance (PDPO, Cap. 486 of the Laws of Hong Kong), regulated by the Office of the Privacy Commissioner for Personal Data, Hong Kong (PCPD)
+- Australian users: the Privacy Act 1988 and the Australian Privacy Principles (APPs), regulated by the Office of the Australian Information Commissioner (OAIC); online-safety matters are additionally governed by the Online Safety Act 2021, regulated by the eSafety Commissioner
+- Macau users: Law No. 8/2005 (Personal Data Protection Act), regulated by the Personal Data Protection Bureau (DSPDP)
 - App Store / Google Play privacy requirements observed
 
 ## 02　Data We Collect
@@ -39,6 +41,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Reflection share cards (reflection text, book author, reading start/end dates, chosen template)
 - Bookshelf (own books, book author, category, reading progress and page numbers, sticky notes)
 - Match records (partner, per-stage unlock times, 100%-completion and celebration times, last-message time)
+- Social connections (your friends list, friend and co-reading invitations you send or receive, your friend invite code)
 - Report and block data: when you report a post or a user, we record the target of your report, the reasons you select, and any explanation you provide, and the server captures a content snapshot at the time of the report as evidence for moderation and legal defense. Where the report targets a user, that snapshot may include the reported user's personal data (nickname, gender, date of birth, mode, personality answers), their recent posts, and the messages and sticky notes exchanged between you and that user in any shared co-reading room. When you block a user, we record only the "blocker–blocked" relationship; the blocked user receives no notification. The foregoing report and block data is accessible only to Folio's moderation / administration personnel and only to the extent necessary.
 - Device info: OS version, app version, language, push token, device and app-instance identifiers (incl. the Firebase Analytics App Instance ID)
 - IP address (security and fraud prevention; Firebase Analytics masks it to derive coarse location)
@@ -53,6 +56,12 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Contacts
 - Phone number
 - Microphone, camera (unless future feature with explicit consent)
+
+### Sensitive personal data (note)
+
+- Your mode (especially "Open to Connection") together with your desired gender may, when read together, reveal sensitive signals about your sexual orientation. Under the California CCPA/CPRA and several US state laws, such data is treated as "sensitive personal information."
+- We use this data to **provide the matching service**: your **mode** drives the visibility matrix (who can see whom); your **desired gender** is only a preference signal shown to eligible peers and is **not itself used to filter** whom you see. We do **not** sell it, use it for advertising, or build advertising / marketing profiles from it. Our analytics provider (Firebase) does **not** receive your mode, gender, or desired gender — only age and de-identified usage-flow events — so the sexual-orientation inference **never enters** analytics or advertising.
+- You provide this data voluntarily (opt-in) at registration, and may change your mode / desired gender at any time on the "Me" page (7-day cooldown each).
 
 ## 03　Purposes
 
@@ -74,7 +83,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - **Apple Push Notification service (APNs)** (iOS push) — global edge
 - **Google LLC** (Google OAuth)
 - **Apple Inc.** (Apple OAuth)
-- **Google Analytics for Firebase (Firebase Analytics) by Google LLC** (usage analytics: DAU, funnel) — global edge. Through this service Google collects: App Instance ID (a device-level identifier), coarse location (derived from a masked IP, not precise positioning), and app-lifecycle / product-interaction events. Folio attaches a small set of non-sensitive attributes (age, mode) to certain feature events as analytics dimensions (for cohort analysis). Analytics data from this service is associated only with the device-level App Instance ID and is **not** linked to your Folio account identifier; Folio does **not** send sensitive personal data such as gender to this service.
+- **Google Analytics for Firebase (Firebase Analytics) by Google LLC** (usage analytics: DAU, funnel) — global edge. Through this service Google collects: App Instance ID (a device-level identifier), coarse location (derived from a masked IP, not precise positioning), and app-lifecycle / product-interaction events. Folio attaches a small set of non-sensitive attributes (age) to certain feature events as analytics dimensions. Analytics data from this service is associated only with the device-level App Instance ID and is **not** linked to your Folio account identifier; Folio does **not** send your gender, desired gender, or mode to this service.
 
 ### Legal disclosure
 
@@ -88,9 +97,12 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Data brokers
 - Marketing analytics firms (except via de-identified aggregates)
 
+We do **not sell** your personal information, and we do **not share** it for cross-context behavioral advertising; we embed no third-party advertising SDK and show no in-app ads.
+
 ### Inter-user visibility
 
 - Nickname, mode badge, category preferences, region (if provided)
+- Desired gender: conditionally shown on the other party's profile / post details per the filtering matrix, only when your mode is "Looking for fate" or "Open to either"
 - Gender and age: shown on the other party's profile and in post details per the mode filtering matrix (gender is not shown to Pure-Book-Friend viewers; age is derived from your date of birth, and your full date of birth is not shown). You can enable hide toggles on the "Me" page so your gender / age are not shown to other users
 - Posts, applications, reflections
 - After matching: chat messages and sticky-note content you cite
@@ -100,6 +112,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - The Supabase host is in Singapore; FCM, APNs, and Firebase Analytics are global
 - Transfer protections: EU Standard Contractual Clauses + Supabase SOC 2 Type II
 - Personal data of Hong Kong users is likewise stored and processed outside Hong Kong (in Singapore and at global edge nodes). Hong Kong's Personal Data (Privacy) Ordinance currently imposes no data-localization requirement, and its cross-border transfer restriction (Section 33) is not yet in force; we nonetheless handle such transfers in line with the safeguards recommended by the Privacy Commissioner
+- Personal data of Australian users is likewise stored and processed outside Australia (in Singapore and at global edge nodes). Under Australian Privacy Principle 8 we remain accountable for the handling by overseas recipients (Supabase in Singapore; Google / Apple at global edge nodes)
 - Transit encryption: TLS 1.2+
 - At-rest encryption: AES-256
 - By using the service, you consent to cross-border transfer
@@ -146,6 +159,7 @@ Choosing "Leave Folio" causes the platform to handle your data as follows:
 - Nickname, avatar, gender, birthdate, preference categories
 - Your shelf (books and personal sticky notes), reflection share cards, posts, unprocessed applications
 - Push notification settings (push token)
+- Social-connection data (friends list, friend and co-reading invitations, friend invite code, block list)
 
 **Retained anonymously** (as a memento for your co-reading partners)
 - Sticky notes you wrote in co-reading rooms
@@ -200,6 +214,29 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 - Right to lodge a complaint with the Office of the Privacy Commissioner for Personal Data, Hong Kong (PCPD)
 - Response time: we respond within **40 days** of receiving a complete request, as required by the Personal Data (Privacy) Ordinance (in practice we generally process within 30 days)
 
+### US State Privacy Rights (California CCPA/CPRA and other states with comprehensive privacy laws)
+
+- **Right to know**: the categories of personal information we collect, their sources, purposes, and with whom we share them
+- **Right to access / obtain a copy**, **delete**, and **correct**
+- **Right to opt out of sale / sharing**: we do **not sell** and do **not share** your personal information for cross-context behavioral advertising, so no "Do Not Sell or Share My Personal Information" link is required
+- **Right to limit use of sensitive personal information**: we use sensitive personal information only to provide the service (matching), never for advertising or profiling
+- **No discrimination** for exercising these rights
+- We may not meet each state law's thresholds given our current scale, but we extend these rights voluntarily; response time and how to exercise are as below
+
+### Australian Privacy Rights (Australian Privacy Principles, Australian users)
+
+- Right to access (APP 12): request access to the personal data we hold about you
+- Right to correct (APP 13): request correction of inaccurate personal data
+- Withdrawal of consent to sensitive information: signals relating to your sexual orientation are sensitive information, collected only with your consent; you may withdraw consent at any time (after which the related matching-display features will be limited)
+- Data breach notification: in the event of an eligible data breach likely to cause serious harm, we notify you and the Office of the Australian Information Commissioner (OAIC) under Part IIIC of the Privacy Act
+- Right to complain to the OAIC; for online-safety matters, you may also complain to the eSafety Commissioner (esafety.gov.au)
+
+### Macau Personal Data Rights (Law No. 8/2005, Macau users)
+
+- Right to access and correct your personal data
+- Right to object to and request cessation of processing
+- Right to complain to the Personal Data Protection Bureau (DSPDP, dspdp.gov.mo)
+
 ### How to exercise
 
 - Email [folio0427@gmail.com](mailto:folio0427@gmail.com)
@@ -218,6 +255,7 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 - Stores login tokens, user preferences (language, mode)
 - Session token: Supabase JWT
 - No third-party browser cookie tracking
+- We do not track you across third-party websites and do not respond to "Do Not Track" (DNT) browser signals; the app uses no third-party behavioral-advertising cookies. The only third party that processes usage data is Firebase Analytics (see §04)
 - Usage analytics (Firebase Analytics, see §04) generate an "App Instance ID" on your device as an analytics identifier, and collect coarse location and app-interaction events
 - Folio embeds no third-party advertising SDK, shows no in-app ads, and does not provide your identifiers to advertisers for ad targeting
 
@@ -238,7 +276,7 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 - Access control: least privilege, Row Level Security (RLS)
 - Log monitoring: anomaly detection
 - Regular backups
-- 100% security cannot be guaranteed; breach notification per PDPA §12
+- 100% security cannot be guaranteed; breach notification per Taiwan PDPA §12; for Australian users we additionally follow the Notifiable Data Breaches (NDB) scheme under Part IIIC of the Privacy Act, notifying the OAIC and affected individuals after assessment
 
 ## 11　Change Notifications
 
@@ -269,6 +307,8 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 - Authority (Taiwan): National Communications Commission / Ministry of Justice (PDPA)
 - Authority (EU): Your country's Data Protection Authority
 - Authority (Hong Kong): Office of the Privacy Commissioner for Personal Data (PCPD), https://www.pcpd.org.hk
+- Authority (Australia): Office of the Australian Information Commissioner (OAIC, oaic.gov.au); online safety: eSafety Commissioner (esafety.gov.au)
+- Authority (Macau): Personal Data Protection Bureau (DSPDP, dspdp.gov.mo)
 
 ---
 

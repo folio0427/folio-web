@@ -11,6 +11,68 @@
 
 ---
 
+## terms v1.5 / privacy v1.5 — 2026-06-24
+
+> **發佈批次** — manifest.json + 四份文件標頭 v1.5、effective_date 2026-06-24（push 當日）。
+> 發佈程序：commit + push folio-web → 跑 `scripts\sync_legal.bat`（同步進 app/assets/legal）→ GitHub Action 同步 tos_versions → 全用戶 re-consent。
+> change_type = major（新增澳洲 / 澳門司法管轄區 + 管轄 / 責任條款）。
+
+**狀態**：正式（生效日 2026-06-24）
+**文件**：terms_zh.md、terms_en.md、privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：major（除原美國上架合規批次外，新增澳洲與澳門兩個司法管轄區之適用法律、用戶權利與管轄/責任條款 —— 屬實質變更。美國批：US-state 隱私權揭露、敏感類標旗、不販售/不分享聲明、DMCA 程序、責任 carve-out、美國安全資源；**無新增蒐集、無新增第三方分享、無新增使用目的**。註：app LegalGate 以版本號觸發、change_type 僅決定 modal 標籤）
+**摘要**：
+
+美國地區上架前合規批次。terms 1.4 → 1.5、privacy 1.4 → 1.5。
+
+**Privacy 變更：**
+
+- §01 適用法律：美國由「加州用戶適用 CCPA」改寫為「美國用戶適用 CCPA/CPRA 及其他綜合隱私法之州；本平台目前規模可能未達受規範企業門檻、惟仍自願將權利延伸予美國各州居民」。修正「自我宣稱為 CCPA 受規範 business」之過度宣稱（FTC §5 representation 風險）。
+- §02 新增「敏感個人資料之特別說明」：揭露 stance（尤其 fate）+ desired_gender 合併可衍生**性傾向**訊號、於 CCPA/CPRA 及維州系列州法屬敏感類；明示「僅用於提供服務（配對）、絕不用於廣告 / 剖繪、由用戶 opt-in」。並澄清分析服務僅收 `mode + age`、**不附性別 / desired_gender** → 性傾向推斷不外送（消除與 §04 之表面矛盾）。
+- §04「不分享給」後新增明確聲明：「**不販售**、亦**不為跨情境行為廣告分享**個人資料；未嵌廣告 SDK、App 內無廣告」。
+- §07 新增「**美國各州隱私權**（CCPA/CPRA 及其他州）」子節：知悉 / 查閱 / 刪除 / 更正 / 拒絕販售分享 / 限制敏感資料使用 / 不歧視；說明規模或未達門檻仍自願提供。
+- 英文版（privacy_en.md）同步。
+
+**Terms 變更：**
+
+- §05「禁止內容違法」新增：商業性交易、媒介賣淫 / 性招攬、人口販運 / 性剝削、以對價換取陪伴或性關係（sugar-dating）。強化 FOSTA-SESTA §1595「good actor」姿態 + 對齊 Apple 1.1.4 / Google Play。
+- §07 新增「**美國 DMCA 通知與取下程序（17 U.S.C. §512）**」子節：指定代理人（folio0427@gmail.com）、通知要件、取下、反通知、還原（10–14 工作日）、重複侵權者終止。為取得 §512 安全港。
+- §08 安全守則新增：美國向措辭（個檔 / 初次訊息勿透露全名 / email / 電話 / 工作地、被逼問個資或金錢即停）；緊急聯絡**依地區**（台灣 110/113、美國 911 + FTC reportfraud.ftc.gov + FBI IC3 ic3.gov）；明示「不對用戶進行刑事背景查核或身分驗證」。
+- §13 免責新增 carve-out：不排除依適用強行法不得排除之責任、及本平台因故意 / 重大過失所生之責任。
+- §14 責任上限新增 carve-out：上限與排除不適用於 (a) 故意 / 重大過失、(b) 人身傷害或死亡、(c) 慣居地強行消費者法不得排除限制之責任。
+- 英文版（terms_en.md）同步。
+
+**Privacy 變更（澳洲 / 澳門，2026-06-17 追加）：**
+
+- §01 適用法律新增：澳洲用戶適用 Privacy Act 1988 + APPs（主管機關 OAIC）+ Online Safety Act 2021（eSafety）；澳門用戶適用第 8/2005 號法律（主管機關 DSPDP，2024-02-01 自 GPDP 更名）。
+- §05 跨境傳輸新增澳洲段：依 APP 8 就境外接收者（Supabase 新加坡 / Google / Apple）負當責。
+- §07 新增「澳洲隱私權（APPs）」子節（查閱 APP 12 / 更正 APP 13 / 敏感資料同意撤回 / NDB 外洩通知 / OAIC + eSafety 投訴）與「澳門個人資料權（8/2005）」子節（查閱 / 更正 / 反對 / DSPDP 投訴）。
+- §10 資料安全新增澳洲 NDB（第 IIIC 部）外洩通知機制。
+- §12 聯絡新增主管機關：OAIC + eSafety（澳洲）、DSPDP（澳門）。
+
+**Terms 變更（澳洲，2026-06-17 追加）：**
+
+- §14 責任限制新增澳洲消費者 carve-out：不排除《澳洲消費者法》（ACL）不可排除之消費者保證；ACL 保證之責任限於重新提供服務或支付其費用（codex 紅隊指既有籠統 carve-out 不足、須明文點名 ACL）。
+- §17 準據法新增：強行法例示加入澳洲；台北地院專屬管轄不適用於澳洲消費者（Karpik v Carnival [2023] HCA 39）。
+
+**補強（2026-06-17，多區 compliance workflow 稽核發現）：**
+
+- §04 用戶間顯示補列「想找的性別（依過濾矩陣有條件顯示）」（原僅列於蒐集、未列於對外顯示 → 透明度補正）。
+- §08 新增 **CalOPPA Do-Not-Track 揭露**：不回應 DNT、無第三方行為廣告 cookie、唯一用量處理者為 Firebase Analytics。CalOPPA（加州 B&P §22575）無規模門檻、是唯一不論公司大小都吃的美國隱私要求。
+- privacy_en 澳門主管機關英文名校正：「Office for Personal Data Protection」→「Personal Data Protection Bureau」（2024-02-01 第 42/2023 號行政法規重組為常設局；DSPDP / dspdp.gov.mo 不變）。
+
+**資料流校正（2026-06-17，codex 實查 app code 發現）：**
+
+- §02 敏感資料：原稱「想找的性別」用於「配對與過濾」、但程式（`filters.dart` `canSeeEachOther` 只看 stance）證實它**僅顯示、不參與配對篩選** → 改正為「心態用於配對過濾矩陣、想找的性別僅對符合條件之對方顯示」。
+- §02 / §04：原稱分析服務收到「心態 + 年齡」cohort 訊號；已將 **stance（心態）自 Firebase 全面移除**（持久 user property + 報名 / 接受事件之雙方 stance 參數，屬 app code 改動、待隨 build 發版）→ 改為「Firebase 僅收年齡 + 去識別化使用事件、不收心態 / 性別 / 想找性別」；心態 cohort 分析改於 Supabase 第一方 SQL 進行。
+
+**變更類型理由**：本批為美國上架合規補強 —— US-state 隱私權之揭露補正、敏感類別標旗（既有蒐集之揭露 / 分類補正、**非新蒐集**）、不販售/不分享之有利聲明、DMCA 程序、責任 carve-out、美國安全資源。美國批本身非新增蒐集、非新增第三方分享、非改變使用目的（單獨可為 `minor`）；惟本版另追加澳洲 / 澳門司法管轄區之適用法律 + 管轄 / 責任條款、屬實質變更 → 整體分類 `major`（與 manifest 一致）。註：app LegalGate 對 minor / major / data_consent_required 均以「accepted 版本 < 最新版本」觸發同一阻擋式 modal、change_type 僅決定 modal 標籤；現有用戶下次開 app 仍會因 1.4 → 1.5 被 LegalGateGuard 強制重新取得同意。
+
+**法律依據**：Cal. Civ. Code §1798.140(d)/(ae)/§1798.121（CCPA/CPRA）；維州系列州隱私法（敏感資料）；FTC Act §5（陳述一致性）；17 U.S.C. §512（DMCA 安全港）；FOSTA-SESTA（§230(e)(5)(A) carve-out 姿態）；各州約會安全法 + FTC 反詐騙立場；台灣民法 §222（故意/重大過失不得預先免除）、消保法 §12 / 民法 §247-1。
+
+**待辦（push 時一併）**：bump `manifest.json` terms/privacy 1.4→1.5 + change_type=major；bump 四份文件標頭版號；跑 `scripts\sync_legal.bat`；commit + push folio-web → GitHub Pages 重建 + sync_tos_versions workflow 自動 upsert terms 1.5 / privacy 1.5；重建 app 帶新 bundled fallback；App Store / Play 資料安全表單依 `STORE_DATA_DISCLOSURE_CHECKLIST.md` 確認。
+
+---
+
 ## terms v1.4 / privacy v1.4 — 2026-06-05
 
 **狀態**：正式（生效日 2026-06-05）

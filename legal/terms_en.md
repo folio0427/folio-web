@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v1.4 ｜ **Effective Date** 2026-06-05 ｜ **Last Updated** 2026-06-05 ｜ **Status** Final
+> **Version** v1.5 ｜ **Effective Date** 2026-06-24 ｜ **Last Updated** 2026-06-24 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -44,6 +44,7 @@ Welcome to Folio. The service is currently provided by an independent developer 
 ### Illegal content prohibited
 
 - Child sexual exploitation material (CSAM)
+- Commercial sex, solicitation of prostitution or escort services, sex trafficking or sexual exploitation, and arrangements exchanging money or other consideration for companionship or sexual relations (e.g. sugar-dating)
 - Drugs, weapons, suicide encouragement, extremist groups, hate speech
 - Defamation, copyright infringement
 
@@ -114,9 +115,19 @@ When your account is suspended (feature restrictions or full suspension):
 - Notice must include: identity, work identification, infringing location, declaration
 - Removal within 7 days; repeat infringers terminated
 
+### US DMCA Notice-and-Takedown (17 U.S.C. §512)
+
+- **Designated agent**: Folio's DMCA designated-agent contact is folio0427@gmail.com.
+- **A takedown notice must include**: (1) a physical or electronic signature of the owner or authorized agent; (2) identification of the copyrighted work; (3) identification of the allegedly infringing material and its location on the service (sufficient for us to locate it); (4) your contact information; (5) a statement of your good-faith belief that the use is not authorized; and (6) a statement, under penalty of perjury, that the notice is accurate and that you are the owner or authorized to act on the owner's behalf.
+- **Takedown**: upon a conforming notice we will expeditiously remove or disable the identified material and notify the user who posted it.
+- **Counter-notification**: if your content was removed and you believe it was a mistake or misidentification, you may submit a counter-notice to the address above (including your signature, identification of the removed material and its prior location, a statement under penalty of perjury of your good-faith belief that it was removed by mistake, your contact information, and consent to jurisdiction).
+- **Restoration**: upon a valid counter-notice we forward it to the original complainant; if they do not file suit within 10–14 business days, we may restore the content.
+- **Repeat infringers**: we terminate the accounts of repeat infringers in appropriate circumstances.
+
 ## 08　Matching & Meetup Disclaimer
 
 - We provide online matching only; we do not verify any user information
+- Folio does not conduct criminal background checks or identity verification on its users
 - Offline meetings are independent decisions; all risks borne by users
 
 ### Strongly recommended safety guidelines
@@ -124,8 +135,10 @@ When your account is suspended (feature restrictions or full suspension):
 - Public venue for first meeting (cafe, bookstore)
 - Inform a friend of your plans and the other party's info
 - Do not disclose home address, bank details, ID number
+- Avoid sharing your full name, email, phone number, or workplace in your profile or first messages
+- Stop contact immediately if anyone pressures you for personal information or money
 - Do not accept unfamiliar food or drink
-- Leave immediately if uncomfortable; call 110 / 113 (Taiwan emergency)
+- Leave immediately if uncomfortable. Emergency contacts vary by country: in Taiwan call 110 (police) / 113 (protection hotline); in the United States call 911 and report fraud to the FTC (reportfraud.ftc.gov) or the FBI IC3 (ic3.gov); elsewhere, call your local emergency number
 
 ### Disclaimer Scope
 
@@ -172,12 +185,15 @@ When your account is suspended (feature restrictions or full suspension):
 - No warranty of match quality or suitability
 - No warranty of user data truthfulness
 - Reflections, discussions, sticky notes, messages, or shared content about books, reading experiences, life experiences, or other topics are personal opinions and experience-sharing only. They do not constitute professional, medical, psychological, legal, financial, investment, or other specialist advice. You should not rely solely on such content when making important decisions. For medical, psychological, legal, financial, investment, or other professional matters, please consult a qualified professional.
+- This disclaimer does not exclude or limit any liability that cannot be excluded under applicable mandatory law, nor our liability for intentional misconduct or gross negligence.
 
 ## 14　Limitation of Liability
 
 - To the maximum extent permitted by law, our cumulative liability is capped at NT$300 (or your past 12-month payment, whichever higher)
 - Not liable for indirect, consequential, profit, goodwill, or punitive damages
 - Consumer Protection Act minimum rights unaffected
+- The cap and exclusions in this section do not apply to, and do not limit, liability for: (a) our intentional misconduct or gross negligence; (b) death or personal injury caused by our fault; or (c) any liability that cannot be excluded or limited under the mandatory law of your place of habitual residence
+- If you are a consumer in Australia: nothing in these Terms excludes, restricts, or modifies any consumer guarantee or right under the Australian Consumer Law that cannot be excluded. To the extent permitted by law, our liability for breach of such a consumer guarantee is limited, at our option, to re-supplying the relevant service or paying the cost of having it re-supplied
 
 ## 15　Indemnification
 
@@ -196,7 +212,8 @@ When your account is suspended (feature restrictions or full suspension):
 - These Terms are governed by Taiwan (R.O.C.) law
 - First-instance jurisdiction: Taiwan Taipei District Court
 - Consumer disputes governed by Consumer Protection Act jurisdiction rules
-- If the mandatory law of your place of habitual residence (for example, consumer-protection or personal-data-protection law in Hong Kong or the EU) grants you rights that cannot be excluded by contract, nothing in these Terms affects the protections you enjoy under such law
+- If the mandatory law of your place of habitual residence (for example, consumer-protection or personal-data-protection law in Hong Kong, the EU, or Australia) grants you rights that cannot be excluded by contract, nothing in these Terms affects the protections you enjoy under such law
+- The exclusive jurisdiction of the Taiwan Taipei District Court above does not apply to consumers in Australia; an Australian consumer may seek remedies under the Australian Consumer Law in a court of competent jurisdiction in their location
 
 ## 18　Miscellaneous
 
