@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-i18n="page.title.home">Folio｜以書交友 app、慢步調共讀，從一本書遇見可能的緣分</title>
-<meta name="description" data-i18n="page.desc.home" content="Folio 是以書交友的 app, 透過共讀慢慢認識一個人，不滑卡配對。三種模式、進度閘解鎖聊天、共讀便利貼牆，留下值得的關係。iOS 與 Android 皆已上架。">
-<meta name="keywords" content="以書交友, 共讀 app, 讀書夥伴, 慢社交, 書友配對, 共讀社群, Folio, book buddy, slow dating, 18+">
+<meta name="description" data-i18n="page.desc.home" content="Folio（Foliomatch）是以書交友的 app，透過共讀慢慢認識一個人，不滑卡配對。三種模式、進度閘解鎖聊天、共讀便利貼牆，留下值得的關係，讓你以書會友。iOS 與 Android 皆已上架。">
+<meta name="keywords" content="以書交友, 共讀 app, 讀書夥伴, 慢社交, 書友配對, 共讀社群, Folio, book buddy, slow dating, 18+, Foliomatch, 以書會友">
 <meta name="author" content="Folio">
 <meta name="theme-color" content="#F8F1E4">
 <link rel="icon" type="image/webp" href="assets/folio_icon.webp">
@@ -51,6 +51,7 @@
       "@type": "Organization",
       "@id": "https://foliomatch.app/#organization",
       "name": "Folio",
+      "alternateName": ["Foliomatch", "以書會友"],
       "url": "https://foliomatch.app/",
       "logo": "https://foliomatch.app/assets/folio_icon.webp",
       "email": "folio0427@gmail.com",
@@ -64,6 +65,7 @@
       "@id": "https://foliomatch.app/#website",
       "url": "https://foliomatch.app/",
       "name": "Folio",
+      "alternateName": "Foliomatch",
       "description": "以書交友、慢步調共讀社交 app",
       "publisher": { "@id": "https://foliomatch.app/#organization" },
       "inLanguage": "zh-Hant"
@@ -116,7 +118,7 @@
 <img src="assets/bookmark-ribbon.webp" class="book-ribbon" alt="" aria-hidden="true">
 
 <nav class="nav">
-  <a href="index.html" class="nav-logo">
+  <a href="/" class="nav-logo">
     <img src="assets/folio_icon.webp" alt="Folio - 以書交友 app 標誌">
     <span>Folio</span>
   </a>
@@ -126,8 +128,8 @@
     <a href="#philosophy" data-i18n="nav.philosophy">理念</a>
     <a href="#notes" data-i18n="nav.blog">筆記</a>
     <a href="quiz/" data-i18n="nav.quiz">閱讀人格測驗</a>
-    <a href="terms.html" data-i18n="nav.terms">條款</a>
-    <a href="privacy.html" data-i18n="nav.privacy">隱私</a>
+    <a href="/terms" data-i18n="nav.terms">條款</a>
+    <a href="/privacy" data-i18n="nav.privacy">隱私</a>
     <!-- 語言切換暫時隱藏 / lang toggle temporarily hidden -->
     <!-- <button type="button" class="lang-toggle" data-i18n="lang.toggle" aria-label="Switch language">EN</button> -->
   </div>
@@ -347,7 +349,7 @@
     </div>
     <div class="notes-grid">
       <div class="reveal reveal-delay-1">
-        <a class="note-card" href="blog/our-beginning.html" style="--tilt: -1deg;">
+        <a class="note-card" href="/blog/our-beginning" style="--tilt: -1deg;">
           <time datetime="2026-04-28">2026-04-28 · 品牌筆記</time>
           <h3>我們的起點：為什麼要做一個「慢」的交友 app</h3>
           <p>Folio 有了第一行字的那天，和三個從第一天就沒變過的決定。</p>
@@ -355,7 +357,7 @@
         </a>
       </div>
       <div class="reveal reveal-delay-2">
-        <a class="note-card" href="blog/why-co-reading.html" style="--tilt: 0.7deg;">
+        <a class="note-card" href="/blog/why-co-reading" style="--tilt: 0.7deg;">
           <time datetime="2026-05-29">2026-05-29 · 慢社交設計</time>
           <h3>為什麼共讀比配對 app 更容易遇到對的人</h3>
           <p>一起讀完一本書，比一千張照片更接近一個人。</p>
@@ -363,7 +365,7 @@
         </a>
       </div>
       <div class="reveal reveal-delay-3">
-        <a class="note-card" href="blog/design-notes-locked-room.html" style="--tilt: -0.5deg;">
+        <a class="note-card" href="/blog/design-notes-locked-room" style="--tilt: -0.5deg;">
           <time datetime="2026-06-10">2026-06-10 · 設計筆記</time>
           <h3>設計筆記：為什麼共讀室一開始是鎖住的</h3>
           <p>配對成立卻不能馬上聊天，最反直覺設計背後的完整取捨。</p>
@@ -371,7 +373,7 @@
         </a>
       </div>
     </div>
-    <p class="notes-more reveal reveal-delay-3"><a href="blog/index.html" data-i18n="notes.more">看所有筆記</a></p>
+    <p class="notes-more reveal reveal-delay-3"><a href="/blog/" data-i18n="notes.more">看所有筆記</a></p>
   </div>
 </section>
 
@@ -434,16 +436,16 @@
           <li><a href="#modes" data-i18n="footer.li.modes">三種模式</a></li>
           <li><a href="#flow" data-i18n="footer.li.flow">共讀流程</a></li>
           <li><a href="#philosophy" data-i18n="footer.li.philosophy">設計理念</a></li>
-          <li><a href="blog/index.html" data-i18n="footer.li.blog">慢社交筆記</a></li>
+          <li><a href="/blog/" data-i18n="footer.li.blog">慢社交筆記</a></li>
           <li><a href="quiz/" data-i18n="footer.li.quiz">閱讀人格測驗</a></li>
         </ul>
       </div>
       <div>
         <h4 data-i18n="footer.h.legal">法務</h4>
         <ul>
-          <li><a href="terms.html" data-i18n="footer.li.terms">服務條款</a></li>
-          <li><a href="privacy.html" data-i18n="footer.li.privacy">隱私權政策</a></li>
-          <li><a href="child-safety.html" data-i18n="footer.li.childsafety">兒童安全</a></li>
+          <li><a href="/terms" data-i18n="footer.li.terms">服務條款</a></li>
+          <li><a href="/privacy" data-i18n="footer.li.privacy">隱私權政策</a></li>
+          <li><a href="/child-safety" data-i18n="footer.li.childsafety">兒童安全</a></li>
         </ul>
       </div>
       <div>
@@ -456,6 +458,7 @@
     </div>
     <div class="footer-bottom">
       <span data-i18n="footer.copyright">© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務</span>
+      <span data-i18n="footer.brandline">Folio（Foliomatch）——以書會友、慢步調的共讀交友 App。</span>
     </div>
   </div>
 </footer>

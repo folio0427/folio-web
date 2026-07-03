@@ -111,6 +111,7 @@
       'footer.h.contact':      '聯絡',
       'footer.li.support':     '支持 Folio',
       'footer.copyright':      '© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務',
+      'footer.brandline':      'Folio（Foliomatch）——以書會友、慢步調的共讀交友 App。',
 
       'lang.toggle':           'EN',
 
@@ -223,6 +224,7 @@
       'footer.h.contact':      'Contact',
       'footer.li.support':     'Support Folio',
       'footer.copyright':      '© 2026 Folio · by an independent developer · 18+ only',
+      'footer.brandline':      'Folio (Foliomatch) — a slow-paced, book-first social app for co-reading friendships (以書會友).',
 
       'lang.toggle':           '中',
 

@@ -20,12 +20,22 @@ Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android 
 
 ## Articles (zh-Hant)
 
-- [不用照片、不看臉的交友 app](https://foliomatch.app/blog/no-photo-dating-app.html)
-- [怎麼找書友 / 共讀夥伴](https://foliomatch.app/blog/find-reading-partner.html)
-- [內向 / 社恐也能用的交友 app](https://foliomatch.app/blog/introvert-social-app.html)
-- [Blog index](https://foliomatch.app/blog/index.html)
+- [不用照片、不看臉的交友 app](https://foliomatch.app/blog/no-photo-dating-app): 為什麼看臉的 0.8 秒，把「聊不聊得來」整個跳過了，寫給想先認識人、再看臉的人。
+- [內向、社恐也能用的交友 app](https://foliomatch.app/blog/introvert-social-app): 一開口就卡不是不想認識人，一本書如何當破冰工具，Folio 對內向者友善的三個設計。
+- [怎麼找書友 / 共讀夥伴](https://foliomatch.app/blog/find-reading-partner): 5 種找書友、共讀夥伴的管道（讀書會、社團、Goodreads、朋友揪、共讀 app）與各自的卡點。
+- [配對成立那一刻，你要聊什麼？](https://foliomatch.app/blog/what-to-talk-about-after-matching): 配對後常常沒話聊，因為標籤太表層；共讀到 25% 加上便利貼，是更好的開場白。
+- [便利貼牆：把對話留下來的另一種方式](https://foliomatch.app/blog/sticky-note-wall): Folio 把共讀的隨手筆記與心得貼成一面牆，讓對話不只是溝通、也是紀念。
+- [讀書會跟共讀 app 差在哪？](https://foliomatch.app/blog/book-club-vs-app): 人數、節奏、深度、留下什麼，五個面向比較讀書會與一對一共讀 app，兩者也可並用。
+- [書總是讀不完？找個共讀夥伴](https://foliomatch.app/blog/finish-books-with-a-buddy): 讀不完常常不是不夠自律，是缺了回饋；共讀夥伴如何比閱讀計畫更有效。
+- [給文青的約會提案](https://foliomatch.app/blog/bookish-date-ideas): 除了書店、咖啡廳，一起讀完一本書是被低估的約會形式，如何開始、第一本書怎麼挑。
+- [設計筆記：為什麼共讀室一開始是鎖住的](https://foliomatch.app/blog/design-notes-locked-room): 配對成立卻不能馬上聊天，25% 進度閘背後的完整取捨與被否決的替代方案。
+- [以書交友：五種挑書策略](https://foliomatch.app/blog/how-to-pick-books): 挑書就是挑人，把「為什麼想讀」寫具體，讓你選的書遇到合得來的讀友。
+- [慢社交 app 怎麼選](https://foliomatch.app/blog/slow-social-apps-2026): Slowly、Folio、Bumble For Friends 三款慢社交 app 的機制對照與分眾推薦。
+- [為什麼共讀比配對 app 更容易遇到對的人](https://foliomatch.app/blog/why-co-reading): 從注意力經濟、決策疲乏到不對稱資訊揭露，給厭倦滑卡的人的慢社交設計筆記。
+- [我們的起點](https://foliomatch.app/blog/our-beginning): Folio 有了第一行字的那天，以及三個從第一天就沒變過的設計決定。
+- [Blog index](https://foliomatch.app/blog/)
 
 ## Legal
 
-- [Privacy Policy](https://foliomatch.app/privacy.html)
-- [Terms of Service](https://foliomatch.app/terms.html)
+- [Privacy Policy](https://foliomatch.app/privacy)
+- [Terms of Service](https://foliomatch.app/terms)

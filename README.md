@@ -31,7 +31,7 @@ folio-web/
 
 - **單一來源原則（Single Source of Truth）**：所有正式對外的服務條款 / 隱私政策皆來自 `legal/*.md`
 - **公開可審計**：任何人皆可透過 git log 驗證條款歷史與變更
-- **app + 網站雙端共用**：Flutter app 啟動時透過 GitHub Pages URL fetch 最新版本、官網靜態 HTML 同步呈現
+- **app + 網站雙端共用**：Flutter app 啟動時透過官網 URL（https://foliomatch.app/legal/）fetch 最新版本、官網靜態 HTML 同步呈現
 - **非律師審閱版本**：目前為 v0.1 草稿、**未生效**。正式版本將由台灣執業律師審閱後發佈
 
 ---
@@ -43,7 +43,7 @@ folio-web/
 2. 更新 legal/manifest.json（version + summary + change_type）
 3. 更新 legal/CHANGELOG.md（新增條目）
 4. git commit + push
-5. GitHub Pages 自動部署、folio0427.github.io/folio-web/ 即時更新
+5. Cloudflare Pages 自動部署、https://foliomatch.app 即時更新
 6. （重大變更）Supabase 寫入 tos_versions 新筆 → app 比對版本不符 → 阻擋式 modal
 7. （重大變更）發推播 + email 通知用戶
 ```
@@ -54,12 +54,12 @@ folio-web/
 
 | 用途 | URL |
 |------|-----|
-| 官網主頁 | https://folio0427.github.io/folio-web/ |
-| 服務條款（HTML） | https://folio0427.github.io/folio-web/terms.html |
-| 隱私權政策（HTML） | https://folio0427.github.io/folio-web/privacy.html |
-| 條款 markdown（app fetch） | https://folio0427.github.io/folio-web/legal/terms_zh.md |
-| 隱私 markdown（app fetch） | https://folio0427.github.io/folio-web/legal/privacy_zh.md |
-| Manifest（app 版本檢查） | https://folio0427.github.io/folio-web/legal/manifest.json |
+| 官網主頁 | https://foliomatch.app |
+| 服務條款（HTML） | https://foliomatch.app/terms |
+| 隱私權政策（HTML） | https://foliomatch.app/privacy |
+| 條款 markdown（app fetch） | https://foliomatch.app/legal/terms_zh.md |
+| 隱私 markdown（app fetch） | https://foliomatch.app/legal/privacy_zh.md |
+| Manifest（app 版本檢查） | https://foliomatch.app/legal/manifest.json |
 
 ---
 
