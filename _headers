@@ -18,5 +18,15 @@
 /assets/*
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
+# 全站安全防護：防 MIME 嗅探 / 點擊劫持 / 資訊外洩，鎖權限 API
 /*
-  Strict-Transport-Security: max-age=31536000
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Cross-Origin-Opener-Policy: same-origin
+
+# 測驗頁：嚴格 CSP（script 只允許同源；樣式/字型允許 Google Fonts）
+/quiz/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
