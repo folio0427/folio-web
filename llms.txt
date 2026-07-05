@@ -18,8 +18,16 @@ Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android 
 - [Differentiators](https://foliomatch.app/okf/differentiators.md): Why Folio is the opposite of mainstream dating apps.
 - [Safety & privacy](https://foliomatch.app/okf/safety-and-privacy.md): 18+ only, reporting/blocking, privacy protections.
 
+## Guide (zh-Hant)
+
+- [Folio 使用教學](https://foliomatch.app/guide/): Folio 怎麼用？從下載、建立檔案、選模式，到發帖配對、共讀室解鎖聊天，完整使用流程與常見問題。
+- [新手上路](https://foliomatch.app/guide/getting-started): 怎麼下載、用 Google 或 Apple 登入、建立個人檔案、選心態模式，到發帖徵共讀夥伴或報名別人的帖子。
+- [三種模式怎麼選](https://foliomatch.app/guide/choose-mode): 純粹書友、純粹找緣分、不拘，誰看得到誰、想找性別怎麼設定、切換有什麼冷卻限制。
+- [共讀室怎麼運作](https://foliomatch.app/guide/co-reading-flow): 從配對成立的鎖定狀態，到雙方讀到 25% 寫下便利貼解鎖聊天，再到 100% 的讀後分享卡。
+
 ## Articles (zh-Hant)
 
+- [「以書會友」是什麼？](https://foliomatch.app/blog/meet-friends-through-books): 以書會友語出《論語．顏淵》「君子以文會友」，這篇談以書會友的具體型態、為什麼有效，以及今天可以怎麼開始。
 - [不用照片、不看臉的交友 app](https://foliomatch.app/blog/no-photo-dating-app): 為什麼看臉的 0.8 秒，把「聊不聊得來」整個跳過了，寫給想先認識人、再看臉的人。
 - [內向、社恐也能用的交友 app](https://foliomatch.app/blog/introvert-social-app): 一開口就卡不是不想認識人，一本書如何當破冰工具，Folio 對內向者友善的三個設計。
 - [怎麼找書友 / 共讀夥伴](https://foliomatch.app/blog/find-reading-partner): 5 種找書友、共讀夥伴的管道（讀書會、社團、Goodreads、朋友揪、共讀 app）與各自的卡點。
@@ -34,6 +42,10 @@ Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android 
 - [為什麼共讀比配對 app 更容易遇到對的人](https://foliomatch.app/blog/why-co-reading): 從注意力經濟、決策疲乏到不對稱資訊揭露，給厭倦滑卡的人的慢社交設計筆記。
 - [我們的起點](https://foliomatch.app/blog/our-beginning): Folio 有了第一行字的那天，以及三個從第一天就沒變過的設計決定。
 - [Blog index](https://foliomatch.app/blog/)
+
+## Quiz
+
+- [閱讀人格測驗](https://foliomatch.app/quiz/): 用閱讀習慣測出你的共讀人格，測完可直接連到 Folio 下載頁。
 
 ## Legal
 

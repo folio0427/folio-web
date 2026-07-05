@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>共讀室怎麼運作：進度閘、便利貼牆、解鎖聊天｜Folio 使用教學</title>
+<meta name="description" content="Folio 共讀室的完整生命週期：從配對成立的鎖定狀態，到雙方讀到 25% 寫下便利貼解鎖聊天，再到 100% 的讀後分享卡與雙方慶祝畫面。">
+<meta name="keywords" content="Folio 共讀室, Folio 進度閘, Folio 便利貼牆, Folio 解鎖聊天, Folio 25%, 共讀 app 怎麼玩">
+<meta name="author" content="Folio">
+<meta name="theme-color" content="#F8F1E4">
+<link rel="icon" type="image/webp" href="../assets/folio_icon.webp">
+
+<meta name="apple-itunes-app" content="app-id=6771667110">
+
+<!-- Canonical + hreflang -->
+<link rel="canonical" href="https://foliomatch.app/guide/co-reading-flow">
+<link rel="alternate" hreflang="zh-Hant" href="https://foliomatch.app/guide/co-reading-flow">
+<link rel="alternate" hreflang="x-default" href="https://foliomatch.app/guide/co-reading-flow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Folio">
+<meta property="og:title" content="共讀室怎麼運作：進度閘、便利貼牆、解鎖聊天">
+<meta property="og:description" content="從配對成立的鎖定狀態，到雙方讀到 25% 解鎖聊天，再到 100% 的讀後分享卡與慶祝畫面。">
+<meta property="og:url" content="https://foliomatch.app/guide/co-reading-flow">
+<meta property="og:image" content="https://foliomatch.app/assets/og-image.jpg">
+<meta property="og:locale" content="zh_TW">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="共讀室怎麼運作｜Folio 使用教學">
+<meta name="twitter:image" content="https://foliomatch.app/assets/og-image.jpg">
+
+<!-- JSON-LD: WebPage（共讀室是狀態機／機制說明，非使用者操作步驟序列，用 WebPage 而非 HowTo） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "共讀室怎麼運作：進度閘、便利貼牆、解鎖聊天",
+  "url": "https://foliomatch.app/guide/co-reading-flow",
+  "description": "Folio 共讀室的完整生命週期：鎖定、進度閘解鎖、100% 讀後分享卡與雙方慶祝畫面。",
+  "inLanguage": "zh-Hant",
+  "isPartOf": { "@id": "https://foliomatch.app/#website" },
+  "about": { "@id": "https://foliomatch.app/#organization" }
+}
+</script>
+
+<!-- JSON-LD: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Folio", "item": "https://foliomatch.app/" },
+    { "@type": "ListItem", "position": 2, "name": "使用教學", "item": "https://foliomatch.app/guide/" },
+    { "@type": "ListItem", "position": 3, "name": "共讀室怎麼運作", "item": "https://foliomatch.app/guide/co-reading-flow" }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">
+    <img src="../assets/folio_icon.webp" alt="Folio - 以書交友 app 標誌">
+    <span>Folio</span>
+  </a>
+  <div class="nav-links">
+    <a href="/#modes">模式</a>
+    <a href="/#flow">流程</a>
+    <a href="/#philosophy">理念</a>
+    <a href="/blog/">筆記</a>
+    <a href="/terms">條款</a>
+    <a href="/privacy">隱私</a>
+  </div>
+  <div class="scroll-progress" role="presentation" aria-hidden="true"><span class="scroll-progress-bar"></span></div>
+</nav>
+
+<main>
+  <article class="blog-article">
+    <p class="blog-breadcrumb">
+      <a href="/">Folio</a> ›
+      <a href="/guide/">使用教學</a> ›
+      <span>共讀室怎麼運作</span>
+    </p>
+
+    <div class="blog-meta">
+      <span>使用教學 · 03</span>
+      <span>· 共讀流程</span>
+    </div>
+
+    <h1>共讀室怎麼運作：進度閘、便利貼牆、解鎖聊天</h1>
+
+    <p class="lede">
+      配對成立後，雙方會進入一間共讀室。這篇說明共讀室從鎖定到解鎖、再到讀完一本書的完整過程。
+    </p>
+
+    <h2>共讀室從哪裡來</h2>
+
+    <p>
+      共讀室是配對成立後開啟的空間。發帖者可以同時答應多位報名者，
+      每答應一人，就會建立一間新的共讀室——如果答應了 3 個人，就會有 3 間共讀室，
+      各自獨立進行。發帖與報名的完整流程看<a href="/guide/getting-started">新手上路</a>。
+    </p>
+
+    <h2>第一階段：鎖定（LOCKED）</h2>
+
+    <p>
+      共讀室一開始是<strong>鎖定狀態</strong>：只能使用固定的罐頭訊息，加上更新自己的進度，
+      自由打字功能會停用。畫面頂部會有一張 sticky 的進度卡，顯示雙方目前各自讀到哪裡。
+    </p>
+
+    <p>
+      這是 Folio 刻意的設計：配對成立不代表可以馬上開始閒聊，
+      要先花時間真的去讀這本書，才會進到下一步。
+    </p>
+
+    <h2>第二階段：推進度、寫便利貼</h2>
+
+    <p>
+      隨著你把這本書的進度往前拉，當自己的進度達到 <strong>25%</strong> 時，
+      系統會請你寫一則「25% 心得」便利貼，這是必填的。
+    </p>
+
+    <p>
+      便利貼是共讀過程中的即時心得紙條，除了 25% 心得之外，
+      平時想到什麼也可以隨手寫，可以寫在個人書房，也可以寫在共讀室的便利貼牆上——
+      牆上的便利貼是雙方共享的，屬於這一間共讀室。同一本書的便利貼會跨房間與書房同步顯示，
+      不會因為寫在不同地方而變成不同的內容。
+    </p>
+
+    <h2>第三階段：解鎖（UNLOCK）</h2>
+
+    <p>
+      共讀室要解鎖、開放自由聊天，需要<strong>雙方各自</strong>滿足兩個條件：
+    </p>
+
+    <ul>
+      <li>自己在這本書的進度達到 25% 以上</li>
+      <li>自己在這間共讀室寫過至少一則便利貼</li>
+    </ul>
+
+    <p>
+      也就是說，雙方各自兩項條件都要達成（總共四個確認），共讀室才會解鎖。
+      解鎖後除了可以自由打字聊天，也可以在對話中<strong>引用便利貼</strong>，
+      把之前寫過的心得帶進訊息裡。
+    </p>
+
+    <h2>進度是怎麼算的：User × Book</h2>
+
+    <p>
+      Folio 的進度 scope 是「<strong>一個使用者 × 一本書</strong>」的全局值，
+      不是針對某一間共讀室單獨計算。同一本書的進度，在任何共讀室或個人書房更新，
+      其他地方都會即時同步反映。如果你配對時對方已經讀了 60%，畫面上就會如實顯示 60%，
+      不會假裝從 0 開始。
+    </p>
+
+    <p>
+      不過解鎖的判斷是在<strong>共讀室這一層</strong>：雙方各自的進度都要達到 25% 以上，
+      而不是把兩人進度加起來看整體。
+    </p>
+
+    <h2>讀到 100% 之後：兩種情況</h2>
+
+    <p>
+      當進度來到 100%，會有兩種情況：
+    </p>
+
+    <h3>只有一方先到 100%</h3>
+
+    <p>
+      可以選擇寫下 100% 心得，寫完之後會解鎖「讀後分享卡」——
+      這是針對整本書的讀後總結，能生成可以分享到 IG / Threads 的精美卡片。
+      讀後分享卡跟便利貼是分開的功能：便利貼是共讀過程中的心得紙條，
+      分享卡則是整本書讀完後的總結，兩者不互相綁定，一本書也可以做多張分享卡。
+    </p>
+
+    <h3>雙方都到 100%</h3>
+
+    <p>
+      共讀室內會出現慶祝畫面與紀念訊息，記錄這場共讀的開始日期、結束日期，
+      以及總共花了多久共讀完這本書，作為這段共讀關係的紀念。
+    </p>
+
+    <blockquote>
+      每一張便利貼，是一段共讀的紀念。
+    </blockquote>
+
+    <h2>共讀室之外：個人書房怎麼接軌</h2>
+
+    <p>
+      個人書房的核心是 <code>progress</code>（書架）：一列代表一本書，狀態由進度百分比推導——
+      0% 是還沒讀、1–99% 是在讀、100% 是看完了，完全由你自己控制，
+      不需要配對也能單獨使用。共讀室裡拉的進度、書房的進度是同一個值，兩邊會保持一致。
+    </p>
+
+    <p>
+      如果你還沒選好要用哪種心態發帖或報名，先看
+      <a href="/guide/choose-mode">三種模式怎麼選</a>；
+      如果還沒開始第一次共讀，從
+      <a href="/guide/getting-started">新手上路</a>開始。
+    </p>
+
+    <div class="blog-cta">
+      <h3>翻到 25%，開始真正的對話</h3>
+      <p class="cta-sub">A place for readers who want to be more than readers.</p>
+      <div class="store-row">
+        <a class="store-btn store-btn-live" href="https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110" target="_blank" rel="noopener" aria-label="Download Folio on the App Store">
+          <span class="sb-glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M17.05 13.18c-.03-2.96 2.42-4.38 2.53-4.45-1.38-2.01-3.52-2.29-4.28-2.32-1.82-.18-3.55 1.07-4.47 1.07-.93 0-2.35-1.05-3.86-1.02-1.98.03-3.81 1.15-4.83 2.92-2.06 3.57-.53 8.85 1.48 11.75.98 1.42 2.15 3.01 3.68 2.95 1.48-.06 2.04-.96 3.83-.96 1.78 0 2.29.96 3.85.93 1.59-.03 2.6-1.45 3.57-2.87 1.13-1.65 1.6-3.25 1.62-3.33-.04-.02-3.1-1.19-3.13-4.72zM14.13 4.48c.82-.99 1.37-2.37 1.22-3.74-1.18.05-2.6.78-3.45 1.77-.76.87-1.42 2.27-1.24 3.61 1.31.1 2.65-.66 3.47-1.64z"/>
+            </svg>
+          </span>
+          <span class="sb-text">
+            <span class="sb-prefix">下載自</span>
+            <span class="sb-name">App Store</span>
+          </span>
+          <span class="sb-state sb-state-live">立即下載</span>
+        </a>
+        <a class="store-btn store-btn-live" href="https://play.google.com/store/apps/details?id=com.yuliao.folio" target="_blank" rel="noopener" aria-label="Download Folio on Google Play">
+          <span class="sb-glyph" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M3.6 1.4c-.4.4-.6 1-.6 1.7v17.8c0 .7.2 1.3.6 1.7l.1.1L13.6 12 3.7 1.4l-.1 0z"/>
+              <path d="M16.8 15.2L13.6 12l3.2-3.2 5 2.8c1.4.8 1.4 2 0 2.8l-5 2.8z" opacity=".85"/>
+              <path d="M16.8 15.2L13.6 12 3.6 22.6c.5.5 1.3.6 2.2.1l11-6.3-.0-.0z"/>
+              <path d="M16.8 8.8L5.8 2.5c-.9-.5-1.7-.4-2.2.1L13.6 12l3.2-3.2z" opacity=".7"/>
+            </svg>
+          </span>
+          <span class="sb-text">
+            <span class="sb-prefix">下載自</span>
+            <span class="sb-name">Google Play</span>
+          </span>
+          <span class="sb-state sb-state-live">立即下載</span>
+        </a>
+      </div>
+    </div>
+
+    <aside class="blog-related">
+      <p class="related-head">接下來看</p>
+      <div class="related-grid">
+        <a class="related-card" href="/guide/getting-started">
+          <span>01 · 新手上路</span>
+        </a>
+        <a class="related-card" href="/guide/choose-mode">
+          <span>02 · 三種模式怎麼選</span>
+        </a>
+      </div>
+    </aside>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="../assets/folio_icon.webp" alt="Folio">
+          <span>Folio</span>
+        </div>
+        <p class="footer-tagline">A place for readers who want to be more than readers.</p>
+      </div>
+      <div>
+        <h4>探索</h4>
+        <ul>
+          <li><a href="/#modes">三種模式</a></li>
+          <li><a href="/#flow">共讀流程</a></li>
+          <li><a href="/blog/">慢社交筆記</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>法務</h4>
+        <ul>
+          <li><a href="/terms">服務條款</a></li>
+          <li><a href="/privacy">隱私權政策</a></li>
+          <li><a href="/child-safety">兒童安全</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>聯絡</h4>
+        <ul>
+          <li><a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a></li>
+          <li><a href="https://portaly.cc/folio" target="_blank" rel="noopener">支持 Folio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>

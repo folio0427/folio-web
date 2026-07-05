@@ -175,3 +175,15 @@ folio-web/
 ---
 
 > 此 plan 為 v1。每 3 個月根據 Search Console 數據迭代主題清單。
+
+---
+
+## 現況更新（2026-07-06）
+
+- 已發布文章共 **14 篇**：原規劃 5 篇 cornerstone 全數完成，
+  加上計畫外擴充的 9 篇，再加上本次新增的第 6 篇 cornerstone
+  「以書會友」是什麼？從《論語》到共讀 app 的當代實踐
+  （`blog/meet-friends-through-books.html`）。
+- 新增 `/guide/` 使用教學區，共 4 頁：`index`、`getting-started`、
+  `choose-mode`、`co-reading-flow`，已接進 nav / footer / sitemap / llms.txt。
+- `quiz/` 補了 SEO head 並補進 sitemap（先前遺漏）。

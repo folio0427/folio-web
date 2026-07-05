@@ -646,14 +646,14 @@ body::after {
 .act-btn svg { width: 18px; height: 18px; }
 .act-btn:disabled { opacity: 0.7; cursor: default; transform: none; }
 
-/* 分享（主要）：暖色實心漸層 + 光暈，最搶眼 */
+/* 分享（主要）：暖色實心漸層，最搶眼 */
 .act-share {
   color: #2A1E12;
   background: linear-gradient(135deg, var(--type-color-wash), #FBEFD9);
-  box-shadow: 0 8px 24px rgba(18,13,8,0.4), 0 0 0 4px rgba(250,243,231,0.12);
+  box-shadow: 0 6px 20px rgba(18,13,8,0.35);
   font-weight: 700;
 }
-.act-share:hover { transform: translateY(-2px); background: linear-gradient(135deg, #fff, var(--type-color-wash)); box-shadow: 0 12px 30px rgba(18,13,8,0.5), 0 0 0 5px rgba(250,243,231,0.18); }
+.act-share:hover { transform: translateY(-2px); background: linear-gradient(135deg, #fff, var(--type-color-wash)); box-shadow: 0 10px 26px rgba(18,13,8,0.45); }
 
 /* 下載（次要）：霧面毛玻璃 */
 .act-download {
