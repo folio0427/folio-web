@@ -2,11 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "_comment": "Folio legal docs manifest. Source of truth for the latest ToS / Privacy version: a GitHub Action syncs this into Supabase tos_versions (which the app reads), and it is also bundled into the app as an offline fallback. Bump version + summary when ToS / Privacy changes.",
   "terms": {
-    "version": "1.5",
-    "effective_date": "2026-06-24T00:00:00+08:00",
-    "change_type": "major",
-    "summary_zh": "v1.5：新增澳洲（《澳洲消費者法》不可排除之消費者保證 carve-out、澳洲消費者管轄）與美國上架合規（DMCA 通知 / 取下程序、禁性交易 / 販運、責任 carve-out、安全資源）相關條款。",
-    "summary_en": "v1.5: Adds Australia provisions (non-excludable Australian Consumer Law guarantee carve-out; Australian-consumer jurisdiction) and US launch-compliance provisions (DMCA notice-and-takedown, prohibition of commercial sex / trafficking, liability carve-outs, safety resources).",
+    "version": "1.6",
+    "effective_date": "2026-07-17T00:00:00+08:00",
+    "change_type": "minor",
+    "summary_zh": "v1.6：一般條款新增「第三方開源元件」說明（App 內嵌字型之 SIL OFL 1.1 授權聲明與 App 內查閱位置）。純資訊性補充，無權利義務或資料處理變更。",
+    "summary_en": "v1.6: Adds a \"Third-party open-source components\" note to Miscellaneous (SIL OFL 1.1 licence attribution for fonts embedded in the app and where to view the notices in-app). Informational only; no change to rights, obligations, or data processing.",
     "content_url_zh": "https://folio0427.github.io/folio-web/legal/terms_zh.md",
     "content_url_en": "https://folio0427.github.io/folio-web/legal/terms_en.md"
   },

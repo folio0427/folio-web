@@ -11,6 +11,18 @@
 
 ---
 
+## terms v1.6 — 2026-07-17
+
+- **文件**：使用者條款（zh / en）
+- **變更類型**：minor（純資訊性補充，不觸發重新同意）
+- **摘要**：第 18 章「一般條款」新增「第三方開源元件」bullet — 揭露 App 內嵌七套字型
+  （Noto Serif TC / Noto Sans TC / EB Garamond / JetBrains Mono / 霞鶩文楷 / jf open 粉圓 /
+  辰宇落雁體）依 SIL Open Font License 1.1 授權使用，完整聲明見 App 內「設定 → 開源授權」
+  （字型檔內嵌授權欄逐檔驗證皆 OFL 1.1）。
+- 隱私權政策無變更（維持 v1.5）。
+
+---
+
 ## terms v1.5 / privacy v1.5 — 2026-06-24
 
 > **發佈批次** — manifest.json + 四份文件標頭 v1.5、effective_date 2026-06-24（push 當日）。
