@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v1.6 ｜ **Effective Date** 2026-07-17 ｜ **Last Updated** 2026-07-17 ｜ **Status** Final
+> **Version** v1.5 ｜ **Effective Date** 2026-06-24 ｜ **Last Updated** 2026-06-24 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -223,7 +223,6 @@ When your account is suspended (feature restrictions or full suspension):
 - **Assignment**: The platform may assign its rights and obligations under these Terms to a successor entity in connection with a reorganization, incorporation, merger, or transfer of assets; you may not transfer your account or your rights and obligations under these Terms without the platform's consent.
 - **Language**: These Terms are provided in Chinese and English; in case of any discrepancy, the Chinese version prevails.
 - **Survival**: Provisions that by their nature should survive termination (including the user-content licence, indemnification, disclaimers, limitation of liability, and governing law and jurisdiction) continue in effect after termination of the service or your account.
-- **Third-party open-source components**: The fonts embedded in the app (Noto Serif TC, Noto Sans TC, EB Garamond, JetBrains Mono, LXGW WenKai TC, jf open-huninn, ChenYuluoyan) are used under the SIL Open Font License 1.1; the full licence notices are available in the app under Settings → Open-source licenses. The licences of these third-party components do not affect your rights or obligations under these Terms.
 
 ---
 
