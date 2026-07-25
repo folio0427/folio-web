@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v1.5 ｜ **Effective Date** 2026-06-24 ｜ **Last Updated** 2026-06-24 ｜ **Status** Final
+> **Version** v1.6 ｜ **Effective Date** 2026-07-25 ｜ **Last Updated** 2026-07-25 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -289,14 +289,14 @@ This handling matches industry practice (Bumble, Tinder, Hinge etc.); the goal i
 
 ### How consent takes effect
 
-- After an update, you will see a blocking consent modal the next time you open the app
+- When there is a **material change** (as classified below), you will see a blocking consent modal the next time you open the app
 - You cannot continue using the service until you explicitly check "I have read and agree"
 - The modal's options are: agree and continue / delete your account
 - No buffer period — under GDPR / PDPA we must obtain valid consent before continuing to process your personal data, rather than granting a grace window afterwards
 
 ### Change classification
 
-- **Minor** (typos, restructuring): version bump + L4 blocking modal re-consent
+- **Minor** (typos, restructuring, clarifying additions within the existing scope of collection or processing): version bump; **takes effect silently, existing users are not interrupted**
 - **Material** (liability, jurisdiction, termination): all L1–L4 channels
 - **New data collection / third-party sharing / purpose change**: forced modal re-consent, feature-limited if no consent, no buffer
 
