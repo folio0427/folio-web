@@ -46,7 +46,7 @@
 - 設備資訊：作業系統版本、App 版本、語言設定、推播 token、裝置與 App 實例識別碼（含 Firebase Analytics 之 App Instance ID）
 - IP 位址（用於安全與防詐；Firebase Analytics 會將其遮罩後用以推算概略位置）
 - 概略位置：國家 / 城市層級（由遮罩後 IP 推得、非精準定位、來自 Firebase Analytics）
-- 操作日誌（登入時間、功能點選；部分透過 Firebase Analytics 之 App 互動事件收集）
+- 操作日誌（登入時間、功能點選、各功能頁面的停留時間與進入次數；部分透過 Firebase Analytics 之 App 互動事件收集。其中「頁面停留時間與進入次數」為第一方（Supabase）收集、關聯您的帳號、僅用於產品改進與用量分析、不傳送第三方、不用於廣告或剖繪）
 
 ### 不收集
 

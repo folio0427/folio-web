@@ -46,7 +46,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Device info: OS version, app version, language, push token, device and app-instance identifiers (incl. the Firebase Analytics App Instance ID)
 - IP address (security and fraud prevention; Firebase Analytics masks it to derive coarse location)
 - Coarse location: country / city level (derived from a masked IP, not precise positioning; via Firebase Analytics)
-- Activity logs (login time, clicks; partly collected via Firebase Analytics app-interaction events)
+- Activity logs (login time, clicks, and per-screen dwell time and entry counts; partly collected via Firebase Analytics app-interaction events. The "per-screen dwell time and entry counts" are collected first-party (Supabase), linked to your account, used only for product improvement and usage analytics, not shared with third parties, and not used for advertising or profiling)
 
 ### Not collected
 

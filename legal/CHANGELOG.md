@@ -11,6 +11,27 @@
 
 ---
 
+## privacy v1.6 — 2026-07-25
+
+> **發佈批次** — manifest.json privacy 1.6、effective_date 2026-07-25（push 當日）。terms 維持 1.5、不動。
+> 發佈程序：commit + push folio-web → GitHub Action 同步 tos_versions（app 讀取判斷是否 re-consent）。
+> change_type = minor → 既有用戶靜默、不跳 modal（新註冊用戶於註冊流程一次性同意最新版）。
+
+**狀態**：正式（生效日 2026-07-25）
+**文件**：privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：minor（既有用戶靜默、不需重新同意）。嚴格性質為「透明度補充揭露」（比純錯字 / 重排多一點）：於既有已同意目的下列出一項收集細項，非新使用目的 / 非新第三方 / 非敏感資料 → 依 LegalGate change_type 閘門規則歸 minor（靜默上線）。
+**摘要**：
+
+app v78 新增「頁面停留時間」遙測：每人每天彙總各功能頁的停留秒數與進入次數，存 Supabase（第一方、關聯帳號），用於後台用量分析與產品改進。此收集之目的（服務改進 / 用量分析，§03）與載體（Supabase，§04）於 privacy 1.5 已揭露並經同意；本次僅將 §02「操作日誌」講得更細。privacy 1.5 → 1.6。
+
+**Privacy 變更：**
+
+- §02 使用過程產生 → 操作日誌：補列「各功能頁面的停留時間與進入次數」，並註明此項為第一方（Supabase）收集、關聯帳號、僅用於產品改進與用量分析、不傳第三方、不用於廣告或剖繪（與 §04 Firebase Analytics「不綁帳號」之敘述明確區分，避免混淆）。
+
+**關聯 commit**：app 端 v78 埋點 `2652f6f`（folio private repo）。
+
+---
+
 ## terms v1.5 / privacy v1.5 — 2026-06-24
 
 > **發佈批次** — manifest.json + 四份文件標頭 v1.5、effective_date 2026-06-24（push 當日）。
