@@ -70,11 +70,14 @@ export async function onRequestGet(context) {
   const safeName = esc(name);
   const safeOwner = esc(owner);
 
-  // 分享卡（v77）：使用者按過分享才會有這張圖，路徑由房間 id 推導。
-  // 沒有的話退回品牌通用圖 —— 爬蟲抓 404 會直接當作沒有圖。
-  const cardImg = id
-    ? `${SUPABASE_URL}/storage/v1/object/public/room-cards/${id}.png`
-    : "https://foliomatch.app/assets/og-image.jpg";
+  // 預覽圖固定用品牌圖（2026-08-19 Max 定案，取消 v77 的房間快照分享卡）。
+  //
+  // 為什麼不放房間截圖：房間裡的便條是使用者自己寫的字，截圖會把它烤進一張
+  // **公開網址**的圖片（在 app 裡讀那些字要登入），而 LINE / Facebook 會把
+  // OG 圖鏡像到自己的 CDN，作者事後刪掉也收不回來。
+  // 個人化由文字承擔就夠了：分享訊息是「XX 邀請你參觀他的書房〈房名〉」，
+  // 下面的 og:title 也帶暱稱 —— 收到的人在意的是「誰找我」，那是文字。
+  const cardImg = "https://foliomatch.app/assets/og-image.jpg";
 
   const ua = context.request.headers.get("user-agent") || "";
   const isIOS = /iPhone|iPad|iPod/i.test(ua);
