@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v1.5 ｜ **Effective Date** 2026-06-24 ｜ **Last Updated** 2026-06-24 ｜ **Status** Final
+> **Version** v1.6 ｜ **Effective Date** 2026-08-21 ｜ **Last Updated** 2026-08-21 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -86,17 +86,18 @@ When your account is suspended (feature restrictions or full suspension):
 
 ## 06　User-Generated Content (UGC)
 
-- User content reflects only the views of the user who posted it and does not represent the position, views, approval, or endorsement of the platform. Folio is a neutral venue for book-based exchange and co-reading matching, and does not warrant the truthfulness, accuracy, completeness, legality, or reliability of user content, including but not limited to book titles, reflections, discussions, posts, applications, sticky notes, and messages. However, Folio may restrict, remove, or take action against such content in accordance with these Terms, applicable law, lawful authority requests, or moderation decisions.
+- User content reflects only the views of the user who posted it and does not represent the position, views, approval, or endorsement of the platform. Folio is a neutral venue for book-based exchange and co-reading matching, and does not warrant the truthfulness, accuracy, completeness, legality, or reliability of user content, including but not limited to book titles, reflections, discussions, posts, applications, sticky notes, messages, study-room names and arrangements, paper-note stacks, guestbook comments, and drift-bottle letters. However, Folio may restrict, remove, or take action against such content in accordance with these Terms, applicable law, lawful authority requests, or moderation decisions.
 - You bear full legal responsibility for what you publish
 - We have no pre-screening obligation but reserve removal rights
 - We remove content that is unlawful or whose removal is required by a competent authority under the applicable law of each region in which we operate, including cessation (anti-doxxing) notices under Hong Kong's Personal Data (Privacy) Ordinance and lawful content-removal requests under Hong Kong law
 - You grant us a non-exclusive, worldwide, royalty-free, sublicensable license
 - Limited to: service operation / platform infrastructure / de-identified analytics / 100% wrap-up pages you actively share
 
-### Retention of co-reading content after account deletion (Important)
+### Retention of user content after account deletion (Important)
 
 - Sticky notes and messages you write in a co-reading room are jointly produced by you and your reading partner
 - After you delete your account, this content remains, anonymised, on your reading partner's side, with the author shown as "A book friend who left"
+- Comments you leave in other users' study-room guestbooks, and pen-pal correspondence from established drift-bottle connections, are retained under the same mechanism: comment authors are shown as "A book friend who left", and pen-pal correspondence becomes a read-only memento on the other side
 - By publishing, you consent to this mechanism
 - For detailed handling, see the "Account deletion" section of the Privacy Policy
 

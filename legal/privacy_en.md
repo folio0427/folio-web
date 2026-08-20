@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v1.6 ｜ **Effective Date** 2026-07-25 ｜ **Last Updated** 2026-07-25 ｜ **Status** Final
+> **Version** v1.7 ｜ **Effective Date** 2026-08-21 ｜ **Last Updated** 2026-08-21 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -40,9 +40,12 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Reflections (25%, 100%, anytime)
 - Reflection share cards (reflection text, book author, reading start/end dates, chosen template)
 - Bookshelf (own books, book author, category, reading progress and page numbers, sticky notes)
+- Study room (room name, bookcase and ornament arrangement, the paper-note stack outside the room, room visibility setting)
+- Study-room interactions (likes you give to other users' rooms, comments you leave in other users' guestbooks)
 - Match records (partner, per-stage unlock times, 100%-completion and celebration times, last-message time)
 - Social connections (your friends list, friend and co-reading invitations you send or receive, your friend invite code)
-- Report and block data: when you report a post or a user, we record the target of your report, the reasons you select, and any explanation you provide, and the server captures a content snapshot at the time of the report as evidence for moderation and legal defense. Where the report targets a user, that snapshot may include the reported user's personal data (nickname, gender, date of birth, mode, personality answers), their recent posts, and the messages and sticky notes exchanged between you and that user in any shared co-reading room. When you block a user, we record only the "blocker–blocked" relationship; the blocked user receives no notification. The foregoing report and block data is accessible only to Folio's moderation / administration personnel and only to the extent necessary.
+- Drift bottles (letters you cast: a sticky note, a reflection, or a letter written on the spot; your replies and pen-pal correspondence; copies of others' letters you save; delivery and arrival status)
+- Report and block data: when you report a post, a user, a study room, a guestbook comment, or a drift bottle / drift-bottle conversation, we record the target of your report, the reasons you select, and any explanation you provide, and the server captures a content snapshot at the time of the report as evidence for moderation and legal defense. Where the report targets a user, that snapshot may include the reported user's personal data (nickname, gender, date of birth, mode, personality answers), their recent posts, and the messages and sticky notes exchanged between you and that user in any shared co-reading room. Where the report targets a study room or a guestbook comment, the snapshot may include the room name, its paper-note stack, and the comment text; where it targets a drift bottle or a drift-bottle conversation, the snapshot includes the letter content. When you block a user, we record only the "blocker–blocked" relationship; the blocked user receives no notification. The foregoing report and block data is accessible only to Folio's moderation / administration personnel and only to the extent necessary.
 - Device info: OS version, app version, language, push token, device and app-instance identifiers (incl. the Firebase Analytics App Instance ID)
 - IP address (security and fraud prevention; Firebase Analytics masks it to derive coarse location)
 - Coarse location: country / city level (derived from a masked IP, not precise positioning; via Firebase Analytics)
@@ -106,6 +109,9 @@ We do **not sell** your personal information, and we do **not share** it for cro
 - Gender and age: shown on the other party's profile and in post details per the mode filtering matrix (gender is not shown to Pure-Book-Friend viewers; age is derived from your date of birth, and your full date of birth is not shown). You can enable hide toggles on the "Me" page so your gender / age are not shown to other users
 - Posts, applications, reflections
 - After matching: chat messages and sticky-note content you cite
+- Study rooms: a room you set to "Public" enters the daily room exhibition and is shown to all users (room name, arrangement, paper-note stack, your avatar and nickname); a room set to "Unlisted" does not appear in Explore, but any signed-in user who knows the room link can still view it (the link itself grants access, so share it with care; viewing is blocked in both directions where a block exists between you and the viewer)
+- Comments you leave in another user's guestbook are shown with your nickname to the room owner and that room's other visitors; for likes you give to another user's room, the owner receives a notification containing your nickname, while the room itself shows only an aggregate count and your identity is not shown to other visitors
+- Drift bottles: letters you cast are delivered anonymously (shown as "A reader far away"); nicknames are revealed to each other only after both sides establish a pen-pal connection
 
 ## 05　Cross-Border Transfer
 
@@ -137,6 +143,7 @@ We do **not sell** your personal information, and we do **not share** it for cro
 - Pending criminal investigation data: until resolution
 - Terms consent records (`user_tos_consents`): **5 years** (legal evidence; auto-purged on expiry). Records include the `doc_type`, version, timestamp, method of your acceptance, the **IP address and the device / browser identifier string (user-agent) at the moment of your consent**, plus a **salted SHA-256 hash of your email** (salt kept server-side, never held by the client). The hash is **one-way** and cannot be reversed to recover your email. Purpose: (a) after you delete your account, allow us to verify in litigation whether an email you claim is yours ever consented on Folio; (b) without retaining the plaintext email. This constitutes pseudonymisation under GDPR Art. 4(5) and is lawful.
 - Terms-change notification delivery log (`tos_notification_log`): records the delivery and open status of terms-change notices across each channel (push / email / in-app banner / blocking modal) as evidence that we provided lawful notice; retained for the same period as the consent records, and the link to your account is removed (user_id set to NULL) after you delete your account.
+- Drift bottles: copies of your letters saved by other users remain in the saver's letter box until they delete them; replies and conversations you decline, and content taken down due to expiry or moderation, are moved to an archive (for abuse prevention, operational statistics, and legal defense) and are no longer shown to regular users
 
 ### Chat messages
 
@@ -157,13 +164,15 @@ Choosing "Leave Folio" causes the platform to handle your data as follows:
 **Fully cleared**
 - Your Google / Apple sign-in link (auth.users record)
 - Nickname, avatar, gender, birthdate, preference categories
-- Your shelf (books and personal sticky notes), reflection share cards, posts, unprocessed applications
+- Your shelf (books and personal sticky notes), your study rooms (room, arrangement, paper-note stack, and the likes and guestbook comments the room received), reflection share cards, posts, unprocessed applications
 - Push notification settings (push token)
 - Social-connection data (friends list, friend and co-reading invitations, friend invite code, block list)
 
-**Retained anonymously** (as a memento for your co-reading partners)
+**Retained anonymously** (as a memento for your co-reading partners and other users)
 - Sticky notes you wrote in co-reading rooms
 - Your messages in those rooms
+- Comments you left in other users' guestbooks
+- Pen-pal correspondence from established connections (kept read-only as a memento on the other side; copies of your letters that others saved remain in their letter boxes; replies and deliveries that never became a pen-pal connection are deleted)
 - Author name shown as "A book friend who left"
 
 **Legal basis**: Conversations and co-reading records are jointly produced by both parties (joint controllership); we have a legitimate interest in retaining them for the other party's continued use. Anonymisation only removes the linkage to your account and displays the content as "A book friend who left"; to that extent it is no longer personally identifiable. However, where a message's own content contains information that identifies an individual (e.g. a self-entered name, address, or social handle), it may still constitute personal data, and we will handle such content in accordance with applicable law, a report, or your deletion request. This pattern matches LINE / WhatsApp / Discord and other messaging services.

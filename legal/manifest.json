@@ -2,20 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "_comment": "Folio legal docs manifest. Source of truth for the latest ToS / Privacy version: a GitHub Action syncs this into Supabase tos_versions (which the app reads), and it is also bundled into the app as an offline fallback. Bump version + summary when ToS / Privacy changes.",
   "terms": {
-    "version": "1.5",
-    "effective_date": "2026-06-24T00:00:00+08:00",
-    "change_type": "major",
-    "summary_zh": "v1.5：新增澳洲（《澳洲消費者法》不可排除之消費者保證 carve-out、澳洲消費者管轄）與美國上架合規（DMCA 通知 / 取下程序、禁性交易 / 販運、責任 carve-out、安全資源）相關條款。",
-    "summary_en": "v1.5: Adds Australia provisions (non-excludable Australian Consumer Law guarantee carve-out; Australian-consumer jurisdiction) and US launch-compliance provisions (DMCA notice-and-takedown, prohibition of commercial sex / trafficking, liability carve-outs, safety resources).",
+    "version": "1.6",
+    "effective_date": "2026-08-21T00:00:00+08:00",
+    "change_type": "minor",
+    "summary_zh": "v1.6：§06 用戶內容列舉補上虛擬書房（房名、佈置、便條疊）、訪客簿留言與漂流瓶信件；帳號刪除後留存節補述訪客簿留言匿名保留與筆友通信唯讀紀念。既有機制之揭露補充、無新增權利義務 → minor、既有用戶靜默。",
+    "summary_en": "v1.6: §06 UGC enumeration now covers study rooms (name, arrangement, paper-note stack), guestbook comments, and drift-bottle letters; the post-deletion retention section adds anonymised guestbook comments and read-only pen-pal correspondence. Disclosure catch-up for existing mechanisms; no new rights or obligations → minor, silent for existing users.",
     "content_url_zh": "https://foliomatch.app/legal/terms_zh.md",
     "content_url_en": "https://foliomatch.app/legal/terms_en.md"
   },
   "privacy": {
-    "version": "1.6",
-    "effective_date": "2026-07-25T00:00:00+08:00",
+    "version": "1.7",
+    "effective_date": "2026-08-21T00:00:00+08:00",
     "change_type": "minor",
-    "summary_zh": "v1.6：§02 操作日誌補列「各功能頁面的停留時間與進入次數」（第一方 Supabase 收集、關聯帳號、僅用於產品改進與用量分析、不傳第三方、不做廣告剖繪）。屬既有「操作日誌 + 服務改進 / 用量分析」目的下之透明度補充揭露，無新增使用目的 / 無新增第三方 / 非敏感資料 → minor、既有用戶靜默、不需重新同意。",
-    "summary_en": "v1.6: §02 activity logs now list 'per-screen dwell time and entry counts' (collected first-party via Supabase, linked to account, used only for product improvement and usage analytics, not shared with third parties, no ad profiling). A transparency clarification within the already-consented 'activity logs + service improvement / usage analytics' purpose; no new purpose, no new third party, non-sensitive → minor, silent for existing users, no re-consent.",
+    "summary_zh": "v1.7：補齊虛擬書房與漂流瓶之揭露：§02 蒐集（房名 / 佈置 / 便條疊 / 可見性、讚與訪客簿留言、漂流瓶信件與收藏副本）、§04 用戶間顯示（今日書房展、不公開＝知悉連結且登入者可檢視、留言具名、讚之通知含暱稱、漂流瓶匿名投遞）、§06 保留與刪帳號（訪客簿留言匿名化、筆友線唯讀紀念、信匣副本與封存區）。皆屬既有功能於既已同意目的下之透明度補充、無新第三方、無新目的 → minor、既有用戶靜默、不需重新同意。",
+    "summary_en": "v1.7: adds disclosure for study rooms and drift bottles: §02 collection (room name / arrangement / paper-note stack / visibility, likes and guestbook comments, drift-bottle letters and saved copies), §04 inter-user visibility (daily room exhibition, unlisted rooms viewable by signed-in link holders, comments shown with nickname, like notifications carry nickname, anonymous bottle delivery), §06 retention and deletion (anonymised guestbook comments, read-only pen-pal mementos, saved-letter copies and archive). Transparency catch-up for existing features under already-consented purposes; no new third party, no new purpose → minor, silent for existing users, no re-consent.",
     "content_url_zh": "https://foliomatch.app/legal/privacy_zh.md",
     "content_url_en": "https://foliomatch.app/legal/privacy_en.md"
   }
