@@ -1,6 +1,6 @@
 # Folio Privacy Policy
 
-> **Version** v1.7 ｜ **Effective Date** 2026-08-21 ｜ **Last Updated** 2026-08-21 ｜ **Status** Final
+> **Version** v1.8 ｜ **Effective Date** 2026-08-28 ｜ **Last Updated** 2026-08-28 ｜ **Status** Final
 
 This policy describes how Folio collects, uses, stores, and shares your personal data, and your rights. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -31,6 +31,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Desired gender (only when your mode is "Open to Connection" or "Open")
 - Character styling (mascot appearance; not a real-life image)
 - Region (optional free text you provide; may be left blank and edited anytime)
+- The community your account belongs to (Chinese-speaking / International): determined at registration — devices with a Chinese interface are placed in the Chinese-speaking community automatically, while on a non-Chinese interface you choose it yourself during registration; **once set it cannot be changed** (you are warned before you submit)
 
 ### Generated through usage
 
@@ -50,6 +51,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - IP address (security and fraud prevention; Firebase Analytics masks it to derive coarse location)
 - Coarse location: country / city level (derived from a masked IP, not precise positioning; via Firebase Analytics)
 - Activity logs (login time, clicks, and per-screen dwell time and entry counts; partly collected via Firebase Analytics app-interaction events. The "per-screen dwell time and entry counts" are collected first-party (Supabase), linked to your account, used only for product improvement and usage analytics, not shared with third parties, and not used for advertising or profiling)
+- Purchase and subscription status (when you buy a support plan: plan tier, purchase / renewal / expiry times, and store transaction / receipt identifiers; payment is processed by Apple / Google, and Folio never collects your card number)
 
 ### Not collected
 
@@ -63,7 +65,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 ### Sensitive personal data (note)
 
 - Your mode (especially "Open to Connection") together with your desired gender may, when read together, reveal sensitive signals about your sexual orientation. Under the California CCPA/CPRA and several US state laws, such data is treated as "sensitive personal information."
-- We use this data to **provide the matching service**: your **mode** drives the visibility matrix (who can see whom); your **desired gender** is only a preference signal shown to eligible peers and is **not itself used to filter** whom you see. We do **not** sell it, use it for advertising, or build advertising / marketing profiles from it. Our analytics provider (Firebase) does **not** receive your mode, gender, or desired gender — only age and de-identified usage-flow events — so the sexual-orientation inference **never enters** analytics or advertising.
+- We use this data to **provide the matching service**: your **mode** drives the visibility matrix (who can see whom); your **desired gender** is only a preference signal shown to eligible peers and is **not itself used to filter** whom you see. We do **not** sell it, use it for advertising, or build advertising / marketing profiles from it. Our third-party analytics provider (Firebase) does **not** receive your mode, gender, or desired gender — only age and de-identified usage-flow events — so the sexual-orientation inference **never enters third-party analytics and is never used for advertising**. We do, however, review this data in our own admin console in **aggregate** form (for example the distribution of modes, mode × gender cross-tabs of how matches are composed, and conversion rates at each step of a feature), in order to understand how the service is used and improve the matching mechanism; those statistics are visible only to our administrators, are never sent to any third party, are not used for advertising or personalisation, and are never used to treat an individual user differently.
 - You provide this data voluntarily (opt-in) at registration, and may change your mode / desired gender at any time on the "Me" page (7-day cooldown each).
 
 ## 03　Purposes
@@ -72,6 +74,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - Matching algorithm
 - 18+ verification
 - Service improvement and usage analytics (DAU, funnel)
+- Service announcements and important notices (shown in the app; may be sent per community)
 - Fraud and abuse detection
 - Customer service
 - Legal compliance
@@ -86,6 +89,7 @@ This policy describes how Folio collects, uses, stores, and shares your personal
 - **Apple Push Notification service (APNs)** (iOS push) — global edge
 - **Google LLC** (Google OAuth)
 - **Apple Inc.** (Apple OAuth)
+- **RevenueCat, Inc.** (subscription status management) — US host. When you purchase a support plan it receives: your Folio account identifier, the purchased product identifier, purchase / renewal / expiry times, and store receipt information, used to validate and sync your subscription status; it also processes the device and connection technical information necessary to operate the service, but never receives your name, email, card number, or any in-app content
 - **Google Analytics for Firebase (Firebase Analytics) by Google LLC** (usage analytics: DAU, funnel) — global edge. Through this service Google collects: App Instance ID (a device-level identifier), coarse location (derived from a masked IP, not precise positioning), and app-lifecycle / product-interaction events. Folio attaches a small set of non-sensitive attributes (age) to certain feature events as analytics dimensions. Analytics data from this service is associated only with the device-level App Instance ID and is **not** linked to your Folio account identifier; Folio does **not** send your gender, desired gender, or mode to this service.
 
 ### Legal disclosure
@@ -104,7 +108,9 @@ We do **not sell** your personal information, and we do **not share** it for cro
 
 ### Inter-user visibility
 
+- **Your community determines who you can see and who can see you**: posts in Explore, search results, other users' bookshelves and study rooms, friend invitations and friend codes, applications, drift-bottle matching and delivery, and the daily room exhibition all operate **within a single community only**; users in different communities cannot see each other. In-app announcements may likewise be sent per community
 - Nickname, mode badge, category preferences, region (if provided)
+- Supporter badge: while your support-plan subscription is active, Folio may show your supporter badge to other users on your profile (friends / co-reading rooms) and on post detail pages; the badge design differs by plan tier (so, when shown, other users can tell which tier you subscribe to). The actual display scope is as shown in the app, and the badge is no longer shown once the subscription ends
 - Desired gender: conditionally shown on the other party's profile / post details per the filtering matrix, only when your mode is "Looking for fate" or "Open to either"
 - Gender and age: shown on the other party's profile and in post details per the mode filtering matrix (gender is not shown to Pure-Book-Friend viewers; age is derived from your date of birth, and your full date of birth is not shown). You can enable hide toggles on the "Me" page so your gender / age are not shown to other users
 - Posts, applications, reflections
@@ -115,7 +121,7 @@ We do **not sell** your personal information, and we do **not share** it for cro
 
 ## 05　Cross-Border Transfer
 
-- The Supabase host is in Singapore; FCM, APNs, and Firebase Analytics are global
+- The Supabase host is in Singapore; FCM, APNs, and Firebase Analytics are global; the RevenueCat host is in the US
 - Transfer protections: EU Standard Contractual Clauses + Supabase SOC 2 Type II
 - Personal data of Hong Kong users is likewise stored and processed outside Hong Kong (in Singapore and at global edge nodes). Hong Kong's Personal Data (Privacy) Ordinance currently imposes no data-localization requirement, and its cross-border transfer restriction (Section 33) is not yet in force; we nonetheless handle such transfers in line with the safeguards recommended by the Privacy Commissioner
 - Personal data of Australian users is likewise stored and processed outside Australia (in Singapore and at global edge nodes). Under Australian Privacy Principle 8 we remain accountable for the handling by overseas recipients (Supabase in Singapore; Google / Apple at global edge nodes)
@@ -128,22 +134,26 @@ We do **not sell** your personal information, and we do **not share** it for cro
 ### During account lifetime
 
 - Full retention to provide service
+- Accounts with **no sign-in for 24 consecutive months** are deleted automatically, together with their personal data; the scope of that deletion is the same as when you delete the account yourself (see "Account deletion" below). This corresponds to "Platform termination scenarios" in the Terms of Service
 
 ### After account deletion
 
-- Personal data is cleared immediately once you confirm "Leave Folio" (see "Account deletion" below)
+- Personal data is cleared immediately once you confirm "Delete account" (see "Account deletion" below)
 - Statutory retention (tax, criminal investigation) per applicable law
 
 ### Specific retention periods
 
 - Violation, report, and related enforcement records (incl. reported content): retained for community safety, abuse prevention, and legal defense. After a report is **closed (actioned or dismissed) it is retained for 5 years and then automatically purged**; reports not yet resolved are kept until handled. The link to your account is removed after you delete your account
+- Moderation action audit records (action type and time, a snapshot of the content at the time of the action, and the identifier of the person acted upon): retained to prevent suspension evasion, for community-safety auditing, and for legal defence; these records are **not removed when an account is deleted**. Once you delete your account, the identifier stored in such a record no longer resolves to any profile on our side
 - Suspension-evasion hash (one-way salted SHA-256 of the OAuth sign-in identifier, used only to prevent re-registration evasion): auto-deleted 5 years after suspension; removed immediately upon unbanning. See "Suspension Notice & Appeal" in the Terms of Service for details
 - IP / login logs: 6 months – 1 year
-- Payment records (future): 5–7 years (Commercial Accounting Act, Tax Collection Act)
+- Raw usage-analytics event records (app open times and counts, feature-tap events, time spent and entry counts per feature screen): retained for the lifetime of your account for product improvement and usage analysis, with **no fixed deletion period**; they are deleted together with your account when you delete it (including the automatic deletion after 24 months without sign-in described above)
+- Anonymous aggregate statistics (daily counts of sign-ups, active users, posts, messages, co-reading rooms created and unlocked, and similar pure counts, containing **no user identifier**): **retained indefinitely**. Such data can no longer be traced back to any individual and is not personal data
+- Payment and subscription event records (plan tier, purchase / renewal / expiry events, store and subscription-service transaction identifiers): kept as financial records for reconciliation, defence against refund disputes, and the retention duties imposed by the Commercial Accounting Act and the Tax Collection Act, with **no fixed deletion period**. Once you delete your account, the link between these records and your profile is removed (user_id set to NULL); the records still hold the store-side transaction identifiers and the account identifier used by the subscription service (RevenueCat) — the latter is deliberately kept because it is necessary for investigating refund disputes, and it no longer resolves to any profile on our side
 - Pending criminal investigation data: until resolution
 - Terms consent records (`user_tos_consents`): **5 years** (legal evidence; auto-purged on expiry). Records include the `doc_type`, version, timestamp, method of your acceptance, the **IP address and the device / browser identifier string (user-agent) at the moment of your consent**, plus a **salted SHA-256 hash of your email** (salt kept server-side, never held by the client). The hash is **one-way** and cannot be reversed to recover your email. Purpose: (a) after you delete your account, allow us to verify in litigation whether an email you claim is yours ever consented on Folio; (b) without retaining the plaintext email. This constitutes pseudonymisation under GDPR Art. 4(5) and is lawful.
-- Terms-change notification delivery log (`tos_notification_log`): records the delivery and open status of terms-change notices across each channel (push / email / in-app banner / blocking modal) as evidence that we provided lawful notice; retained for the same period as the consent records, and the link to your account is removed (user_id set to NULL) after you delete your account.
-- Drift bottles: copies of your letters saved by other users remain in the saver's letter box until they delete them; replies and conversations you decline, and content taken down due to expiry or moderation, are moved to an archive (for abuse prevention, operational statistics, and legal defense) and are no longer shown to regular users
+- Terms-change notification delivery log (`tos_notification_log`): records the delivery and open status of terms-change notices (the channel currently in use is the in-app blocking modal) as evidence that we provided lawful notice; retained for the same period as the consent records, and the link to your account is removed (user_id set to NULL) after you delete your account.
+- Drift bottles: copies of your letters saved by other users remain in the saver's letter box until they delete them; replies and conversations you decline, and content taken down due to expiry or moderation, are moved to an archive (for abuse prevention, operational statistics, and legal defense) and are no longer shown to regular users. **Letter contents in that archive are cleared automatically 2 years after archiving**; only the statistical fields recording type and time (which contain no letter content) are kept long-term for operational statistics
 
 ### Chat messages
 
@@ -157,9 +167,9 @@ We do **not sell** your personal information, and we do **not share** it for cro
 - The other party cannot save your notes into their own shelf; they can only view them on your shared wall.
 - They can select and copy text out, but plain text copied this way is no longer governed by Folio.
 
-### Account deletion ("Leave Folio")
+### Account deletion ("Delete account")
 
-Choosing "Leave Folio" causes the platform to handle your data as follows:
+Choosing "Delete account" causes the platform to handle your data as follows:
 
 **Fully cleared**
 - Your Google / Apple sign-in link (auth.users record)
@@ -172,17 +182,20 @@ Choosing "Leave Folio" causes the platform to handle your data as follows:
 - Sticky notes you wrote in co-reading rooms
 - Your messages in those rooms
 - Comments you left in other users' guestbooks
-- Pen-pal correspondence from established connections (kept read-only as a memento on the other side; copies of your letters that others saved remain in their letter boxes; replies and deliveries that never became a pen-pal connection are deleted)
+- Pen-pal correspondence from established connections (kept read-only as a memento on the other side; copies of your letters that others saved remain in their letter boxes; replies and deliveries that never became a pen-pal connection are deleted). Letters you cast that have already been moved to the archive because they expired, were declined, or were removed by moderation follow the archive rule above (contents cleared 2 years after archiving) and are not removed immediately when you delete your account
 - Author name shown as "A book friend who left"
 
 **Legal basis**: Conversations and co-reading records are jointly produced by both parties (joint controllership); we have a legitimate interest in retaining them for the other party's continued use. Anonymisation only removes the linkage to your account and displays the content as "A book friend who left"; to that extent it is no longer personally identifiable. However, where a message's own content contains information that identifies an individual (e.g. a self-entered name, address, or social handle), it may still constitute personal data, and we will handle such content in accordance with applicable law, a report, or your deletion request. This pattern matches LINE / WhatsApp / Discord and other messaging services.
 
 **Future re-login**: Signing back in with the same Google / Apple account will be treated as a **brand-new user** requiring fresh registration. Sticky notes you wrote on partners' walls remain (anonymised) but are not linked to your new account.
 
-**Processing**: takes effect immediately after you confirm "Leave Folio"; your auth account and personal data are removed from our servers in the same operation.
+**Processing**: takes effect immediately after you confirm "Delete account"; your auth account and personal data are removed from our servers in the same operation.
+
+**Your subscription is not cancelled automatically**: deleting your Folio account does **not** cancel a support-plan subscription bought through the App Store or Google Play. Subscriptions are managed by the store and live in a separate system from your Folio account. If you have an active plan, **cancel it in the store's subscription settings first**, or the store will keep charging you on the original cycle.
 
 **Statutory retention:**
 - Terms-consent records (`user_tos_consents`) — **5 years** (incl. salted SHA-256 of email, non-reversible, auto-purged on expiry)
+- Payment and subscription event records (kept after the link to your account is removed, for reconciliation, defence against refund disputes, and accounting / tax duties; see "Retention periods for specific data" above)
 - Messages relevant to ongoing legal disputes or fraud investigations
 - Anonymised data that cannot be traced to an individual
 
@@ -192,7 +205,7 @@ Apple lets you revoke Folio's authorization via **Settings → Apple ID → Pass
 
 **Please note: this action only revokes the Apple ID ↔ Folio link; it does NOT automatically delete your Folio account or data.** Apple and Folio are separate data controllers; revocation at the Apple layer cannot be construed as a deletion request directed at Folio.
 
-**To fully delete your Folio account**, please use the in-app path: **"Me" tab → Settings → Leave Folio**. If that path is unavailable to you, you may also email a deletion request to folio0427@gmail.com.
+**To fully delete your Folio account**, please use the in-app path: **"Me" tab → Settings → Account management → Delete account**. If that path is unavailable to you, you may also email a deletion request to folio0427@gmail.com.
 
 **If you revoke Apple authorization without deleting in-app**: your Folio data persists until you actively delete in-app.
 

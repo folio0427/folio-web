@@ -2,20 +2,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "_comment": "Folio legal docs manifest. Source of truth for the latest ToS / Privacy version: a GitHub Action syncs this into Supabase tos_versions (which the app reads), and it is also bundled into the app as an offline fallback. Bump version + summary when ToS / Privacy changes.",
   "terms": {
-    "version": "1.6",
-    "effective_date": "2026-08-21T00:00:00+08:00",
-    "change_type": "minor",
-    "summary_zh": "v1.6：§06 用戶內容列舉補上虛擬書房（房名、佈置、便條疊）、訪客簿留言與漂流瓶信件；帳號刪除後留存節補述訪客簿留言匿名保留與筆友通信唯讀紀念。既有機制之揭露補充、無新增權利義務 → minor、既有用戶靜默。",
-    "summary_en": "v1.6: §06 UGC enumeration now covers study rooms (name, arrangement, paper-note stack), guestbook comments, and drift-bottle letters; the post-deletion retention section adds anonymised guestbook comments and read-only pen-pal correspondence. Disclosure catch-up for existing mechanisms; no new rights or obligations → minor, silent for existing users.",
+    "version": "1.7",
+    "effective_date": "2026-08-28T00:00:00+08:00",
+    "change_type": "major",
+    "summary_zh": "Folio 新增了「支持方案」訂閱，因此補上完整的付費條款：訂閱為月繳、自動續訂，最晚須於當期結束的 24 小時前到 App Store 或 Google Play 取消，逾時商店仍會扣下一期；升級立即生效並按比例折抵，降級於當期結束時生效。取消訂閱後，您建立的虛擬書房全部保留，可以瀏覽、分享、改名與刪除，並可自行挑選方案額度內的書房繼續佈置，已套用的書背樣式保留但無法再修改。退款依 Apple 與 Google 各自的政策辦理。請特別注意：刪除 Folio 帳號不會自動取消訂閱，請先到商店取消。另外，條款日後如有輕微文字修正（例如錯字或排版），將更新版本號並記錄於變更紀錄後生效，不再另行打擾您。",
+    "summary_en": "Folio now offers a \"support plan\" subscription, so we have added the full paid-feature terms: the plan is billed monthly and renews automatically, and you must cancel in the App Store or Google Play at least 24 hours before the current period ends, otherwise the store will charge you for the next period; upgrades take effect immediately with the remaining days prorated, and downgrades take effect at the end of the current period. After you cancel, every study room you created is kept and remains viewable, shareable, renamable, and deletable, and you may choose which rooms within your plan's allowance stay decoratable; book-spine styles you already applied are kept but can no longer be edited. Refunds follow Apple's and Google's own policies. Please note: deleting your Folio account does not cancel your subscription, so cancel it in the store first. Finally, minor wording fixes to these terms in future (typos or formatting, for example) will take effect once the version number is updated and the change is logged, without interrupting you again.",
     "content_url_zh": "https://foliomatch.app/legal/terms_zh.md",
     "content_url_en": "https://foliomatch.app/legal/terms_en.md"
   },
   "privacy": {
-    "version": "1.7",
-    "effective_date": "2026-08-21T00:00:00+08:00",
-    "change_type": "minor",
-    "summary_zh": "v1.7：補齊虛擬書房與漂流瓶之揭露：§02 蒐集（房名 / 佈置 / 便條疊 / 可見性、讚與訪客簿留言、漂流瓶信件與收藏副本）、§04 用戶間顯示（今日書房展、不公開＝知悉連結且登入者可檢視、留言具名、讚之通知含暱稱、漂流瓶匿名投遞）、§06 保留與刪帳號（訪客簿留言匿名化、筆友線唯讀紀念、信匣副本與封存區）。皆屬既有功能於既已同意目的下之透明度補充、無新第三方、無新目的 → minor、既有用戶靜默、不需重新同意。",
-    "summary_en": "v1.7: adds disclosure for study rooms and drift bottles: §02 collection (room name / arrangement / paper-note stack / visibility, likes and guestbook comments, drift-bottle letters and saved copies), §04 inter-user visibility (daily room exhibition, unlisted rooms viewable by signed-in link holders, comments shown with nickname, like notifications carry nickname, anonymous bottle delivery), §06 retention and deletion (anonymised guestbook comments, read-only pen-pal mementos, saved-letter copies and archive). Transparency catch-up for existing features under already-consented purposes; no new third party, no new purpose → minor, silent for existing users, no re-consent.",
+    "version": "1.8",
+    "effective_date": "2026-08-28T00:00:00+08:00",
+    "change_type": "data_consent_required",
+    "summary_zh": "因應「支持方案」訂閱上線，本次補上相關的資料處理揭露。新增蒐集「購買與訂閱狀態」，包括方案檔位、購買與續訂時間、到期時間，以及商店的交易與收據識別資訊；付款全部由 Apple 或 Google 處理，Folio 不會收集您的信用卡號。新增第三方服務 RevenueCat, Inc.（美國）協助驗證與同步您的訂閱狀態，它只會收到您的帳號識別碼、購買的產品與時間、商店收據資訊，不會收到您的姓名、Email、信用卡號或任何 App 內的內容。訂閱期間，您的支持者勳章可能顯示給其他用戶，訂閱結束後即不再顯示。此外本次一併補齊資料保留期間的說明：帳戶連續 24 個月未登入將自動刪除；使用分析的原始紀錄於帳戶存續期間保留、隨帳戶刪除一併清除；不含任何識別碼的每日彙總統計永久保留；付費紀錄作為財務憑證保留；漂流瓶封存區的信件內文於 2 年後自動清除。最後提醒：刪除 Folio 帳號不會自動取消訂閱，請先到商店取消。",
+    "summary_en": "Following the launch of our \"support plan\" subscription, this update adds the related data-processing disclosures. We now collect \"purchase and subscription status\", including plan tier, purchase and renewal times, expiry time, and the store's transaction and receipt identifiers; payment is handled entirely by Apple or Google, and Folio never collects your card number. We have added a third-party service, RevenueCat, Inc. (United States), to validate and sync your subscription status; it receives only your account identifier, the product you purchased and when, and store receipt information, and never your name, email, card number, or any in-app content. While your subscription is active, your supporter badge may be shown to other users; it is no longer shown once the subscription ends. This update also completes our retention disclosures: accounts with no sign-in for 24 consecutive months are deleted automatically; raw usage-analytics records are kept for the lifetime of your account and deleted along with it; daily aggregate statistics containing no identifiers are kept indefinitely; payment records are kept as financial records; and letter contents in the drift-bottle archive are cleared automatically after 2 years. One reminder: deleting your Folio account does not cancel your subscription, so please cancel it in the store first.",
     "content_url_zh": "https://foliomatch.app/legal/privacy_zh.md",
     "content_url_en": "https://foliomatch.app/legal/privacy_en.md"
   }

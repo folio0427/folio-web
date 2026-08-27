@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v1.6 ｜ **Effective Date** 2026-08-21 ｜ **Last Updated** 2026-08-21 ｜ **Status** Final
+> **Version** v1.7 ｜ **Effective Date** 2026-08-28 ｜ **Last Updated** 2026-08-28 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -153,15 +153,20 @@ When your account is suspended (feature restrictions or full suspension):
 
 ## 10　Paid Features
 
-- All current features are free
-- Paid features may be introduced later, with separate notice
-- Free features will not be retroactively charged
+- Folio offers auto-renewing subscription "support plans" (monthly). Plan contents, names, prices, and periods are as shown in the app and on the store page (App Store / Google Play) at the time of purchase
+- Payment is processed by Apple or Google and charged to your store account; Folio never handles or stores your card number or payment credentials
+- **Auto-renewal**: subscriptions renew and charge at the end of each period unless you cancel in the store's subscription settings at least 24 hours before the period ends; after cancelling, you keep access until the end of the paid period
+- **Plan changes**: an upgrade (switching to a higher-priced plan) takes effect immediately, with the remaining days of the current period prorated by the store; a downgrade (switching to a lower-priced plan) takes effect at the end of the current period, and your current plan stays active until then
+- **After cancelling or downgrading**: every study room you created is kept (viewable, shareable, renamable, deletable), and you may choose which rooms within your plan's allowance stay decoratable (decorating is paused for all rooms until you have chosen, and the choice cannot be changed afterwards); book-spine styles you applied are kept but can no longer be edited; the supporter badge is shown only while your subscription is active and is removed when it ends
+- **Cross-platform**: managing, changing, or cancelling a subscription must be done in the store of the platform where you originally purchased it (for example, a subscription purchased on iOS is managed in App Store subscription settings)
+- **Refunds** follow Apple's / Google's own refund policies and are handled and decided by the store; deleting your Folio account does not cancel your subscription, so please cancel in the store first
+- Free features will not be retroactively charged because paid features exist; paid offerings may change over time as shown in the app
 
 ## 11　Account Termination
 
 ### User-initiated deletion
 
-- Anytime via "Me" tab → Settings → Leave Folio
+- Anytime via "Me" tab → Settings → Account management → Delete account
 - Personal data is cleared immediately upon confirmation (statutory retention exempted)
 
 ### Platform-initiated termination
@@ -170,7 +175,7 @@ When your account is suspended (feature restrictions or full suspension):
 - Multiple legitimate complaints
 - Suspected illegality
 - 18+ verification failure
-- 24 consecutive months of inactivity
+- No sign-in for 24 consecutive months
 - Service-wide shutdown
 
 ## 12　Service Changes
@@ -204,9 +209,10 @@ When your account is suspended (feature restrictions or full suspension):
 
 ## 16　Term Modifications
 
-- **Minor edits** (typos, restructuring): version bump + blocking modal re-consent
-- **Material changes** (liability, jurisdiction, termination): in-app announcement + push + email + blocking modal; you must explicitly check to consent before you can continue
-- **New data collection / new third-party sharing / changed purposes**: blocking modal forces re-consent; you cannot continue until you agree
+- **Minor edits** (typos, formatting, wording fixes that do not affect rights or obligations): take effect upon posting, with a version bump recorded in the changelog; we will not interrupt you
+- **Material changes** (liability, jurisdiction, termination): the next time you open the app, a modal you cannot dismiss presents a summary of the change; you must explicitly check to consent before you can continue
+- **New data collection / new third-party sharing / changed purposes**: as above, a blocking modal forces re-consent; you cannot continue until you agree
+- We do not notify you of terms changes by email or push notification; notice is always given in the app through the blocking modal described above
 
 ## 17　Governing Law & Jurisdiction
 

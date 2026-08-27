@@ -11,6 +11,112 @@
 
 ---
 
+## terms v1.7 / privacy v1.8 — 2026-08-28
+
+> **發佈批次** — manifest.json terms 1.7 + privacy 1.8、effective_date 2026-08-28（push 當日）。
+> 發佈程序：commit + push folio-web → GitHub Action 同步 tos_versions → 回 `<folio>` 跑
+> `scripts/sync_legal.sh` 更新 app bundled fallback → build。
+> change_type = **major（terms）/ data_consent_required（privacy）** → **全體用戶跳阻擋式 modal
+> 重新同意**。上線時機須早於雙商店送審（Apple 審核員會點購買頁的條款連結；Google 會比對
+> 資料安全表與線上隱私政策）。
+> **鐵則**：本批上線後、在多數用戶尚未同意前不可再疊 minor 發布。
+
+**狀態**：正式（生效日 2026-08-28）
+**文件**：terms_zh.md、terms_en.md、privacy_zh.md、privacy_en.md、manifest.json、delete-account.html
+**變更類型**：
+- terms **major** — 新增付款義務與自動扣款之實質條款；並修改條款修改條之處理方式（權利義務變更）
+- privacy **data_consent_required** — 新增第三方接收者（RevenueCat, Inc.、美國）與新跨境傳輸目的地，屬資料處理變更
+
+**Terms 變更（v1.6 → v1.7）：**
+
+- §10 付費功能：由「目前全部免費、未來推出另行公告」全面改寫為訂閱型「支持方案」之完整條款——
+  自動續訂與 24 小時前取消、付款由 Apple / Google 收取且本平台不經手卡號、升級即時生效並按比例
+  折抵 / 降級期末生效、退訂與降級後之權益範圍（書房全保留可瀏覽分享改名刪除；額度內自選書房
+  續留佈置權，完成挑選前全部暫停、選定後不可更改；書背樣式保留但不可再改；勳章隨訂閱結束收起）、
+  跨平台須於原購買商店管理、退款依商店政策、**刪除帳號不會取消訂閱**、免費功能不回溯收費。
+- §16 條款修改：「輕微調整」由「版本號 bump、仍以阻擋式 modal 重新取得同意」改為「更新版本號並
+  記錄於 CHANGELOG 後逕行生效、不另行打擾」。**此條原文與 `LegalGate` 實作（change_type=minor
+  靜默）長期矛盾**，本次以條文對齊實作、三段閘門（minor／major／data_consent_required）與條文
+  三款一一對應。
+
+**Privacy 變更（v1.7 → v1.8）：**
+
+- §02 使用過程產生：新增「購買與訂閱狀態」（方案檔位、購買 / 續訂 / 到期時間、商店交易與收據
+  識別資訊；付款由 Apple / Google 處理、不收集信用卡號）。
+- §04 第三方：新增 **RevenueCat, Inc.（訂閱狀態管理、美國主機）**，逐項列明其接收與不接收之
+  資料範圍。
+- §04 用戶間顯示：新增支持者勳章（訂閱期間可能顯示、檔位可辨、實際展示範圍以 App 內顯示為準、
+  訂閱結束即不再顯示）。
+- §05 跨境傳輸：接收地新增美國（RevenueCat）。
+- §06 帳戶存續期間：**新增揭露「連續 24 個月未登入自動刪除帳戶」**。此機制 2026 年起即由
+  `folio_purge_dormant_accounts(24)` cron 執行、terms §11「平台終止情境」亦已載明，惟 privacy
+  之保留期間節從未揭露 —— 本次補正（個資法第 8 條、GDPR Art. 13(2)(a) 之保存期間告知義務）。
+- §06 特定資料之保留期間，新增 / 修訂四項：
+  - **使用分析之原始事件紀錄**（app_opens / feature_events / screen_time_daily）：不設刪除期限、
+    隨帳戶刪除一併清除。
+  - **匿名彙總統計**（daily_metrics、20 欄純計數、無任何用戶識別碼）：永久保留、非個人資料。
+  - **付費與訂閱事件紀錄**（supporter_events）：作為財務憑證保留、不設刪除期限；刪帳號後
+    user_id SET NULL、僅餘商店端交易識別碼。
+  - **管理處置之稽核紀錄**（moderation_actions）：不隨帳號刪除而移除。此表 v59 起即為 append-only
+    且無 purge，原條文僅涵蓋 `reports`（結案 5 年真刪）、未涵蓋本表 —— 本次補正。
+- §06 漂流瓶：封存區之**信件內文於歸檔滿 2 年後自動清除**、僅保留類型與時間之統計欄位。
+  對應新增之 migration `20260828120000_v99_drift_archive_payload_retention.sql`
+  （`purge_drift_archive_payload()` ＋ cron `folio_purge_drift_archive_payload`）。
+  ★ 此為本批**唯一新增的刪除機制**：先改實作、再由條文對標，非以條文遷就現況。
+- §06 帳戶刪除：新增「**訂閱不會自動取消**」段（與 app 內 `deleteAccountSubscriptionNote` 一致）。
+
+**發佈前獨立覆核（2026-08-28、對 prod DB 與 client code 逐項查證）修正之項目：**
+
+- `supporter_events` 之揭露原寫「刪帳號後僅餘商店端之交易識別碼」，**與實作不符** —— 該表另有無 FK 之
+  `app_user_id` 文字欄（179/184 列存 Folio 帳號 UUID）、`payload` 內另有 177 份。此為 v80 之刻意設計
+  （註解：「app_user_id 留著、RevenueCat 端仍查得到」），供退款爭議查考。**不洗欄位**（洗掉即毀掉該表
+  存在之理由），改以據實揭露處理：明列仍保留訂閱服務所用之帳號識別碼、並說明其於本平台已無對應
+  之個人檔案可回溯。四處同步（privacy zh/en、delete-account.html zh/en）。
+- 兩份條款共 7 處仍指示用戶點擊已不存在之按鈕「離開 Folio」（實際 UI 為 設定 → 帳號管理 → 刪除帳號），
+  且 privacy §08 之路徑漏了「帳號管理」一層。全數修正（Apple 5.1.1(v) 會查核所述刪除路徑）。
+- `delete-account.html` 原寫條款同意紀錄「自帳戶刪除起保留 5 年」，實際 `user_tos_consents.retention_until`
+  之預設為**同意當下 + 5 年**（`purge_expired_consents` 依此刪除、與刪帳號時點無關）。改為「自您同意當下起」。
+  ★ 附帶發現（未於本批處理）：帳號存續中若逾 5 年未再同意、該筆證據會先行消滅，與其設計目的相悖，
+  待日後於 `app_delete_account_data` 補 `retention_until` 重錨或改變預設。
+- 刪除範圍原稱「您投出的瓶子」一律永久刪除，未涵蓋**已移入封存區之自有信件**（過期 / 遭婉拒 /
+  管理處置；prod 9,225 列中 1,185 列帶內文）。補上 carve-out：依封存區規則、內文於歸檔滿 2 年後清除。
+- `manifest.json` 之 `summary_zh` 原寫「可在到期前 24 小時取消」，語意與商店規則相反（應為「最晚須於
+  當期結束 24 小時前」）。此字串逐字顯示於強制同意 modal、且涉及扣款，已改正；en 同步加強。
+- 四份文件之版本標頭（第 3 行）仍停在舊版號與舊生效日，已同步為 terms v1.7 / privacy v1.8、2026-08-28。
+- `terms_en` §11 之「24 consecutive months of inactivity」與 zh「連續 24 個月未登入」不對稱（機制為
+  `COALESCE(last_sign_in_at, created_at)`、確為「未登入」），en 已對齊為 "No sign-in for..."。
+- RevenueCat 之「只會收到」列舉未含服務運作必要之裝置與連線技術資訊，已補述。
+- v99：`SET search_path` 對齊專案慣例（`TO ''` + 全限定名）、修正註解之欄位計數筆誤。
+- **新增揭露：帳號所屬社群分區（`profiles.community`）**（2026-08-28 admin 對照稽核發現）。此欄自 v38
+  上線即存在、於註冊當下依有效介面語言判定（zh 靜默入華人區、非 zh 顯示選區頁）、**之後無 UI 可改**，
+  且經 `same_community()` 閘門決定探索 feed / 搜尋 / 他人書櫃與書房 / 好友三閘 / 報名 / 漂流瓶配對 /
+  今日書房展 / 後台公告分眾之可見範圍 —— 亦即**決定使用者能遇見誰**。條款與隱私政策先前**完全未提及**。
+  補入 §02（收集項目與不可變更之說明）、§03（服務公告目的）、§04 用戶間之顯示（列為首條，說明其
+  決定可見範圍）。中英同步。
+- **§02 敏感資料段補正第一方分析之揭露**（owner 於覆核中提出、2026-08-28）：原文結尾寫「故『性傾向』
+  之推斷**從不進入分析或廣告**」，惟該句只對第三方成立。`admin/index.html` 之「數據」與「配對組成」
+  分頁確有**心態 × 性別交叉分析器**（含女×男的心態、女×男的年齡、各格解鎖率）與心態分布、性別 /
+  年齡輪廓圖，屬 Apple 定義之「衡量受眾規模或特徵」＝分析。改為：第三方分析與廣告用途仍為否定
+  （`analytics.dart:56` 明確不送 gender / desired_gender / stance、亦不呼叫 setUserId），但明文揭露
+  本平台於自有後台以**彙總統計**形式檢視此類資料之目的與界線（僅管理人員可見、不傳第三方、不用於
+  廣告或個人化、不據以對個別用戶差別待遇）。中英同步。
+  ★ 連帶：App Store 隱私標籤之「敏感資訊」用途**應保留「分析」**（先前擬取消，為誤判）。
+- **terms §16 告知管道改為與實作一致**（owner 指示、2026-08-28）：原文承諾重大變更以「站內公告 ＋ 推播
+  ＋ Email ＋ 阻擋式 modal」四管道告知，惟 `supabase/functions/` 並無任何寄信基礎建設、亦無條款變更
+  推播管線，唯一實際運作之管道為 `LegalGate` 的阻擋式視窗。§16 改為只述阻擋式視窗、並明列「不以
+  Email 或推播通知條款變更」。privacy 之 `tos_notification_log` 條同步移除不存在之管道列舉。
+  ★ 本批 terms 1.7 為 major、發佈當日即受此條拘束，先改條文即避免上線當天自我違約。
+
+**同批更新之非條款文件：**
+
+- `delete-account.html`（Play Console 帳號刪除網址所指之頁面）：最後更新自 2026-05-20 起未同步，
+  本次補齊——頁首加訂閱取消警語；刪除範圍補虛擬書房、書房按讚、漂流瓶、好友關係與好友碼、
+  使用分析紀錄；保留範圍補訪客簿留言、筆友線、他人信匣之信件副本、付費紀錄、檢舉與處置紀錄；
+  新增「長期未使用的帳戶」節；**修正 App 內操作步驟的按鈕字樣**（「離開 Folio」→ 實際標籤
+  「刪除帳號」）。中英兩份同步。
+
+---
+
 ## terms v1.6 / privacy v1.7 — 2026-08-21
 
 > **發佈批次** — manifest.json terms 1.6 + privacy 1.7、effective_date 2026-08-21（push 當日）。
