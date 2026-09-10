@@ -1137,6 +1137,21 @@ section[id] { scroll-margin-top: 72px; }
   box-shadow: var(--shadow-soft);
   border-color: var(--sage-soft);
 }
+/* 卡上的實景圖（虛擬書房＝真的一間房、書圈＝真的一面牆）。不是每張卡都有：
+   有圖的是「一句話講不清楚長怎樣」的那兩個。 */
+.feature-card .fc-shot {
+  display: block;
+  width: 100%;
+  /* height:auto 是必要的：img 的 width/height 屬性會被當成 presentational hint
+     寫進 CSS，height 有值時 aspect-ratio 整條會被忽略、圖被撐成 800px 高。 */
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(201, 184, 154, 0.45);
+  background: var(--parchment);
+  margin-bottom: 16px;
+}
 .feature-card .fc-tag {
   font-family: var(--font-mono);
   font-size: 0.68rem;
