@@ -234,7 +234,16 @@ section[id] { scroll-margin-top: 72px; }
 
 @media (max-width: 640px) {
   .nav { padding: 14px 18px; }
-  .nav-links { gap: 16px; font-size: 0.85rem; }
+  /* 連結多到一行放不下時改成可橫向捲動，不要被擠爆 */
+  .nav-links {
+    gap: 16px;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a { white-space: nowrap; }
 }
 
 /* ---------- Hero ---------- */
@@ -1098,6 +1107,74 @@ section[id] { scroll-margin-top: 72px; }
 }
 @media (max-width: 640px) {
   .solo-grid { grid-template-columns: 1fr; gap: 18px; }
+}
+
+/* ---------- Features：共讀之外的功能 ---------- */
+/* 同 notes-grid 的分工：reveal 進場放外層 wrapper、hover transform 放卡片本體 */
+.features {
+  background: var(--cream);
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+.feature-grid > .reveal { height: 100%; }
+.feature-card {
+  height: 100%;
+  background: rgba(248, 241, 228, 0.72);
+  border: 1px solid var(--amber-soft);
+  border-radius: var(--radius-card);
+  padding: 28px 26px 24px;
+  transition: transform 0.35s var(--ease-watercolor),
+              box-shadow 0.35s var(--ease-watercolor),
+              border-color 0.35s var(--ease-watercolor);
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--sage-soft);
+}
+.feature-card .fc-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--sage);
+  display: block;
+  margin-bottom: 10px;
+}
+.feature-grid > .reveal:nth-child(2) .fc-tag { color: var(--lavender); }
+.feature-grid > .reveal:nth-child(3) .fc-tag { color: var(--walnut-soft); }
+.feature-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.45;
+  margin-bottom: 10px;
+  color: var(--walnut);
+}
+.feature-card p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--walnut-soft);
+  margin: 0;
+}
+.feature-card .fc-go {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.85rem;
+  color: var(--sage);
+  font-weight: 500;
+}
+.feature-card .fc-go::after {
+  content: ' →';
+  display: inline-block;
+  transition: transform 0.3s var(--ease-watercolor);
+}
+.feature-card:hover .fc-go::after { transform: translateX(4px); }
+@media (max-width: 720px) {
+  .feature-grid { grid-template-columns: 1fr; max-width: 480px; }
 }
 
 /* ---------- Notes：慢社交筆記導流 ---------- */
