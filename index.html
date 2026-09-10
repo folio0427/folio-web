@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-i18n="page.title.home">Folio 以書會友｜以書交友 app、共讀與虛擬書房，從一本書遇見緣分</title>
 <meta name="description" data-i18n="page.desc.home" content="Folio（以書會友）是不滑卡、不看照片的以書交友 app：發帖徵共讀夥伴、雙方讀到 25% 才解鎖聊天，還有虛擬書房、漂流瓶匿名信與讀後分享卡。iOS 與 Android 免費下載，18 歲以上限定。">
-<meta name="keywords" content="以書交友, 以書會友, 共讀 app, 找書友, 讀書夥伴, 虛擬書房, 線上書房佈置, 漂流瓶 app, 匿名信, 慢社交, 不用照片的交友 app, 讀後分享卡, Folio, Foliomatch, book buddy app, 18+">
+<meta name="keywords" content="以書交友, 以書會友, 共讀 app, 找書友, 讀書夥伴, 書圈, 書評 app, 讀書心得分享, 虛擬書房, 線上書房佈置, 漂流瓶 app, 匿名信, 慢社交, 不用照片的交友 app, 讀後分享卡, Folio, Foliomatch, book buddy app, 18+">
 <meta name="author" content="Folio">
 <meta name="theme-color" content="#F8F1E4">
 <link rel="icon" type="image/webp" href="assets/folio_icon.webp">
@@ -79,6 +79,7 @@
       "description": "以書交友的 app。透過共讀慢慢認識一個人，不滑卡配對。三種模式（純粹書友 / 想找緣分 / 不拘）、進度閘解鎖聊天、共讀便利貼牆、虛擬書房、漂流瓶匿名信與讀後分享卡。",
       "featureList": [
         "以書會友：發帖徵共讀夥伴、報名配對，不滑卡、不看照片",
+        "書圈（大家的便利貼）：每本書一面公開便利貼牆，依閱讀進度分成六段避免劇透",
         "三種心態模式：純粹書友 / 純粹找緣分 / 不拘",
         "共讀室進度閘：雙方各自讀到 25% 並寫下便利貼才解鎖聊天",
         "共讀便利貼牆與個人書櫃閱讀紀錄",
@@ -107,6 +108,7 @@
       "description": "以書交友的 app。透過共讀慢慢認識一個人，不滑卡配對。三種模式（純粹書友 / 想找緣分 / 不拘）、進度閘解鎖聊天、共讀便利貼牆、虛擬書房、漂流瓶匿名信與讀後分享卡。",
       "featureList": [
         "以書會友：發帖徵共讀夥伴、報名配對，不滑卡、不看照片",
+        "書圈（大家的便利貼）：每本書一面公開便利貼牆，依閱讀進度分成六段避免劇透",
         "三種心態模式：純粹書友 / 純粹找緣分 / 不拘",
         "共讀室進度閘：雙方各自讀到 25% 並寫下便利貼才解鎖聊天",
         "共讀便利貼牆與個人書櫃閱讀紀錄",
@@ -260,10 +262,21 @@
     <div class="section-head reveal">
       <span class="kicker" data-i18n="features.kicker">More inside Folio</span>
       <h2 data-i18n="features.title">在 Folio，你可以做這些</h2>
-      <p data-i18n="features.sub">找人一起讀，只是其中一條路。書也可以是一間房、一封信，或一張卡片。</p>
+      <p data-i18n="features.sub">找人一起讀，只是其中一條路。書也可以是一面牆、一間房、一封信，或一張卡片。</p>
     </div>
     <div class="feature-grid">
       <div class="reveal reveal-delay-1">
+      <div class="feature-card">
+        <img class="fc-shot" src="assets/feature-book-club.webp" width="1000" height="689" loading="lazy" decoding="async"
+             alt="Folio 書圈：每本書都有一面公開的便利貼牆，卡片上是書封、作者與讀者給的星星"
+             data-i18n-attr="alt:features.club.alt">
+        <span class="fc-tag" data-i18n="features.club.tag">書圈</span>
+        <h3 data-i18n="features.club.h">每一本書，都有一面牆</h3>
+        <p data-i18n="features.club.p">讀過的人一邊讀一邊把句子貼在書的牆上。牆依進度分成六段，你讀到哪一段就打開到哪一段，後面先蓋著，不會被劇透。看到寫得好的一句話，可以點名字去看那個人在別本書寫過什麼。</p>
+        <a class="fc-go" href="/guide/book-club" data-i18n="features.club.go">書圈怎麼用</a>
+      </div>
+      </div>
+      <div class="reveal reveal-delay-2">
       <div class="feature-card">
         <img class="fc-shot" src="assets/feature-study-room.webp" width="1200" height="800" loading="lazy" decoding="async"
              alt="Folio 虛擬書房實景：木屋書房裡的書櫃排著讀過的書，窗邊有串燈、地毯與睡著的貓狗"
@@ -274,7 +287,7 @@
         <a class="fc-go" href="/guide/study-room" data-i18n="features.room.go">虛擬書房怎麼用</a>
       </div>
       </div>
-      <div class="reveal reveal-delay-2">
+      <div class="reveal reveal-delay-3">
       <div class="feature-card">
         <span class="fc-tag" data-i18n="features.drift.tag">漂流瓶</span>
         <h3 data-i18n="features.drift.h">匿名的信，慢慢漂過來</h3>
@@ -282,7 +295,7 @@
         <a class="fc-go" href="/guide/drift-bottle" data-i18n="features.drift.go">漂流瓶怎麼玩</a>
       </div>
       </div>
-      <div class="reveal reveal-delay-3">
+      <div class="reveal reveal-delay-4">
       <div class="feature-card">
         <span class="fc-tag" data-i18n="features.card.tag">讀後分享卡</span>
         <h3 data-i18n="features.card.h">讀完了，做一張卡片</h3>

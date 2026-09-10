@@ -1122,6 +1122,8 @@ section[id] { scroll-margin-top: 72px; }
   margin: 0 auto;
 }
 .feature-grid > .reveal { height: 100%; }
+/* 卡片數是奇數時，最後一張橫跨兩欄，不留半排空白 */
+.feature-grid > .reveal:last-child:nth-child(odd) { grid-column: 1 / -1; }
 .feature-card {
   height: 100%;
   background: rgba(248, 241, 228, 0.72);
