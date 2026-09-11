@@ -5,8 +5,8 @@
 > point to connection. Folio is NOT a reader app and NOT a swipe-dating app: no swiping, no
 > photos in the early product. Besides co-reading it also has virtual study rooms (虛擬書房) you
 > decorate and share, a per-book public sticky-note wall split into six spoiler-safe progress
-> bands (書圈 / 大家的便利貼), anonymous drift-bottle letters (漂流瓶), shareable
-> reading cards (讀後分享卡) and a friend-code system. In this file, "Folio" always means this
+> bands (書圈 / 大家的便利貼), anonymous drift-bottle letters (漂流瓶) and a
+> friend-code system. In this file, "Folio" always means this
 > app, not the printing/bibliographic term "folio".
 
 Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android com.yuliao.folio · Language: 繁體中文 (zh-Hant-TW)
@@ -27,7 +27,7 @@ Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android 
 - [Folio 使用教學](https://foliomatch.app/guide/): Folio 怎麼用？從下載、建立檔案、選模式，到發帖配對、共讀室解鎖聊天，完整使用流程與常見問題。
 - [新手上路](https://foliomatch.app/guide/getting-started): 怎麼下載、用 Google 或 Apple 登入、建立個人檔案、選心態模式，到發帖徵共讀夥伴或報名別人的帖子。
 - [三種模式怎麼選](https://foliomatch.app/guide/choose-mode): 純粹書友、純粹找緣分、不拘，誰看得到誰、想找性別怎麼設定、切換有什麼冷卻限制。
-- [共讀室怎麼運作](https://foliomatch.app/guide/co-reading-flow): 從配對成立的鎖定狀態，到雙方讀到 25% 寫下便利貼解鎖聊天，再到 100% 的讀後分享卡。
+- [共讀室怎麼運作](https://foliomatch.app/guide/co-reading-flow): 從配對成立的鎖定狀態，到雙方讀到 25% 寫下便利貼解鎖聊天，再到雙方讀完的慶祝畫面。
 - [書圈怎麼用](https://foliomatch.app/guide/book-club): 每本書一面公開的便利貼牆，依閱讀進度分成六段、讀到哪開到哪所以不會被劇透；星星評分、從書櫃搬便利貼、點名字看書友。
 - [虛擬書房怎麼用](https://foliomatch.app/guide/study-room): 佈置線上書房、自訂書背字體與顏色、公開或只給有連結的人看，以及今日書房展、訪客簿與分享成圖片。
 - [漂流瓶怎麼玩](https://foliomatch.app/guide/drift-bottle): 一天一瓶的匿名寫信功能，傍晚靠岸、停留 48 小時，可收藏、回信，兩邊都願意才成為筆友。
