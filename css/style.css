@@ -1843,6 +1843,10 @@ section[id] { scroll-margin-top: 72px; }
 .feature-story-entry--drift .feature-story-page { max-width: 980px; margin-inline: auto; }
 .feature-story-entry--drift .feature-story-art { padding: 0; background: none; transform: rotate(-0.6deg); }
 .feature-story-entry--drift .feature-story-art::before { display: none; }
+/* 大家的便利貼那張本身就是兩張帶紙邊、微旋轉的照片疊在一起（透明底），
+   所以不再套外層紙框與紙膠帶，否則等於框裡再包一個框。 */
+.feature-story-entry--club .feature-story-art { padding: 0; background: none; transform: none; }
+.feature-story-entry--club .feature-story-art::before { display: none; }
 .feature-story-entry--friends { padding-top: 12px; }
 .feature-story-entry--friends .feature-story-page {
   display: block;
