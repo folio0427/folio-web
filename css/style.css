@@ -1765,12 +1765,22 @@ section[id] { scroll-margin-top: 72px; }
   display: inline-block;
   padding: 10px 20px 12px;
   margin-bottom: 20px;
-  /* 底是 codex 畫的手撕紙條（assets/paper-label.webp），不是 CSS 色塊。
-     中段顏色平均所以可以橫向拉伸，毛邊在上下緣、拉伸不會變形。 */
-  background: url('../assets/paper-label.webp') center / 100% 100% no-repeat;
-  color: var(--walnut-soft);
+  position: relative;
+  color: var(--walnut);
   font: 500 0.78rem/1.6 var(--font-sans);
   letter-spacing: 0.12em;
+}
+/* 標籤的底＝色鉛筆斜線排線（codex 畫的 240×240 無縫磚）。
+   兩層分工：排線用 repeat 所以**角度不會被拉歪**（標籤字數 3 到 6 字、寬度不一），
+   形狀交給手撕紙的 alpha 當遮罩去啃邊。放 ::before 是因為 mask 會連文字一起遮。 */
+.feature-story-tag::before {
+  content: '';
+  position: absolute;
+  inset: -2px -4px;
+  z-index: -1;
+  background: url('../assets/pencil-hatch.webp') 0 0 / 96px 96px repeat;
+  -webkit-mask: url('../assets/paper-label.webp') center / 100% 100% no-repeat;
+  mask: url('../assets/paper-label.webp') center / 100% 100% no-repeat;
 }
 .feature-story-copy h3 {
   max-width: 16em;
@@ -1821,19 +1831,7 @@ section[id] { scroll-margin-top: 72px; }
   border-radius: 1% 2% 1.5% 0.5%;
   transform: rotate(-1deg);
 }
-.feature-story-art::before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  /* 紙膠帶也是 codex 畫的（assets/washi-tape.webp）、半透明、兩端鋸齒撕口 */
-  width: 132px;
-  height: 38px;
-  left: 38%;
-  top: -14px;
-  background: url('../assets/washi-tape.webp') center / 100% 100% no-repeat;
-  transform: rotate(-5deg);
-  pointer-events: none;
-}
+
 .feature-story-art img { display: block; width: 100%; height: auto; }
 .feature-story-entry--room .feature-story-page {
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
@@ -1842,11 +1840,9 @@ section[id] { scroll-margin-top: 72px; }
 .feature-story-entry--room .feature-story-art { grid-column: 1; grid-row: 1; transform: rotate(1deg); }
 .feature-story-entry--drift .feature-story-page { max-width: 980px; margin-inline: auto; }
 .feature-story-entry--drift .feature-story-art { padding: 0; background: none; transform: rotate(-0.6deg); }
-.feature-story-entry--drift .feature-story-art::before { display: none; }
 /* 大家的便利貼那張本身就是兩張帶紙邊、微旋轉的照片疊在一起（透明底），
    所以不再套外層紙框與紙膠帶，否則等於框裡再包一個框。 */
 .feature-story-entry--club .feature-story-art { padding: 0; background: none; transform: none; }
-.feature-story-entry--club .feature-story-art::before { display: none; }
 .feature-story-entry--friends { padding-top: 12px; }
 .feature-story-entry--friends .feature-story-page {
   display: block;
