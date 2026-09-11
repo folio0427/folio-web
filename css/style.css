@@ -125,6 +125,28 @@ section[id] { scroll-margin-top: 72px; }
   .book-ribbon { transform: none; }
 }
 
+/* ---------- 跳到主要內容（鍵盤使用者專用，聚焦才出現）---------- */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 200;
+  padding: 10px 16px;
+  background: var(--cream);
+  color: var(--walnut);
+  border: 1px solid var(--amber);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  transform: translateY(-160%);
+  transition: transform 0.18s var(--ease-watercolor);
+}
+.skip-link:focus-visible,
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--sage);
+  outline-offset: 2px;
+}
+
 /* ---------- Top Nav ---------- */
 .nav {
   position: fixed;
@@ -1690,9 +1712,14 @@ section[id] { scroll-margin-top: 72px; }
 
 /* ---------- Scroll-reveal ---------- */
 .reveal {
-  opacity: 0;
-  transform: translateY(24px);
+  opacity: 1;
+  transform: translateY(0);
   transition: opacity 0.9s var(--ease-watercolor), transform 0.9s var(--ease-watercolor);
+}
+.reveal.reveal-pending {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(24px);
 }
 .reveal.visible {
   opacity: 1;
@@ -1731,7 +1758,7 @@ section[id] { scroll-margin-top: 72px; }
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .reveal { opacity: 1; transform: none; }
+  .reveal, .reveal.reveal-pending { opacity: 1; visibility: visible; transform: none; }
 }
 
 /* ---------- Features：圖文交錯的繪本編排（2026-09-11 改版）---------- */

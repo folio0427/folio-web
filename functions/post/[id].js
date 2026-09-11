@@ -46,7 +46,9 @@ export async function onRequestGet(context) {
   p{font-size:14px;color:#6B5B45;margin:0;max-width:300px;line-height:1.6;}
   .btns{display:flex;flex-direction:column;gap:12px;width:100%;max-width:280px;margin-top:8px;}
   a.btn{display:block;padding:14px 20px;border-radius:999px;text-decoration:none;font-size:15px;font-weight:600;}
-  a.primary{background:#6B8064;color:#FAF3E7;}
+  a.primary{background:#586D52;color:#FAF3E7;}
+  a.primary:hover{background:#4B6045;}
+  a.btn:focus-visible{outline:3px solid #3D2F1F;outline-offset:3px;}
   a.ghost{background:transparent;color:#3D2F1F;border:1px solid #C9B89A;}
 </style>
 </head>
@@ -79,6 +81,12 @@ export async function onRequestGet(context) {
     headers: {
       "content-type": "text/html; charset=utf-8",
       "cache-control": "no-store",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "SAMEORIGIN",
+      "Referrer-Policy": "strict-origin-when-cross-origin",
+      "Permissions-Policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+      "Cross-Origin-Opener-Policy": "same-origin",
     },
   });
 }

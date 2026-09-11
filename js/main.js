@@ -5,25 +5,35 @@
   // Scroll reveal: IntersectionObserver
   const REVEAL_THRESHOLD = 0.12;
   const revealEls = document.querySelectorAll('.reveal');
-  if (revealEls.length > 0 && 'IntersectionObserver' in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          io.unobserve(entry.target);
+  if (revealEls.length > 0 && 'IntersectionObserver' in window &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    try {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            entry.target.classList.remove('reveal-pending');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: REVEAL_THRESHOLD, rootMargin: '0px 0px -60px 0px' });
+      revealEls.forEach((el) => {
+        // 比視窗高太多的元素（如超長的法律條款頁）一次露不到 REVEAL_THRESHOLD、
+        // 門檻永遠跨不過 → 直接顯示、不丟給 observer 否則永久 opacity:0 空白
+        const h = el.getBoundingClientRect().height;
+        // vh 取不到（隱藏的 iframe、還沒 layout 的分頁）時 window.innerHeight 會是 0，
+        // 0/h 永遠小於門檻 → 每個元素都會被判成「太高」而直接顯示、進場動畫整個不跑。
+        const vh = window.innerHeight || document.documentElement.clientHeight || 0;
+        if (h > 0 && vh > 0 && vh / h < REVEAL_THRESHOLD) {
+          el.classList.add('visible');
+        } else {
+          io.observe(el);
+          el.classList.add('reveal-pending');
         }
       });
-    }, { threshold: REVEAL_THRESHOLD, rootMargin: '0px 0px -60px 0px' });
-    revealEls.forEach((el) => {
-      // 比視窗高太多的元素（如超長的法律條款頁）一次露不到 REVEAL_THRESHOLD、
-      // 門檻永遠跨不過 → 直接顯示、不丟給 observer 否則永久 opacity:0 空白
-      const h = el.getBoundingClientRect().height;
-      if (h > 0 && window.innerHeight / h < REVEAL_THRESHOLD) {
-        el.classList.add('visible');
-      } else {
-        io.observe(el);
-      }
-    });
+    } catch {
+      revealEls.forEach((el) => el.classList.remove('reveal-pending'));
+    }
   } else {
     revealEls.forEach((el) => el.classList.add('visible'));
   }

@@ -11,6 +11,7 @@
       'page.title.privacy':    'Folio｜隱私權政策，個資保護與資料使用說明',
       'page.desc.home':        'Folio（以書會友）是不滑卡、不看照片的以書交友 app：發帖徵共讀夥伴、雙方讀到 25% 才解鎖聊天，還有虛擬書房與漂流瓶匿名信。iOS 與 Android 免費下載，18 歲以上限定。',
 
+      'a11y.skip':             '跳到主要內容',
       'nav.modes':             '模式',
       'nav.flow':              '流程',
       'nav.features':          '功能',
@@ -151,6 +152,7 @@
       'page.title.privacy':    'Folio｜Privacy Policy, Data Use & Protection',
       'page.desc.home':        'Folio is a book-first social app with no swiping and no photos: post to find a co-reading partner, chat unlocks only after both of you pass 25%, plus virtual study rooms and anonymous drift-bottle letters. Free on iOS and Android, 18+.',
 
+      'a11y.skip':             'Skip to main content',
       'nav.modes':             'Modes',
       'nav.flow':              'How',
       'nav.features':          'Features',

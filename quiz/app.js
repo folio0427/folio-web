@@ -11,6 +11,7 @@
    ================================================================ */
 
 (function () {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const APPLE = 'https://apps.apple.com/tw/app/folio-find-your-book-buddy/id6771667110';
   const PLAY = 'https://play.google.com/store/apps/details?id=com.yuliao.folio';
 
@@ -261,6 +262,13 @@
     currentSceneObj = scene;
     if (!url) return;
     if (bgLayer.dataset.url === url) return;
+    if (reducedMotion.matches) {
+      bgLayer.style.backgroundImage = `url("${url}")`;
+      bgLayer.dataset.url = url;
+      bgLayer.style.opacity = '1';
+      bgLayerPrev.style.opacity = '0';
+      return;
+    }
     bgLayerPrev.style.backgroundImage = bgLayer.style.backgroundImage;
     bgLayerPrev.style.opacity = '1';
     bgLayer.style.backgroundImage = `url("${url}")`;
@@ -323,7 +331,12 @@
       clearTimeout(revealTimer);
       renderFn(root);
       root.classList.remove('leaving');
-    }, 360);
+      const target = root.querySelector('h1, .vn-eyebrow, .vn-text, .vn-transition');
+      if (target && !document.querySelector('.vn-advance')) {
+        target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+      }
+    }, reducedMotion.matches ? 0 : 360);
   }
 
   function majority(votes) {
@@ -333,6 +346,12 @@
 
   // 逐字浮現：把文字拆成 span、交錯 transition-delay。回傳整段完成毫秒
   function typeInto(el, text, perChar = 26) {
+    if (reducedMotion.matches) {
+      el.textContent = text;
+      el.style.whiteSpace = 'pre-line';
+      el.classList.add('shown');
+      return 0;
+    }
     el.innerHTML = '';
     let idx = 0;
     text.split('\n').forEach((line, li) => {
@@ -353,6 +372,10 @@
   // 打字 + 全螢幕「點擊跳過」層。打完（或被點）呼叫 onReveal（只觸發一次）。
   function typeAndThen(el, text, perChar, cap, onReveal) {
     const dur = typeInto(el, text, perChar);
+    if (reducedMotion.matches) {
+      onReveal && onReveal();
+      return () => {};
+    }
     let fired = false;
     const layer = document.createElement('div');
     layer.className = 'tap-skip';
@@ -372,7 +395,8 @@
 
   // 敘事段落結尾：右下角「點擊繼續」提示 + 全螢幕可點層
   function showAdvance(labelText, onAdvance) {
-    const hint = document.createElement('div');
+    const hint = document.createElement('button');
+    hint.type = 'button';
     hint.className = 'vn-advance';
     hint.innerHTML =
       `<span>${labelText}</span>` +
@@ -382,14 +406,21 @@
 
     const layer = document.createElement('div');
     layer.className = 'tap-advance';
+    let advanced = false;
     const go = () => {
+      if (advanced) return;
+      advanced = true;
       hint.remove();
       layer.remove();
       onAdvance();
     };
     layer.addEventListener('click', go, { once: true });
+    hint.addEventListener('click', go, { once: true });
     document.body.appendChild(layer);
-    requestAnimationFrame(() => hint.classList.add('shown'));
+    requestAnimationFrame(() => {
+      hint.classList.add('shown');
+      hint.focus({ preventScroll: true });
+    });
     return go;
   }
 
@@ -425,7 +456,7 @@
     btn.addEventListener('click', () => {
       primeAudio();
       AUDIO.door();
-      setTimeout(() => fadeSwap(() => showQuestion('act1', 0)), 460);
+      setTimeout(() => fadeSwap(() => showQuestion('act1', 0)), reducedMotion.matches ? 0 : 460);
     });
   }
 
@@ -468,7 +499,7 @@
         else if (opt.sfx === 'typewriter') AUDIO.typewriter();
         else AUDIO.select();
         recordAnswer(actKey, opt);
-        setTimeout(() => advance(actKey, idx), 320);
+        setTimeout(() => advance(actKey, idx), reducedMotion.matches ? 0 : 320);
       });
       optsEl.appendChild(btn);
     });
@@ -564,7 +595,7 @@
       wrap.appendChild(p);
     });
     const btn = document.getElementById('btn-reveal');
-    setTimeout(() => btn.classList.add('shown'), 220 * state.echoes.length + 500);
+    setTimeout(() => btn.classList.add('shown'), reducedMotion.matches ? 0 : 220 * state.echoes.length + 500);
     btn.addEventListener('click', () => {
       AUDIO.page();
       fadeSwap(showResult);
