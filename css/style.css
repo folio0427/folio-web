@@ -1763,12 +1763,12 @@ section[id] { scroll-margin-top: 72px; }
 .feature-story-copy { min-width: 0; overflow-wrap: anywhere; }
 .feature-story-tag {
   display: inline-block;
-  padding: 5px 15px 7px 11px;
+  padding: 10px 20px 12px;
   margin-bottom: 20px;
-  /* 淡水彩暈、不是實心色塊：實心的看起來就是 UI chip，跟紙感打架 */
-  background: rgba(201, 184, 154, 0.38);
+  /* 底是 codex 畫的手撕紙條（assets/paper-label.webp），不是 CSS 色塊。
+     中段顏色平均所以可以橫向拉伸，毛邊在上下緣、拉伸不會變形。 */
+  background: url('../assets/paper-label.webp') center / 100% 100% no-repeat;
   color: var(--walnut-soft);
-  clip-path: polygon(2% 0, 100% 5%, 97% 95%, 0 100%);
   font: 500 0.78rem/1.6 var(--font-sans);
   letter-spacing: 0.12em;
 }
@@ -1820,19 +1820,17 @@ section[id] { scroll-margin-top: 72px; }
   background: var(--parchment);
   border-radius: 1% 2% 1.5% 0.5%;
   transform: rotate(-1deg);
-  transition: transform 400ms var(--ease-watercolor);
 }
 .feature-story-art::before {
   content: '';
   position: absolute;
   z-index: 1;
-  width: 76px;
-  height: 22px;
-  left: 42%;
-  top: -7px;
-  background: var(--amber-soft);
-  opacity: 0.75;
-  clip-path: polygon(3% 0, 98% 4%, 100% 91%, 0 100%);
+  /* 紙膠帶也是 codex 畫的（assets/washi-tape.webp）、半透明、兩端鋸齒撕口 */
+  width: 132px;
+  height: 38px;
+  left: 38%;
+  top: -14px;
+  background: url('../assets/washi-tape.webp') center / 100% 100% no-repeat;
   transform: rotate(-5deg);
   pointer-events: none;
 }
@@ -1842,9 +1840,7 @@ section[id] { scroll-margin-top: 72px; }
 }
 .feature-story-entry--room .feature-story-copy { grid-column: 2; grid-row: 1; }
 .feature-story-entry--room .feature-story-art { grid-column: 1; grid-row: 1; transform: rotate(1deg); }
-.feature-story-entry--room .feature-story-tag { background: rgba(155, 143, 181, 0.26); }
 .feature-story-entry--drift .feature-story-page { max-width: 980px; margin-inline: auto; }
-.feature-story-entry--drift .feature-story-tag { background: rgba(166, 181, 194, 0.30); }
 .feature-story-entry--drift .feature-story-art { padding: 0; background: none; transform: rotate(-0.6deg); }
 .feature-story-entry--drift .feature-story-art::before { display: none; }
 .feature-story-entry--friends { padding-top: 12px; }
@@ -1878,7 +1874,7 @@ section[id] { scroll-margin-top: 72px; }
 .feature-story .reveal-delay-3 { transition-delay: 120ms; }
 .feature-story .reveal-delay-4 { transition-delay: 160ms; }
 @media (hover: hover) and (pointer: fine) {
-  .feature-story-page:hover .feature-story-art { transform: rotate(0deg) translateY(-2px); }
+  /* 圖不做 hover 位移：它被紙膠帶貼在紙上，會動就穿幫了（Max 2026-09-11）。 */
   .feature-story-link:hover .feature-story-arrow { transform: translateX(3px); }
 }
 @media (max-width: 720px) {
