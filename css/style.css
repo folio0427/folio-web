@@ -1829,7 +1829,10 @@ section[id] { scroll-margin-top: 72px; }
   padding: 12px;
   background: var(--parchment);
   border-radius: 1% 2% 1.5% 0.5%;
-  transform: rotate(-1deg);
+  /* 只有「實體物件」（照片）歪，而且統一在 ±1.2 度內：幅度不一就會看起來像
+     不小心歪掉，而不是有人把照片擺上去。文字一律 0 度 —— 中文字一旦旋轉會
+     走 GPU 合成、subpixel 抗鋸齒失效，筆畫邊緣會糊。 */
+  transform: rotate(-1.2deg);
 }
 
 .feature-story-art img { display: block; width: 100%; height: auto; }
@@ -1837,9 +1840,9 @@ section[id] { scroll-margin-top: 72px; }
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
 }
 .feature-story-entry--room .feature-story-copy { grid-column: 2; grid-row: 1; }
-.feature-story-entry--room .feature-story-art { grid-column: 1; grid-row: 1; transform: rotate(1deg); }
+.feature-story-entry--room .feature-story-art { grid-column: 1; grid-row: 1; transform: rotate(1.2deg); }
 .feature-story-entry--drift .feature-story-page { max-width: 980px; margin-inline: auto; }
-.feature-story-entry--drift .feature-story-art { padding: 0; background: none; transform: rotate(-0.6deg); }
+.feature-story-entry--drift .feature-story-art { padding: 0; background: none; transform: rotate(-1.2deg); }
 /* 大家的便利貼那張本身就是兩張帶紙邊、微旋轉的照片疊在一起（透明底），
    所以不再套外層紙框與紙膠帶，否則等於框裡再包一個框。 */
 .feature-story-entry--club .feature-story-art { padding: 0; background: none; transform: none; }
