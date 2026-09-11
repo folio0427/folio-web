@@ -254,54 +254,63 @@
   </div>
 </section>
 
-<!-- Features：共讀之外的其他功能（放在 flow 之前，別讓書房／書圈埋太深）-->
-<section id="features" class="features">
+<!-- Features：共讀之外的其他功能。2026-09-11 從 2 欄卡片方陣改成圖文交錯的
+     繪本編排（Max：「不要這種方格一塊塊的像 AI 模板」），好友那項以短箋收尾。-->
+<section id="features" class="feature-story" aria-labelledby="features-heading">
   <div class="container">
-    <div class="section-head reveal">
-      <span class="kicker" data-i18n="features.kicker">More inside Folio</span>
-      <h2 data-i18n="features.title">在 Folio，你可以做這些</h2>
-      <p data-i18n="features.sub">找人一起讀，只是其中一條路。書也可以是一面牆、一間房、一封信，或一張卡片。</p>
-    </div>
-    <div class="feature-grid">
-      <div class="reveal reveal-delay-1">
-      <div class="feature-card">
-        <img class="fc-shot" src="assets/feature-book-club.webp" width="1000" height="689" loading="lazy" decoding="async"
-             alt="Folio 書圈：每本書都有一面公開的便利貼牆，卡片上是書封、作者與讀者給的星星"
-             data-i18n-attr="alt:features.club.alt">
-        <span class="fc-tag" data-i18n="features.club.tag">書圈</span>
-        <h3 data-i18n="features.club.h">每一本書，都有一面牆</h3>
-        <p data-i18n="features.club.p">讀過的人一邊讀一邊把句子貼在書的牆上。牆依進度分成六段，你讀到哪一段就打開到哪一段，後面先蓋著，不會被劇透。看到寫得好的一句話，可以點名字去看那個人在別本書寫過什麼。</p>
-        <a class="fc-go" href="/guide/book-club" data-i18n="features.club.go">書圈怎麼用</a>
+    <header class="feature-story-head reveal">
+      <span class="feature-story-kicker" data-i18n="features.kicker">More inside Folio</span>
+      <h2 id="features-heading" data-i18n="features.title">在 Folio，你可以⋯</h2>
+      <p data-i18n="features.sub">找人一起讀，只是其中一條路。</p>
+    </header>
+    <div class="feature-story-pages">
+      <div class="feature-story-entry feature-story-entry--club reveal reveal-delay-1">
+        <article class="feature-story-page" aria-labelledby="feature-story-club">
+          <div class="feature-story-copy">
+            <span class="feature-story-tag" data-i18n="features.club.tag">書圈</span>
+            <h3 id="feature-story-club" data-i18n="features.club.h">把一句話貼上一本書的牆</h3>
+            <p data-i18n="features.club.p">讀過的人一邊讀一邊把句子貼在書的牆上。牆依進度分成六段，你讀到哪一段就打開到哪一段，後面先蓋著，不會被劇透。看到寫得好的一句話，可以點名字去看那個人在別本書寫過什麼。</p>
+            <a class="feature-story-link" href="/guide/book-club"><span data-i18n="features.club.go">書圈怎麼用</span><span class="feature-story-arrow" aria-hidden="true"></span></a>
+          </div>
+          <figure class="feature-story-art">
+            <img src="assets/feature-book-club.webp" width="1000" height="689" loading="lazy" decoding="async" alt="Folio 書圈：每本書都有一面公開的便利貼牆，卡片上是書封、作者與讀者給的星星" data-i18n-attr="alt:features.club.alt">
+          </figure>
+        </article>
       </div>
+      <div class="feature-story-entry feature-story-entry--room reveal reveal-delay-2">
+        <article class="feature-story-page" aria-labelledby="feature-story-room">
+          <div class="feature-story-copy">
+            <span class="feature-story-tag" data-i18n="features.room.tag">虛擬書房</span>
+            <h3 id="feature-story-room" data-i18n="features.room.h">佈置一間屬於你的書房</h3>
+            <p data-i18n="features.room.p">選背景、擺書櫃、放擺飾，把讀過的書排上書架，連書背的字體與顏色都能自己調。書房可以只留給自己，也可以公開到「今日書房展」讓別人來參觀、按讚、寫訪客簿。分享出去的連結，會變成一張你的書房名片。</p>
+            <a class="feature-story-link" href="/guide/study-room"><span data-i18n="features.room.go">虛擬書房怎麼用</span><span class="feature-story-arrow" aria-hidden="true"></span></a>
+          </div>
+          <figure class="feature-story-art">
+            <img src="assets/feature-study-room.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Folio 虛擬書房實景：木屋書房裡的書櫃排著讀過的書，窗邊有串燈、地毯與睡著的貓狗" data-i18n-attr="alt:features.room.alt">
+          </figure>
+        </article>
       </div>
-      <div class="reveal reveal-delay-2">
-      <div class="feature-card">
-        <img class="fc-shot" src="assets/feature-study-room.webp" width="1200" height="800" loading="lazy" decoding="async"
-             alt="Folio 虛擬書房實景：木屋書房裡的書櫃排著讀過的書，窗邊有串燈、地毯與睡著的貓狗"
-             data-i18n-attr="alt:features.room.alt">
-        <span class="fc-tag" data-i18n="features.room.tag">虛擬書房</span>
-        <h3 data-i18n="features.room.h">佈置一間屬於你的書房</h3>
-        <p data-i18n="features.room.p">選背景、擺書櫃、放擺飾，把讀過的書排上書架，連書背的字體與顏色都能自己調。書房可以只留給自己，也可以公開到「今日書房展」讓別人來參觀、按讚、寫訪客簿。分享出去的連結，會變成一張你的書房名片。</p>
-        <a class="fc-go" href="/guide/study-room" data-i18n="features.room.go">虛擬書房怎麼用</a>
+      <div class="feature-story-entry feature-story-entry--drift reveal reveal-delay-3">
+        <article class="feature-story-page" aria-labelledby="feature-story-drift">
+          <div class="feature-story-copy">
+            <span class="feature-story-tag" data-i18n="features.drift.tag">漂流瓶</span>
+            <h3 id="feature-story-drift" data-i18n="features.drift.h">投一封信，等它漂上岸</h3>
+            <p data-i18n="features.drift.p">把一段讀書心得或一封親筆信投進海裡，傍晚靠岸到另一個讀者手上。作者只顯示為「遠方的讀者」，收到的人可以收藏、回信；兩邊都願意，就成為筆友。一天一瓶，急不得。</p>
+            <a class="feature-story-link" href="/guide/drift-bottle"><span data-i18n="features.drift.go">漂流瓶怎麼玩</span><span class="feature-story-arrow" aria-hidden="true"></span></a>
+          </div>
+          <figure class="feature-story-art">
+            <img src="assets/feature-drift-bottle.webp" width="1200" height="800" loading="lazy" decoding="async" alt="Folio 漂流瓶：一只裝著信的玻璃瓶擱淺在傍晚的沙灘上" data-i18n-attr="alt:features.drift.alt">
+          </figure>
+        </article>
       </div>
-      </div>
-      <div class="reveal reveal-delay-3">
-      <div class="feature-card">
-        <img class="fc-shot" src="assets/feature-drift-bottle.webp" width="1200" height="800" loading="lazy" decoding="async"
-             alt="Folio 漂流瓶：一只裝著信的玻璃瓶擱淺在傍晚的沙灘上"
-             data-i18n-attr="alt:features.drift.alt">
-        <span class="fc-tag" data-i18n="features.drift.tag">漂流瓶</span>
-        <h3 data-i18n="features.drift.h">匿名的信，慢慢漂過來</h3>
-        <p data-i18n="features.drift.p">把一段讀書心得或一封親筆信投進海裡，傍晚靠岸到另一個讀者手上。作者只顯示為「遠方的讀者」，收到的人可以收藏、回信；兩邊都願意，就成為筆友。一天一瓶，急不得。</p>
-        <a class="fc-go" href="/guide/drift-bottle" data-i18n="features.drift.go">漂流瓶怎麼玩</a>
-      </div>
-      </div>
-      <div class="reveal reveal-delay-4">
-      <div class="feature-card">
-        <span class="fc-tag" data-i18n="features.friends.tag">好友與個人碼</span>
-        <h3 data-i18n="features.friends.h">共讀之外，也能留下聯繫</h3>
-        <p data-i18n="features.friends.p">每個人有一組 8 碼個人邀請碼，可以直接給、可以掃 QR，覺得被打擾隨時換一組新的。加好友一律要對方確認；共讀室解鎖之後，也能在房裡直接加。解除好友不會影響已經開始的共讀。</p>
-      </div>
+      <div class="feature-story-entry feature-story-entry--friends reveal reveal-delay-4">
+        <article class="feature-story-page" aria-labelledby="feature-story-friends">
+          <div class="feature-story-copy">
+            <span class="feature-story-tag" data-i18n="features.friends.tag">好友與個人碼</span>
+            <h3 id="feature-story-friends" data-i18n="features.friends.h">留一組只有你的碼</h3>
+            <p data-i18n="features.friends.p">每個人有一組 8 碼個人邀請碼，可以直接給、可以掃 QR，覺得被打擾隨時換一組新的。加好友一律要對方確認；共讀室解鎖之後，也能在房裡直接加。解除好友不會影響已經開始的共讀。</p>
+          </div>
+        </article>
       </div>
     </div>
   </div>
