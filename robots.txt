@@ -1,10 +1,53 @@
 # Folio — robots.txt
 # https://foliomatch.app/
+# 站點由 Cloudflare Pages 服務（舊註解寫 GitHub Pages 已過時）。
 
 User-agent: *
 Allow: /
 
+# AI 檢索與訓練爬蟲：明確放行。
+# 這幾條技術上被上面的 User-agent: * 涵蓋，但寫出來是為了留下意圖紀錄，
+# 也避免日後有人加了 Disallow 規則時誤把它們一起擋掉。
+# 注意：robots.txt 放行不等於爬得到，Cloudflare 的 Bot Fight Mode 與
+# 「Block AI Scrapers and Crawlers」會在邊緣直接擋，要另外到後台確認關閉。
+
+# OpenAI：搜尋索引、使用者即時取用、模型訓練
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google 的 AI 產品（Gemini、AI Overview 的額外授權訊號）
+User-agent: Google-Extended
+Allow: /
+
+# 其他
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+
 # Sitemap
 Sitemap: https://foliomatch.app/sitemap.xml
-
-# Crawl-delay not needed for static GitHub Pages

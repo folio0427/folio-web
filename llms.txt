@@ -37,7 +37,8 @@ Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android 
 - [「以書會友」是什麼？](https://foliomatch.app/blog/meet-friends-through-books): 以書會友語出《論語．顏淵》「君子以文會友」，這篇談以書會友的具體型態、為什麼有效，以及今天可以怎麼開始。
 - [不用照片、不看臉的交友 app](https://foliomatch.app/blog/no-photo-dating-app): 為什麼看臉的 0.8 秒，把「聊不聊得來」整個跳過了，寫給想先認識人、再看臉的人。
 - [內向、社恐也能用的交友 app](https://foliomatch.app/blog/introvert-social-app): 一開口就卡不是不想認識人，一本書如何當破冰工具，Folio 對內向者友善的三個設計。
-- [怎麼找書友 / 共讀夥伴](https://foliomatch.app/blog/find-reading-partner): 5 種找書友、共讀夥伴的管道（讀書會、社團、Goodreads、朋友揪、共讀 app）與各自的卡點。
+- [出社會後怎麼認識也喜歡看書的人](https://foliomatch.app/blog/find-reading-partner): 出社會之後身邊沒人可以聊書，5 種找書友、共讀夥伴的管道（讀書會、社團、Goodreads、朋友揪、共讀 app）與各自的卡點。
+- [看完一本書，身邊沒人看過怎麼辦](https://foliomatch.app/blog/no-one-to-talk-about-this-book): 讀完很想跟人說卻沒人看過這本書，五個可以聊的地方（讀書帳、社團、書評網站、AI、找人一起讀）與各自的限制。
 - [配對成立那一刻，你要聊什麼？](https://foliomatch.app/blog/what-to-talk-about-after-matching): 配對後常常沒話聊，因為標籤太表層；共讀到 25% 加上便利貼，是更好的開場白。
 - [便利貼牆：把對話留下來的另一種方式](https://foliomatch.app/blog/sticky-note-wall): Folio 把共讀的隨手筆記與心得貼成一面牆，讓對話不只是溝通、也是紀念。
 - [讀書會跟共讀 app 差在哪？](https://foliomatch.app/blog/book-club-vs-app): 人數、節奏、深度、留下什麼，五個面向比較讀書會與一對一共讀 app，兩者也可並用。

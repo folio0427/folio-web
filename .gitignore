@@ -12,3 +12,8 @@ Thumbs.db
 node_modules/
 dist/
 .cache/
+
+# 休眠備援：強制更新的真實來源是 Firebase Remote Config 的 version_config。
+# 這支留在本機當備援可以，但不要 push，否則變成雙頭維護（目前內容停在 1.0.6、
+# 商店已經 1.0.15）。見 docs 的版本閘門筆記。
+app/version.json

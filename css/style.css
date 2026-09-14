@@ -1923,3 +1923,33 @@ section[id] { scroll-margin-top: 72px; }
   .feature-story .feature-story-page:hover .feature-story-art,
   .feature-story .feature-story-link .feature-story-arrow { transform: none; transition: none; }
 }
+
+/* ---------- Home FAQ ----------
+   可見的常見問題。內容必須與 index.html 裡那段 FAQPage JSON-LD 逐字一致，
+   Google 對不上就整組忽略。問句用 h3 是為了讓 AI 摘要抓得到「問題＋答案」的配對。 */
+.home-faq {
+  padding: 96px 0;
+  background: var(--parchment);
+}
+.home-faq-list {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.home-faq-list h3 {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--walnut);
+  margin: 36px 0 12px;
+}
+.home-faq-list h3:first-child { margin-top: 0; }
+.home-faq-list p {
+  font-size: 0.97rem;
+  line-height: 1.95;
+  color: var(--walnut-soft);
+  margin: 0;
+}
+@media (max-width: 640px) {
+  .home-faq { padding: 68px 0; }
+  .home-faq-list h3 { margin-top: 28px; }
+}

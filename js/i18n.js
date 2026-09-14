@@ -6,10 +6,10 @@
 
   const dict = {
     zh: {
-      'page.title.home':       'Folio 以書會友｜以書交友 app、共讀與虛擬書房，從一本書遇見緣分',
+      'page.title.home':       '看書交友軟體 Folio 以書會友：一起讀一本書，慢慢認識一個人',
       'page.title.terms':      'Folio｜服務條款，以書交友 app 使用條款',
       'page.title.privacy':    'Folio｜隱私權政策，個資保護與資料使用說明',
-      'page.desc.home':        'Folio（以書會友）是不滑卡、不看照片的以書交友 app：發帖徵共讀夥伴、雙方讀到 25% 才解鎖聊天，還有虛擬書房與漂流瓶匿名信。iOS 與 Android 免費下載，18 歲以上限定。',
+      'page.desc.home':        '在找看書的交友軟體嗎？Folio 以書會友是不滑卡、不用照片的以書交友 app：發帖徵共讀夥伴，雙方各讀到 25% 才解鎖聊天，還有虛擬書房與漂流瓶匿名信。iOS 與 Android 免費下載，18 歲以上限定。',
 
       'a11y.skip':             '跳到主要內容',
       'nav.modes':             '模式',
@@ -26,7 +26,7 @@
       'hero.line1':            '從一本書',
       'hero.line2.prefix':     '遇見',
       'hero.line2.accent':     '可能的緣分',
-      'hero.lede':             'Folio 不是配對 app，也不是讀書器。<br>透過一起讀完一本書，慢慢認識一個人。',
+      'hero.lede':             '一款看書的人在用的交友軟體。不滑卡、不用放照片。<br>透過一起讀完一本書，慢慢認識一個人。',
       'hero.cta.primary':      '了解 Folio',
       'hero.cta.secondary':    '如何下載',
       'hero.caption':          '每一張便利貼，是一段共讀的紀念。',
@@ -136,6 +136,7 @@
       'footer.li.terms':       '服務條款',
       'footer.li.privacy':     '隱私權政策',
       'footer.li.childsafety': '兒童安全',
+      'footer.li.llms':        '給 AI 讀的版本',
       'footer.h.contact':      '聯絡',
       'footer.li.support':     '支持 Folio',
       'footer.copyright':      '© 2026 Folio · 由獨立開發者提供 · 18+ 限定服務',
@@ -167,7 +168,7 @@
       'hero.line1':            'From one book,',
       'hero.line2.prefix':     'meet',
       'hero.line2.accent':     'a possible kindred',
-      'hero.lede':             'Folio isn\'t a dating app, nor a reading tracker.<br>By finishing a book together, slowly come to know a person.',
+      'hero.lede':             'A social app for people who read. No swiping, no photos.<br>By finishing a book together, slowly come to know a person.',
       'hero.cta.primary':      'About Folio',
       'hero.cta.secondary':    'How to get it',
       'hero.caption':          'Every sticky note is a memento of reading together.',
@@ -277,6 +278,7 @@
       'footer.li.terms':       'Terms',
       'footer.li.privacy':     'Privacy',
       'footer.li.childsafety': 'Child Safety',
+      'footer.li.llms':        'Machine-readable version',
       'footer.h.contact':      'Contact',
       'footer.li.support':     'Support Folio',
       'footer.copyright':      '© 2026 Folio · by an independent developer · 18+ only',
