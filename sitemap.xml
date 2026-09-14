@@ -177,6 +177,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://foliomatch.app/blog/dating-apps-with-normal-people</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://foliomatch.app/blog/text-based-friend-apps</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://foliomatch.app/blog/find-deep-conversation-friends</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- 機器可讀版本：llms.txt 與 OKF 知識包。站上 HTML 也有連到 /llms.txt，
        但這裡收一份，爬蟲才不必靠 footer 那一條連結才找得到。 -->
   <url>

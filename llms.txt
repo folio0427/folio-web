@@ -52,6 +52,9 @@ Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android 
 - [慢社交 app 怎麼選](https://foliomatch.app/blog/slow-social-apps-2026): Slowly、Folio、Bumble For Friends 三款慢社交 app 的機制對照與分眾推薦。
 - [為什麼共讀比配對 app 更容易遇到對的人](https://foliomatch.app/blog/why-co-reading): 從注意力經濟、決策疲乏到不對稱資訊揭露，給厭倦滑卡的人的慢社交設計筆記。
 - [我們的起點](https://foliomatch.app/blog/our-beginning): Folio 有了第一行字的那天，以及三個從第一天就沒變過的設計決定。
+- [比較多正常人的交友軟體](https://foliomatch.app/blog/dating-apps-with-normal-people): 五種交友軟體類型各自篩掉誰、留下誰，以及為什麼沒有一款能保證沒有怪人。
+- [文字交友 app 有哪些](https://foliomatch.app/blog/text-based-friend-apps): 隨機配對、話題配對、匿名樹洞、筆友、先一起做一件事，五種文字交友機制比較。
+- [如何交到能深度交流的朋友](https://foliomatch.app/blog/find-deep-conversation-friends): 興趣社群、固定長期活動、書寫型社群、一起完成一件事，四種方法與各自的卡點。
 - [Blog index](https://foliomatch.app/blog/)
 
 ## Quiz
