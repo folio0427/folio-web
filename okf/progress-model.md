@@ -22,4 +22,4 @@ timestamp: 2026-06-18T00:00:00Z
 書房 = `progress` 表，一列一本書，完全自己控制；狀態由 `percent` 推導
 （0 = 還沒讀 / 1–99 = 在讀 / 100 = 看完了），可單獨使用、不配對也行。
 
-相關：[共讀室與進度閘](./co-reading-room.md) ・ [便利貼與讀後分享卡](./notes-and-reflections.md)
+相關：[共讀室與進度閘](./co-reading-room.md) ・ [便利貼](./notes-and-reflections.md) ・ [虛擬書房](./study-room.md)

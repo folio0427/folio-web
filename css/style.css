@@ -1953,3 +1953,17 @@ section[id] { scroll-margin-top: 72px; }
   .home-faq { padding: 68px 0; }
   .home-faq-list h3 { margin-top: 28px; }
 }
+
+/* 「即將推出」：官網已經寫、但商店版 app 還沒有的功能要標出來。
+   同一個標準：讀後分享卡是整段撤下，書圈是標註，兩者都不能讓人下載後找不到。 */
+.feature-story-soon {
+  display: inline-block;
+  margin: 0 0 20px 10px;
+  padding: 4px 12px 5px;
+  border: 1px dashed var(--amber);
+  border-radius: 999px;
+  font: 500 0.7rem/1.5 var(--font-sans);
+  letter-spacing: 0.1em;
+  color: var(--walnut-soft);
+  vertical-align: 4px;
+}

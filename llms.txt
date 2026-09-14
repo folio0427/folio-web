@@ -21,6 +21,9 @@ Official site: https://foliomatch.app · iOS App Store id 6771667110 · Android 
 - [Co-reading room & progress gate](https://foliomatch.app/okf/co-reading-room.md): Chat is locked until both readers reach 25% and each writes a note.
 - [Differentiators](https://foliomatch.app/okf/differentiators.md): Why Folio is the opposite of mainstream dating apps.
 - [Safety & privacy](https://foliomatch.app/okf/safety-and-privacy.md): 18+ only, reporting/blocking, privacy protections.
+- [Virtual study room](https://foliomatch.app/okf/study-room.md): 佈置一間自己的書房、今日書房展、分享連結與訪客簿。
+- [Drift bottle](https://foliomatch.app/okf/drift-bottle.md): 匿名信件、傍晚靠岸、收藏與回信、筆友線。
+- [Book club wall](https://foliomatch.app/okf/book-club.md): 每本書一面公開便利貼牆，依進度分六段、後段蓋住不劇透。
 
 ## Guide (zh-Hant)
 

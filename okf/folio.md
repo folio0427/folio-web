@@ -29,7 +29,7 @@ Folio 是一款**以書交友（book-based friend-matching）的慢步調社交 
 [發帖徵共讀夥伴 → 對方報名 → 開共讀室](./matching-flow.md)；
 [共讀室起始鎖定，雙方各讀到 25% 才解鎖自由聊天](./co-reading-room.md)；
 [進度是 User × Book 的全局值](./progress-model.md)；過程中寫
-[便利貼心得](./notes-and-reflections.md)，讀完整本可做[讀後分享卡](./notes-and-reflections.md)。
+[便利貼心得](./notes-and-reflections.md)，另外還有[虛擬書房](./study-room.md)與[漂流瓶](./drift-bottle.md)兩條不必配對就能用的線。
 
 ## 技術與平台
 
