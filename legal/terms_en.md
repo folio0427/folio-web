@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v1.7 ｜ **Effective Date** 2026-08-28 ｜ **Last Updated** 2026-08-28 ｜ **Status** Final
+> **Version** v1.8 ｜ **Effective Date** 2026-09-17 ｜ **Last Updated** 2026-09-17 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -15,7 +15,8 @@ Welcome to Folio. The service is currently provided by an independent developer 
 ## 02　Nature of Service
 
 - Folio is a book-centered social platform that matches users via shared reading
-- Three modes: Pure Book Friend / Open to Connection / Open
+- The service also includes "Everyone's sticky notes": every book has a **public sticky-note wall** and a review section, where users may choose to publish their own notes, or post reviews (reviews are always public and show the rating), for other users in the same community partition to read
+- Three modes: Reading friends only / Looking for fate / Open to either
 - Not a matrimonial agency, dating bureau, or matching guarantor
 - We do not verify users' marital status, profession, education, finances, or health
 
@@ -31,7 +32,7 @@ Welcome to Folio. The service is currently provided by an independent developer 
 - Provide truthful, accurate, complete information
 - Safeguard your OAuth (Google / Apple) credentials
 - Account sharing, transfer, sale prohibited
-- Cooldown fields: nickname (30 days), mode (7 days), gender (7 days), date of birth (7 days) — locked during the cooldown after each change
+- Cooldown fields: nickname (30 days), mode (7 days), gender (7 days), date of birth (7 days); each cooldown starts at registration and restarts after every change, and the field cannot be changed again during the cooldown
 - Any change to date of birth must still keep you 18 or older (system-enforced)
 
 ## 05　User Conduct
@@ -61,7 +62,7 @@ Welcome to Folio. The service is currently provided by an independent developer 
 
 ### Consequences
 
-- Warnings / feature limitations / temporary suspension / permanent termination
+- Warnings / feature limitations (including temporarily suspending your ability to publish to "Everyone's sticky notes") / temporary suspension / permanent termination
 - We reserve civil and criminal recourse
 
 ### Suspension Notice & Appeal
@@ -69,8 +70,8 @@ Welcome to Folio. The service is currently provided by an independent developer 
 When your account is suspended (feature restrictions or full suspension):
 
 **Notice**
-- We will notify you both in-app and via your OAuth-linked email
-- The notice includes: suspension type (partial restriction / full), reason, and effective date
+- We will notify you in the app, through a notice screen, a one-time notice window, or a prompt when you try to use a restricted feature (we do not send suspension notices by email)
+- Depending on the type of action, the notice includes the suspension type (partial restriction / full), its effective date or period, and, where applicable, the reason
 
 **Appeal**
 - You may appeal within 14 days of receiving the notice
@@ -79,10 +80,10 @@ When your account is suspended (feature restrictions or full suspension):
 - We will respond within 7 business days
 
 **Prevention of repeat violations**
-- To prevent suspension evasion, when an account is suspended we record a one-way salted SHA-256 hash of the user's Google / Apple sign-in identifier
+- To prevent suspension evasion, when an account is permanently suspended we record a one-way salted SHA-256 hash of the user's Google / Apple sign-in identifier
 - The record is retained for 5 years and is removed immediately upon unbanning
 - During this period, if you delete your Folio account and attempt to re-register with the same Google / Apple identity, the system will block registration and prompt you to contact support
-- The hash is non-reversible and we retain only the minimum required for matching
+- The hash is non-reversible; the record contains only the hash, the sign-in provider, the original account identifier, and the reason and time of the suspension, used for matching and to explain the reason to you
 
 ## 06　User-Generated Content (UGC)
 
@@ -91,19 +92,30 @@ When your account is suspended (feature restrictions or full suspension):
 - We have no pre-screening obligation but reserve removal rights
 - We remove content that is unlawful or whose removal is required by a competent authority under the applicable law of each region in which we operate, including cessation (anti-doxxing) notices under Hong Kong's Personal Data (Privacy) Ordinance and lawful content-removal requests under Hong Kong law
 - You grant us a non-exclusive, worldwide, royalty-free, sublicensable license
-- Limited to: service operation / platform infrastructure / de-identified analytics / 100% wrap-up pages you actively share
+- Limited to: service operation / platform infrastructure / de-identified analytics / reflection share cards you actively share
+
+### Publishing to "Everyone's sticky notes"
+
+- Each of the following means you are **actively choosing to make that content public** so that all users in your community partition can read it: ticking "Also post to Everyone's sticky notes" on a shelf or co-reading room note, tapping "Stick it on the wall" in Everyone's sticky notes, or saving a review. **Reviews are always public and are shown together with the rating you gave**
+- Published content is attributed to your nickname by default; when you stick a note on the wall in Everyone's sticky notes or save a review, you may also choose to publish anonymously (whether anonymity is available is as shown in the app)
+- For content you publish, the license above extends to displaying it publicly to other users within the service and to aggregate display (for example the book's average rating and your reader page)
+- You must ensure that what you publish is written by you and does not infringe anyone's copyright, privacy, or other rights; when quoting from a book, follow the "Book Citations & Copyright" section
+- You may take back (delete) published content at any time; once taken back, other users can no longer see it. **We cannot recall content that other users have already read, screenshotted, or copied down**. Deleting the private note on your shelf with "Delete here only", or removing the whole book from your shelf, does not delete content you have already published
+- We may take published content down following a report review or under these Terms, and may temporarily suspend an infringing user's ability to publish to the public wall; a takedown does not affect the private copy on your own shelf, but that private note can no longer be used to publish again
+- The wall's reading bands exist to prevent spoilers and are **not a privacy or permission setting** (readers can choose to unlock bands themselves); do not rely on them to keep particular people from reading your content
 
 ### Retention of user content after account deletion (Important)
 
 - Sticky notes and messages you write in a co-reading room are jointly produced by you and your reading partner
 - After you delete your account, this content remains, anonymised, on your reading partner's side, with the author shown as "A book friend who left"
 - Comments you leave in other users' study-room guestbooks, and pen-pal correspondence from established drift-bottle connections, are retained under the same mechanism: comment authors are shown as "A book friend who left", and pen-pal correspondence becomes a read-only memento on the other side
+- Notes and reviews you published to "Everyone's sticky notes" are **not** subject to this anonymised-retention mechanism and are deleted together with your account (content snapshots held in report and moderation records are kept as described in the Privacy Policy)
 - By publishing, you consent to this mechanism
 - For detailed handling, see the "Account deletion" section of the Privacy Policy
 
-### 100% Wrap-up Page Sharing
+### Reflection Share Cards
 
-- By tapping share to IG / Threads / X, you confirm right to share
+- By tapping "Share" (sharing to IG, Threads, X, and others through the system share sheet) or "Download image", you confirm that you have the right to share that content publicly
 - You acknowledge content carries Folio watermark
 - External sharing legal liability is yours
 
@@ -157,7 +169,7 @@ When your account is suspended (feature restrictions or full suspension):
 - Payment is processed by Apple or Google and charged to your store account; Folio never handles or stores your card number or payment credentials
 - **Auto-renewal**: subscriptions renew and charge at the end of each period unless you cancel in the store's subscription settings at least 24 hours before the period ends; after cancelling, you keep access until the end of the paid period
 - **Plan changes**: an upgrade (switching to a higher-priced plan) takes effect immediately, with the remaining days of the current period prorated by the store; a downgrade (switching to a lower-priced plan) takes effect at the end of the current period, and your current plan stays active until then
-- **After cancelling or downgrading**: every study room you created is kept (viewable, shareable, renamable, deletable), and you may choose which rooms within your plan's allowance stay decoratable (decorating is paused for all rooms until you have chosen, and the choice cannot be changed afterwards); book-spine styles you applied are kept but can no longer be edited; the supporter badge is shown only while your subscription is active and is removed when it ends
+- **After cancelling or downgrading**: every study room you created is kept (viewable, shareable, renamable, deletable), and you may choose which rooms within your plan's allowance stay decoratable (decorating is paused for all rooms until you have chosen, and the choice cannot be changed afterwards); once your subscription ends, book-spine styles you applied are kept but can no longer be edited; the supporter badge is shown only while your subscription is active and is removed when it ends
 - **Cross-platform**: managing, changing, or cancelling a subscription must be done in the store of the platform where you originally purchased it (for example, a subscription purchased on iOS is managed in App Store subscription settings)
 - **Refunds** follow Apple's / Google's own refund policies and are handled and decided by the store; deleting your Folio account does not cancel your subscription, so please cancel in the store first
 - Free features will not be retroactively charged because paid features exist; paid offerings may change over time as shown in the app
@@ -167,7 +179,7 @@ When your account is suspended (feature restrictions or full suspension):
 ### User-initiated deletion
 
 - Anytime via "Me" tab → Settings → Account management → Delete account
-- Personal data is cleared immediately upon confirmation (statutory retention exempted)
+- Your account and personal data are deleted immediately upon confirmation, except co-reading content retained anonymously under Section 06, report and moderation records, and data retained under the "Retention" section of the Privacy Policy
 
 ### Platform-initiated termination
 
@@ -175,7 +187,7 @@ When your account is suspended (feature restrictions or full suspension):
 - Multiple legitimate complaints
 - Suspected illegality
 - 18+ verification failure
-- No sign-in for 24 consecutive months
+- No sign-in and no use of the service for 24 consecutive months (except accounts with an active subscription)
 - Service-wide shutdown
 
 ## 12　Service Changes

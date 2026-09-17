@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Folio｜刪除帳戶說明 — Delete Account</title>
-<meta name="description" content="如何從 Folio 以書交友 app 刪除您的帳戶與相關資料。一鍵刪除流程、保留範圍說明（共同產出的對話 / 便利貼依 LINE / WhatsApp 模式保留並匿名）。">
+<meta name="description" content="如何從 Folio 以書交友 app 刪除您的帳戶與相關資料。一鍵刪除流程、保留範圍說明（共同產出的對話 / 便利貼依常見通訊服務的做法保留並匿名）。">
 <meta name="theme-color" content="#F8F1E4">
 <link rel="icon" type="image/webp" href="assets/folio_icon.webp">
 
@@ -143,16 +143,18 @@
     <p>提交刪除後，下列資料會<strong>永久刪除</strong>：</p>
     <ul>
       <li>您的登入帳戶（Google / Apple）</li>
-      <li>個人檔案：暱稱、性別、出生日期、所在地、書籍類別偏好、個性問答</li>
-      <li>您發布的所有貼文，以及您送出的報名紀錄</li>
+      <li>個人檔案：暱稱、角色造型、性別、出生日期、所在地、書籍類別偏好、個性問答、心態與想找的性別</li>
+      <li>您發布的所有貼文與其收到的報名、您送出的所有報名紀錄、您收藏的貼文</li>
       <li>您的閱讀進度與讀後分享卡</li>
       <li>您個人書櫃中的便利貼</li>
+      <li>您在「大家的便利貼」公開的便利貼與書評（不會匿名保留），以及您按的愛心、段落解鎖紀錄、「這本書的提醒」設定、進入公開牆的紀錄與書目回報</li>
       <li>您的虛擬書房：房間、佈置、書櫃上的書、房外的便條疊，以及該房收到的讚與訪客簿留言</li>
       <li>您對其他人書房按過的讚</li>
       <li>漂流瓶：您投出的瓶子，以及尚未成立筆友關係的回信（已因過期、被婉拒或管理處置而移入封存區的信件除外，見下方保留說明）</li>
       <li>好友關係、好友邀請與共讀邀請、您的好友邀請碼</li>
-      <li>您的使用分析紀錄（功能點選事件、頁面停留時間、開啟次數）</li>
+      <li>您的使用分析紀錄（功能點選事件、頁面停留時間、開啟次數，以及評估新功能用的使用狀態快照）</li>
       <li>推播通知識別碼（push token）</li>
+      <li>站內通知</li>
       <li>您設定的封鎖名單</li>
     </ul>
   </div>
@@ -163,25 +165,35 @@
     <ul>
       <li>共讀室中的聊天訊息</li>
       <li>共讀便利貼牆上的便利貼</li>
+      <li>共讀室中保存的您的貼文或報名文字（為什麼想讀、共讀方式、預期週數）</li>
       <li>您在其他人的書房訪客簿留下的留言</li>
       <li>已成立筆友關係的漂流瓶通信（在對方那端轉為唯讀的紀念）</li>
     </ul>
-    <p>原因：這些內容是您與共讀夥伴或筆友<strong>共同產生</strong>的紀錄，完全刪除會破壞對方保有的紀念。匿名化後已無法識別您的身分。</p>
+    <p>原因：這些內容是您與共讀夥伴或筆友<strong>共同產生</strong>的紀錄，完全刪除會破壞對方保有的紀念。匿名化會移除這些內容與您帳號的連結；但若內容本身含有可識別您的資訊，仍可能被認出。</p>
     <p>下列資料會留在收到的人那裡：</p>
     <ul>
       <li>其他人已收藏到自己信匣的、您寄出的漂流瓶信件副本（保留至該收藏者自行刪除）</li>
-      <li>您已因過期、被婉拒或管理處置而移入封存區的信件：內文於歸檔滿 2 年後自動清除，在此之前不對任何用戶顯示</li>
+    </ul>
+    <p>下列資料由 Folio 封存、不對任何用戶顯示：</p>
+    <ul>
+      <li>您已因過期、被婉拒或管理處置而移入封存區的信件：內文於歸檔滿 2 年後自動清除</li>
+    </ul>
+    <p>下列資料因統計或系統運作需要而保留：</p>
+    <ul>
+      <li>每日活躍名單（只有日期與帳號識別碼，用於計算活躍與留存）：刪除帳號後仍保留，以免改寫歷史統計；其中的識別碼在 Folio 已無對應的個人檔案可回溯。</li>
+      <li>頻率限制用的操作時間紀錄（例如書房按讚、好友碼查詢的時間，不含內容）：刪除帳號後可能仍保留。</li>
+      <li>資料庫每日自動備份、保留 7 天：刪除的資料會在備份輪替後一併消失。</li>
     </ul>
     <p>下列資料依法律義務或安全需要保留：</p>
     <ul>
-      <li>服務條款同意紀錄：自您同意當下起保留 <strong>5 年</strong>，以雜湊（hash）形式儲存，無法反推您的身分。</li>
-      <li>付費與訂閱事件紀錄：方案檔位、購買與續訂、到期事件，以及商店端的交易識別資訊。作為財務憑證，用於對帳、退款爭議，以及商業會計法與稅捐稽徵法所定的保存義務，不設定刪除期限。您刪除帳號後，這些紀錄與您個人檔案的關聯會被移除；紀錄中仍留有商店端的交易識別碼，以及訂閱服務（RevenueCat）所使用的帳號識別碼，後者是查考退款爭議所必要而刻意保留，在 Folio 已無對應的個人檔案可回溯。</li>
+      <li>服務條款同意紀錄：自您同意當下起保留 <strong>5 年</strong>，內容包含同意的條款版本、時間與方式、當下的 IP 位址與裝置識別字串，以及您 email 經加鹽雜湊後的字串（無法反推 email）。</li>
+      <li>付費與訂閱事件紀錄：方案檔位、金額與幣別、商店國家或地區代碼、購買與續訂、到期事件，以及商店端的交易識別資訊。作為財務憑證，用於對帳、退款爭議，以及商業會計法與稅捐稽徵法所定的保存義務，不設定刪除期限。您刪除帳號後，這些紀錄與您個人檔案的關聯會被移除；紀錄中仍留有商店端的交易識別碼，以及訂閱服務（RevenueCat）所使用的帳號識別碼，後者是查考退款爭議所必要而刻意保留，在 Folio 已無對應的個人檔案可回溯。</li>
       <li>檢舉與處置紀錄：檢舉案件結案後保留 <strong>5 年</strong>，屆期由系統自動刪除。管理處置的稽核紀錄（處置類型、時間與當下的內容快照）為防止規避停權、社群安全稽核與法律抗辯而保留，不隨帳號刪除而移除；帳號刪除後，其中的識別碼在 Folio 已無對應的個人檔案可回溯。</li>
     </ul>
   </div>
 
   <h2>長期未使用的帳戶</h2>
-  <p>若您的帳戶<strong>連續 24 個月未登入</strong>，系統會自動刪除該帳戶與相關資料，處理範圍與您自行刪除帳戶相同。</p>
+  <p>若您的帳戶<strong>連續 24 個月未登入、且期間內未開啟使用 App</strong>（訂閱有效期間的支持者除外），系統會在每月例行作業中自動刪除該帳戶與相關資料，處理範圍與您自行刪除帳戶相同。</p>
 
   <h2>聯絡我們</h2>
   <p>如對帳戶或資料刪除有任何疑問，請來信：<a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a></p>
@@ -224,45 +236,57 @@
     <p>Upon deletion, the following data is <strong>permanently deleted</strong>:</p>
     <ul>
       <li>Your sign-in account (Google / Apple)</li>
-      <li>Profile: nickname, gender, date of birth, location, book category preferences, personality answers</li>
-      <li>All posts you published, and applications you submitted</li>
+      <li>Profile: nickname, character styling, gender, date of birth, location, book category preferences, personality answers, mode, and desired gender</li>
+      <li>All posts you published and the applications they received, all applications you submitted, and posts you bookmarked</li>
       <li>Your reading progress and reading share cards</li>
       <li>Notes in your personal bookshelf</li>
+      <li>Notes and reviews you published to "Everyone's sticky notes" (not retained anonymously), plus the loves you gave, band-unlock records, "Notifications for this book" settings, public-wall entry records, and catalogue reports</li>
       <li>Your virtual study rooms: the room, its arrangement, the books on the shelves, the paper-note stack outside the room, and the likes and guestbook comments that room received</li>
       <li>Likes you gave to other people's study rooms</li>
       <li>Drift bottles: bottles you cast, and replies that had not yet become a pen-pal connection (except letters already moved to the archive because they expired, were declined, or were removed by moderation — see the retention note below)</li>
       <li>Friendships, friend and co-reading invitations, and your friend code</li>
-      <li>Your usage-analytics records (feature-tap events, time spent per screen, app open counts)</li>
+      <li>Your usage-analytics records (feature-tap events, time spent per screen, app open counts, and the usage-status snapshot kept to evaluate new features)</li>
       <li>Push notification token</li>
+      <li>In-app notices</li>
       <li>Your block list</li>
     </ul>
   </div>
 
   <h2>Data that is retained, and for how long</h2>
   <div class="card">
-    <p>The following data is <strong>not deleted</strong>, but is <strong>anonymized</strong> (your association is removed; it appears in the app as "a reader who has left"):</p>
+    <p>The following data is <strong>not deleted</strong>, but is <strong>anonymized</strong> (your association is removed; it appears in the app as "A book friend who left"):</p>
     <ul>
       <li>Chat messages within co-reading rooms</li>
       <li>Sticky notes on co-reading note walls</li>
+      <li>Text from your posts or applications preserved in co-reading rooms (motivation, co-reading styles, expected weeks)</li>
       <li>Comments you left in other people's study-room guestbooks</li>
       <li>Drift-bottle correspondence where a pen-pal connection was established (it becomes a read-only memento on the other person's side)</li>
     </ul>
-    <p>Reason: this content is <strong>jointly created</strong> with your reading partners or pen pals; deleting it entirely would destroy the memento they keep. After anonymization, you can no longer be identified.</p>
+    <p>Reason: this content is <strong>jointly created</strong> with your reading partners or pen pals; deleting it entirely would destroy the memento they keep. Anonymization removes the link between this content and your account; however, if the content itself contains information that identifies you, you may still be recognizable.</p>
     <p>The following stays with the person who received it:</p>
     <ul>
       <li>Copies of drift-bottle letters you sent that others have saved to their own letter box (kept until that person deletes them)</li>
-      <li>Letters of yours already moved to the drift-bottle archive (expired, declined, or removed by moderation): the text is cleared automatically 2 years after archiving, and is not shown to any user in the meantime</li>
+    </ul>
+    <p>The following is archived by Folio and not shown to any user:</p>
+    <ul>
+      <li>Letters of yours already moved to the drift-bottle archive (expired, declined, or removed by moderation): the text is cleared automatically 2 years after archiving</li>
+    </ul>
+    <p>The following is retained for statistics or system operation:</p>
+    <ul>
+      <li>Daily active-user list (only the date and an account identifier, used to calculate activity and retention): kept after account deletion so that historical statistics are not rewritten; the identifier it holds no longer resolves to any profile on Folio.</li>
+      <li>Timing records used for rate limiting (for example when you liked a room or looked up a friend code; containing no content): may be kept after you delete your account.</li>
+      <li>Daily database backups, kept for 7 days: deleted data disappears from backups as they rotate.</li>
     </ul>
     <p>The following is retained to meet legal obligations or safety needs:</p>
     <ul>
-      <li>Terms-of-service consent records: retained for <strong>5 years</strong> from the moment you gave consent, stored as a hash that cannot be traced back to your identity.</li>
-      <li>Payment and subscription event records: plan tier, purchase and renewal, expiry events, and store-side transaction identifiers. Kept as financial records for reconciliation, refund disputes, and the retention duties under the Commercial Accounting Act and the Tax Collection Act, with no fixed deletion period. Once you delete your account, the link between these records and your profile is removed; the records still hold the store-side transaction identifiers and the account identifier used by the subscription service (RevenueCat), which is deliberately kept because it is necessary for investigating refund disputes and no longer resolves to any profile on Folio.</li>
+      <li>Terms-of-service consent records: retained for <strong>5 years</strong> from the moment you gave consent, containing the terms version, time, and method of consent, the IP address and device identifier string at that moment, and a salted hash of your email (which cannot be reversed to recover your email).</li>
+      <li>Payment and subscription event records: plan tier, amount and currency, store country or region code, purchase and renewal, expiry events, and store-side transaction identifiers. Kept as financial records for reconciliation, refund disputes, and the retention duties under the Commercial Accounting Act and the Tax Collection Act, with no fixed deletion period. Once you delete your account, the link between these records and your profile is removed; the records still hold the store-side transaction identifiers and the account identifier used by the subscription service (RevenueCat), which is deliberately kept because it is necessary for investigating refund disputes and no longer resolves to any profile on Folio.</li>
       <li>Report and enforcement records: a closed report is retained for <strong>5 years</strong> and then deleted automatically. Moderation action audit records (action type, time, and a snapshot of the content at that moment) are retained to prevent suspension evasion, for community-safety auditing, and for legal defence, and are not removed when an account is deleted; after deletion the identifier they hold no longer resolves to any profile on Folio.</li>
     </ul>
   </div>
 
   <h2>Accounts that go unused</h2>
-  <p>If your account has <strong>no sign-in for 24 consecutive months</strong>, it is deleted automatically along with the related data, with the same scope as deleting the account yourself.</p>
+  <p>If your account has <strong>no sign-in and no use of the app for 24 consecutive months</strong> (except supporters with an active subscription), it is deleted automatically in a monthly routine job along with the related data, with the same scope as deleting the account yourself.</p>
 
   <h2>Contact us</h2>
   <p>For any questions about account or data deletion, email: <a href="mailto:folio0427@gmail.com">folio0427@gmail.com</a></p>
@@ -270,7 +294,7 @@
   </section>
   </main>
 
-  <p class="updated">Folio · 最後更新 Last updated: 2026-08-28</p>
+  <p class="updated">Folio · 最後更新 Last updated: 2026-09-17</p>
 </div>
 </body>
 </html>

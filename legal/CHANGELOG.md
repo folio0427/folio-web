@@ -11,6 +11,176 @@
 
 ---
 
+## terms v1.8 / privacy v1.9 — 2026-09-17
+
+> **發佈批次** — manifest.json terms 1.8 + privacy 1.9、effective_date 2026-09-17（push 當日）。
+> 發佈程序：commit + push folio-web → GitHub Action 同步 tos_versions → 回 `<folio>` 跑
+> `scripts/sync_legal.sh` 更新 app bundled fallback → build。
+> change_type = **major（terms）/ data_consent_required（privacy）** → **全體用戶跳阻擋式
+> modal 重新同意**。
+> ⚠ **本批是補揭露**：「大家的便利貼」client 已先於本批上線（prod 2026-09-16 起已有真人公開
+> 便利貼；國際區 2026-09-17 由 v174 開啟），應儘速發佈。
+> **鐵則**：本批上線後、在多數用戶尚未同意前不可再疊 minor 發布。
+
+**狀態**：正式（生效日 2026-09-17）
+**文件**：terms_zh.md、terms_en.md、privacy_zh.md、privacy_en.md、manifest.json、delete-account.html
+**變更類型**：
+- terms **major** — 新增「公開發布」之權利義務（三種公開操作、書評一律公開含評分、授權範圍擴及公開
+  與彙整顯示、收回之界限、下架與功能限制）；停權通知管道更正（不寄 Email）
+- privacy **data_consent_required** — 新增蒐集項目、新增可見範圍（同社群分區全體、不適用心態過濾
+  矩陣、書評逐則顯示評分）、新增使用目的（以全體書櫃彙總計數做推薦與榜單）、新增第三方接收者
+  （Google Books / Open Library / 國家圖書館因封面直連而取得 IP）
+
+**校對紀錄（2026-09-17，對照 master 之 migrations、client 程式碼與 prod schema）**——09-15 初稿有下列
+錯誤與缺漏，本批已更正後才發佈：
+- 初稿「不顯示您個別給了幾分」→ **錯**：每則書評逐則顯示作者評分＋暱稱／匿名書友＋年月、可依評分
+  排序（wire 帶 `rating`；`club_screen.dart` 書評卡）
+- 初稿以「勾選『也貼到大家的便利貼』」為唯一公開路徑 → **不完整**：另有「貼上牆」
+  （`club_publish_note`）與書評（`club_upsert_review`，無勾選框、一律公開）；勾選框路徑固定署名
+- 初稿「撤回或下架後只留不含內容之紀錄（時間、書籍、事件類型）」→ **錯**：撤回墓碑
+  `club_publish_log` 只有 user_id／kind／created_at、7 天清除；**下架**寫入 `moderation_actions`
+  整列快照（含 content、永久保存）；檢舉快照含作者暱稱／性別／生日／心態、結案後 5 年
+- 初稿「發布當下您所在之閱讀段落」→ 段落由作者自選、server 只檢查不超過可讀段；段落可自行解鎖
+  （`club_unlock_to`）
+- 初稿書目回報欄位「書名、作者、ISBN」→ 拆房只收作者（存為 `reason`）；缺書回報之書名由 server
+  取自書櫃、作者／ISBN 選填
+- 初稿封面來源只列 Google Books / Open Library → **漏列國家圖書館**（`pdsapp.ncl.edu.tw`：內建
+  `book_art.json` 94 筆、prod `book_catalog` 53 筆）
+- 初稿未揭露：書友頁可開個人資料卡且**不適用心態過濾矩陣**（`v_public_profiles` 無心態過濾）、書友頁
+  可送附留言之好友邀請；封鎖不影響匿名貼；段落透露閱讀進度；編輯雙向連動；推薦與榜單使用全體書櫃
+  彙總（含未用書圈者）；上線時凍結之逐人快照（`club_launch_cohort`，含心態、性別）
+- 初稿 manifest 摘要含 `**` → `tos_update_modal.dart` 以純 `Text` 顯示、會把星號原樣秀給用戶；已去除
+
+**發佈前第二輪獨立覆核（2026-09-17，逐條對照 prod 之 schema、函式、FK、cron 與 client 程式碼）修正之項目**：
+- privacy §04「性別、年齡」**既有條文與實作不符**：原寫「依過濾矩陣顯示、純粹書友之檢視者不顯示性別」；實作為
+  貼文卡、貼文詳情、共讀室顯示性別，貼文詳情、共讀室、報名資料、個人檔案顯示年齡，皆不看檢視者心態
+  （`post_card.dart`、`post_detail_screen.dart`、`room_screen.dart`、`applicants_screen.dart`、
+  `peer_profile_sheet.dart`；過濾矩陣只決定貼文是否可見與「想找的性別」是否顯示）。改為據實描述、摘要列為更正
+- privacy §04 **補揭露既有第三方 Resend（美國）**：`submit_report` 於理由含 minor／sexual 時寄信給管理人員，
+  內含檢舉理由、對象類型、檢舉人自填說明與 report_id（不含快照）；§05 跨境與 APP 8 一併補上
+- privacy §06 **補揭露每日活躍名單** `daily_active_users`（day、user_id）：v28 刻意不設 FK（刪帳號不回頭改寫
+  歷史活躍），prod 有 1,125 列屬已刪除帳號，與「使用分析原始紀錄隨帳戶刪除」不符；比照 supporter_events
+  之處理據實揭露、不洗資料；delete-account.html 同步
+- privacy §06 逐人快照改為已發生：`club_launch_cohort` 已於 2026-09-10 凍結，原文「可能於新功能上線時保存」
+  改為「已於上線前保存一份、並可能再保存」；摘要一併揭露
+- 段落決定方式：只有「貼上牆」由作者自選；勾選框路徑依該則之頁數或進度標記、未標記時依當下書櫃進度
+  （`club_also_post.dart`）
+- 補揭露「貼上牆」會同時建立書櫃私人便利貼、書不在書櫃時一併加入（進度 0%）（`club_write_sheet.dart`）
+- 愛心相關紀錄據實拆開：`club_note_likes`（目前之愛心）、`club_like_events`（只有 user_id 與時間、頻率限制用、
+  本人下次操作時清除 2 天以前者）、`club_note_like_push_log`（誰按過哪一則、取消愛心後仍保留）、
+  `club_like_notify_day`、`club_bell_push_log`
+- 瀏覽紀錄 `club_view_log` 由 `club_bake_boards()` 每日清一次：「保留 2 天」改為「約 2 至 3 天」；補
+  `club_read_hourly`（每小時計次、3 小時後刪除）
+- `club_publish_log` 除收回墓碑外亦記錄每次發布（配額用）：補揭露
+- 下架後阻擋再公開之範圍以私人便利貼家族為單位（`notes.club_removed_at`）：terms、privacy 與摘要改為
+  「該私人便利貼日後無法再用於公開」
+- 補揭露私人便利貼上之 `club_anon_at`、`named_on_wall_at`、`club_removed_at` 標記（收回公開內容後仍保留、
+  隨該私人便利貼刪除）
+- 補註禁言期間修改連動中斷（`notes_sync_club_copy` 對禁言者跳過、`club_edit_note` 被 guard 擋下）
+- 檢舉快照補列：書名、社群分區、修改時間、作者帳號建立時間
+- 推薦與榜單：「最近熱門」另用閱讀進度更新時間與署名作者數；輸入書名時之建議排序用全站書櫃彙總
+  （`book_shelf_pop`）
+- 補揭露：`book_pick`（同名書之版本選擇）、已署名書評可事後改為匿名
+- **本批只揭露目前上線版 App（1.0.16+21）實際發生之處理**（創辦人 2026-09-17 指示「條款要對齊目前 App
+  上線的情況」）。因此移出本批：國際區以書名＋作者向 Apple iTunes Search API 查詢封面、自 mzstatic.com
+  載圖、向 Open Library 取每週熱門書單、查得之封面網址寫入 `books.cover_url`（prod 目前 0 列），以及
+  匯入 Goodreads／StoryGraph 匯出檔；兩者皆在 `international_ver` 分支、尚未發版。`progress.source` 亦移出
+  （prod 38,059 列全為 NULL、上線版 client 未寫入）。**國際區版本發版前須另發一批 data_consent_required**
+  （Apple 為新增第三方接收者）
+- 「發現頁」改為「大家的便利貼」之「發現」分頁（介面沒有「發現頁」之稱）
+- EN：三種心態名稱與 App 不一致，且同一份文件內 "Pure Book Friend / Open to Connection / Open" 與
+  "Looking for fate / Open to either" 並存；全數對齊 App 字串 Reading friends only / Looking for fate /
+  Open to either
+- delete-account.html：補「大家的便利貼」公開內容與相關紀錄之刪除、逐人快照之刪除、每日活躍名單之保留；
+  EN「a reader who has left」對齊 App「A book friend who left」；最後更新日改為 2026-09-17
+- 本批新增文字中兩處破折號改為分號（文案規範）
+
+**發佈前第三輪全文稽核（2026-09-17，三組平行逐句核對未改動之舊段落，基準為上線版 origin/master 1.0.16+21 與 prod）修正之項目**：
+- 服務條款：§02 書評一律公開與「可選擇公開」之措辭矛盾、心態名稱對齊 App 選擇畫面「純粹找書友」；§04 冷卻期自註冊時起算
+  （`*_changed_at` 預設建立時間）；§05 停權雜湊只在**永久**停權時記錄、表內另存原帳號識別碼與停權原因；§06「100% 整理頁
+  分享」改為實際可分享之「讀後心得分享卡」（系統分享選單或下載圖片）；§10 書背樣式僅於訂閱結束後不可再改（降級仍可改）；
+  §11 刪除後保留項目不只法令保留、24 個月判準補「且未使用、訂閱中除外」（`purge_dormant_accounts`）
+- 隱私 §02：OAuth 另存 Google 顯示名稱與大頭貼網址；生日為「年齡限制」非驗證；角色造型移至使用過程產生；
+  報名無「想說的話」（UI 從未實作、prod 0 筆）；里程碑「心得」已廢、改列便利貼；貼文補共讀方式與收藏；書房互動補推播
+  去重與頻率限制紀錄；檢舉快照補貼文、書房、留言、漂流瓶對象之個資與檢舉人暱稱；設備資訊補 Firebase 自動收集之裝置型號；
+  IP 實際存於登入工作階段與同意紀錄；操作日誌之功能點選為第一方；購買紀錄補價格、幣別、國家、原因、優惠碼；
+  想找的性別**無冷卻**
+- 隱私 §03：「媒合演算法」改寫為實際機制；**行銷推播機制不存在**、改寫為目前不發送；App 內公告實際含問卷邀請與支持方案介紹
+- 隱私 §04：**RevenueCat 於登入後即以帳號識別碼查詢（非購買時才收）**；補 Firebase Remote Config（每次啟動、備援 GitHub
+  Pages）與 Cloudflare（網站與條款託管、網站頁面載入 Google Fonts）；書房連結路徑不受社群分區限制；勳章已不對他人展示；
+  報名僅發文者可見、分享卡不對他人顯示；共讀夥伴可引用您的牆上便利貼至聊天；**書房讚數僅房主可見**；**回覆漂流瓶時暱稱與
+  頭像即顯示給投瓶人**
+- 隱私 §06：貼文期滿 3 天刪除；**「IP／登入日誌 6 個月至 1 年」查無機制**（`auth.sessions` 無逾時、無清除），改寫為保留至登出或
+  刪帳號；**`tos_notification_log` 從未寫入（prod 0 列）**、刪除該敘述；檢舉紀錄之暱稱與內容快照於刪帳號後仍保留；刑事調查
+  改為「經司法或檢警要求保全」（無 legal hold 機制）；補每日備份 7 天；補頻率限制紀錄可能殘留（`bookcase_like_events`、
+  `friend_invite_lookups` 無 FK）；聊天室無「刪除」功能、雙方皆離開時整房刪除；刪除清單補齊（所有報名、收藏、漂流瓶、
+  站內通知、共讀室中之貼文與報名文字快照匿名保留）；移除具名之業界比較（LINE／WhatsApp／Discord、Bumble／Tinder／Hinge）
+- 隱私 §07：冷卻自註冊起算；自動化決策改寫；敏感資料用途含自有後台彙總統計；澳洲撤回同意之實際方式（來信或改為純粹找書友）
+- 隱私 §08：無 Keychain、補 SQLite 聊天快取與封面快取、補 Remote Config 與 RevenueCat 連線；§09「未經同意之未成年配對」與
+  18+ 矛盾；§10 無密碼（實有審核用 Email 帳號）、最小權限（`profiles` 欄位權限過寬）、日誌監控（查無實作）三句改寫
+- 隱私 §11：破折號改冒號；§12 台灣個資主管機關由 NCC／法務部更正為個人資料保護委員會（籌備處）
+- manifest 四段摘要改寫：對齊正文（所在段落、發布或收回之紀錄、全站書名建議、檢舉快照、刪帳號刪除公開內容、上述校正重點）
+- delete-account.html：同步上述刪除清單、匿名保留、統計與系統保留、同意紀錄內容（IP 與 user-agent 為明文）、付費紀錄欄位、
+  24 個月判準；封存區信件改列「由 Folio 封存」
+
+**Terms 變更（v1.7 → v1.8）：**
+
+- §02 服務性質 — 補上「大家的便利貼」＝每本書一面公開便利貼牆與書評區（含評分）
+- §05 違反處置 — 「限制功能」明列包含暫停公開牆發布權限（`profiles.club_muted_until`）
+- §05 停權通知 — 刪除「與您 OAuth 登入之 email 同時通知」（系統沒有寄信給用戶的機制；實際為 App 內
+  之通知視窗／停權畫面／使用受限功能時之提示）；通知內容改為「視處置類型」（公開牆禁言之提示只有
+  期限、沒有原因）
+- §06 用戶內容 — **新增〈公開發布至「大家的便利貼」〉一節**：三種公開操作（勾選／貼上牆／儲存
+  書評）、書評一律公開含評分；預設署名、貼上牆與書評可匿名；授權範圍及於公開顯示與彙整顯示；須為
+  本人所撰且不侵權；可收回但已被讀過／截圖／抄錄者無從回收；「只刪這裡」與移除整本書不刪公開副本；
+  檢舉下架（之後不可再公開）與功能限制；★ 段落分段不是隱私或權限設定（讀者可自行解鎖）
+- §06 帳號刪除後之留存 — 新增：公開便利貼與書評不適用匿名保留、隨帳號刪除（檢舉／處置快照除外）
+- EN §06 交叉引用更正：「Book References & Copyright」→「Book Citations & Copyright」（對齊 §07 標題）
+
+**Privacy 變更（v1.8 → v1.9）：**
+
+- §02 使用過程產生 — 新增：公開便利貼與書評（文字、評分、書、書名寫法、所選段落、匿名、時間、與
+  私人便利貼之對應）／公開牆互動與使用紀錄（愛心含按／取消時間、解鎖段落含自行解鎖、開過之公開牆與
+  書友頁、進入來源與次數、「這本書的提醒」）／書目回報（拆房：作者；缺書：書櫃原書名＋作者＋
+  ISBN）；社交關係補「附帶之留言與來源」；檢舉對象補「公開便利貼或書評」及其快照內容
+- §03 收集目的 — 新增「書籍推薦與書籍榜單」（全體書櫃彙總計數、含未用書圈者、達一定人數才列入、
+  不顯示身分）；服務型推播例示補「這本書的提醒」
+- §04 — **新增〈您的裝置直接連線之第三方（書籍封面圖片）〉**：Google Books、Open Library、國家
+  圖書館；對方可取得 IP、可由網址（ISBN／書籍識別碼）推知所看之書；本機快取 30 天；非受託處理者。
+  （國際區之 iTunes 封面查詢已移出本批，見上方第二輪覆核）
+- §04 用戶間之顯示 — 社群分區清單補「大家的便利貼」；**新增九點**：可見範圍與三種公開方式；書評逐則
+  顯示評分、可依評分排序；★ 不適用心態過濾矩陣（書友頁、個人檔案、好友邀請）；匿名之範圍與限制
+  （審核人員可見）；封鎖不影響匿名貼；段落透露閱讀進度、段落非隱私設定；修改連動；愛心數公開、書名
+  寫法；可收回
+- §05 跨境傳輸 — 補封面來源（Google 全球／Open Library 美國／國圖臺灣）；APP 8 境外接收者補
+  RevenueCat 美國（第二輪另補 Resend 美國）
+- §06 特定資料之保留期間 — 使用分析補「功能點選事件保留 365 天」與「新功能上線時之逐人使用狀態快照
+  （含心態、性別等、隨帳號刪除）」
+- §06 — **新增〈公開便利貼與書評〉小節**：保留至收回／下架／帳戶刪除（含 24 個月未登入）；「只刪這裡」
+  與移除整本書不刪公開副本；收回墓碑不含內容、7 天清除、刪書評不留；檢舉／下架之快照依既有規定；
+  ★ 刪帳號真實刪除（`club_notes.user_id` ON DELETE CASCADE，prod 已核）；愛心隨貼或按愛心者刪除；
+  瀏覽紀錄 2 天；其餘隨帳號刪除
+- §06 帳戶刪除 — 「會被徹底清除」補公開便利貼與書評等項目
+- §11 變更通知 — **刪除「多管道告知」之 L1 推播／L2 Email／L3 banner**：與 terms §16（v1.7 起「不以
+  Email 或推播通知條款變更」）及本政策 §06「目前之告知管道為 App 內之阻擋式視窗」矛盾；改為與 terms
+  §16 一致。「不勾選將限制相關功能」更正為「未同意無法繼續使用」（對齊 `tos_update_modal.dart` 只有
+  同意／刪除帳戶兩個出口）
+- EN 交叉引用更正：「Platform termination scenarios」→「Platform-initiated termination」；
+  「Retention periods for specific data」→「Specific retention periods」
+
+**已知、未在本批處理（程式面待辦）**：
+- `club_like_events`、`club_like_notify_day` 沒有 user FK，刪帳號後會殘留（prod 目前 0 列）→ 建議補
+  ON DELETE CASCADE
+- App 內文案寫「Folio 上的人都看得到」（實際分社群）；書評 sheet 沒有任何公開告知；空段落首貼提示
+  會蓋掉公開說明；EN 有兩處寫成「Everyone's notes」（master 工作區已修、待發版）
+- `admin_club_mute` 寫入的 `moderation_notices` kind `club_muted`，client `ModerationNoticeKindDb.fromRaw`
+  沒有對應、fallback 成 `postRemoved` → 被禁言者會看到「你的一則貼文因違反社群規範已被移除」之錯誤告知
+  （master 工作區已修、待發版；**發版前後台勿使用公開牆禁言**，prod 目前 0 人被禁言）
+- `bookcase_like_events`（10 列）、`friend_invite_lookups`（20 列）同樣沒有 user FK、刪帳號後有頻率限制用之
+  時間戳殘留 → 建議補 ON DELETE CASCADE 或排程清除
+
+---
+
 ## terms v1.7 / privacy v1.8 — 2026-08-28
 
 > **發佈批次** — manifest.json terms 1.7 + privacy 1.8、effective_date 2026-08-28（push 當日）。
