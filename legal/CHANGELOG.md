@@ -11,6 +11,99 @@
 
 ---
 
+## terms v1.8（未變更）/ privacy v1.10 — 2026-09-22（草稿／未發佈）
+
+> **草稿批次** — manifest.json privacy 1.10、terms 維持 1.8 不動。
+> ⚠ **尚未 commit、尚未 push。`push` 那一下就是發佈**（無預覽、無排程）。
+> **effective_date 2026-09-22 是佔位值**、實際 push 當日必須把**四處日期**一起改成當天：
+> ① `manifest.json` 的 `privacy.effective_date`（`YYYY-MM-DDT00:00:00+08:00`）；
+> ② `privacy_zh.md` 第 3 行標頭的「生效日」與「最後更新」；
+> ③ `privacy_en.md` 第 3 行標頭的 Effective Date 與 Last Updated；
+> ④ 本條目之標題日期與本段。（`terms` 區塊之 effective_date 2026-09-17 **不要動**。）
+> 發佈程序：commit + push folio-web → GitHub Action `sync-tos-versions` 同步 tos_versions →
+> 回 `<folio>` 跑 `scripts/sync_legal.sh` 更新 app bundled fallback → build。
+> push 前先 `git fetch`、看 `prerender-legal.yml` 有沒有自己 commit 新的渲染 html。
+> change_type = **data_consent_required（privacy）** → **全體用戶跳阻擋式 modal 重新同意**。
+> ⚠ **時機**：terms 1.8 / privacy 1.9（2026-09-17）那一批仍在收集全體同意。本批是在其上再疊一層
+> **data_consent_required**（不是 minor、不觸犯「不可把 minor 疊在尚未被同意的 major 之上」之鐵則），
+> 但兩批相隔數日、使用者會連續看到兩次阻擋式視窗；請與 1.0.17 發版時程一起決定發佈日。
+> ★ **本批應早於 app 1.0.17 上架**：所揭露的兩項處理都只在 1.0.17 才發生（匯入書單、每日 Open
+> Library 熱門書單），條款先行是正常順序；1.9 那批是上線後補揭露、勿重演。
+
+**另改（2026-09-23 補）**：漂流瓶「回覆他人漂流瓶時暱稱與頭像隨回信顯示」改為「回信同樣以匿名方式（「遠方的讀者」）送達、成立筆友後才互相顯示暱稱」—— 對齊 app 1.0.17 起的實際行為（創辦人 09-17 裁定；伺服器端推播 `notify_drift` v15 已先上線、app 端隨 1.0.17 上線）。舊句沿用自 1.9、若不改會變成「文件說得比實際更揭露」。
+
+**狀態**：草稿／未發佈（生效日 2026-09-22 為佔位）
+**文件**：privacy_zh.md、privacy_en.md、manifest.json
+**變更類型**：
+- terms **未變更、維持 1.8** — 逐句核對後無一句因本批而失真：§02 服務性質未宣稱書目來源；§06 UGC
+  清單已含「書名」（匯入上傳的就是書名與作者文字）；§07 書籍引用與著作權只規範「書籍原文」之引用與
+  上傳、匯入不涉及原文。故本批不動 terms
+- privacy **data_consent_required** — **新增資料來源**（您裝置上的 Goodreads／StoryGraph 匯出檔）
+  與**新增離開裝置之欄位**（書名、匯出檔所載之作者文字、該列是否已讀），屬新增蒐集項目；並新增一個
+  站方伺服器對外之公開資料來源（Open Library 每週熱門書單、英文書目資料集）
+
+**Privacy 變更（v1.9 → v1.10）：**
+
+- §02 使用過程產生 — **新增兩點〈匯入書單〉**（僅國際區）：以作業系統檔案選取器挑選 Goodreads /
+  StoryGraph 匯出檔（CSV）、**完全於裝置本機解析**；上傳者只有**書名、匯出檔所載之作者文字、該列是否
+  標記為已讀**（已讀＝進度 100%、其餘 0%、**不覆蓋既有進度**）；上傳之書名僅與站方書目比對（同手動
+  加書）；匯入之書即書房內容、適用相同之顯示／保留／刪除規則。第二點逐項列出**不上傳亦不儲存**者：
+  評分、閱讀日期、已讀與否以外之書架名稱、書評文字、檔案本身；並寫明匯入結束後不於裝置保留
+  （第二輪：ISBN 改為「送伺服器比對站方書目後即捨棄、不儲存」——client 1.0.17 匯入時用 ISBN 釘選作品，見 v191）
+  該檔案或解析結果
+- §03 收集目的 — 書籍推薦與榜單之輸入補「（含您以『匯入書單』加入之書）」（匯入之書進書櫃、就會進
+  既有的彙總計數，不補這一句等於漏講目的擴張）
+- §04〈您的裝置直接連線之第三方（書籍封面圖片）〉— **新增一點**寫明此方式適用 App 內**所有**顯示封面
+  之畫面（書籍頁、書櫃、貼文卡、共讀室列表），並說明版面顯示封面之處較多時、載入次數隨之增加
+  （國際區版面之直接後果；**未新增任何主機**，Google Books／Open Library／國家圖書館三家不變）
+- §04 — **新增〈公開書目資料來源（不接收您的個人資料）〉小節**三點：伺服器每日一次向 Open Library
+  （Internet Archive、美國）取公開之每週熱門書單供國際區瀏覽；英文書目（約 17 萬筆、僅書目欄位）取自
+  其公開資料集；★ 兩者皆由**伺服器**發出、**不含帳號識別碼／IP／書櫃內容**、Open Library 於此為
+  **資料來源而非接收者**；另明寫「匯入書單**不連線 Goodreads／StoryGraph**、不向任何第三方傳送書單」
+- §04 用戶間之顯示 — 社群分區那一點補上**澄清**：**站方書目資料（書名、作者等非用戶內容）不受社群
+  分區限制**、搜尋或輸入書名時可能看到另一分區目錄之書（標示為其他語言）；**惟該等書上之公開便利貼、
+  書評與書友頁仍僅限同一社群分區**（`book_suggest`／`club_search` 分區感知、`club_*` 牆照舊同區）
+- §05 跨境傳輸 — **新增一點**：匯入之解析在裝置完成、僅前述三項上傳至 Supabase（新加坡）；伺服器每日
+  向 Open Library（美國）取熱門書單之連線**不含個人資料、非個人資料之跨境傳輸**
+- §06 保留期間 — **刻意未改**：匯入之書即書房內容、既有「帳戶存續期間保留以提供服務」與帳戶刪除清單
+  之「您的書房（書與個人便利貼）」已完全涵蓋；CSV 檔案與解析結果不留存、無保留期間可寫
+- §08 Cookie 與類似技術 — **未改**：匯入不於裝置新增任何儲存（檔案只讀進記憶體、`readAsString`）
+
+**核對紀錄（2026-09-22，對照 `<folio>` master 工作區之 client 程式碼與 edge function）：**
+- 上傳欄位逐行核對 `app/lib/services/library_import_runner.dart`：只有 `title`（經
+  `stripBookTitleWrapping`）、`bookAuthor: row.author`、`percent: status == read ? 100 : 0`
+  三項離開裝置；`upsert_book` 一參數（不釘選目錄作品）；`authoritativePercent: false` ＝ 既有進度不被
+  蓋掉（`kImportAuthoritativePercent` 常數 + 測試釘死）
+- 解析器 `library_import.dart` 確有讀出 `rating` / `dateRead` / `isbn13`，但**三者只進記憶體與結果卡
+  計數、從不上傳**；條文據此寫「不上傳亦不儲存」而非「不解析」（寫「不讀取」會是假的）
+- ★ **與上游說明不一致之處**：上游描述「書名會去除 Goodreads 的系列字尾（例如 `(Mistborn, #1)`）」，
+  但 client 現況**沒有任何系列字尾處理** —— `stripBookTitleWrapping` 只脫外層《》並 trim
+  （`app/lib/util/book_title.dart`）。條文因此只寫「書名」、**不寫「去除系列字尾後的書名」**（照上游
+  寫法會是不實陳述）。若 1.0.17 發版前補上該處理、本條文仍為真、不必改
+- 檔案生命週期核對 `app/lib/screens/proto/me/import_library_flow.dart`：`openFile` →
+  `file.readAsString()` → 字串進 parser；**全程無任何寫檔、無快取、無 SharedPreferences**
+- 每日熱門書單核對 `supabase/functions/fetch_ol_trending/index.ts`：cron 台北 05:10 →
+  `dispatch_fetch_ol_trending()` → edge fn 打 `openlibrary.org/trending/weekly.json`；送出的只有
+  User-Agent 與 function secret `OL_CONTACT_EMAIL`（Folio 官方信箱、**非用戶資料**）；結果寫
+  `club_trending_cache`、只對 intl 有值
+- 分區澄清核對 `supabase/migrations/20260920110000_v181_book_identity_functions.sql` 第 4 節
+  （`book_suggest` / `club_search` 分區感知、另一分區之目錄結果標「其他語言」；`club_key_check` 以
+  呼叫者分區解析）
+
+**刻意未納入本批（寫進來就是不實陳述）：**
+- **Apple iTunes Search API / mzstatic 封面**：1.0.16 未用、1.0.17 亦已廢（09-17 那批移出時列為「發版前
+  須另發一批」之理由已消滅）。**不得**寫進第三方或跨境清單
+- `progress.source`：prod 全為 NULL、匯入路徑未寫入
+- 閱讀日誌（reading journal）／相機／OCR：未發版，§02「不收集：麥克風、相機」維持原狀
+- Goodreads／StoryGraph **帳號連結或 API 串接**：不存在、只有使用者自己挑的檔案
+
+**已知、未在本批處理（程式面待辦）：**
+- 匯入每本書走一次 `upsert_book`（每日 400 本配額）、撞配額即中止；條款不寫配額（屬服務限制、非隱私）
+- 國際區版面現況幾乎無封面可載（`books.cover_url` prod 15,447 本只有 1 本有值）；§04 新增那句講的是
+  機制而非現況，`upsert_book` 釘選時抄目錄封面做完後才會真的變多，屆時無須再改條款
+
+---
+
 ## terms v1.8 / privacy v1.9 — 2026-09-17
 
 > **發佈批次** — manifest.json terms 1.8 + privacy 1.9、effective_date 2026-09-17（push 當日）。
