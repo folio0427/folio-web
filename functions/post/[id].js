@@ -14,23 +14,40 @@ const PLAY_STORE =
   "https://play.google.com/store/apps/details?id=com.yuliao.folio";
 const SITE = "https://foliomatch.app/";
 
-// 語言：`?lang=en|zh` 明確指定 > Accept-Language 第一個語言是否 zh 開頭 > 預設繁中。
-// 只分兩種（繁中／英文），跟 app 的規則一樣：非 zh 一律英文。沒帶 header 的
-// 平台爬蟲（LINE / Facebook 抓 og 預覽）維持繁中，跟改版前完全一樣；分享者是
-// 英文介面時 app 端可在網址加 ?lang=en，讓預覽卡也是英文。
-function pickLang(request) {
+// 語言。只分兩種（繁中／英文），跟 app 的規則一樣：非 zh 一律英文。
+//
+// ★ 抓 og 預覽的機器人和真人分開判斷。機器人送來的 Accept-Language 不一定是
+//   分享者的語言：網路上記錄到 Facebook 的爬蟲送 en-US（LINE 的送分享者自己的
+//   zh-TW，但只有一筆紀錄，不能當規則）。照 header 走的話，台灣用戶分享到
+//   Facebook／Messenger／Threads 的預覽卡會變英文。所以：
+//   - 機器人：只認 `?lang`（app 1.0.17 起英文介面分享才會帶 `?lang=en`），
+//     沒帶就繁中，跟改版前逐字相同。
+//   - 真人：Accept-Language 第一個語言 > `?lang` > 繁中。`?lang` 說的是「分享者」
+//     的介面語言；點開來讀的是另一個人，他的瀏覽器語言才是他讀得懂的。
+const PREVIEW_BOT =
+  /facebookexternalhit|facebot|meta-external|line-poker|whatsapp|telegrambot|twitterbot|slackbot|discordbot|linkedinbot|pinterestbot|skypeuripreview|kakaotalk-scrap|embedly|bot\/|crawler|spider/i;
+
+function langParam(request) {
   let q = "";
   try {
     q = (new URL(request.url).searchParams.get("lang") || "").toLowerCase();
   } catch (_) {}
   if (q === "en") return "en";
   if (q === "zh" || q.startsWith("zh-")) return "zh";
+  return null;
+}
+
+function pickLang(request) {
+  const param = langParam(request);
+  if (PREVIEW_BOT.test(request.headers.get("user-agent") || "")) {
+    return param || "zh";
+  }
   const first = (request.headers.get("accept-language") || "")
     .split(",")[0]
     .trim()
     .toLowerCase();
-  if (!first) return "zh";
-  return first.startsWith("zh") ? "zh" : "en";
+  if (first) return first.startsWith("zh") ? "zh" : "en";
+  return param || "zh";
 }
 
 const STR = {
