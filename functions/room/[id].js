@@ -24,6 +24,71 @@ const PLAY_STORE =
   "https://play.google.com/store/apps/details?id=com.yuliao.folio";
 const SITE = "https://foliomatch.app/";
 
+// 語言：`?lang=en|zh` 明確指定 > Accept-Language 第一個語言是否 zh 開頭 > 預設繁中。
+// 只分兩種（繁中／英文），跟 app 的規則一樣：非 zh 一律英文。沒帶 header 的
+// 平台爬蟲（LINE / Facebook 抓 og 預覽）維持繁中，跟改版前完全一樣；分享者是
+// 英文介面時 app 端可在網址加 ?lang=en，讓預覽卡也是英文。
+function pickLang(request) {
+  let q = "";
+  try {
+    q = (new URL(request.url).searchParams.get("lang") || "").toLowerCase();
+  } catch (_) {}
+  if (q === "en") return "en";
+  if (q === "zh" || q.startsWith("zh-")) return "zh";
+  const first = (request.headers.get("accept-language") || "")
+    .split(",")[0]
+    .trim()
+    .toLowerCase();
+  if (!first) return "zh";
+  return first.startsWith("zh") ? "zh" : "en";
+}
+
+// 文案分兩套；帶房名／暱稱的句子是函式，呼叫時傳的是**已逸出**的字串。
+const STR = {
+  zh: {
+    htmlLang: "zh-Hant",
+    ogLocale: "zh_TW",
+    ogTitle: (owner) =>
+      owner ? `來 Folio 看看 ${owner} 的書房吧` : "來 Folio 看看這間書房吧",
+    title: (name, ogTitle) => (name ? `${name}｜Folio 書房` : ogTitle),
+    heading: (name, owner) =>
+      name
+        ? `到〈${name}〉坐坐`
+        : owner
+          ? `${owner} 邀請你參觀他的書房`
+          : "有人邀請你參觀他的書房",
+    ogDesc: (name) =>
+      name
+        ? `〈${name}〉—— 每個人都能在 Folio 佈置一間屬於自己的書房，擺上讀過的書。`
+        : "每個人都能在 Folio 佈置一間屬於自己的書房，擺上讀過的書。",
+    p: "Folio 是以書交友的 app。每個人都能佈置一間自己的書房，把讀過的書擺上去 —— 打開 Folio 就能走進這一間。",
+    primary: "下載 / 開啟 Folio",
+    ghost: "已安裝？用 App 開啟",
+  },
+  en: {
+    htmlLang: "en",
+    ogLocale: "en_US",
+    ogTitle: (owner) =>
+      owner
+        ? `Come see ${owner}'s study on Folio`
+        : "Come see this study on Folio",
+    title: (name, ogTitle) => (name ? `${name} | Folio Study` : ogTitle),
+    heading: (name, owner) =>
+      name
+        ? `Come sit a while in “${name}”`
+        : owner
+          ? `${owner} invites you to visit their study`
+          : "Someone invites you to visit their study",
+    ogDesc: (name) =>
+      name
+        ? `“${name}” — Everyone can arrange a study of their own on Folio and put the books they've read on the shelves.`
+        : "Everyone can arrange a study of their own on Folio and put the books they've read on the shelves.",
+    p: "Folio is an app for making friends through books. Everyone can arrange a study of their own and put the books they've read on the shelves. Open Folio to step into this one.",
+    primary: "Download / Open Folio",
+    ghost: "Already installed? Open in the app",
+  },
+};
+
 /** HTML 逸出 —— 房名是使用者自由輸入，直接內插等於開一個 XSS。 */
 function esc(s) {
   return String(s)
@@ -87,25 +152,21 @@ export async function onRequestGet(context) {
 
   // 標題以**人**為主詞（Max 2026-08-18：「來 Folio 看看 XX 的書房吧」）——
   // 收到連結的人在意的是「誰找我」，不是房間叫什麼。
-  const ogTitle = owner
-    ? `來 Folio 看看 ${safeOwner} 的書房吧`
-    : "來 Folio 看看這間書房吧";
-  const title = name ? `${safeName}｜Folio 書房` : ogTitle;
-  const heading = name
-    ? `到〈${safeName}〉坐坐`
-    : (owner ? `${safeOwner} 邀請你參觀他的書房` : "有人邀請你參觀他的書房");
-  const ogDesc = name
-    ? `〈${safeName}〉—— 每個人都能在 Folio 佈置一間屬於自己的書房，擺上讀過的書。`
-    : "每個人都能在 Folio 佈置一間屬於自己的書房，擺上讀過的書。";
+  const t = STR[pickLang(context.request)];
+  const ogTitle = t.ogTitle(safeOwner);
+  const title = t.title(safeName, ogTitle);
+  const heading = t.heading(safeName, safeOwner);
+  const ogDesc = t.ogDesc(safeName);
 
   const html = `<!doctype html>
-<html lang="zh-Hant">
+<html lang="${t.htmlLang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${title}</title>
 <meta name="robots" content="noindex">
 <meta property="og:title" content="${ogTitle}">
+<meta property="og:locale" content="${t.ogLocale}">
 <meta property="og:description" content="${ogDesc}">
 <meta property="og:image" content="${cardImg}">
 <meta property="og:url" content="https://foliomatch.app/room/${id}">
@@ -128,10 +189,10 @@ export async function onRequestGet(context) {
 <body>
   <img src="https://foliomatch.app/assets/folio_icon.webp" alt="Folio">
   <h1>${heading}</h1>
-  <p>Folio 是以書交友的 app。每個人都能佈置一間自己的書房，把讀過的書擺上去 —— 打開 Folio 就能走進這一間。</p>
+  <p>${t.p}</p>
   <div class="btns">
-    <a class="btn primary" href="${store}">下載 / 開啟 Folio</a>
-    <a class="btn ghost" href="${scheme}">已安裝？用 App 開啟</a>
+    <a class="btn primary" href="${store}">${t.primary}</a>
+    <a class="btn ghost" href="${scheme}">${t.ghost}</a>
   </div>
   <script>
     // 既裝情境下 Universal Link 已直接開 App、走不到這頁；保險再試一次 custom scheme，

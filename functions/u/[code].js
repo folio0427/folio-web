@@ -16,6 +16,56 @@ const PLAY_STORE =
   "https://play.google.com/store/apps/details?id=com.yuliao.folio";
 const SITE = "https://foliomatch.app/";
 
+// 語言：`?lang=en|zh` 明確指定 > Accept-Language 第一個語言是否 zh 開頭 > 預設繁中。
+// 只分兩種（繁中／英文），跟 app 的規則一樣：非 zh 一律英文。沒帶 header 的
+// 平台爬蟲（LINE / Facebook 抓 og 預覽）維持繁中，跟改版前完全一樣；分享者是
+// 英文介面時 app 端可在網址加 ?lang=en，讓預覽卡也是英文。
+function pickLang(request) {
+  let q = "";
+  try {
+    q = (new URL(request.url).searchParams.get("lang") || "").toLowerCase();
+  } catch (_) {}
+  if (q === "en") return "en";
+  if (q === "zh" || q.startsWith("zh-")) return "zh";
+  const first = (request.headers.get("accept-language") || "")
+    .split(",")[0]
+    .trim()
+    .toLowerCase();
+  if (!first) return "zh";
+  return first.startsWith("zh") ? "zh" : "en";
+}
+
+const STR = {
+  zh: {
+    htmlLang: "zh-Hant",
+    ogLocale: "zh_TW",
+    title: "Folio — 加我為好友",
+    ogTitle: "Folio — 在 Folio 加我為好友",
+    ogDesc: "用我的好友碼，在 Folio 上加我，一起讀一本書。",
+    h1: "在 Folio 加我為好友",
+    p: "Folio 是以書交友的 app — 一起讀一本書，慢慢認識。下載後輸入下面的好友碼加我。",
+    codeLabel: "好友碼",
+    download: "下載 Folio",
+    site: "前往 Folio 官網下載",
+    ghost: "已安裝？用 App 開啟",
+    hint: "在 Folio 的「聊天 → 好友 → 加好友」輸入好友碼，送出後我確認就成立。",
+  },
+  en: {
+    htmlLang: "en",
+    ogLocale: "en_US",
+    title: "Folio — Add me as a friend",
+    ogTitle: "Folio — Add me on Folio",
+    ogDesc: "Use my friend code to add me on Folio and read a book together.",
+    h1: "Add me on Folio",
+    p: "Folio is an app for making friends through books: read one together and get to know each other slowly. Download it and enter the friend code below to add me.",
+    codeLabel: "FRIEND CODE",
+    download: "Download Folio",
+    site: "Get Folio from the website",
+    ghost: "Already installed? Open in the app",
+    hint: "In Folio, go to Rooms → Friends → Add friend and enter the code. Once I confirm, we're friends.",
+  },
+};
+
 export async function onRequestGet(context) {
   const rawCode = context.params.code || "";
   // 好友碼安全化：只留英數、轉大寫、長度封頂，擋 HTML / scheme 注入。
@@ -27,28 +77,30 @@ export async function onRequestGet(context) {
   const isIOS = /iPhone|iPad|iPod/i.test(ua);
   const isAndroid = /Android/i.test(ua);
   const scheme = `foliomatch://u/${code}`;
+  const t = STR[pickLang(context.request)];
 
   // 主商店依平台；桌機兩個都給。
   const primary = isIOS ? APP_STORE : isAndroid ? PLAY_STORE : null;
 
   const codeBlock = code
-    ? `<div class="code"><span class="code-label">好友碼</span><span class="code-val">${code}</span></div>`
+    ? `<div class="code"><span class="code-label">${t.codeLabel}</span><span class="code-val">${code}</span></div>`
     : "";
 
   // 桌機（無 primary）：region-less App Store 連結會 404 → 一律導官網（有商店 badge）。
   const storeBtns = primary
-    ? `<a class="btn primary" href="${primary}">下載 Folio</a>`
-    : `<a class="btn primary" href="${SITE}">前往 Folio 官網下載</a>`;
+    ? `<a class="btn primary" href="${primary}">${t.download}</a>`
+    : `<a class="btn primary" href="${SITE}">${t.site}</a>`;
 
   const html = `<!doctype html>
-<html lang="zh-Hant">
+<html lang="${t.htmlLang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Folio — 加我為好友</title>
+<title>${t.title}</title>
 <meta name="apple-itunes-app" content="app-id=6771667110">
-<meta property="og:title" content="Folio — 在 Folio 加我為好友">
-<meta property="og:description" content="用我的好友碼，在 Folio 上加我，一起讀一本書。">
+<meta property="og:title" content="${t.ogTitle}">
+<meta property="og:locale" content="${t.ogLocale}">
+<meta property="og:description" content="${t.ogDesc}">
 <meta property="og:image" content="https://foliomatch.app/assets/welcome.webp">
 <meta property="og:url" content="https://foliomatch.app/u/${code}">
 <meta name="twitter:card" content="summary_large_image">
@@ -78,14 +130,14 @@ export async function onRequestGet(context) {
 </head>
 <body>
   <img src="https://foliomatch.app/assets/folio_icon.webp" alt="Folio">
-  <h1>在 Folio 加我為好友</h1>
-  <p>Folio 是以書交友的 app — 一起讀一本書，慢慢認識。下載後輸入下面的好友碼加我。</p>
+  <h1>${t.h1}</h1>
+  <p>${t.p}</p>
   ${codeBlock}
   <div class="btns">
     ${storeBtns}
-    <a class="btn ghost" href="${scheme}">已安裝？用 App 開啟</a>
+    <a class="btn ghost" href="${scheme}">${t.ghost}</a>
   </div>
-  <p class="hint">在 Folio 的「聊天 → 好友 → 加好友」輸入好友碼，送出後我確認就成立。</p>
+  <p class="hint">${t.hint}</p>
 </body>
 </html>`;
 
