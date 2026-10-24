@@ -14,6 +14,67 @@ const PLAY_STORE =
   "https://play.google.com/store/apps/details?id=com.yuliao.folio";
 const SITE = "https://foliomatch.app/";
 
+// 語言。只分兩種（繁中／英文），跟 app 的規則一樣：非 zh 一律英文。
+//
+// ★ 抓 og 預覽的機器人和真人分開判斷。機器人送來的 Accept-Language 不一定是
+//   分享者的語言：網路上記錄到 Facebook 的爬蟲送 en-US（LINE 的送分享者自己的
+//   zh-TW，但只有一筆紀錄，不能當規則）。照 header 走的話，台灣用戶分享到
+//   Facebook／Messenger／Threads 的預覽卡會變英文。所以：
+//   - 機器人：只認 `?lang`（app 1.0.17 起英文介面分享才會帶 `?lang=en`），
+//     沒帶就繁中，跟改版前逐字相同。
+//   - 真人：Accept-Language 第一個語言 > `?lang` > 繁中。`?lang` 說的是「分享者」
+//     的介面語言；點開來讀的是另一個人，他的瀏覽器語言才是他讀得懂的。
+const PREVIEW_BOT =
+  /facebookexternalhit|facebot|meta-external|line-poker|whatsapp|telegrambot|twitterbot|slackbot|discordbot|linkedinbot|pinterestbot|skypeuripreview|kakaotalk-scrap|embedly|bot\/|crawler|spider/i;
+
+function langParam(request) {
+  let q = "";
+  try {
+    q = (new URL(request.url).searchParams.get("lang") || "").toLowerCase();
+  } catch (_) {}
+  if (q === "en") return "en";
+  if (q === "zh" || q.startsWith("zh-")) return "zh";
+  return null;
+}
+
+function pickLang(request) {
+  const param = langParam(request);
+  if (PREVIEW_BOT.test(request.headers.get("user-agent") || "")) {
+    return param || "zh";
+  }
+  const first = (request.headers.get("accept-language") || "")
+    .split(",")[0]
+    .trim()
+    .toLowerCase();
+  if (first) return first.startsWith("zh") ? "zh" : "en";
+  return param || "zh";
+}
+
+const STR = {
+  zh: {
+    htmlLang: "zh-Hant",
+    ogLocale: "zh_TW",
+    title: "Folio — 共讀貼文",
+    ogTitle: "Folio — 以書交友",
+    ogDesc: "在 Folio 打開這則共讀貼文，一起讀一本書。",
+    h1: "在 Folio 打開這則貼文",
+    p: "下載 Folio 即可查看這則共讀貼文，找人一起讀一本書。",
+    primary: "下載 / 開啟 Folio",
+    ghost: "已安裝？用 App 開啟",
+  },
+  en: {
+    htmlLang: "en",
+    ogLocale: "en_US",
+    title: "Folio — Reading post",
+    ogTitle: "Folio — Make friends through books",
+    ogDesc: "Open this reading post in Folio and read a book together.",
+    h1: "Open this post in Folio",
+    p: "Download Folio to see this reading post and find someone to read a book with.",
+    primary: "Download / Open Folio",
+    ghost: "Already installed? Open in the app",
+  },
+};
+
 export async function onRequestGet(context) {
   const rawId = context.params.id || "";
   // UUID-ish 安全化：只留英數與連字號，擋 HTML / scheme 注入。
@@ -23,15 +84,17 @@ export async function onRequestGet(context) {
   const isAndroid = /Android/i.test(ua);
   const store = isIOS ? APP_STORE : isAndroid ? PLAY_STORE : SITE;
   const scheme = `foliomatch://post/${id}`;
+  const t = STR[pickLang(context.request)];
 
   const html = `<!doctype html>
-<html lang="zh-Hant">
+<html lang="${t.htmlLang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Folio — 共讀貼文</title>
-<meta property="og:title" content="Folio — 以書交友">
-<meta property="og:description" content="在 Folio 打開這則共讀貼文，一起讀一本書。">
+<title>${t.title}</title>
+<meta property="og:title" content="${t.ogTitle}">
+<meta property="og:locale" content="${t.ogLocale}">
+<meta property="og:description" content="${t.ogDesc}">
 <meta property="og:image" content="https://foliomatch.app/assets/welcome.webp">
 <meta property="og:url" content="https://foliomatch.app/post/${id}">
 <meta name="twitter:card" content="summary_large_image">
@@ -54,11 +117,11 @@ export async function onRequestGet(context) {
 </head>
 <body>
   <img src="https://foliomatch.app/assets/folio_icon.webp" alt="Folio">
-  <h1>在 Folio 打開這則貼文</h1>
-  <p>下載 Folio 即可查看這則共讀貼文，找人一起讀一本書。</p>
+  <h1>${t.h1}</h1>
+  <p>${t.p}</p>
   <div class="btns">
-    <a class="btn primary" href="${store}">下載 / 開啟 Folio</a>
-    <a class="btn ghost" href="${scheme}">已安裝？用 App 開啟</a>
+    <a class="btn primary" href="${store}">${t.primary}</a>
+    <a class="btn ghost" href="${scheme}">${t.ghost}</a>
   </div>
   <script>
     // 既裝情境下 Universal Link 已直接開 App、走不到這頁；保險再試一次 custom scheme，
