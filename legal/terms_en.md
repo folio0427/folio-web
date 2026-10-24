@@ -1,6 +1,6 @@
 # Folio Terms of Service
 
-> **Version** v1.8 ｜ **Effective Date** 2026-09-17 ｜ **Last Updated** 2026-09-17 ｜ **Status** Final
+> **Version** v1.9 ｜ **Effective Date** 2026-10-24 ｜ **Last Updated** 2026-10-24 ｜ **Status** Final
 
 Welcome to Folio. The service is currently provided by an independent developer (no company has been incorporated). Please read these Terms carefully. **By downloading, registering, or using Folio, you agree to all terms herein.** If you do not agree, please do not use the service. For questions: [folio0427@gmail.com](mailto:folio0427@gmail.com).
 
@@ -92,7 +92,7 @@ When your account is suspended (feature restrictions or full suspension):
 - We have no pre-screening obligation but reserve removal rights
 - We remove content that is unlawful or whose removal is required by a competent authority under the applicable law of each region in which we operate, including cessation (anti-doxxing) notices under Hong Kong's Personal Data (Privacy) Ordinance and lawful content-removal requests under Hong Kong law
 - You grant us a non-exclusive, worldwide, royalty-free, sublicensable license
-- Limited to: service operation / platform infrastructure / de-identified analytics / reflection share cards you actively share
+- Limited to: service operation / platform infrastructure / de-identified analytics / share images you actively share
 
 ### Publishing to "Everyone's sticky notes"
 
@@ -113,10 +113,10 @@ When your account is suspended (feature restrictions or full suspension):
 - By publishing, you consent to this mechanism
 - For detailed handling, see the "Account deletion" section of the Privacy Policy
 
-### Reflection Share Cards
+### Share Images (including reflection share cards, recap cards, and quote cards)
 
-- By tapping "Share" (sharing to IG, Threads, X, and others through the system share sheet) or "Download image", you confirm that you have the right to share that content publicly
-- You acknowledge content carries Folio watermark
+- Share images are made on your device; by tapping "Share" (sharing to IG, Threads, X, and others through the system share sheet), or by saving an image to your photo library and then sharing it yourself, you confirm that you have the right to share that content publicly (including the photos and text you put in it)
+- You acknowledge that share images may carry a Folio watermark
 - External sharing legal liability is yours
 
 ## 07　Book Citations & Copyright
@@ -165,14 +165,18 @@ When your account is suspended (feature restrictions or full suspension):
 
 ## 10　Paid Features
 
-- Folio offers auto-renewing subscription "support plans" (monthly). Plan contents, names, prices, and periods are as shown in the app and on the store page (App Store / Google Play) at the time of purchase
+- Folio offers auto-renewing subscription "support plans" (monthly or yearly). Plan contents, names, prices, and periods are as shown in the app and on the store page (App Store / Google Play) at the time of purchase
 - Payment is processed by Apple or Google and charged to your store account; Folio never handles or stores your card number or payment credentials
-- **Auto-renewal**: subscriptions renew and charge at the end of each period unless you cancel in the store's subscription settings at least 24 hours before the period ends; after cancelling, you keep access until the end of the paid period
-- **Plan changes**: an upgrade (switching to a higher-priced plan) takes effect immediately, with the remaining days of the current period prorated by the store; a downgrade (switching to a lower-priced plan) takes effect at the end of the current period, and your current plan stays active until then
+- **Auto-renewal**: subscriptions renew and charge at the end of each period unless you cancel in the store's subscription settings at least 24 hours before the period ends; after cancelling, you keep access until the end of the paid period. The store may charge you within the 24 hours before the period ends; any price change follows the store's notices and rules. To cancel: on iPhone, Settings > [your Apple Account] > Subscriptions; on Android, Google Play > Payments & subscriptions > Subscriptions. If you choose yearly billing, the full year is charged when you confirm the purchase (or, with a free trial, when the trial ends), and the subscription then renews every year
+- **Free trial**: some plans include a free trial; the trial length and whether you are eligible for it are as shown in the app and in the store at the time of purchase. Each App Store or Google Play account can use one free trial, shared across all plans. You may cancel at any time during the trial in the store's subscription settings; if you do, you will not be charged and you keep access until the trial ends. If you change plans yourself in the store during the trial, the trial may end early. Unless you cancel at least 24 hours before the trial ends, you will be charged for the plan and billing period you chose when the trial ends, and the subscription renews automatically. The supporter badge is not given during a free trial; it is given after the first successful payment (users who have received the badge before keep it)
+- **Plan changes**: plan levels, from highest to lowest, are Super Supporter yearly, Super Supporter monthly, Supporter yearly, and Supporter monthly. Switching to a higher-level plan (for example, from the Supporter Plan to the Super Supporter Plan, or from monthly to yearly billing on the same plan) takes effect immediately, and the store credits the unused part of the current period as a prorated refund or as extra days; switching to a lower-level plan takes effect at the end of the current period, and your current plan stays active until then. The timing and charges of each change are as shown on the in-app confirmation screen and by the store; plans cannot be changed during a free trial
 - **After cancelling or downgrading**: every study room you created is kept (viewable, shareable, renamable, deletable), and you may choose which rooms within your plan's allowance stay decoratable (decorating is paused for all rooms until you have chosen, and the choice cannot be changed afterwards); once your subscription ends, book-spine styles you applied are kept but can no longer be edited; the supporter badge is shown only while your subscription is active and is removed when it ends
+- **Subscriber-only styles and assets (after your subscription ends, or when an item becomes subscriber-only again)**: images you have already saved to your photo library or set as your wallpaper are not affected. Calendar backgrounds: past months stay as they are, and a subscriber-only background applied to the current month is kept until the month ends, but you cannot switch to another subscriber-only background. Sticky-note papers: a note already using a subscriber-only paper keeps it, but once you switch it to another paper you cannot switch back. Share images and recap cards: drafts and images you have saved keep their look and can still be exported, but you cannot choose subscriber-only layouts, aspect ratios, backgrounds, or styles. Wallpaper maker: a subscriber-only style you chose before starts again from a free style. Subscriber-only study-room backgrounds and ornaments released each month: a background you applied and ornaments you placed are kept and remain visible to visitors, and the ornaments cannot be moved; once replaced or removed, they cannot be used again. Cloud backup: no new photos or files are uploaded; what was already backed up is kept and can still be downloaded to your device (see the Privacy Policy)
+- **Cloud backup**: cloud backup is provided on a best-effort basis and is not guaranteed to be complete or kept forever; before shutting down the service entirely, we will notify you in advance and give you a reasonable period to download your backup
+- **Usage limits**: some features offer a limited number of free uses or have a daily limit (for example, Scan text and the number of photos you can save each day); the counts, reset times, and differences between plans are as shown in the app
 - **Cross-platform**: managing, changing, or cancelling a subscription must be done in the store of the platform where you originally purchased it (for example, a subscription purchased on iOS is managed in App Store subscription settings)
 - **Refunds** follow Apple's / Google's own refund policies and are handled and decided by the store; deleting your Folio account does not cancel your subscription, so please cancel in the store first
-- Free features will not be retroactively charged because paid features exist; paid offerings may change over time as shown in the app
+- We will not start charging for any feature or asset that we have made available to all users free of charge without a stated time limit. We may make some subscriber-only items free for a limited period stated in the app; when that period ends, those items become subscriber-only again, and anything you applied, made, or saved during that period is kept under the rules in "Subscriber-only styles and assets" above. Which items are paid is as shown in the app
 
 ## 11　Account Termination
 
@@ -231,7 +235,7 @@ When your account is suspended (feature restrictions or full suspension):
 - These Terms are governed by Taiwan (R.O.C.) law
 - First-instance jurisdiction: Taiwan Taipei District Court
 - Consumer disputes governed by Consumer Protection Act jurisdiction rules
-- If the mandatory law of your place of habitual residence (for example, consumer-protection or personal-data-protection law in Hong Kong, the EU, or Australia) grants you rights that cannot be excluded by contract, nothing in these Terms affects the protections you enjoy under such law
+- If the mandatory law of your place of habitual residence (for example, consumer-protection or personal-data-protection law in Hong Kong, the EU, Australia, or Canada (including Quebec)) grants you rights that cannot be excluded by contract, nothing in these Terms affects the protections you enjoy under such law
 - The exclusive jurisdiction of the Taiwan Taipei District Court above does not apply to consumers in Australia; an Australian consumer may seek remedies under the Australian Consumer Law in a court of competent jurisdiction in their location
 
 ## 18　Miscellaneous
